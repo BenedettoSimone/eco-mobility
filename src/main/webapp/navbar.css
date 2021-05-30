@@ -110,6 +110,7 @@
 .sidebar ul li .top:hover{
   color: #5a87e8;
   background: #F1F6FF;
+  width: 300px;
 }
 .sidebar ul li i{
   font-size: 18px;
@@ -150,5 +151,37 @@
 .sidebar.active ~ .home_content{
   width: calc(100% - 240px);
   left: 240px;
+
+}
+
+
+
+@media screen and (max-width: 1520px){
+
+
+  .sidebar.active .links_name{
+    opacity: 0;
+  }
+
+  .sidebar.active{
+    width: 107px;
+    padding: 33px 0px;
+  }
+
+  #navbar{
+    width: 10%;
+  }
+
+  #content{
+    width:90%;
+  }
+
+  #user{
+    width: 107px;
+  }
+
+  .sidebar ul li i{
+    min-width: 62px;
+  }
 
 }
