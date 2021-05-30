@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Helvetica Neue";
+}
+
+/*respnsive*/
+.sidebar.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 281px;
+  background: white;
+  padding: 33px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+
+
+
+.logo_content img{
+  width: 171px;
+  margin-left: 57px;
+}
+
+.sidebar #btn{
+  position: absolute;
+  color: #fff;
+  top: 6px;
+  left: 50%;
+  font-size: 22px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+.sidebar.active #btn{
+  left: 90%;
+}
+.sidebar ul{
+  margin-top: 20px;
+}
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  list-style: none;
+  line-height: 50px;
+  margin: 28px 0;
+}
+.sidebar ul li .tooltip{
+  position: absolute;
+  left: 125px;
+  top: 0;
+  transform: translate(-50% , -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 120px;
+  background: #fff;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+.sidebar.active ul li .tooltip{
+  display: none;
+}
+.sidebar ul li:hover .tooltip{
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%
+}
+
+
+.sidebar ul li .top{
+  color: #494848;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+  height:68px;
+}
+
+.sidebar ul li .user-name, .sidebar ul li .logout-bottom{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: all 0.4s ease;
+  height:68px;
+}
+
+.sidebar ul li .user-name{
+  background-color: #F8F7FA;
+  color: #494848;
+}
+
+.sidebar ul li .logout-bottom{
+  background-color: #5a87e8;
+  color: white;
+}
+
+
+.sidebar ul li .top:hover{
+  color: #5a87e8;
+  background: #F1F6FF;
+}
+.sidebar ul li i{
+  font-size: 18px;
+  font-weight: 400;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+.sidebar .links_name{
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-family: "Helvetica Neue";
+}
+.sidebar.active .links_name{
+  transition: 0s;
+  opacity: 1;
+  pointer-events: auto
+}
+
+#user{
+  position: absolute;
+  bottom: 14px;
+  width: 260px;
+}
+
+#user li a .user-name{
+  background-color: red;
+}
+
+.sidebar.active ~ .home_content{
+  z-index: 100;
+}
+
+.sidebar.active ~ .home_content{
+  width: calc(100% - 240px);
+  left: 240px;
+
+}
