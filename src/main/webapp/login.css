@@ -4,7 +4,7 @@ html, body{
     margin:0;
 }
 
-#body{
+body{
     background: #5a87e8;
 }
 #content {
@@ -18,15 +18,18 @@ html, body{
     width: 60%;
 }
 
-#contentLeft {
-    float: left;
-    height: 100%;
-    width: 60%;
-}
 
 #contentRight {
     float: left;
     height: 100%;
     width: 40%;
     background: #ffffff;
+}
+
+/*form*/
+
+#formLogin{
+    border-radius:12px;
+    border: 1px solid;
+    width: 70%;
 }

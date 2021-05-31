@@ -28,11 +28,13 @@
                     <a href="#">Registrati</a>
                 </div>
 
-                <form name="#" action="#">
+                <form action="#">
                     email <br>
-                    <input type="text" name="email">
+                    <input type="text" name="email"><br>
                     password <br>
-                    <input type="password" name="password" >
+                    <input type="password" name="password"><br>
+
+                    <input type="submit" value="accedi">
                 </form>
             </div>
             <div id="formRegistrazione">
