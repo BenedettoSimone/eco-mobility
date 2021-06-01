@@ -21,6 +21,16 @@ body{
 
 h1{
     font-family: "Helvetica Neue";
+    display: inline;
+}
+#particolareH1{
+    color: #5a87e8;
+}
+#motto{
+    position: absolute;
+    top: 120px;
+    left: 70px;
+    font-size: 30px;
 }
 #contentLeft {
     float: left;

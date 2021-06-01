@@ -17,7 +17,10 @@
 <body>
     <div id="content">
         <div id="contentLeft">
-            <h1>benvenuto in ecomobility, l'app pensata per te e per l'ambiente</h1>
+            <div id="motto">
+                <h1>Benvenuto in</h1><h1 id="particolareH1"> ecomobility</h1><h1>,<br>
+                l'app pensata per te e per l'ambiente</h1>
+            </div>
         </div>
         <div id="contentRight">
             <!-- per messaggi di errore e cose del genere -->
