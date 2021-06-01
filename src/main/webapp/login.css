@@ -44,7 +44,7 @@ h1{
     padding-top: 50px;
 }
 
-#formSwitch a{
+#selectRegi{
     font-family: CoolveticaCustom;
     font-size: 30px;
     padding: 20px;
@@ -52,32 +52,70 @@ h1{
     color: #494848;
 }
 
-#fLogin{
-    height: 514px;
-    padding-top: 70px;
+#selectLogin{
+    font-family: CoolveticaCustom;
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+    color: #5a87e8;
+    background-color: #F1F6FF;
+    border-radius: 25px;
 }
 
 
-#formContent input{
+#fLogin{
+    height: 514px;
+    padding-top: 70px;
+    width: 306px;
+    margin: auto;
+}
+
+#fLogin p{
+    text-align: left;
+}
+
+#formContent input[type=text],input[type=password]{
     border-radius: 9px;
     height: 30px;
-    width: 300px;
+    width: 100%;
     border: 1px solid #494848;
 }
 
 .btn{
-    width: 170px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
     background: #5a87e8;
     color: #fff;
     border: 0px;
+    border-radius: 25px;
     margin-top: 50px;
     font-size: 25px;
 }
 
 #fRegi {
     display: none;
+    padding-top: 70px;
+    width: 306px;
+    margin: auto;
 }
+#fRegi p{
+    text-align: left;
+}
+
+#nomeRegi{
+    width: 48%;
+    float: left;
+    margin-bottom: 20px;
+}
+
+
+#cognomeRegi{
+    width: 48%;
+    float: right;
+    margin-bottom: 20px;
+}
+
+
 @media only screen and (max-width: 1600px){
     #content{
         width: 100%;
