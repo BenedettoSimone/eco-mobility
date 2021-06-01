@@ -1,0 +1,258 @@
+@font-face {
+    font-family: "CoolveticaCustom";
+    src: url("img/coolvetica rg.ttf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Create two equal columns that floats next to each other */
+#content, #navbar {
+    float: left;
+    height: 100%;
+}
+
+#navbar{
+    background-color: white;
+    width: 20%;
+    padding:30px 0 0 40px;
+}
+
+/*navbar content*/
+
+#navbar #logo{
+    width: 208px;
+}
+
+#navbar {
+    display: block;
+    float: left;
+}
+
+
+
+
+#content{
+    background-color: white;
+    width: 80%;
+    padding:20px 20px 20px 0;
+}
+
+.background-content{
+    width: 100%;
+    height: 100%;
+    background-color: #EEECF2;
+    border-radius:30px;
+    padding:35px 35px 0 35px;
+
+}
+
+#home-card{
+    background-image: url("img/1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 160px;
+    padding:20px;
+    border-radius:25px;
+}
+
+#home-card h1{
+    text-transform: uppercase;
+    color: white;
+    font-size: 51px;
+    font-family: CoolveticaCustom;
+    letter-spacing: 2px;
+    margin-top: 6px;
+    margin-bottom: 11px;
+}
+
+#home-card h3{
+    color:white;
+    font-family: "Helvetica Neue";
+    font-size:27px;
+    margin-top:10px;
+
+}
+
+#home-card img{
+    width: 375px;
+    position: absolute;
+    right: 252px;
+    top: 36px;
+}
+
+#obiettivi-content {
+    width: 100%;
+}
+
+/* Float four columns side by side */
+.column-obiettivi {
+    float: left;
+    width: 33.3%;
+    padding: 0 28px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-obiettivi {margin: 0 -23px;}
+
+
+
+
+/* Style the counter cards */
+.card-obiettivi {
+    background-color: #F1F6FF;
+    border:1px solid #5a87e8;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+}
+#obiettivi-content h5{
+    font-size:19px;
+    font-family: "Helvetica Neue";
+    margin-bottom:16px;
+    color: #494848;
+}
+
+#obiettivi-content h3{
+    font-size:18px;
+    font-family: "Helvetica Neue";
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#5a87e8;
+    text-transform: uppercase;
+}
+
+#obiettivi-content p{
+    font-size: 15px;
+    font-family: "Helvetica Neue";
+    color:#5a87e8;
+}
+
+
+
+#chart-content{
+    width: 100%;
+}
+
+.row-chart{
+    width: 100%;
+    margin-top:185px;
+}
+
+.column-chart1, .column-chart2{
+    float: left;
+    width: 50%;
+    background-color: #EEECF2;
+    height: 427px;
+}
+
+.column-chart2{
+    padding-left: 30px;
+}
+
+.column-chart1{
+    padding-right: 30px;
+}
+
+.chart-card{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius:20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding:2px 0 0 19px;
+    margin-top:6px;
+}
+
+.chart-card h1, .chart-card h5{
+    font-family: "Helvetica Neue";
+}
+
+.chart-card h1{
+    margin-bottom: -9px;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 18px;
+    color:#494848;
+}
+
+.chart-card h5{
+    font-weight: normal;
+    font-size:17px;
+    color: #494848;
+}
+
+.chart-container{
+    width: 95%!important;
+    height: 84%!important;
+    margin:0!important;
+}
+
+.chart-container canvas{
+    height: 80%!important;
+    width: 101%!important;
+}
+
+
+
+/*
+@media screen and (max-width: 1161px) {
+    .column-obiettivi {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+*/
+
+
+@media screen and (max-width: 1202px) {
+
+    .column-chart1, .column-chart2 {
+        width: 100%;
+    }
+
+    .column-chart2{
+        padding-left:0;
+        background-color: transparent;
+        margin-top:30px;
+    }
+
+    .column-chart1{
+        padding-right:0;
+        background-color: transparent;
+        margin-top:25px;
+    }
+
+    .background-content{
+        height: 154%;
+    }
+}
+
+
+@media screen and (max-width: 1202px){
+    #home-card img{
+        right: 151px;
+    }
+}
+
+
+@media screen and (max-width: 860px){
+    #home-card img{
+        display: none;
+    }
+}
