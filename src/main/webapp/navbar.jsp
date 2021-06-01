@@ -11,7 +11,7 @@
     <title>Title</title>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
 <div class="sidebar active">
@@ -69,28 +69,6 @@
 </div>
 </body>
 
-<script>
-
-    var url = window.location.href;
-
-
-    if (url.includes("home")) {
-        document.getElementById("home").setAttribute('id', 'clicked');
-
-    } else if (url.includes("index")) {
-        document.getElementById("spostamenti").setAttribute('id', 'clicked');
-
-    } else if (url.includes("spesa")) {
-
-        document.getElementById("spesa").setAttribute('id', 'clicked');
-    }
-    else if (url.includes("obiettivi")) {
-
-        document.getElementById("obiettivi").setAttribute('id', 'clicked');
-    }
-    else if (url.includes("premi")) {
-
-        document.getElementById("premi").setAttribute('id', 'clicked');
-    }
+<script src="js/navbar.js">
 </script>
 </html>

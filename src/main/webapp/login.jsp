@@ -10,7 +10,7 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="css/login.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -61,43 +61,6 @@
         </div>
     </div>
 
-<script type="text/javascript">
-
-    /* cosa succede quando premo registrati */
-    function selectRegi(){
-        /*il form di login non si vede più*/
-        document.getElementById("fLogin").style.display="none";
-        /*il form di registrazione diventa visibile*/
-        document.getElementById("fRegi").style.display="block";
-
-        /*cambio i colori al bottone cliccato*/
-        document.getElementById("selectRegi").style.color="#5a87e8"
-        document.getElementById("selectRegi").style.backgroundColor="#f1f6ff"
-        document.getElementById("selectRegi").style.borderRadius="25px";
-
-        /*cambio i colori al bottone non cliccato*/
-        document.getElementById("selectLogin").style.color="#494848"
-        document.getElementById("selectLogin").style.backgroundColor="#fff"
-        document.getElementById("selectLogin").style.borderRadius="0px";
-    }
-
-    /* cosa succede quando premo registrati */
-    function selectLogin(){
-        /*il form di login diventa visibile*/
-        document.getElementById("fLogin").style.display="block";
-        /*il form di registrazione non si vede più*/
-        document.getElementById("fRegi").style.display="none";
-
-        /*cambio i colori al bottone cliccato*/
-        document.getElementById("selectLogin").style.color="#5a87e8"
-        document.getElementById("selectLogin").style.backgroundColor="#f1f6ff"
-        document.getElementById("selectLogin").style.borderRadius="25px";
-
-        /*cambio i colori al bottone non cliccato*/
-        document.getElementById("selectRegi").style.color="#494848"
-        document.getElementById("selectRegi").style.backgroundColor="#fff"
-        document.getElementById("selectRegi").style.borderRadius="0px";
-    }
-</script>
+<script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>
