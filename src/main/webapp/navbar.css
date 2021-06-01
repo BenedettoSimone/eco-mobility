@@ -110,7 +110,11 @@
 .sidebar ul li .top:hover{
   color: #5a87e8;
   background: #F1F6FF;
-  width: 300px;
+}
+
+.sidebar ul li #clicked{
+  color: #5a87e8;
+  background: #F1F6FF;
 }
 .sidebar ul li i{
   font-size: 18px;

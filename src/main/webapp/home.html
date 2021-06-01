@@ -42,39 +42,34 @@
             </div>
             <ul class="nav_list">
                 <li>
-                    <a class="top" href="#">
+                    <a id="home" class="top" href="#">
                         <i class='bx bxs-home'></i>
                         <span class="links_name">Home</span>
                     </a>
-                    <span class="tooltip">Home</span>
                 </li>
                 <li>
-                    <a class="top" href="#">
+                    <a id="spostamenti" class="top" href="#">
                         <i class='bx bxs-car'></i>
                         <span class="links_name">Spostamenti</span>
                     </a>
-                    <span class="tooltip">Spostamenti</span>
                 </li>
                 <li>
-                    <a class="top" href="#">
+                    <a id="spesa" class="top" href="#">
                         <i class='bx bxs-wallet'></i>
                         <span class="links_name">Spesa carburante</span>
                     </a>
-                    <span class="tooltip">Spesa carburante</span>
                 </li>
                 <li>
-                    <a class="top" href="#">
+                    <a id="obiettivi" class="top" href="#">
                         <i class='bx bxs-trophy'></i>
                         <span class="links_name">Obiettivi</span>
                     </a>
-                    <span class="tooltip">Obiettivi</span>
                 </li>
                 <li>
-                    <a class="top" href="#">
+                    <a id="premi" class="top" href="#">
                         <i class='bx bxs-medal'></i>
                         <span class="links_name">Premi</span>
                     </a>
-                    <span class="tooltip">Premi</span>
                 </li>
             </ul>
 
@@ -250,5 +245,30 @@
 
 </script>
 
+
+<script>
+
+    var url = window.location.href;
+
+
+    if (url.includes("home")) {
+        document.getElementById("home").setAttribute('id', 'clicked');
+
+    } else if (url.includes("index")) {
+        document.getElementById("spostamenti").setAttribute('id', 'clicked');
+
+    } else if (url.includes("spesa")) {
+
+        document.getElementById("spesa").setAttribute('id', 'clicked');
+    }
+    else if (url.includes("obiettivi")) {
+
+        document.getElementById("obiettivi").setAttribute('id', 'clicked');
+    }
+    else if (url.includes("premi")) {
+
+        document.getElementById("premi").setAttribute('id', 'clicked');
+    }
+</script>
 </body>
 </html>
