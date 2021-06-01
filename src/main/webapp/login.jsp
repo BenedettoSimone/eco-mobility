@@ -21,27 +21,45 @@
         </div>
         <div id="contentRight">
 
-            <div id="formLogin">
+            <div id="formContent">
                 <div id="formSwitch">
 
                     <a href="#">Accedi</a>
                     <a href="#">Registrati</a>
                 </div>
 
-                <form action="#">
-                    email <br>
+                <form id="fLogin"action="#">
+                    <p>email</p>
                     <input type="text" name="email"><br>
-                    password <br>
+                    <p>password</p>
                     <input type="password" name="password"><br>
 
-                    <input type="submit" value="accedi">
+                    <input class="btn" type="submit" value="ACCEDI">
                 </form>
-            </div>
-            <div id="formRegistrazione">
 
+                <form id="fRegi"action="#">
+                    <p>nome</p>
+                    <input type="text" name="nome">
+                    <p>cognome</p>
+                    <input type="text" name="cognome"><br>
+                    <p>email</p>
+                    <input type="text" name="email"><br>
+                    <p>password</p>
+                    <input type="password" name="password"><br>
+                    <input class="btn" type="submit" onclick="selectRegi()" value="REGISTRATI">
+                </form>
             </div>
 
         </div>
     </div>
+
+<script type="text/javascript">
+
+    function selectRegi(){
+        document.getElementById("fLogin").style.display="none";
+        document.getElementById("fRegi").style.display="block";
+
+    }
+</script>
 </body>
 </html>

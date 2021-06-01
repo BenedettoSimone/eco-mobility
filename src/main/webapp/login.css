@@ -46,8 +46,38 @@ h1{
 
 #formSwitch a{
     font-family: CoolveticaCustom;
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+    color: #494848;
 }
 
+#fLogin{
+    height: 514px;
+    padding-top: 70px;
+}
+
+
+#formContent input{
+    border-radius: 9px;
+    height: 30px;
+    width: 300px;
+    border: 1px solid #494848;
+}
+
+.btn{
+    width: 170px;
+    height: 50px;
+    background: #5a87e8;
+    color: #fff;
+    border: 0px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+#fRegi {
+    display: none;
+}
 @media only screen and (max-width: 1600px){
     #content{
         width: 100%;
