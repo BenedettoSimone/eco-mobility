@@ -265,10 +265,18 @@ html, body{
         width: 100%;
     }
 
+    .chart-container canvas{
+        height: 89%!important;
+    }
+
     .column-chart2{
         padding-left:0;
         background-color: transparent;
-        margin-top:30px;
+        margin-top:193px;
+    }
+
+    .chart-card{
+        height: 138%;
     }
 
     .column-chart1{
@@ -316,6 +324,11 @@ html, body{
         width: 100%;
         padding:20px 20px 20px 20px;
         margin-top: 36px;
+    }
+
+
+    #home-card img{
+        top:71px;
     }
 }
 
