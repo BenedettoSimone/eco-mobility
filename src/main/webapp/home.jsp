@@ -29,7 +29,7 @@
         <%@include file="navbar.jsp"%>
     </div>
 
-    <span class="hamburger" id="HamburgerBTN" onclick="openNav()">&#9776; </span>
+    <span class="hamburger" id="HamburgerBTN" onclick="openNav()"><i class='bx bx-menu-alt-left'></i></span>
     <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">Home</a>

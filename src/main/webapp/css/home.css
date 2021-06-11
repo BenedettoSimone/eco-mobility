@@ -230,6 +230,9 @@ html, body{
         margin-bottom: -162px;
     }
 
+    .scroll-bar::-webkit-scrollbar{
+        display: none;
+    }
     .row-obiettivi{
         width: 1420px;
         overflow-x: scroll;
@@ -312,6 +315,7 @@ html, body{
         background-color: white;
         width: 100%;
         padding:20px 20px 20px 20px;
+        margin-top: 36px;
     }
 }
 
