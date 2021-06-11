@@ -221,6 +221,24 @@ html, body{
 
 
 
+@media screen and (max-width: 1818px){
+
+    .scroll-bar{
+        background-color: red;
+        overflow-x:scroll ;
+        height: 145px;
+    }
+
+    .row-obiettivi{
+        width: 1420px;
+        overflow: scroll;
+    }
+
+    .column-obiettivi{
+        width: 472px;
+    }
+
+}
 
 /* NAV BAR */
 @media screen and (max-width:1520px){
