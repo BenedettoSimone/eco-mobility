@@ -61,7 +61,7 @@ html, body{
 }
 
 #home-card{
-    background-image: url("../img/1.png");
+    background-image: url("../img/home-bg.png");
     background-repeat: no-repeat;
     background-size:cover;
     width: 100%;
