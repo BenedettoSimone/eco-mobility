@@ -189,7 +189,11 @@
 
 
   #user{
-    width: 107px;
+    width: 87px;
+  }
+
+  .sidebar ul li .user-name,  .sidebar ul li .logout-bottom{
+    height: 62px;
   }
 
   .sidebar ul li i{
