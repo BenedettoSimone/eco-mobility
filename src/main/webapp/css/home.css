@@ -258,14 +258,13 @@ html, body{
     .background-content{
         height: 100%;
     }
-}
 
-
-@media screen and (max-width: 1202px){
     #home-card img{
         right: 151px;
     }
 }
+
+
 @media screen and (min-width: 1081px) {
     .sidenav{
         display: none;
