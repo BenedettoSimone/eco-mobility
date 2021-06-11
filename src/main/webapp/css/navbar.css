@@ -178,6 +178,10 @@
     width: 76%;
   }
 
+  #user ul li{
+    width: 100%;
+  }
+
 
   .sidebar ul li #clicked{
     width:62px;
