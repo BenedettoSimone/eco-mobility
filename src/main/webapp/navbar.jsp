@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
+
+
+
+
+
 <div class="sidebar active">
     <div class="logo_content">
         <a href=""><img src="img/logo.png"></a>
@@ -67,7 +72,14 @@
         </ul>
     </div>
 </div>
+
+
+
 </body>
+
+
+
+
 
 <script src="js/navbar.js">
 </script>

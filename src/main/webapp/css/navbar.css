@@ -2,6 +2,18 @@
   font-family: "Helvetica Neue";
 }
 
+
+/*hamburger icon*/
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9;
+  position:absolute;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+
 /*respnsive*/
 .sidebar.active{
   position: fixed;
@@ -150,17 +162,11 @@
 }
 
 
-/*rimuovere navbar e aggiungere HAMBURGER SIDE BAR
-                    DA FARE
-                    */
-@media screen and (max-width:1080px){}
-
-
 @media screen and (max-width: 1520px){
 
- .sidebar ul{
-   padding-inline-start: 25px !important;
- }
+  .sidebar ul{
+    padding-inline-start: 25px !important;
+  }
 
   .sidebar ul li .top:hover{
     width:62px;
@@ -181,13 +187,6 @@
     padding: 0px 0px;
   }
 
-  #navbar{
-    width: 10%;
-  }
-
-  #content{
-    width:90%;
-  }
 
   #user{
     width: 107px;
@@ -201,5 +200,63 @@
 
 
   }
+
+
+
+/* rimuovere navbar e aggiungere HAMBURGER SIDE BAR
+                    DA FARE
+                        */
+@media screen and (max-width:1080px){
+
+  .sidebar.active{
+    display: none;
+  }
+
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+  }
+
+  .sidenav a:hover{
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+}
+
+
+
 
 }
