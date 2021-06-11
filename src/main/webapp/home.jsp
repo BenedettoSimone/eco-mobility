@@ -29,13 +29,15 @@
         <%@include file="navbar.jsp"%>
     </div>
 
-    <span class="hamburger" onclick="openNav()">&#9776; </span>
+    <span class="hamburger" id="HamburgerBTN" onclick="openNav()">&#9776; </span>
     <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
-  <a href="#">Contact</a>
+  <a href="#">Home</a>
+  <a href="#">Spostamenti</a>
+  <a href="#">Obiettivi</a>
+  <a href="#">Spesa Carburante</a>
+    <a href="#">Premi</a>
+
 </div>
 
 

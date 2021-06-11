@@ -24,8 +24,10 @@ else if (url.includes("premi")) {
 
     function openNav() {
     document.getElementById("mySidenav").style.width = "100%";
+    document.getElementById("HamburgerBTN").style.display="none";
 }
 
     function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("HamburgerBTN").style.display="block";
 }
