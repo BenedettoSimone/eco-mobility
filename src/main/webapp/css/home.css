@@ -220,6 +220,20 @@ html, body{
 */
 
 
+
+/* NAV BAR */
+@media screen and (max-width:1520px){
+
+#navbar{
+    background-color: white;
+    width: 20%;
+    padding:0px 0 0 40px;
+}
+}
+
+
+
+
 @media screen and (max-width: 1202px) {
 
     .column-chart1, .column-chart2 {

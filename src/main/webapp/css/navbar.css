@@ -39,6 +39,7 @@
 }
 .sidebar ul{
   margin-top: 20px;
+
 }
 .sidebar ul li{
   position: relative;
@@ -46,7 +47,7 @@
   width: 100%;
   list-style: none;
   line-height: 50px;
-  margin: 28px 0;
+  margin-top: 28px;
 }
 .sidebar ul li .tooltip{
   position: absolute;
@@ -148,20 +149,28 @@
   background-color: red;
 }
 
-.sidebar.active ~ .home_content{
-  z-index: 100;
-}
 
-.sidebar.active ~ .home_content{
-  width: calc(100% - 240px);
-  left: 240px;
-
-}
-
+/*rimuovere navbar e aggiungere HAMBURGER SIDE BAR
+                    DA FARE
+                    */
+@media screen and (max-width:1080px){}
 
 
 @media screen and (max-width: 1520px){
 
+ .sidebar ul{
+   padding-inline-start: 25px !important;
+ }
+
+  .sidebar ul li .top:hover{
+    width:62px;
+    height: 62px;
+  }
+
+  .sidebar ul li #clicked{
+    width:62px;
+    height: 62px;
+  }
 
   .sidebar.active .links_name{
     opacity: 0;
@@ -169,7 +178,7 @@
 
   .sidebar.active{
     width: 107px;
-    padding: 33px 0px;
+    padding: 0px 0px;
   }
 
   #navbar{
@@ -186,6 +195,11 @@
 
   .sidebar ul li i{
     min-width: 62px;
+  }
+
+  .sidebar .li{
+
+
   }
 
 }
