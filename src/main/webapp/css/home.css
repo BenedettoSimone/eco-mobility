@@ -224,14 +224,15 @@ html, body{
 @media screen and (max-width: 1818px){
 
     .scroll-bar{
-        background-color: red;
         overflow-x:scroll ;
-        height: 145px;
+        height: 148px;
+        overflow-y: hidden;
+        margin-bottom: -162px;
     }
 
     .row-obiettivi{
         width: 1420px;
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     .column-obiettivi{
@@ -280,6 +281,15 @@ html, body{
     #home-card img{
         right: 151px;
     }
+
+    .column-obiettivi{
+        width: 389px;
+    }
+
+    .row-obiettivi{
+        width: 1167px;
+    }
+
 }
 
 
