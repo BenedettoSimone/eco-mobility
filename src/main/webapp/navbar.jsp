@@ -15,13 +15,9 @@
 </head>
 <body>
 
-
-
-
-
 <div class="sidebar active">
     <div class="logo_content">
-        <a href=""><img src="img/logo.png"></a>
+        <a href=""><img id="logo" src="img/logo.png"></a>
     </div>
     <ul class="nav_list">
         <li>
