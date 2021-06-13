@@ -2,6 +2,12 @@
     font-family: "CoolveticaCustom";
     src: url("../font/coolvetica rg.ttf");
 }
+
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../font/HelveticaNeue.ttf");
+}
+
 html, body{
     width: 100%;
     height: 100%;
@@ -20,7 +26,7 @@ body{
 }
 
 h1{
-    font-family: "Helvetica Neue";
+    font-family: Helvetica Neue;
     display: inline;
 }
 #particolareH1{

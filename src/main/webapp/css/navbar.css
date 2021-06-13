@@ -1,6 +1,8 @@
 @font-face {
-  font-family: "Helvetica Neue";
+  font-family: "HelveticaNeue";
+  src: url("../font/HelveticaNeue.ttf");
 }
+
 
 
 /*hamburger icon*/
@@ -144,7 +146,7 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  font-family: "Helvetica Neue";
+  font-family: Helvetica Neue;
 }
 .sidebar.active .links_name{
   transition: 0s;
@@ -252,6 +254,7 @@
     color: #f1f1f1;
     display: block;
     transition: 0.3s;
+    font-family: HelveticaNeue;
 
   }
 
