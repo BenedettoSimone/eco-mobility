@@ -15,6 +15,8 @@
 </head>
 <body>
 
+
+
 <div class="sidebar active">
     <div class="logo_content">
         <a href=""><img id="logo" src="img/logo.png"></a>
@@ -72,11 +74,6 @@
 
 
 </body>
-
-
-
-
-
 <script src="js/navbar.js">
 </script>
 </html>
