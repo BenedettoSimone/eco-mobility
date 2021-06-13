@@ -1,8 +1,6 @@
-
-
 @font-face {
     font-family: "CoolveticaCustom";
-    src: url("src/main/webapp/font/coolvetica rg.ttf");
+    src: url("../font/coolvetica rg.ttf");
 }
 
 *{
