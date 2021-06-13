@@ -71,8 +71,6 @@
     </div>
 </div>
 
-
-
 </body>
 <script src="js/navbar.js">
 </script>

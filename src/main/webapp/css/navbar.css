@@ -154,7 +154,7 @@
 
 #user{
   position: absolute;
-  bottom: 14px;
+  bottom: 21px;
   width: 260px;
 }
 
@@ -170,8 +170,8 @@
   }
 
   .sidebar ul li .top:hover{
-    width:62px;
-    height: 62px;
+    width:68px;
+    height: 68px;
   }
 
   .sidebar ul li{
@@ -184,8 +184,8 @@
 
 
   .sidebar ul li #clicked{
-    width:62px;
-    height: 62px;
+    width:68px;
+    height: 68px;
   }
 
   .sidebar.active .links_name{
@@ -194,20 +194,20 @@
 
   .sidebar.active{
     width: 107px;
-    padding: 0px 0px;
+    padding: 33px 0px;
   }
 
 
   #user{
-    width: 87px;
+    width: 93px;
   }
 
   .sidebar ul li .user-name,  .sidebar ul li .logout-bottom{
-    height: 62px;
+    height: 68px;
   }
 
   .sidebar ul li i{
-    min-width: 62px;
+    min-width: 68px;
   }
 
 
