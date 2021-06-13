@@ -10,7 +10,7 @@
   font-size: 30px;
   cursor: pointer;
   z-index: 9;
-  position:absolute;
+  position:fixed;
   margin-top:20px;
   margin-left:20px;
   color: #242424;
@@ -200,6 +200,15 @@
 
   .sidebar.active{
     display: none;
+  }
+
+  .background_white{
+    background-color: #ffffff;
+    height:53px;
+    width:100%;
+    position:fixed;
+    margin-top:0px;
+
   }
 
 

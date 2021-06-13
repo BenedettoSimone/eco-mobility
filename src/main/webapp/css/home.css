@@ -346,14 +346,22 @@ html, body{
 
 
     .logo_resp_visible{
-        display: block;
+
         width: 171px;
-        margin: -61px auto -16px;
+        display: block;
+        position:fixed;
+        margin-left: 36%;
+        margin-top:-80px;
+
     }
 
 
     .logo_resp_visible #logo-resp{
         width: 171px;
+
+
+
+
     }
 }
 

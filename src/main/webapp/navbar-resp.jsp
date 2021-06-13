@@ -16,6 +16,7 @@
 <body>
 
 <div>
+    <span class="background_white"></span>
 <span class="hamburger" id="HamburgerBTN" onclick="openNav()">
             <i class='bx bx-menu-alt-left'>
                 <span id="menu">Menù</span>
