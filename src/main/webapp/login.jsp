@@ -16,10 +16,10 @@
 </head>
 <body>
     <div id="content">
-        <div class="logo_content">
-            <a href=""><img id="logo" src="img/logo.png"></a>
-        </div>
         <div id="contentLeft">
+            <div class="logo_content">
+                <a href=""><img id="logo" src="img/logo.png"></a>
+            </div>
             <div id="motto">
                 <h1>Benvenuto in</h1><h1 id="particolareH1"> ecomobility</h1><h1>,<br>
                 l'app pensata per te e per l'ambiente</h1>
@@ -36,9 +36,9 @@
                 </div>
 
                 <form id="fLogin"action="#">
-                    <p>email</p>
+                    <p>Email</p>
                     <input type="text" name="email"><br>
-                    <p>password</p>
+                    <p>Password</p>
                     <input type="password" name="password"><br>
 
                     <input class="btn" type="submit" value="ACCEDI">
@@ -46,16 +46,16 @@
 
                 <form id="fRegi"action="#">
                     <div id="nomeRegi">
-                        <p>nome</p>
+                        <p>Nome</p>
                         <input type="text" name="nome">
                     </div>
                     <div id="cognomeRegi">
-                        <p>cognome</p>
+                        <p>Cognome</p>
                         <input type="text" name="cognome">
                     </div>
-                    <p>email</p>
+                    <p>Email</p>
                     <input type="text" name="email"><br>
-                    <p>password</p>
+                    <p>Password</p>
                     <input type="password" name="password"><br>
                     <input class="btn" type="submit" value="REGISTRATI">
                 </form>
