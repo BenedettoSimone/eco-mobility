@@ -142,9 +142,9 @@ html, body{
     width: 100%;
     height: 50%;
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
     padding:20px;
-    box-shadow: 10px 10px 5px #dedede;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .cardDX{
