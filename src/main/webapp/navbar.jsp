@@ -12,6 +12,7 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/navbar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -74,4 +75,42 @@
 </body>
 <script src="js/navbar.js">
 </script>
+
+<script>
+    function checkResolution() {
+
+        if ($(window).innerWidth() > 1520) {
+
+            $img = $('#logo');
+            $img.attr('src', 'img/logo.png');
+
+        }
+
+        else if ($(window).innerWidth() >1081 && $(window).innerWidth() <= 1520) {
+            $img = $('#logo');
+            $img.attr('src', 'img/logo-short.png');
+        }
+
+        else if ($(window).innerWidth() <= 1080) {
+            $img = $('#logo');
+            $img.attr('src', 'img/logo.png');
+
+        }
+    }
+
+    $(window).resize(function() {
+        checkResolution();
+    });
+
+    $(document).ready(function() {
+        checkResolution();
+    });
+
+
+</script>
+
+</body>
+</html>
+
+
 </html>
