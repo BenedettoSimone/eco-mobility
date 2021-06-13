@@ -197,33 +197,48 @@ html, body{
 }
 
 
-/*
-@media only screen and (max-width: 1500px){
+@media screen and (max-width: 1600px){
 
-    .cardDX{
-        display: none;
-    }
-    .cardSX{
+    #list {
+        background-color: white;
         width: 100%;
-        height: 100%;
-        box-sizing: border-box;
-        border: 1px solid blue;
+        padding: 0;
+        height: 224px;
+    }
+
+    #list #titleList{
+        padding-left: 0;
+    }
+
+    .textbox{
+        width: 300px;
+    }
+
+    .listaSpese{
+        height: 119px;
+
+        margin: 30px 0px 0px 0px;
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    .cardList {
+        width: 290px;
+        float:left;
+        margin-right:30px;
+    }
+
+
+    #content #titleContent {
+        padding-bottom: 11px;
     }
 }
-
-@media only screen and (max-width: 1200px )  {
-    #list{
-        display: none;
-        width: 0%;
-        height: 0%;
-    }
-
-}*/
 
 
 .logo_resp_visible{
     display:none;
 }
+
 
 
 
