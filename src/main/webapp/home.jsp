@@ -29,15 +29,32 @@
         <%@include file="navbar.jsp"%>
     </div>
 
-    <span class="hamburger" id="HamburgerBTN" onclick="openNav()"><i class='bx bx-menu-alt-left'></i></span>
+    <div id="navbar_responsive">
+        <span class="hamburger" id="HamburgerBTN" onclick="openNav()">
+            <i class='bx bx-menu-alt-left'>
+                <span id="menu">Menù</span>
+            </i>
+        </span>
     <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Spostamenti</a>
-  <a href="#">Obiettivi</a>
-  <a href="#">Spesa Carburante</a>
-    <a href="#">Premi</a>
+        <div id="links_resp">
+            <a href="#">Home</a>
+            <a href="#">Spostamenti</a>
+            <a href="#">Obiettivi</a>
+            <a href="#">Spesa Carburante</a>
+             <a href="#">Premi</a>
+        </div>
 
+        <div id="user_resp">
+            <a class="user-name"> <i class='bx bxs-user'></i>
+                        <span class="links_name">Benedetto Simone</span>
+                    </a>
+
+                    <a class="logout-bottom"> <i class='bx bx-log-out'></i>
+                        <span class="links_name">Logout</span>
+                    </a>
+        </div>
+    </div>
 </div>
 
 
