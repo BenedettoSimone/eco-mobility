@@ -33,7 +33,10 @@
             <div id="titleContent">
                 SPESE CARBURANTE
             </div>
+            <button onclick="myFunction()">Try it</button>
+            <div id="list-responsive">
 
+            </div>
             <div id="card">
                 <div class="cardSX">
 
@@ -53,6 +56,8 @@
 
 
                 </div >
+
+
 
                 <div class="cardDX">
                     <img src="../../../../eco-mobility1/src/main/webapp/img/Mar-Business_11_i@2x.png" class="imgCard"/></div>
@@ -106,7 +111,14 @@
     </div>
 
 
-
 </div>
+
+<script>
+    function myFunction() {
+        var div=document.getElementById("list-responsive");
+        var list=document.getElementById("list");
+        div.appendChild(list);
+    }
+</script>
 </body>
 </html>
