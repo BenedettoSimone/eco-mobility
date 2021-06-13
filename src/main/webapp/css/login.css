@@ -40,11 +40,10 @@ h1{
     color: #5a87e8;
 }
 #motto{
-    position: absolute;
-    top: 156px;
-    left: 70px;
     font-size: 30px;
+    margin-left: 70px;
 }
+
 #contentLeft {
     float: left;
     height: 100%;
@@ -53,6 +52,13 @@ h1{
 
 
 #contentRight {
+    width: 40%;
+    height: 100%;
+    float: left;
+    background-color: red;
+}
+
+#formContent{
     position: absolute;
     background: #ffffff;
     border-radius: 26px;
