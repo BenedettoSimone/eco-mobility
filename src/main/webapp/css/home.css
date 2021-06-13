@@ -116,6 +116,9 @@ html, body{
 .row-obiettivi {margin: 0 -23px;}
 
 
+.logo_resp_visible{
+    display:none;
+}
 
 
 /* Style the counter cards */
@@ -338,7 +341,19 @@ html, body{
 
 
     #home-card img{
-        top:71px;
+        top:103px;
+    }
+
+
+    .logo_resp_visible{
+        display: block;
+        width: 171px;
+        margin: -61px auto -16px;
+    }
+
+
+    .logo_resp_visible #logo-resp{
+        width: 171px;
     }
 }
 
