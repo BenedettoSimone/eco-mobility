@@ -21,8 +21,14 @@ body{
 #content {
     width: 100%;
     height: 100%;
+    padding: 33px 14px;
     background-image: url("../img/sfondoLogin.jpeg");
     background-size: 100% 100%;
+}
+
+#content .logo_content #logo{
+    width: 208px;
+    margin-left: 57px;
 }
 
 h1{
@@ -34,7 +40,7 @@ h1{
 }
 #motto{
     position: absolute;
-    top: 120px;
+    top: 156px;
     left: 70px;
     font-size: 30px;
 }
@@ -63,7 +69,7 @@ h1{
 #selectRegi{
     font-family: CoolveticaCustom;
     font-size: 30px;
-    padding: 20px;
+    padding: 5px 20px 5px 20px;
     text-decoration: none;
     color: #494848;
 }
@@ -71,11 +77,11 @@ h1{
 #selectLogin{
     font-family: CoolveticaCustom;
     font-size: 30px;
-    padding: 20px;
+    padding: 5px 20px 5px 20px;
     text-decoration: none;
     color: #5a87e8;
     background-color: #F1F6FF;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 

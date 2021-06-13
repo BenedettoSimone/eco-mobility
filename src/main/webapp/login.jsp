@@ -16,6 +16,9 @@
 </head>
 <body>
     <div id="content">
+        <div class="logo_content">
+            <a href=""><img id="logo" src="img/logo.png"></a>
+        </div>
         <div id="contentLeft">
             <div id="motto">
                 <h1>Benvenuto in</h1><h1 id="particolareH1"> ecomobility</h1><h1>,<br>

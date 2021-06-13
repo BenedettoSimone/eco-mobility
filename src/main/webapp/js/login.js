@@ -9,7 +9,7 @@ function selectRegi(){
     /*cambio i colori al bottone cliccato*/
     document.getElementById("selectRegi").style.color="#5a87e8"
     document.getElementById("selectRegi").style.backgroundColor="#f1f6ff"
-    document.getElementById("selectRegi").style.borderRadius="25px";
+    document.getElementById("selectRegi").style.borderRadius="15px";
 
     /*cambio i colori al bottone non cliccato*/
     document.getElementById("selectLogin").style.color="#494848"
@@ -27,7 +27,7 @@ function selectLogin(){
     /*cambio i colori al bottone cliccato*/
     document.getElementById("selectLogin").style.color="#5a87e8"
     document.getElementById("selectLogin").style.backgroundColor="#f1f6ff"
-    document.getElementById("selectLogin").style.borderRadius="25px";
+    document.getElementById("selectLogin").style.borderRadius="15px";
 
     /*cambio i colori al bottone non cliccato*/
     document.getElementById("selectRegi").style.color="#494848"
