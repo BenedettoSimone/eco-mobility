@@ -47,7 +47,8 @@ html, body{
 #list{
     background-color: white;
     width: 20%;
-    padding:130px 0 0 30px;
+    padding: 130px 30px 0 30px;
+    height: 98%;
 }
 
 #list #titleList{
@@ -59,11 +60,15 @@ html, body{
 
 }
 
-.listaSpese{
-    height: 90%;
-    /*border: 1px solid blue;*/
+.listaSpese {
+    height: 86.9%;
     box-sizing: border-box;
     margin: 30px 0px 0px 0px;
+    overflow: scroll;
+}
+
+.listaSpese::-webkit-scrollbar{
+    display: none;
 }
 
 .textbox{
@@ -72,16 +77,10 @@ html, body{
     border: #eae7ef;
     font-size: 18px;
     width: 100%;
-    margin: 0px 10% 0px 0px;
 }
 
-.listaSpese{
-    padding: 10px 20px 15px;
-    overflow: scroll;
-}
 
 .cardList{
-    height: 20%;
     width: 100%;
     background-color: #edf3fe;
     border: 1px solid #4c71e1;
