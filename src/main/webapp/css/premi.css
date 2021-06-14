@@ -4,13 +4,12 @@
 }
 
 @font-face {
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeueCustom";
     src: url("../font/HelveticaNeue.ttf");
 }
 
-*{
-    box-sizing: border-box;
-}
+
+*{box-sizing: border-box;}
 
 html, body{
     width: 100%;
@@ -47,9 +46,6 @@ html, body{
     float: left;
 }
 
-
-
-
 #content{
     background-color: white;
     width: 80%;
@@ -67,7 +63,7 @@ html, body{
 
 .background-content h1{
     padding-top: 28px;
-    padding-bottom: 60px;
+    padding-bottom: 15px;
     font-size: 59px;
     color: #393838;
     font-weight: bolder;
@@ -75,82 +71,52 @@ html, body{
     text-transform: uppercase;
 }
 
-/*----------------section resume medal*/
+/*---Section resume medal*/
 
-#obiettivi-content {
+#premi-content {
     width: 100%;
 }
 
 /* Float four columns side by side */
-.column-obiettivi {
+.column-premi {
     float: left;
     width: 33.3%;
     padding: 0 28px;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row-obiettivi {margin: 0 -23px;}
+.row-premi {margin: 0 -23px;}
 
 
 /* Style the counter cards */
-.card-obiettivi {
+.card-premi {
     background-color: #F1F6FF;
-    border:1px solid var(--primary-color);
+    border:1px solid #5a87e8;
     border-radius:30px;
     padding: 16px;
     text-align: left;
 }
-#obiettivi-content h5{
+
+#premi-content h5{
     font-size:19px;
-    font-family: Helvetica Neue;
+    font-family: HelveticaNeueCustom;
     margin-bottom:16px;
-    color: var(--primary-text);
+    color: #fff;
 }
 
-#obiettivi-content h3{
+#premi-content h3{
     font-size:18px;
-    font-family:Helvetica Neue;
+    font-family:HelveticaNeueCustom;
     margin-bottom:16px;
     margin-top:10px;
-    color:var(--primary-color);
+    color:#5a87e8;
     text-transform: uppercase;
 }
 
-#obiettivi-content p{
+#premi-content p{
     font-size: 15px;
-    font-family: Helvetica Neue;
-    color:var(--primary-color);
-}
-
-
-/* Style the counter cards */
-.card-obiettivi {
-    background-color: #F1F6FF;
-    border:1px solid var(--primary-color);
-    border-radius:30px;
-    padding: 16px;
-    text-align: left;
-}
-#obiettivi-content h5{
-    font-size:19px;
-    font-family: Helvetica Neue;
-    margin-bottom:16px;
-    color: var(--primary-text);
-}
-
-#obiettivi-content h3{
-    font-size:18px;
-    font-family:Helvetica Neue;
-    margin-bottom:16px;
-    margin-top:10px;
-    color:var(--primary-color);
-    text-transform: uppercase;
-}
-
-#obiettivi-content p{
-    font-size: 15px;
-    font-family: Helvetica Neue;
-    color:var(--primary-color);
+    font-family: HelveticaNeueCustom;
+    color: #5a87e8;
 }
 
 
@@ -179,12 +145,12 @@ html, body{
     .scroll-bar::-webkit-scrollbar{
         display: none;
     }
-    .row-obiettivi{
+    .row-premi{
         width: 1420px;
         overflow-x: scroll;
     }
 
-    .column-obiettivi{
+    .column-premi{
         width: 472px;
     }
 
