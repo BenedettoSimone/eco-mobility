@@ -14,7 +14,7 @@
     --secondary-bg-color:#fff;
     --primary-text: #494848;
     --secondary-text: #707070;
-    --background-content: #EEECF2;
+    --background-content: #eeecf2;
     --background-chart: #EEECF2;
 }
 
@@ -316,7 +316,7 @@ html, body{
     }
 
     .background-content{
-        min-height: fit-content;
+        min-height: fit-content!important;
     }
 
     #home-card img{
