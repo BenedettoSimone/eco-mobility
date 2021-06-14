@@ -120,10 +120,56 @@ html, body{
 }
 
 
+/*------------------*/
+
+/*---Goal Section--*/
+
+#obiettivi-content {
+    width: 100%;
+    margin-top:213px;
+}
+
+/* Float four columns side by side */
+.column-obiettivi {
+    float: left;
+    width: 33.3%;
+    padding: 0 130px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-obiettivi {margin: 0 -120px 0 -120px;}
 
 
+/* Style the counter cards */
+.card-obiettivi {
+    background-color: #F1F6FF;
+    border:1px solid var(--primary-color);
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    height: 342px;
+}
+#obiettivi-content h5{
+    font-size:19px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: var(--primary-text);
+}
 
+#obiettivi-content h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:var(--primary-color);
+    text-transform: uppercase;
+}
 
+#obiettivi-content p{
+    font-size: 15px;
+    font-family: HelveticaNeueCustom;
+    color:var(--primary-color);
+}
 
 
 
@@ -132,6 +178,30 @@ html, body{
     display:none;
 }
 
+
+/*--Query obiettivi list--*/
+@media screen and (max-width: 1818px){
+
+    .scroll-bar{
+        overflow-x:scroll ;
+        height: 148px;
+        overflow-y: hidden;
+        margin-bottom: -162px;
+    }
+
+    .scroll-bar::-webkit-scrollbar{
+        display: none;
+    }
+    .row-obiettivi{
+        width: 1420px;
+        overflow-x: scroll;
+    }
+
+    .column-obiettivi{
+        width: 472px;
+    }
+
+}
 
 @media screen and (max-width: 1818px){
 

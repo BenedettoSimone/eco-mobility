@@ -61,6 +61,42 @@
                     </div>
                 </div>
             </div>
+
+            <div id="obiettivi-content">
+
+                <h5>Obiettivi riduzione km</h5>
+
+                <div class="scroll-bar">
+                    <div class="row-obiettivi">
+                        <div class="column-obiettivi">
+                            <div class="card-obiettivi">
+                                <h3>Riduzione spesa</h3>
+                                <p>Status: in corso</p>
+                                <p>Km percorsi: 30 &nbsp &nbsp &nbsp Km massimi: 400</p>
+                            </div>
+                        </div>
+
+                        <div class="column-obiettivi">
+                            <div class="card-obiettivi">
+                                <h3>Card 2</h3>
+                                <p>Some text</p>
+                                <p>Some text</p>
+                            </div>
+                        </div>
+
+                        <div class="column-obiettivi">
+                            <div class="card-obiettivi">
+                                <h3>Card 3</h3>
+                                <p>Some text</p>
+                                <p>Some text</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
