@@ -8,6 +8,13 @@
     src: url("../font/HelveticaNeue.ttf");
 }
 
+:root{
+    --primary-color: #5a87e8;
+    --theme-bg-color: #fff;
+    --primary-text: #494848;
+    --secondary-text: #707070;
+}
+
 
 *{
     box-sizing: border-box;
@@ -124,7 +131,7 @@ html, body{
 /* Style the counter cards */
 .card-obiettivi {
     background-color: #F1F6FF;
-    border:1px solid #5a87e8;
+    border:1px solid var(--primary-color);
     border-radius:30px;
     padding: 16px;
     text-align: left;
@@ -141,14 +148,14 @@ html, body{
     font-family:Helvetica Neue;
     margin-bottom:16px;
     margin-top:10px;
-    color:#5a87e8;
+    color:var(--primary-color);
     text-transform: uppercase;
 }
 
 #obiettivi-content p{
     font-size: 15px;
     font-family: Helvetica Neue;
-    color:#5a87e8;
+    color:var(--primary-color);
 }
 
 
