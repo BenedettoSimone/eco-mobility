@@ -21,7 +21,7 @@
             crossorigin="anonymous"></script>
 
 </head>
-<body class="dark-mode">
+<body class="">
 
 <div class="row">
 
