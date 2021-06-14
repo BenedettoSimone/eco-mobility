@@ -15,15 +15,13 @@
 </head>
 <body>
 
-<div>
     <span class="background_white"></span>
 <span class="hamburger" id="HamburgerBTN" onclick="openNav()">
             <i class='bx bx-menu-alt-left'>
-                <span id="menu">Menù</span>
             </i>
+    <span id="menu">Menù</span>
 </span>
 
-</div>
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
