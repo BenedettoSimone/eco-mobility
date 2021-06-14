@@ -1,0 +1,244 @@
+@font-face {
+    font-family: "CoolveticaCustom";
+    src: url("../font/coolvetica rg.ttf");
+}
+
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../font/HelveticaNeue.ttf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Create two equal columns that floats next to each other */
+#content, #navbar {
+    float: left;
+    height: 100%;
+}
+
+#navbar{
+    background-color: white;
+    width: 20%;
+    padding:30px 0 0 40px;
+}
+
+/*navbar content*/
+
+#navbar #logo{
+    width: 208px;
+}
+
+#navbar {
+    display: block;
+    float: left;
+}
+
+
+
+
+#content{
+    background-color: white;
+    width: 80%;
+    padding:20px 20px 20px 0;
+}
+
+.background-content{
+    width: 100%;
+    height: 100%;
+    background-color: #EEECF2;
+    border-radius:30px;
+    padding:35px 35px 0 35px;
+
+}
+
+.background-content h1{
+    padding-top: 28px;
+    padding-bottom: 60px;
+    font-size: 59px;
+    color: #393838;
+    font-weight: bolder;
+    font-family: CoolveticaCustom;
+    text-transform: uppercase;
+}
+
+/*----------------section resume medal*/
+
+#obiettivi-content {
+    width: 100%;
+}
+
+/* Float four columns side by side */
+.column-obiettivi {
+    float: left;
+    width: 33.3%;
+    padding: 0 28px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-obiettivi {margin: 0 -23px;}
+
+
+/* Style the counter cards */
+.card-obiettivi {
+    background-color: #F1F6FF;
+    border:1px solid var(--primary-color);
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+}
+#obiettivi-content h5{
+    font-size:19px;
+    font-family: Helvetica Neue;
+    margin-bottom:16px;
+    color: var(--primary-text);
+}
+
+#obiettivi-content h3{
+    font-size:18px;
+    font-family:Helvetica Neue;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:var(--primary-color);
+    text-transform: uppercase;
+}
+
+#obiettivi-content p{
+    font-size: 15px;
+    font-family: Helvetica Neue;
+    color:var(--primary-color);
+}
+
+
+/* Style the counter cards */
+.card-obiettivi {
+    background-color: #F1F6FF;
+    border:1px solid var(--primary-color);
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+}
+#obiettivi-content h5{
+    font-size:19px;
+    font-family: Helvetica Neue;
+    margin-bottom:16px;
+    color: var(--primary-text);
+}
+
+#obiettivi-content h3{
+    font-size:18px;
+    font-family:Helvetica Neue;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:var(--primary-color);
+    text-transform: uppercase;
+}
+
+#obiettivi-content p{
+    font-size: 15px;
+    font-family: Helvetica Neue;
+    color:var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+
+.logo_resp_visible{
+    display:none;
+}
+
+
+@media screen and (max-width: 1818px){
+
+    .scroll-bar{
+        overflow-x:scroll ;
+        height: 148px;
+        overflow-y: hidden;
+        margin-bottom: -162px;
+    }
+
+    .scroll-bar::-webkit-scrollbar{
+        display: none;
+    }
+    .row-obiettivi{
+        width: 1420px;
+        overflow-x: scroll;
+    }
+
+    .column-obiettivi{
+        width: 472px;
+    }
+
+}
+
+
+/* NAV BAR */
+@media screen and (max-width:1520px){
+
+    #navbar{
+        background-color: white;
+        width: 10%;
+        padding:0px 0 0 40px;
+    }
+    #content{
+        width:90%;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1081px) {
+    .sidenav{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    #navbar:not(sidenav) {
+        display: none;
+    }
+
+    #content {
+        background-color: white;
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        margin-top: 36px;
+    }
+
+    .logo_resp_visible{
+        display: block;
+        width: 171px;
+        margin: -61px auto -16px;
+    }
+
+
+    .logo_resp_visible #logo-resp{
+        width: 171px;
+    }
+}
+
+

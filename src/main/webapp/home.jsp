@@ -3,25 +3,17 @@
 <html lang="en" xmlns="">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet"
-          href="../contrast-bootstrap-pro/css/bootstrap.min.css"/>
-    <link
-            rel="stylesheet"
-            href="../contrast-bootstrap-pro/css/cdb.css"/>
-    <script
-            src="../contrast-bootstrap-pro/js/cdb.js"></script>
-    <script
-            src="../contrast-bootstrap-pro/js/bootstrap.min.js">
-    </script>
-    <script src="https://kit.fontawesome.com/9d1d9a82d2.js"
-            crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="../contrast-bootstrap-pro/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../contrast-bootstrap-pro/css/cdb.css"/>
+    <script src="../contrast-bootstrap-pro/js/cdb.js"></script>
+    <script src="../contrast-bootstrap-pro/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
 </head>
-<body class="">
+<body>
 
 <div class="row">
 
@@ -33,23 +25,22 @@
         <%@include file="navbar-resp.jsp"%>
     </div>
 
-
-
-
     <div id="content">
+
         <div class="logo_resp_visible">
             <a href=""><img id="logo-resp" src="img/logo.png"></a>
         </div>
 
         <div class="background-content">
 
+            <!--Home section banner-->
             <div id="home-card">
                 <h1>Home</h1>
                 <h3>Bentornato Benedetto</h3>
                 <img src="img/home-img.png">
             </div>
 
-
+            <!--Section obiettivi-->
             <div id="obiettivi-content">
 
                 <h5>Obiettivi in corso</h5>
@@ -85,6 +76,7 @@
                 </div>
             </div>
 
+            <!--Section chart-->
             <div id="chart-content">
 
                 <div class="row-chart">
@@ -100,9 +92,7 @@
                                 <canvas id="chart"></canvas>
                             </div>
 
-
                         </div>
-
 
                     </div>
 
@@ -127,24 +117,12 @@
 
             </div>
 
-
         </div>
     </div>
 </div>
 
-
-
-</body>
-
-
-
-
-
-<script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js">
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script src="js/home.js"></script>
-
 
 </body>
 </html>
