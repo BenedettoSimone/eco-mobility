@@ -11,8 +11,22 @@
 :root{
     --primary-color: #5a87e8;
     --theme-bg-color: #fff;
+    --secondary-bg-color:#fff;
     --primary-text: #494848;
     --secondary-text: #707070;
+    --background-content: #EEECF2;
+    --background-chart: #EEECF2;
+}
+
+
+.dark-mode{
+    --primary-color: #5a87e8;
+    --theme-bg-color: #121212;
+    --secondary-bg-color:#292929;
+    --primary-text: white;
+    --secondary-text: white;
+    --background-content: #121212;
+    --background-chart: #121212;
 }
 
 
@@ -39,7 +53,7 @@ html, body{
 }
 
 #navbar{
-    background-color: white;
+    background-color: var(--secondary-bg-color);
     width: 20%;
     padding:30px 0 0 40px;
 }
@@ -59,7 +73,7 @@ html, body{
 
 
 #content{
-    background-color: white;
+    background-color:var(--secondary-bg-color) ;
     width: 80%;
     padding:20px 20px 20px 0;
 }
@@ -67,7 +81,7 @@ html, body{
 .background-content{
     width: 100%;
     height: 100%;
-    background-color: #EEECF2;
+    background-color: var(--background-content);
     border-radius:30px;
     padding:35px 35px 0 35px;
 
@@ -140,7 +154,7 @@ html, body{
     font-size:19px;
     font-family: Helvetica Neue;
     margin-bottom:16px;
-    color: #494848;
+    color: var(--primary-text);
 }
 
 #obiettivi-content h3{
@@ -172,7 +186,7 @@ html, body{
 .column-chart1, .column-chart2{
     float: left;
     width: 50%;
-    background-color: #EEECF2;
+    background-color: var(--background-chart);
     height: 427px;
 }
 
@@ -187,7 +201,7 @@ html, body{
 .chart-card{
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: var(--secondary-bg-color);
     border-radius:20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding:2px 0 0 19px;
@@ -203,13 +217,13 @@ html, body{
     text-transform: uppercase;
     font-size: 18px;
     margin-top: 18px;
-    color:#494848;
+    color:var(--primary-text);
 }
 
 .chart-card h5{
     font-weight: normal;
     font-size:17px;
-    color: #494848;
+    color: var(--secondary-text);
 }
 
 .chart-container{

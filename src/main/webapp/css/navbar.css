@@ -3,8 +3,6 @@
   src: url("../font/HelveticaNeue.ttf");
 }
 
-
-
 /*hamburger icon*/
 .hamburger {
   font-size: 30px;
@@ -13,7 +11,7 @@
   position:fixed;
   margin-top:20px;
   margin-left:20px;
-  color: #494848;
+  color: var(--primary-text);
   align-items: center;
   display: none;
 }
@@ -26,7 +24,7 @@
   left: 0;
   height: 100%;
   width: 281px;
-  background: white;
+  background: var(--secondary-bg-color);
   padding: 33px 14px;
   z-index: 99;
   transition: all 0.5s ease;
@@ -69,7 +67,7 @@
 
 
 .sidebar ul li .top{
-  color: #494848;
+  color: var(--primary-text);
   display: flex;
   align-items: center;
   text-decoration: none;
