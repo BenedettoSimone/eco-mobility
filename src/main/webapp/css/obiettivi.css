@@ -1,0 +1,323 @@
+@font-face {
+    font-family: "CoolveticaCustom";
+    src: url("../font/coolvetica rg.ttf");
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../font/HelveticaNeue.ttf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Create two equal columns that floats next to each other */
+#content, #navbar, #list,#card{
+    float: left;
+    height: 100%;
+}
+
+#navbar{
+    background-color: white;
+    width: 20%;
+    padding:30px 0 0 40px;
+}
+
+/*navbar content*/
+
+#navbar #logo{
+    width: 208px;
+}
+
+#navbar {
+    display: block;
+    float: left;
+}
+
+/* Lista destra*/
+
+#list{
+    background-color: white;
+    width: 20%;
+    padding: 130px 30px 0 30px;
+    height: 98%;
+}
+
+#list #titleList{
+    font-size: 26px;
+    color:#5d5d5d;
+    font-weight: bold;
+    font-family: HelveticaNeue;
+    padding-left: 6px;
+
+}
+
+.listaSpese {
+    height: 86.9%;
+    box-sizing: border-box;
+    margin: 30px 0px 0px 0px;
+    overflow: scroll;
+}
+
+.listaSpese::-webkit-scrollbar{
+    display: none;
+}
+
+.textbox{
+    border-radius: 10px;
+    background: #eae7ef;
+    border: #eae7ef;
+    font-size: 18px;
+    width: 100%;
+}
+
+
+.cardList{
+    width: 100%;
+    background-color: #edf3fe;
+    border: 1px solid #4c71e1;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding:30px;
+    text-align: center;
+}
+
+.dataCard{
+    color: #4c71e1;
+    font-weight: bolder;
+    font-size: 22px;
+    font-family: Helvetica Neue;
+}
+
+.priceCard{
+    color: #4c71e1;
+    font-size: 20px;
+    font-family: Helvetica Neue;
+}
+
+#ContainerObiettivi{
+    display:grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+    margin-left:2%;
+    margin-right: 2%;
+
+}
+
+#cardECO{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+#content{
+    background-color: white;
+    width: 60%;
+    padding:20px 20px 20px 0;
+}
+
+#content #titleContent{
+    padding-top: 80px;
+    padding-bottom: 60px;
+
+
+    font-size: 45px;
+    color:#393838;
+    font-weight: bolder;
+    font-family: Helvetica Neue;
+
+}
+
+.background-content{
+    width: 100%;
+    height: 100%;
+    background-color: #EEECF2;
+    border-radius:30px;
+    padding:35px 35px 0 35px;
+
+}
+
+/*Card centrale*/
+
+.card{
+    display: flex;
+    font-family: Helvetica Neue;
+    float: left;
+    width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.cardDX{
+    width: 40%;
+    height: 100%;
+}
+.cardSX{
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cardALONE{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.textCard{
+    margin-top: 10%;
+    font-family: Helvetica Neue;
+    font-size: 20px;
+    color: 	#858585;
+}
+.textCardUp{
+    margin-top: 1%;
+    font-family: Helvetica Neue;
+    font-size: 20px;
+    color: 	#858585;
+}
+
+.formCard{
+    border-radius: 10px;
+    margin-top: 10px;
+    border-color: #858585;
+    border-bottom-width: 2px;
+    background: white;
+    font-size: 18px;
+    line-height: 32px;
+    width: 100%;
+}
+
+.buttonCard{
+    font-family: HelveticaNeue;
+    float: right;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: #486fe4;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    margin: 5% 0px 5% 0px;
+    padding-top: 10px;
+}
+
+.imgCard{
+    float: right;
+    width: 80%;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+
+@media screen and (max-width: 1600px){
+
+    #list {
+        background-color: white;
+        width: 100%;
+        padding: 0;
+        height: 224px;
+    }
+
+    #list #titleList{
+        padding-left: 0;
+    }
+
+    .textbox{
+        width: 300px;
+    }
+
+    .listaSpese{
+        height: 119px;
+
+        margin: 30px 0px 0px 0px;
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    .cardList {
+        width: 290px;
+        float:left;
+        margin-right:30px;
+    }
+
+
+    #content #titleContent {
+        padding-bottom: 11px;
+    }
+}
+
+
+.logo_resp_visible{
+    display:none;
+}
+
+
+
+
+/* NAV BAR */
+@media screen and (max-width:1520px){
+
+    #navbar{
+        background-color: white;
+        width: 10%;
+        padding:0px 0 0 40px;
+    }
+    #content{
+        width:90%;
+    }
+}
+
+
+@media screen and (min-width: 1081px) {
+    .sidenav{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    #navbar:not(sidenav) {
+        display: none;
+    }
+
+    #content {
+        background-color: white;
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        margin-top: 36px;
+    }
+
+    .logo_resp_visible{
+        display: block;
+        width: 171px;
+        margin: -61px auto -16px;
+    }
+
+
+    .logo_resp_visible #logo-resp{
+        width: 171px;
+    }
+}
+
