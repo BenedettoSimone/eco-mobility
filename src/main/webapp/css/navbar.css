@@ -126,84 +126,81 @@
 
 
 
-@media screen and (max-width: 1520px){
+/*--minimize navbar--*/
+@media screen and (max-width: 1520px) {
 
-  .sidebar ul{
+  .sidebar ul {
     padding-inline-start: 25px !important;
   }
 
-  .sidebar ul li .top:hover{
-    width:68px;
+  .sidebar ul li .top:hover {
+    width: 68px;
     height: 68px;
   }
 
-  .sidebar ul li{
+  .sidebar ul li {
     width: 76%;
   }
 
-  #user ul li{
+  #user ul li {
     width: 100%;
   }
 
-  #navbar #logo{
+  #navbar #logo {
     height: 126px;
     width: auto;
   }
 
-  .logo_content #logo{
-    margin-left:31px;
+  .logo_content #logo {
+    margin-left: 31px;
   }
 
-  .sidebar ul li #clicked{
-    width:68px;
+  .sidebar ul li #clicked {
+    width: 68px;
     height: 68px;
   }
 
-  .sidebar.active .links_name{
+  .sidebar.active .links_name {
     opacity: 0;
   }
 
-  .sidebar.active{
+  .sidebar.active {
     width: 107px;
     padding: 33px 0px;
   }
 
-
-  #user{
+  #user {
     width: 93px;
   }
 
-  .sidebar ul li .user-name,  .sidebar ul li .logout-bottom{
+  .sidebar ul li .user-name, .sidebar ul li .logout-bottom {
     height: 68px;
   }
 
-  .sidebar ul li i{
+  .sidebar ul li i {
     min-width: 68px;
   }
 
+}
+  /*--change type navbar--*/
+@media screen and (max-width:1080px) {
 
-/* rimuovere navbar e aggiungere HAMBURGER SIDE BAR
-                    DA FARE
-                        */
-@media screen and (max-width:1080px){
-
-  .sidebar.active{
+  .sidebar.active {
     display: none;
   }
 
-  .hamburger{
+  .hamburger {
     display: flex;
   }
 
-  .background_white{
+  .background_white {
     background-color: #ffffff;
-    height:63px;
-    width:100%;
-    position:fixed;
-    margin-top:0px;
+    height: 63px;
+    width: 100%;
+    position: fixed;
+    margin-top: 0px;
 
   }
-
 
   .sidenav {
     height: 100%;
@@ -216,7 +213,7 @@
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    text-align:center;
+    text-align: center;
   }
 
   .sidenav a {
@@ -227,11 +224,11 @@
     display: block;
     transition: 0.3s;
     font-family: HelveticaNeue;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 
   }
 
-  .sidenav a:hover{
+  .sidenav a:hover {
     color: #95a8c7;
   }
 
@@ -243,32 +240,32 @@
     margin-left: 50px;
   }
 
-  #links_resp{
+  #links_resp {
     margin-top: 70px;
   }
 
 
-  #user_resp{
+  #user_resp {
     width: fit-content;
     margin: 79px auto auto;
   }
 
-  #user_resp span{
+  #user_resp span {
     margin-right: 18px;
-    font-size:20px;
+    font-size: 20px;
   }
 
-  #user_resp .user-name, #user_resp .logout-bottom{
+  #user_resp .user-name, #user_resp .logout-bottom {
     display: flex;
     align-items: center;
     text-decoration: none;
     border-radius: 12px;
     white-space: nowrap;
     transition: all 0.4s ease;
-    height:68px;
+    height: 68px;
   }
 
-  #user_resp i{
+  #user_resp i {
     font-size: 18px;
     font-weight: 400;
     height: 50px;
@@ -278,30 +275,28 @@
     text-align: center;
   }
 
-  #user_resp .user-name{
+  #user_resp .user-name {
     background-color: #F8F7FA;
     color: #494848;
   }
 
-  #user_resp .logout-bottom{
+  #user_resp .logout-bottom {
     background-color: white;
     color: #5a87e8;
   }
 
-  #menu{
+  #menu {
     font-size: 24px;
     font-family: CoolveticaCustom;
-    color:#494848;
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    color: #494848;
   }
 
 }
 
-
-
-
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
+
+
+
