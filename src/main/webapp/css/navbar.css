@@ -16,8 +16,7 @@
   display: none;
 }
 
-
-/*respnsive*/
+/*---Navbar--*/
 .sidebar.active{
   position: fixed;
   top: 0;
@@ -30,28 +29,13 @@
   transition: all 0.5s ease;
 }
 
-
-
+/*--Logo Section--*/
 .logo_content #logo{
   width: 208px;
   margin-left: 57px;
 }
 
-.sidebar #btn{
-  position: absolute;
-  color: #fff;
-  top: 6px;
-  left: 50%;
-  font-size: 22px;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  line-height: 50px;
-  transform: translateX(-50%);
-}
-.sidebar.active #btn{
-  left: 90%;
-}
+/*--Link section--*/
 .sidebar ul{
   margin-top: 20px;
 
@@ -65,7 +49,7 @@
   margin-top: 28px;
 }
 
-
+/*link top nav*/
 .sidebar ul li .top{
   color: var(--primary-text);
   display: flex;
@@ -77,6 +61,12 @@
   height:68px;
 }
 
+.sidebar ul li .top:hover{
+  color: #5a87e8;
+  background: #F1F6FF;
+}
+
+/*---link bottom nav--*/
 .sidebar ul li .user-name, .sidebar ul li .logout-bottom{
   display: flex;
   align-items: center;
@@ -98,15 +88,12 @@
 }
 
 
-.sidebar ul li .top:hover{
-  color: #5a87e8;
-  background: #F1F6FF;
-}
 
 .sidebar ul li #clicked{
   color: #5a87e8;
   background: #F1F6FF;
 }
+
 .sidebar ul li i{
   font-size: 18px;
   font-weight: 400;
@@ -116,13 +103,15 @@
   line-height: 50px;
   text-align: center;
 }
+
 .sidebar .links_name{
   font-size: 18px;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  font-family: Helvetica Neue;
+  font-family: HelveticaNeue;
 }
+
 .sidebar.active .links_name{
   transition: 0s;
   opacity: 1;

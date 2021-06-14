@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeueCustom";
     src: url("../font/HelveticaNeue.ttf");
 }
 
@@ -98,7 +98,7 @@ html, body{
     text-transform: uppercase;
     color: #fff;
     font-size: 51px;
-    font-family: CoolveticaCustom, serif;
+    font-family: CoolveticaCustom;
     letter-spacing: 2px;
     margin-top: 6px;
     margin-bottom: 11px;
@@ -106,7 +106,7 @@ html, body{
 
 #home-card h3{
     color:#fff;
-    font-family: HelveticaNeue, serif;
+    font-family: HelveticaNeueCustom;
     font-size:27px;
     margin-top:10px;
 
@@ -147,14 +147,14 @@ html, body{
 }
 #obiettivi-content h5{
     font-size:19px;
-    font-family: HelveticaNeue, serif;
+    font-family: HelveticaNeueCustom;
     margin-bottom:16px;
     color: var(--primary-text);
 }
 
 #obiettivi-content h3{
     font-size:18px;
-    font-family: HelveticaNeue, serif;
+    font-family: HelveticaNeueCustom;
     margin-bottom:16px;
     margin-top:10px;
     color:var(--primary-color);
@@ -163,7 +163,7 @@ html, body{
 
 #obiettivi-content p{
     font-size: 15px;
-    font-family: HelveticaNeue, serif;
+    font-family: HelveticaNeueCustom;
     color:var(--primary-color);
 }
 
@@ -206,7 +206,7 @@ html, body{
 }
 
 .chart-card h1, .chart-card h5{
-    font-family: HelveticaNeue, serif;
+    font-family: HelveticaNeueCustom;
 }
 
 .chart-card h1{
