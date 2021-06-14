@@ -84,7 +84,7 @@
 
 .sidebar ul li .logout-bottom{
   background-color: #5a87e8;
-  color: white;
+  color: #fff;
 }
 
 
@@ -198,7 +198,7 @@
     height: 63px;
     width: 100%;
     position: fixed;
-    margin-top: 0px;
+    margin-top: 0;
 
   }
 
@@ -281,7 +281,7 @@
   }
 
   #user_resp .logout-bottom {
-    background-color: white;
+    background-color: #fff;
     color: #5a87e8;
   }
 
