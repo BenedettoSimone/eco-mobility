@@ -34,3 +34,5 @@ function selectLogin(){
     document.getElementById("selectRegi").style.backgroundColor="#fff"
     document.getElementById("selectRegi").style.borderRadius="0px";
 }
+
+/* Responsive options*/

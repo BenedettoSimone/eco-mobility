@@ -14,9 +14,9 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body >
     <div id="content">
-        <div id="contentLeft">
+
             <div class="logo_content">
                 <a href=""><img id="logo" src="img/logo.png"></a>
             </div>
@@ -24,8 +24,8 @@
                 <h1>Benvenuto in</h1><h1 id="particolareH1"> ecomobility</h1><h1>,<br>
                 l'app pensata per te e per l'ambiente</h1>
             </div>
-        </div>
-        <div id="contentRight">
+
+
             <!-- per messaggi di errore e cose del genere -->
             <div id="message"></div>
 
@@ -61,7 +61,7 @@
                 </form>
             </div>
 
-        </div>
+
     </div>
 
 <script type="text/javascript" src="js/login.js"></script>

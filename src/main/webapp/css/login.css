@@ -42,21 +42,9 @@ h1{
 #motto{
     font-size: 30px;
     margin-left: 70px;
+    width: 50%;
 }
 
-#contentLeft {
-    float: left;
-    height: 100%;
-    width: 60%;
-}
-
-
-#contentRight {
-    width: 40%;
-    height: 100%;
-    float: left;
-    background-color: red;
-}
 
 #formContent{
     position: absolute;
@@ -67,7 +55,7 @@ h1{
     text-align: center;
     top: 50%;
     margin-top: -300px;
-    right: 100px;
+    right: 300px;
 }
 
 #formSwitch{
@@ -127,7 +115,7 @@ h1{
 
 #fRegi {
     display: none;
-    padding-top: 70px;
+    padding-top: 22px;
     width: 306px;
     margin: auto;
 }
@@ -158,5 +146,37 @@ h1{
         height: 100%;
         background-image: url("../img/taxi_login.jpg");
         background-size: cover;
+    }
+    #formContent{
+        position:relative;
+        top:0%;
+        margin:0 auto;
+        right: 0px;
+    }
+
+    #motto{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+
+@media only screen and (max-width: 980px){
+    #formContent{
+        width:90%;
+    }
+
+    #motto{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #fLogin{
+        width:80%;
+    }
+
+    #fRegi{
+        width: 80%;
     }
 }
