@@ -20,7 +20,7 @@ body{
 }
 #content {
     width: 100%;
-    height: 100%;
+    height: inherit;
     padding: 0;
     background-image: url("../img/taxi_login.jpg");
     background-size: 100% 100%;
@@ -42,7 +42,6 @@ h1{
 #motto{
     font-size: 30px;
     margin-left: 70px;
-    width: 50%;
 }
 
 
@@ -82,7 +81,6 @@ h1{
 
 
 #fLogin{
-    height: 514px;
     padding-top: 70px;
     width: 306px;
     margin: auto;
@@ -139,11 +137,17 @@ h1{
     margin-bottom: 20px;
 }
 
+@media only screen and (max-width: 1862px){
+
+    #motto{
+        width: 50%;
+    }
+}
 
 @media only screen and (max-width: 1600px){
     #content{
         width: 100%;
-        height: 100%;
+        height: auto;
         background-image: url("../img/taxi_login.jpg");
         background-size: cover;
     }
@@ -155,13 +159,16 @@ h1{
     }
 
     #motto{
-        width: 100%;
         margin-bottom: 40px;
+        width: auto;
     }
 }
 
 
 @media only screen and (max-width: 980px){
+    #content{
+        height: inherit;
+    }
     #formContent{
         width:90%;
     }
@@ -171,12 +178,3 @@ h1{
     }
 }
 
-@media only screen and (max-width: 600px){
-    #fLogin{
-        width:80%;
-    }
-
-    #fRegi{
-        width: 80%;
-    }
-}

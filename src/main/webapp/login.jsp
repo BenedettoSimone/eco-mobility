@@ -14,7 +14,7 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body >
+<body onload="responsiveLg()" onresize="responsiveLg()">
     <div id="content">
 
             <div class="logo_content">
