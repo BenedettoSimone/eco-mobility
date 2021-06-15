@@ -238,7 +238,7 @@ html, body{
 
     .scroll-bar{
         overflow-x:scroll ;
-        height: 148px;
+        height: 150px;
         overflow-y: hidden;
         margin-bottom: -162px;
     }
@@ -246,6 +246,7 @@ html, body{
     .scroll-bar::-webkit-scrollbar{
         display: none;
     }
+
     .row-obiettivi{
         width: 1420px;
         overflow-x: scroll;
