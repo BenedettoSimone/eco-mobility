@@ -3,11 +3,6 @@
     src: url("../font/coolvetica rg.ttf");
 }
 
-@font-face {
-    font-family: "HelveticaNeueCustom";
-    src: url("../font/HelveticaNeue.ttf");
-}
-
 :root{
     --primary-color: #5a87e8;
     --theme-bg-color: #fff;
@@ -93,6 +88,7 @@ html, body{
     height: 160px;
     padding:20px;
     border-radius:25px;
+    position:relative;
 }
 
 #home-card h1{
@@ -117,7 +113,7 @@ html, body{
     width: 375px;
     position: absolute;
     right: 252px;
-    top: 36px;
+    top: -19px;
 }
 
 
@@ -223,6 +219,7 @@ html, body{
     font-size:17px;
     color: var(--secondary-text);
 }
+
 
 .chart-container{
     width: 95%!important;
@@ -350,7 +347,7 @@ html, body{
     }
 
     #home-card img{
-        top:103px;
+        top:-19px;
     }
 
     .logo_resp_visible{
