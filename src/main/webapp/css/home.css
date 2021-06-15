@@ -71,6 +71,7 @@ html, body{
     background-color: var(--background-content);
     border-radius:30px;
     padding:35px 35px 0 35px;
+    overflow-x: scroll;
 
 }
 
