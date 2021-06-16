@@ -42,17 +42,17 @@
                                     <p>Medaglie ottenute</p>
                                     <div class="resume-icon">
                                         <div class="bronzo">
-                                            <img src="img/carbOro.png">
+                                            <img src="img/resumeBronzo.png">
                                             <span>3</span>
                                         </div>
 
                                         <div class="argento">
-                                            <img src="img/carbOro.png">
+                                            <img src="img/resumeSilver.png">
                                             <span>3</span>
                                         </div>
 
                                         <div class="oro">
-                                            <img src="img/carbOro.png">
+                                            <img src="img/resumeGold.png">
                                             <span>3</span>
                                         </div>
                                     </div>
@@ -62,17 +62,51 @@
 
                         <div class="column-premi">
                             <div class="card-premi">
-                                <h3>Riduzione spesa</h3>
-                                <p>Status: in corso</p>
-                                <p>Km percorsi: 30 &nbsp &nbsp &nbsp Km massimi: 400</p>
+                                <div class="resume-left">
+                                    <h3>chilometri ridotti</h3>
+                                    <p>Medaglie ottenute</p>
+                                    <div class="resume-icon">
+                                        <div class="bronzo">
+                                            <img src="img/resumeBronzo.png">
+                                            <span>3</span>
+                                        </div>
+
+                                        <div class="argento">
+                                            <img src="img/resumeSilver.png">
+                                            <span>3</span>
+                                        </div>
+
+                                        <div class="oro">
+                                            <img src="img/resumeGold.png">
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <div class="column-premi">
                             <div class="card-premi">
-                                <h3>Riduzione spesa</h3>
-                                <p>Status: in corso</p>
-                                <p>Km percorsi: 30 &nbsp &nbsp &nbsp Km massimi: 400</p>
+                                <div class="resume-left">
+                                    <h3>chilometri ridotti</h3>
+                                    <p>Medaglie ottenute</p>
+                                    <div class="resume-icon">
+                                        <div class="bronzo">
+                                            <img src="img/resumeBronzo.png">
+                                            <span>3</span>
+                                        </div>
+
+                                        <div class="argento">
+                                            <img src="img/resumeSilver.png">
+                                            <span>3</span>
+                                        </div>
+
+                                        <div class="oro">
+                                            <img src="img/resumeGold.png">
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

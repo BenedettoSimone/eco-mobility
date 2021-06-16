@@ -91,8 +91,8 @@ html, body{
 
 /* Style the counter cards */
 .card-premi {
-    background-color: #F1F6FF;
-    border:1px solid #5a87e8;
+    background-color: #fff;
+    border:1px solid #000;
     border-radius:30px;
     padding: 16px;
     text-align: left;
@@ -110,14 +110,14 @@ html, body{
     font-family:HelveticaNeueCustom;
     margin-bottom:16px;
     margin-top:10px;
-    color:#5a87e8;
+    color:#494848;
     text-transform: uppercase;
 }
 
 #premi-content p{
     font-size: 15px;
     font-family: HelveticaNeueCustom;
-    color: #5a87e8;
+    color: #707070;
 }
 
 .resume-left{
@@ -149,6 +149,9 @@ html, body{
 
 .resume-icon span{
     z-index: 7;
+    font-family: HelveticaNeueCustom;
+    color: #fff;
+    font-size: 20px;
 }
 
 
@@ -165,13 +168,13 @@ html, body{
 .column-medal {
     float: left;
     width: 33.3%;
-    padding: 0 130px;
+    padding: 0 90px;
     margin-bottom:60px;
 }
 
-/* Remove extra left and right margins, due to padding */
+/* Remove extra left and right margins, due to padding
 .row-medal {margin: 0 -120px 0 -120px;}
-
+*/
 
 /* Style the counter cards */
 .card-medal {
