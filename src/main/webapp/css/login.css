@@ -177,3 +177,22 @@ h1{
     }
 }
 
+@media only screen and (max-width: 462px){
+
+  #motto{
+      width: 90%;
+      font-size:19px;
+      text-align:center;
+      margin: auto auto 40px;
+  }
+}
+
+@media only screen and (max-width: 358px){
+
+    #motto{
+        width: 90%;
+        font-size:15px;
+
+    }
+}
+
