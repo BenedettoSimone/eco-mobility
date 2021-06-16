@@ -102,35 +102,37 @@
                     </div>
                 </div>
 
+                <h5>Dispendio carburante diminuito</h5>
+
                 <div class="scroll-bar1">
                     <div class="row-medal">
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmBronzo.png">
+                                    <img src="img/speseBronzo.png">
                                 </div>
                                 <h3>Bronzo</h3>
-                                <p>Riduzione del 10% dei chilometri percorsi rispetto al mese scorso</p>
+                                <p>Riduzione del 10% della spesa carburante rispetto al mese scorso</p>
                             </div>
                         </div>
 
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmArgento.png">
+                                    <img src="img/speseArgento.png">
                                 </div>
                                 <h3>Argento</h3>
-                                <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
+                                <p>Riduzione del 25% della spesa carburante rispetto al mese scorso</p>
                             </div>
                         </div>
 
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmOro.png">
+                                    <img src="img/speseOro.png">
                                 </div>
                                 <h3>Oro</h3>
-                                <p>Riduzione del 50% dei chilometri percorsi rispetto al mese scorso</p>
+                                <p>Riduzione del 50% della spesa carburante rispetto al mese scorso</p>
                             </div>
                         </div>
 
@@ -138,35 +140,36 @@
                     </div>
                 </div>
 
+                <h5>Utilizzo mezzi ecosostenibili</h5>
                 <div class="scroll-bar1">
                     <div class="row-medal">
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmBronzo.png">
+                                    <img src="img/carbBronzo.png">
                                 </div>
                                 <h3>Bronzo</h3>
-                                <p>Riduzione del 10% dei chilometri percorsi rispetto al mese scorso</p>
+                                <p>Aumento del 10% l’utilizzo dei mezzi ecosostenibili rispetto al mese scorso</p>
                             </div>
                         </div>
 
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmArgento.png">
+                                    <img src="img/carbArgento.png">
                                 </div>
                                 <h3>Argento</h3>
-                                <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
+                                <p>Aumento del 25% l’utilizzo dei mezzi ecosostenibili rispetto al mese scorso</p>
                             </div>
                         </div>
 
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmOro.png">
+                                    <img src="img/carbOro.png">
                                 </div>
                                 <h3>Oro</h3>
-                                <p>Riduzione del 50% dei chilometri percorsi rispetto al mese scorso</p>
+                                <p>Aumento del 50% l’utilizzo dei mezzi ecosostenibili rispetto al mese scorso</p>
                             </div>
                         </div>
 
