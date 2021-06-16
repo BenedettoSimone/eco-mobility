@@ -35,7 +35,11 @@ function selectLogin(){
     document.getElementById("selectRegi").style.borderRadius="0px";
 }
 
-/* Responsive options*/
+
+
+
+/*
+/* Responsive options
 function responsiveLg(){
     var w = window.outerWidth;
     var h = window.outerHeight;
@@ -48,3 +52,5 @@ function responsiveLg(){
         document.getElementById("fRegi").style.width="306px";
     }
 }
+
+*/
