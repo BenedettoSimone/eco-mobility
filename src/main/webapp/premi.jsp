@@ -39,17 +39,20 @@
                             <div class="card-premi">
                                 <div class="resume-left">
                                     <h3>chilometri ridotti</h3>
-                                    <p>medaglie ottenute</p>
+                                    <p>Medaglie ottenute</p>
                                     <div class="resume-icon">
                                         <div class="bronzo">
+                                            <img src="img/carbOro.png">
                                             <span>3</span>
                                         </div>
 
-                                        <div class="bronzo">
+                                        <div class="argento">
+                                            <img src="img/carbOro.png">
                                             <span>3</span>
                                         </div>
 
-                                        <div class="bronzo">
+                                        <div class="oro">
+                                            <img src="img/carbOro.png">
                                             <span>3</span>
                                         </div>
                                     </div>

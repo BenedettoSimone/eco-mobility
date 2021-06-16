@@ -120,6 +120,37 @@ html, body{
     color: #5a87e8;
 }
 
+.resume-left{
+    width: 245px;
+    text-align: center;
+}
+
+.resume-icon{
+    display: inline-block;
+    position: relative;
+}
+
+.resume-icon .bronzo, .resume-icon .argento, .resume-icon .oro{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 6px;
+    margin-right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-icon img{
+    width:40px;
+    position: absolute;
+    z-index: 6;
+}
+
+.resume-icon span{
+    z-index: 7;
+}
+
 
 /*------------------*/
 
