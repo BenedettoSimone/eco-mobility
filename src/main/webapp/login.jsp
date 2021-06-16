@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/login.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body onload="responsiveLg()" onresize="responsiveLg()">
     <div id="content">

@@ -138,14 +138,14 @@ h1{
     margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 1862px){
+@media screen and (max-width: 1862px){
 
     #motto{
         width: 50%;
     }
 }
 
-@media only screen and (max-width: 1600px){
+@media screen and (max-width: 1600px){
     #formContent{
         position:relative;
         top:0%;
@@ -162,14 +162,14 @@ h1{
 }
 
 
-@media only screen and (max-width: 980px){
+@media screen and (max-width: 980px){
     #motto{
         width: 80%;
         font-size:20px;
     }
 }
 
-@media only screen and (max-width: 650px){
+@media screen and (max-width: 650px){
 
     #formContent{
         width:85%;
@@ -177,7 +177,7 @@ h1{
     }
 }
 
-@media only screen and (max-width: 462px){
+@media screen and (max-width: 462px){
 
   #motto{
       width: 90%;
@@ -187,12 +187,9 @@ h1{
   }
 }
 
-@media only screen and (max-width: 358px){
+@media screen and (max-width: 358px){
 
-    #motto{
-        width: 90%;
-        font-size:15px;
-
+    #motto {
+        font-size: 15px;
     }
 }
-
