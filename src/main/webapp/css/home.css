@@ -246,7 +246,6 @@ html, body{
     .scroll-bar::-webkit-scrollbar{
         display: none;
     }
-
     .row-obiettivi{
         width: 1420px;
         overflow-x: scroll;
