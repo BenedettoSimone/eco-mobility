@@ -58,6 +58,7 @@ html, body{
     background-color: #EEECF2;
     border-radius:30px;
     padding:35px 35px 0 35px;
+    overflow-x: scroll;
 
 }
 
@@ -124,40 +125,49 @@ html, body{
 
 /*---Goal Section--*/
 
-#obiettivi-content {
+#medal-content {
     width: 100%;
     margin-top:213px;
 }
 
 /* Float four columns side by side */
-.column-obiettivi {
+.column-medal {
     float: left;
     width: 33.3%;
     padding: 0 130px;
+    margin-bottom:60px;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row-obiettivi {margin: 0 -120px 0 -120px;}
+.row-medal {margin: 0 -120px 0 -120px;}
 
 
 /* Style the counter cards */
-.card-obiettivi {
-    background-color: #F1F6FF;
+.card-medal {
+    background-color: #fff;
     border:1px solid var(--primary-color);
     border-radius:30px;
     padding: 16px;
-    text-align: left;
+    text-align: center;
     height: 342px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
-#obiettivi-content h5{
+
+.card-medal .medal img{
+    width:150px;
+    height: 150px;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+#medal-content h5{
     font-size:19px;
     font-family: HelveticaNeueCustom;
     margin-bottom:16px;
     color: var(--primary-text);
 }
 
-#obiettivi-content h3{
-    font-size:18px;
+#medal-content h3{
+    font-size:19px;
     font-family: HelveticaNeueCustom;
     margin-bottom:16px;
     margin-top:10px;
@@ -165,7 +175,7 @@ html, body{
     text-transform: uppercase;
 }
 
-#obiettivi-content p{
+#medal-content p{
     font-size: 15px;
     font-family: HelveticaNeueCustom;
     color:var(--primary-color);
@@ -178,30 +188,6 @@ html, body{
     display:none;
 }
 
-
-/*--Query obiettivi list--*/
-@media screen and (max-width: 1818px){
-
-    .scroll-bar{
-        overflow-x:scroll ;
-        height: 148px;
-        overflow-y: hidden;
-        margin-bottom: -162px;
-    }
-
-    .scroll-bar::-webkit-scrollbar{
-        display: none;
-    }
-    .row-obiettivi{
-        width: 1420px;
-        overflow-x: scroll;
-    }
-
-    .column-obiettivi{
-        width: 472px;
-    }
-
-}
 
 @media screen and (max-width: 1818px){
 

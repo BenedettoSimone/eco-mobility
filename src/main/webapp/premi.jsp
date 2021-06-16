@@ -62,33 +62,111 @@
                 </div>
             </div>
 
-            <div id="obiettivi-content">
+            <div id="medal-content">
 
-                <h5>Obiettivi riduzione km</h5>
+                <h5>Chilometri ridotti</h5>
 
-                <div class="scroll-bar">
-                    <div class="row-obiettivi">
-                        <div class="column-obiettivi">
-                            <div class="card-obiettivi">
-                                <h3>Riduzione spesa</h3>
-                                <p>Status: in corso</p>
-                                <p>Km percorsi: 30 &nbsp &nbsp &nbsp Km massimi: 400</p>
+                <div class="scroll-bar1">
+                    <div class="row-medal">
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmBronzo.png">
+                                </div>
+                                <h3>Bronzo</h3>
+                                <p>Riduzione del 10% dei chilometri percorsi rispetto al mese scorso</p>
                             </div>
                         </div>
 
-                        <div class="column-obiettivi">
-                            <div class="card-obiettivi">
-                                <h3>Card 2</h3>
-                                <p>Some text</p>
-                                <p>Some text</p>
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmArgento.png">
+                                </div>
+                                <h3>Argento</h3>
+                                <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
                             </div>
                         </div>
 
-                        <div class="column-obiettivi">
-                            <div class="card-obiettivi">
-                                <h3>Card 3</h3>
-                                <p>Some text</p>
-                                <p>Some text</p>
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmOro.png">
+                                </div>
+                                <h3>Oro</h3>
+                                <p>Riduzione del 50% dei chilometri percorsi rispetto al mese scorso</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="scroll-bar1">
+                    <div class="row-medal">
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmBronzo.png">
+                                </div>
+                                <h3>Bronzo</h3>
+                                <p>Riduzione del 10% dei chilometri percorsi rispetto al mese scorso</p>
+                            </div>
+                        </div>
+
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmArgento.png">
+                                </div>
+                                <h3>Argento</h3>
+                                <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
+                            </div>
+                        </div>
+
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmOro.png">
+                                </div>
+                                <h3>Oro</h3>
+                                <p>Riduzione del 50% dei chilometri percorsi rispetto al mese scorso</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="scroll-bar1">
+                    <div class="row-medal">
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmBronzo.png">
+                                </div>
+                                <h3>Bronzo</h3>
+                                <p>Riduzione del 10% dei chilometri percorsi rispetto al mese scorso</p>
+                            </div>
+                        </div>
+
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmArgento.png">
+                                </div>
+                                <h3>Argento</h3>
+                                <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
+                            </div>
+                        </div>
+
+                        <div class="column-medal">
+                            <div class="card-medal">
+                                <div class="medal">
+                                    <img src="img/kmOro.png">
+                                </div>
+                                <h3>Oro</h3>
+                                <p>Riduzione del 50% dei chilometri percorsi rispetto al mese scorso</p>
                             </div>
                         </div>
 
