@@ -37,9 +37,23 @@
                     <div class="row-premi">
                         <div class="column-premi">
                             <div class="card-premi">
-                                <h3>Riduzione spesa</h3>
-                                <p>Status: in corso</p>
-                                <p>Km percorsi: 30 &nbsp &nbsp &nbsp Km massimi: 400</p>
+                                <div class="resume-left">
+                                    <h3>chilometri ridotti</h3>
+                                    <p>medaglie ottenute</p>
+                                    <div class="resume-icon">
+                                        <div class="bronzo">
+                                            <span>3</span>
+                                        </div>
+
+                                        <div class="bronzo">
+                                            <span>3</span>
+                                        </div>
+
+                                        <div class="bronzo">
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
