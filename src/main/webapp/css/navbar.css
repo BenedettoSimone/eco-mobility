@@ -247,7 +247,7 @@
   }
 
   .sidenav a:hover {
-    color: #95a8c7;
+    color: #17233B;
   }
 
   .sidenav .closebtn {
@@ -299,8 +299,8 @@
   }
 
   #user_resp .logout-bottom {
-    background-color: #fff;
-    color: #5a87e8;
+    background-color: #17233B;
+    color: #fff;
   }
 
   #menu {
