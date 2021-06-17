@@ -265,14 +265,6 @@ html, body{
     }
 }
 
-
-.logo_resp_visible{
-    display:none;
-}
-
-
-
-
 /* NAV BAR */
 @media screen and (max-width:1520px){
 
@@ -309,15 +301,5 @@ html, body{
         margin-top: 36px;
     }
 
-    .logo_resp_visible{
-        display: block;
-        width: 171px;
-        margin: -61px auto -16px;
-    }
-
-
-    .logo_resp_visible #logo-resp{
-        width: 171px;
-    }
 }
 

@@ -26,9 +26,6 @@
 
 
     <div id="content">
-        <div class="logo_resp_visible">
-            <a href=""><img id="logo-resp" src="img/logo.png"></a>
-        </div>
         <div class="background-content">
             <div id="titleContent">
                 SPESE CARBURANTE

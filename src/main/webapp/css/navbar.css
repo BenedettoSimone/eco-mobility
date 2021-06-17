@@ -16,6 +16,11 @@
   display: none;
 }
 
+/*--Logo Mobile--*/
+.logo_resp_visible{
+  display:none;
+}
+
 /*---Navbar--*/
 .sidebar.active{
   position: fixed;
@@ -200,6 +205,19 @@
     position: fixed;
     margin-top: 0;
 
+  }
+
+  .logo_resp_visible{
+    width: 140px;
+    display: block;
+    position:fixed;
+    left:50%;
+    margin-left:-70px;
+    margin-top:-6px;
+  }
+
+  .logo_resp_visible #logo-resp{
+    width: 140px;
   }
 
   .sidenav {

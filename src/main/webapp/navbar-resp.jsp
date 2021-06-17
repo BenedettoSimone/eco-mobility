@@ -22,6 +22,10 @@
     <span id="menu">Menù</span>
 </span>
 
+    <div class="logo_resp_visible">
+        <a href=""><img id="logo-resp" src="img/logo.png"></a>
+    </div>
+
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

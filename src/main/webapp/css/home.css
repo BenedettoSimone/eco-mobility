@@ -70,13 +70,6 @@ html, body{
 
 }
 
-/*--Logo Mobile--*/
-.logo_resp_visible{
-    display:none;
-}
-
-
-
 /*----Content Section--*/
 
 /*--First Section--*/
@@ -350,17 +343,6 @@ html, body{
         top:-19px;
     }
 
-    .logo_resp_visible{
-        width: 171px;
-        display: block;
-        position:fixed;
-        margin-left: 36%;
-        margin-top:-82px;
-    }
-
-    .logo_resp_visible #logo-resp{
-        width: 171px;
-    }
 }
 
 
