@@ -74,7 +74,7 @@ html, body{
 
 /*--First Section--*/
 #home-card{
-    background-image: url("../img/home-bg.png");
+    background-image: url("../img/homeBg.jpg");
     background-repeat: no-repeat;
     background-size:cover;
     width: 100%;
