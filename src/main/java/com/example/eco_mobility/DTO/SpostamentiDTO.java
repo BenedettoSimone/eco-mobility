@@ -8,14 +8,16 @@ public class SpostamentiDTO {
     Date data;
     int kmPercorsi;
     boolean tipoMezzo;
+    int idUtenti;
 
     public SpostamentiDTO(){}
 
-    public SpostamentiDTO(int idSpostamenti, Date data, int kmPercorsi, boolean tipoMezzo){
+    public SpostamentiDTO(int idSpostamenti, Date data, int kmPercorsi, boolean tipoMezzo, int idUtenti){
         this.data=data;
         this.idSpostamenti=idSpostamenti;
         this.kmPercorsi=kmPercorsi;
         this.tipoMezzo=tipoMezzo;
+        this.idUtenti=idUtenti;
     }
 
     public int getIdSpostamenti() {
@@ -48,5 +50,13 @@ public class SpostamentiDTO {
 
     public void setTipoMezzo(boolean tipoMezzo) {
         this.tipoMezzo = tipoMezzo;
+    }
+
+    public int getIdUtenti() {
+        return idUtenti;
+    }
+
+    public void setIdUtenti(int idUtenti) {
+        this.idUtenti = idUtenti;
     }
 }

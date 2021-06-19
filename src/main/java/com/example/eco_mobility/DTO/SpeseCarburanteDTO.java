@@ -7,14 +7,16 @@ public class SpeseCarburanteDTO {
     int idSpeseCarburante;
     Date data;
     int euroSpesi;
+    int idUtenti;
 
     public SpeseCarburanteDTO(){
     }
 
-    public SpeseCarburanteDTO(int idSpeseCarburante, Date data, int euroSpesi){
+    public SpeseCarburanteDTO(int idSpeseCarburante, Date data, int euroSpesi, int idUtenti){
         this.idSpeseCarburante=idSpeseCarburante;
         this.data=data;
         this.euroSpesi=euroSpesi;
+        this.idUtenti=idUtenti;
     }
 
     public int getIdSpeseCarburante() {
@@ -39,5 +41,13 @@ public class SpeseCarburanteDTO {
 
     public void setEuroSpesi(int euroSpesi) {
         this.euroSpesi = euroSpesi;
+    }
+
+    public int getIdUtenti() {
+        return idUtenti;
+    }
+
+    public void setIdUtenti(int idUtenti) {
+        this.idUtenti = idUtenti;
     }
 }

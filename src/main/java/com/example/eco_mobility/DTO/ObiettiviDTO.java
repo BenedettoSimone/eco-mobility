@@ -9,15 +9,17 @@ public class ObiettiviDTO {
     int obiettivo;
     boolean status;
     Date scadenza;
+    int idUtenti;
 
     public ObiettiviDTO(){}
 
-    public ObiettiviDTO(int idObiettivi, String tipoObiettivo, int obiettivo, boolean status, Date scadenza){
+    public ObiettiviDTO(int idObiettivi, String tipoObiettivo, int obiettivo, boolean status, Date scadenza, int idUtenti){
         this.idObiettivi=idObiettivi;
         this.tipoObiettivo=tipoObiettivo;
         this.obiettivo=obiettivo;
         this.status=status;
         this.scadenza=scadenza;
+        this.idUtenti=idUtenti;
     }
 
     public int getIdObiettivi() {
