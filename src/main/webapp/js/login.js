@@ -35,22 +35,3 @@ function selectLogin(){
     document.getElementById("selectRegi").style.borderRadius="0px";
 }
 
-
-
-
-/*
-/* Responsive options
-function responsiveLg(){
-    var w = window.outerWidth;
-    var h = window.outerHeight;
-
-    if (w<580){
-        document.getElementById("fLogin").style.width="80%";
-        document.getElementById("fRegi").style.width="80%";
-    }else{
-        document.getElementById("fLogin").style.width="306px";
-        document.getElementById("fRegi").style.width="306px";
-    }
-}
-
-*/

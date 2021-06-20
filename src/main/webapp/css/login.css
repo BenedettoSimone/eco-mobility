@@ -32,12 +32,12 @@ h1{
     font-family: Helvetica Neue;
     display: inline;
     color:#494848;
+    font-size:50px;
 }
 #particolareH1{
     color: #5a87e8;
 }
 #motto{
-    font-size: 30px;
     margin-left: 70px;
 }
 
@@ -155,42 +155,41 @@ h1{
         height: 582px;
     }
 
-    #motto{
+    #motto h1{
         margin-bottom: 40px;
-        width: auto;
-        font-size:25px;
+        font-size:40px;
+    }
+
+    #motto{
+        margin-bottom:60px;
+        width: 80%;
     }
 }
 
 
 @media screen and (max-width: 980px){
+    #motto h1{
+        font-size:30px;
+    }
+
     #motto{
-        width: 80%;
-        font-size:20px;
+        text-align: center;
+        margin: auto auto 60px;
     }
 }
 
 @media screen and (max-width: 650px){
 
     #formContent{
-        width:85%;
+        width:90%;
 
     }
 }
 
 @media screen and (max-width: 462px){
 
-  #motto{
-      width: 90%;
-      font-size:19px;
-      text-align:center;
-      margin: auto auto 40px;
-  }
-}
-
-@media screen and (max-width: 358px){
-
-    #motto {
-        font-size: 15px;
+    #motto{
+        width: 90%;
     }
 }
+
