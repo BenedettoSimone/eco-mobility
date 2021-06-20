@@ -129,7 +129,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmArgento.png">
+                                    <img src="img/no-carbMedal.png">
                                 </div>
                                 <h3>Argento</h3>
                                 <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
