@@ -61,6 +61,14 @@ public class ObiettiviDTO {
     public void setScadenza(Date scadenza) {
         this.scadenza = scadenza;
     }
+
+    public int getIdUtenti() {
+        return idUtenti;
+    }
+
+    public void setIdUtenti(int idUtenti) {
+        this.idUtenti = idUtenti;
+    }
 }
 
 
