@@ -143,7 +143,7 @@
 
 
         <div id="titleList">
-            Lista Spese
+            Lista Obiettivi
         </div>
         <br>
 
@@ -153,7 +153,7 @@
 
             <div class="cardList">
                 <div class="dataCard">20/02/2021</div>
-                <div class="priceCard">Euro spesi: 50</div>
+                <div class="priceCard">Obiettivo riduzione chilometri: 10/400</div>
             </div>
             <div class="cardList">
                 <div class="dataCard">10/01/2021</div>
@@ -184,11 +184,29 @@
 </div>
 
 <script>
-    function myFunction() {
-        var div = document.getElementById("list-responsive");
-        var list = document.getElementById("list");
-        div.appendChild(list);
+    window.onresize = function myFunction() {
+        if (window.innerWidth < 1520) {
+            var div = document.getElementById("list-responsive");
+            var list = document.getElementById("list");
+            div.appendChild(list);
+
+        }
+        else if(window.innerWidth>1520){
+            var divrow=document.getElementById("row");
+            div2.appendChild(list);
+        }
     }
+    window.onload = function myFunction() {
+        if (window.innerWidth < 1520) {
+            var div = document.getElementById("list-responsive");
+            var list = document.getElementById("list");
+            div.appendChild(list);
+
+        }
+    }
+
+
+
 </script>
 </body>
 </html>
