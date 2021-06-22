@@ -83,6 +83,7 @@ html, body{
     float: left;
     width: 33.3%;
     padding: 0 28px;
+    margin-bottom:53px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -172,9 +173,8 @@ html, body{
     margin-bottom:60px;
 }
 
-/* Remove extra left and right margins, due to padding
-.row-medal {margin: 0 -120px 0 -120px;}
-*/
+/* Remove extra left and right margins, due to padding */
+.row-medal {margin: 0 -20px 0 -20px;}
 
 /* Style the counter cards */
 .card-medal {
@@ -220,15 +220,21 @@ html, body{
 
     .scroll-bar{
         overflow-x:scroll ;
-        height: 148px;
+        height: 154px;
         overflow-y: hidden;
         margin-bottom: -162px;
     }
 
-    .scroll-bar::-webkit-scrollbar{
+    .scroll-bar1{
+        overflow-x:scroll ;
+        height: 377px;
+        overflow-y: hidden;
+    }
+
+    .scroll-bar::-webkit-scrollbar,  .scroll-bar1::-webkit-scrollbar{
         display: none;
     }
-    .row-premi{
+    .row-premi, .row-medal{
         width: 1420px;
         overflow-x: scroll;
     }
@@ -253,6 +259,14 @@ html, body{
     }
 }
 
+
+
+@media screen and (max-width:1345px){
+    .column-medal{
+        width: 29.3%;
+        padding: 0 57px;
+    }
+}
 
 
 
