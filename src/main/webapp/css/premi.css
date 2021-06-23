@@ -62,6 +62,11 @@ html, body{
 
 }
 
+.background-content::-webkit-scrollbar{
+    display: none;
+}
+
+
 .background-content h1{
     padding-top: 28px;
     padding-bottom: 15px;
@@ -83,7 +88,6 @@ html, body{
     float: left;
     width: 33.3%;
     padding: 0 28px;
-    margin-bottom:53px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -97,6 +101,8 @@ html, body{
     border-radius:30px;
     padding: 16px;
     text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 #premi-content h5{
@@ -122,7 +128,7 @@ html, body{
 }
 
 .resume-left{
-    width: 245px;
+    width: 257px;
     text-align: center;
 }
 
@@ -153,6 +159,19 @@ html, body{
     font-family: HelveticaNeueCustom;
     color: #fff;
     font-size: 20px;
+}
+
+
+.category-resume0, .category-resume2{
+    position: relative;
+    width: 100px;
+    left: 33px;
+}
+
+.category-resume1{
+    position: relative;
+    width: 103px;
+    left:27px;
 }
 
 
@@ -232,32 +251,10 @@ html, body{
     }
 
 
-/* scrollbar
-    .scroll-bar::-webkit-scrollbar-track
-    {
-        -webkit-box-shadow: none;
-        background-color: #F5F5F5;
+    .scroll-bar::-webkit-scrollbar{
+       display: none;
     }
 
-    .scroll-bar::-webkit-scrollbar
-    {
-        width: 3px;
-        background-color: #F5F5F5;
-    }
-
-    .scroll-bar::-webkit-scrollbar-thumb
-    {
-        background-color: #5a87e8;
-        background-image: -webkit-linear-gradient(45deg,
-        rgba(255, 255, 255, .2) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, .2) 50%,
-        rgba(255, 255, 255, .2) 75%,
-        transparent 75%,
-        transparent)
-    }
-*/
 
     .row-premi, .row-medal{
         width: 1420px;
@@ -363,6 +360,11 @@ html, body{
         width: 311px;
         padding:0 10px;
     }
+
+    .category-resume0, .category-resume2, .category-resume1{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 614px){
