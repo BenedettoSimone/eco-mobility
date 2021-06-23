@@ -189,7 +189,7 @@ html, body{
     float: left;
     width: 33.3%;
     padding: 0 90px;
-    margin-bottom:60px;
+    margin-bottom:10px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -251,7 +251,7 @@ html, body{
     }
 
 
-    .scroll-bar::-webkit-scrollbar{
+    .scroll-bar::-webkit-scrollbar, .scroll-bar1::-webkit-scrollbar{
        display: none;
     }
 
