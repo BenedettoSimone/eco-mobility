@@ -21,6 +21,12 @@
             <div class="logo_content">
                 <a href=""><img id="logo" src="img/logo.png"></a>
             </div>
+
+            <label class="switch">
+                <input type="checkbox" name="switch" id="checkbox" onclick="darkMode()">
+                <span class="switch-svg"></span>
+            </label>
+
             <div id="motto">
                 <h1>Benvenuto in</h1><h1 id="particolareH1"> ecomobility</h1><h1>,<br>
                 l'app pensata per te e per l'ambiente</h1>
