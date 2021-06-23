@@ -121,8 +121,10 @@
                                 <div class="medal">
                                     <img src="img/kmBronzo.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Bronzo</h3>
                                 <p>Riduzione del 10% dei chilometri percorsi rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -131,8 +133,10 @@
                                 <div class="medal">
                                     <img src="img/no-carbMedal.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Argento</h3>
                                 <p>Riduzione del 25% dei chilometri percorsi rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -141,8 +145,10 @@
                                 <div class="medal">
                                     <img src="img/kmOro.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Oro</h3>
                                 <p>Riduzione del 50% dei chilometri percorsi rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -159,8 +165,10 @@
                                 <div class="medal">
                                     <img src="img/speseBronzo.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Bronzo</h3>
                                 <p>Riduzione del 10% della spesa carburante rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -169,8 +177,10 @@
                                 <div class="medal">
                                     <img src="img/speseArgento.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Argento</h3>
                                 <p>Riduzione del 25% della spesa carburante rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -179,8 +189,10 @@
                                 <div class="medal">
                                     <img src="img/speseOro.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Oro</h3>
                                 <p>Riduzione del 50% della spesa carburante rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -196,8 +208,10 @@
                                 <div class="medal">
                                     <img src="img/carbBronzo.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Bronzo</h3>
                                 <p>Aumento del 10% l’utilizzo dei mezzi ecosostenibili rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -206,8 +220,10 @@
                                 <div class="medal">
                                     <img src="img/carbArgento.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Argento</h3>
                                 <p>Aumento del 25% l’utilizzo dei mezzi ecosostenibili rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 
@@ -216,8 +232,10 @@
                                 <div class="medal">
                                     <img src="img/carbOro.png">
                                 </div>
+                                <div class="info-medal">
                                 <h3>Oro</h3>
                                 <p>Aumento del 50% l’utilizzo dei mezzi ecosostenibili rispetto al mese scorso</p>
+                                </div>
                             </div>
                         </div>
 

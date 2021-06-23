@@ -231,9 +231,34 @@ html, body{
         overflow-y: hidden;
     }
 
-    .scroll-bar::-webkit-scrollbar,  .scroll-bar1::-webkit-scrollbar{
-        display: none;
+
+/* scrollbar
+    .scroll-bar::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: none;
+        background-color: #F5F5F5;
     }
+
+    .scroll-bar::-webkit-scrollbar
+    {
+        width: 3px;
+        background-color: #F5F5F5;
+    }
+
+    .scroll-bar::-webkit-scrollbar-thumb
+    {
+        background-color: #5a87e8;
+        background-image: -webkit-linear-gradient(45deg,
+        rgba(255, 255, 255, .2) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, .2) 50%,
+        rgba(255, 255, 255, .2) 75%,
+        transparent 75%,
+        transparent)
+    }
+*/
+
     .row-premi, .row-medal{
         width: 1420px;
         overflow-x: scroll;
@@ -269,6 +294,40 @@ html, body{
 }
 
 
+@media screen and (max-width: 1158px){
+    .column-medal{
+        width: 100%;
+        padding: 0 27px;
+        margin-bottom: 23px;
+    }
+
+    .row-medal{
+        width: auto;
+        overflow-x: hidden;
+    }
+
+    .scroll-bar1{
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .card-medal{
+        height: 225px;
+        text-align: left;
+        align-items: center;
+        display: flex;
+        padding:38px;
+    }
+
+    .card-medal .medal img{
+        float: left;
+     }
+
+    .info-medal{
+        margin-left: 40px;
+    }
+}
+
 
 @media screen and (min-width: 1081px) {
     .sidenav{
@@ -292,5 +351,34 @@ html, body{
         margin-top: 36px;
     }
 }
+
+@media screen and (max-width: 614px){
+    .background-content{
+        padding: 20px;
+    }
+
+    .card-medal{
+        padding:18px;
+        height: 155px;
+    }
+
+    .card-medal .medal img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .info-medal{
+        margin-left:15px;
+    }
+
+
+
+
+
+}
+
+
+
+
 
 
