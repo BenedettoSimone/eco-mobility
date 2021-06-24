@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
+
 public class LoginControl extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
@@ -29,14 +30,14 @@ public class LoginControl extends HttpServlet {
             if(checkLogin(email,password,request).equals("registrato")){
 
                 redirectedPage="/home.jsp";
-                response.sendRedirect(request.getContextPath() + redirectedPage);
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
             }
         } catch (Exception throwables) {
 
             //Se l'utente non è risulta nel database o la password è errata
             request.setAttribute("invalidAccess","true");
-            redirectedPage="/login.jsp";
-            response.sendRedirect(request.getContextPath() + redirectedPage);
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+            dispatcher.forward(request, response);
         }
 
 
