@@ -48,6 +48,7 @@
                 <!--message error login-->
                 <%
                     if(errore=="true"){
+
                 %>
                 <div id="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
@@ -63,14 +64,14 @@
                     if (message == "false") {
                 %>
                 <div id="alert1">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span class="closebtn" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                     <strong>Errore!</strong> Email già esistente.
                 </div>
                 <%
                     }else if(message=="true"){
                 %>
                 <div id="success">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span class="closebtn" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                     <strong></strong> Registrazione effettuata con  <strong>successo.</strong>
                 </div>
                 <%

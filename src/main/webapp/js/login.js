@@ -18,6 +18,9 @@ function selectRegi(){
     document.getElementById("selectLogin").style.backgroundColor="#fff"
     document.getElementById("selectLogin").style.borderRadius="0px";
 
+
+    document.getElementById("message").style.visibility="hidden";
+
 }
 
 
@@ -40,7 +43,7 @@ function selectLogin(){
     document.getElementById("selectRegi").style.backgroundColor="#fff"
     document.getElementById("selectRegi").style.borderRadius="0px";
 
-
+    document.getElementById("message").style.visibility="hidden";
 
 }
 
@@ -169,7 +172,6 @@ $(document).on("submit", "#fRegi", function (event) {
         return false;
     }
 });
-
 
 
 
