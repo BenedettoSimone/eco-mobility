@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="row">
+<div class="row" id="myrow">
 
     <div id="navbar">
         <%@include file="navbar.jsp" %>
@@ -30,7 +30,7 @@
             <div id="titleContent">
                 OBIETTIVI
             </div>
-            <button onclick="myFunction()">Try it</button>
+
             <div id="list-responsive">
 
             </div>
@@ -184,24 +184,38 @@
 </div>
 
 <script>
+
+    var div = document.getElementById("list-responsive");
+    var list = document.getElementById("list");
+    var divrow=document.getElementById("myrow");
     window.onresize = function myFunction() {
-        if (window.innerWidth < 1520) {
-            var div = document.getElementById("list-responsive");
-            var list = document.getElementById("list");
+
+        if (window.innerWidth <= 1540) {
+
             div.appendChild(list);
 
         }
-        else if(window.innerWidth>1520){
-            var divrow=document.getElementById("row");
-            div2.appendChild(list);
+
+        if(window.innerWidth > 1540){
+
+
+            divrow.appendChild(list);
         }
     }
     window.onload = function myFunction() {
-        if (window.innerWidth < 1520) {
-            var div = document.getElementById("list-responsive");
-            var list = document.getElementById("list");
+        div = document.getElementById("list-responsive");
+        list = document.getElementById("list");
+        divrow=document.getElementById("myrow");
+        if (window.innerWidth <= 1540) {
+
             div.appendChild(list);
 
+        }
+
+
+        if(window.innerWidth>1540){
+
+            divrow.appendChild(list);
         }
     }
 
