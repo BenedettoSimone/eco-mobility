@@ -10,23 +10,11 @@
 
 html{
     width: 100%;
-    min-height:800px;
+    min-height: 100%;
     margin:0;
-    background-color: #F1F6FF;
-
+    background: #F1F6FF url("../img/taxi_login.jpg") no-repeat fixed left;
+    background-size: auto 100%;
 }
-body{
-
-
-    width: 100%;
-    height:100%;
-    min-height: 800px;
-    background: url("../img/taxi_login.jpg") no-repeat left fixed;
-    background-size:100%;
-
-}
-
-
 
 
 /*------alert error------*/
@@ -258,6 +246,11 @@ h1{
     #motto{
         width: 90%;
     }
+
+    #motto h1{
+        font-size:27px;
+    }
+
 }
 
 
