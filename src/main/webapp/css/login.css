@@ -8,12 +8,16 @@
     src: url("../font/HelveticaNeue.ttf");
 }
 
-html, body{
+html{
     width: 100%;
     min-height: 100%;
     margin:0;
     background-color: #F1F6FF;
+    background: url("../img/taxi_login.jpg") no-repeat left fixed;
+    background-size: auto 100%;
 }
+
+
 
 
 /*------alert error------*/
@@ -60,8 +64,7 @@ html, body{
     width: 100%;
     min-height: 100vh;
     padding: 0;
-    background: url("../img/taxi_login.jpg") no-repeat left fixed;
-    background-size: auto 100%;
+
 }
 
 #content .logo_content #logo{
