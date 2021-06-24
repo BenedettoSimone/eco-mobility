@@ -9,6 +9,7 @@
 
 <%
     String errore = (String) request.getAttribute("invalidAccess");
+    String message = (String) request.getAttribute("messageRegistrazione");
 %>
 
 
@@ -41,6 +42,8 @@
 
             <!-- per messaggi di errore e cose del genere -->
             <div id="message">
+
+                <!--message error login-->
                 <%
                     if (errore != null) {
                 %>
@@ -51,6 +54,27 @@
                 <%
                     }
                 %>
+
+                <!--message registrazione-->
+
+                <%
+                    if (message == "false") {
+                %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Errore!</strong> Email già esistente.
+                </div>
+                <%
+                    }else {
+                %>
+                <div class="success">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong></strong> Registrazione effettuata con  <strong>successo.</strong>
+                </div>
+                <%
+                    }
+                %>
+
             </div>
 
 

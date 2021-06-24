@@ -29,13 +29,13 @@ public class UtentiControl extends HttpServlet {
                 UtentiDTO ut= new UtentiDTO(0,email,password,nome,cognome);
                 int key=utDao.doSaveUtente(ut);
                 ut.setIdUtenti(key);
-                request.getSession().setAttribute("utente",ut);
 
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+                request.setAttribute("messageRegistrazione", "true");
                 dispatcher.forward(request, response);
             } catch (SQLException throwables) {
                 // se un form è vuoto
-                request.setAttribute("invalidForm", "true");
+                request.setAttribute("messageRegistrazione", "false");
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
                 dispatcher.forward(request, response);
                 throwables.printStackTrace();

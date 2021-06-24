@@ -32,6 +32,13 @@ html, body{
     border-radius:14px;
 }
 
+.success{
+    padding: 20px;
+    background-color: green;
+    color: white;
+    border-radius:14px;
+}
+
 .closebtn {
     margin-left: 15px;
     color: white;
