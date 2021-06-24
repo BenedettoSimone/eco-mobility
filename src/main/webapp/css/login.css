@@ -30,6 +30,7 @@ html{
     right: 130px;
 }
 .alert {
+    display: block;
     padding: 20px;
     background-color: #f44336;
     color: white;
@@ -37,6 +38,7 @@ html{
 }
 
 .success{
+    display: block;
     padding: 20px;
     background-color: green;
     color: white;
@@ -44,6 +46,7 @@ html{
 }
 
 .closebtn {
+    display: block;
     margin-left: 15px;
     color: white;
     font-weight: bold;
