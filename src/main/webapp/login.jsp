@@ -45,14 +45,14 @@
 
                 <!--message error login-->
                 <%
-                    if (errore == "true") {
+
                 %>
                 <div id="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong>Errore! </strong> Username e/o password non validi.
                 </div>
                 <%
-                    }
+
                 %>
 
                 <!--message registrazione-->
