@@ -6,6 +6,10 @@ function selectRegi(){
     /*il form di registrazione diventa visibile*/
     document.getElementById("fRegi").style.display="block";
 
+    /*elimino eventuali messaggi*/
+    document.getElementsByClassName("alert").style.display="none";
+    document.getElementsByClassName("success").style.display="none";
+
     /*cambio i colori al bottone cliccato*/
     document.getElementById("selectRegi").style.color="#5a87e8"
     document.getElementById("selectRegi").style.backgroundColor="#f1f6ff"
@@ -23,6 +27,10 @@ function selectLogin(){
     document.getElementById("fLogin").style.display="block";
     /*il form di registrazione non si vede più*/
     document.getElementById("fRegi").style.display="none";
+
+    /*elimino eventuali messaggi*/
+    document.getElementsByClassName("alert").style.display="none";
+    document.getElementsByClassName("success").style.display="none";
 
     /*cambio i colori al bottone cliccato*/
     document.getElementById("selectLogin").style.color="#5a87e8"
