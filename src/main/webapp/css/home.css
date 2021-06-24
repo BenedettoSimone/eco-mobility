@@ -106,7 +106,7 @@ html, body{
 #home-card lottie-player{
     position: absolute;
     right: 252px;
-    top: -19px;
+    top: -84px;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
@@ -335,7 +335,7 @@ html, body{
     }
 
     #home-card lottie-player{
-        top:-19px;
+        top:-84px;
     }
 
 }

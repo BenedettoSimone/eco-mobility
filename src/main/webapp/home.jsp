@@ -35,9 +35,7 @@
             <div id="home-card">
                 <h1>Home</h1>
                 <h3>Bentornato Benedetto</h3>
-
-                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_fco8dkvm.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-                <!--<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_t1oxo4c1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>-->
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_fco8dkvm.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;"  loop  autoplay></lottie-player>
             </div>
 
             <!--Section obiettivi-->
