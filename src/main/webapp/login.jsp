@@ -24,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body id="bod">
+<body>
     <div id="content">
 
             <div class="logo_content">
@@ -47,14 +47,14 @@
 
                 <!--message error login-->
                 <%
-
+                    if(errore=="true"){
                 %>
                 <div id="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong>Errore! </strong> Username e/o password non validi.
                 </div>
                 <%
-
+                    }
                 %>
 
                 <!--message registrazione-->

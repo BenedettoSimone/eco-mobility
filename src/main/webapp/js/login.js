@@ -18,8 +18,6 @@ function selectRegi(){
     document.getElementById("selectLogin").style.backgroundColor="#fff"
     document.getElementById("selectLogin").style.borderRadius="0px";
 
-    /*elimino eventuali messaggi*/
-    document.getElementById("message").style.display="none";
 }
 
 
@@ -42,8 +40,7 @@ function selectLogin(){
     document.getElementById("selectRegi").style.backgroundColor="#fff"
     document.getElementById("selectRegi").style.borderRadius="0px";
 
-    /*elimino eventuali messaggi*/
-    document.getElementById("message").style.display="none";
+
 
 }
 
@@ -69,6 +66,9 @@ function emailObserver() {
 
     } else {
         label.text("Email");
+        label.css('color', '#707070');
+        email.css('border-color', '#707070');
+
 
 
         emailGlobal=  true;
@@ -93,6 +93,8 @@ function nomeObserver() {
 
     } else {
         label.text("Nome");
+        label.css('color', '#707070');
+        nome.css('border-color', '#707070');
 
         return true;
     }
@@ -116,6 +118,8 @@ function cognomeObserver() {
         return false;
     } else {
         label.text("Cognome");
+        label.css('color', '#707070');
+        cognome.css('border-color', '#707070');
 
 
         return true;
@@ -141,6 +145,8 @@ function passwordObserver() {
 
     } else {
         label.text("Password");
+        label.css('color', '#707070');
+        password.css('border-color', '#707070');
 
         return true;
 
