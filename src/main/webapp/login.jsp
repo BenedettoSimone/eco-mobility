@@ -21,6 +21,8 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body id="bod">
     <div id="content">
@@ -94,17 +96,17 @@
 
                 <form id="fRegi"action="${pageContext.servletContext.contextPath}/UtentiControl">
                     <div id="nomeRegi">
-                        <p>Nome</p>
-                        <input type="text" name="nome" required>
+                        <p id="nome_l">Nome</p>
+                        <input type="text" id="nome" name="nome" required onchange="nomeObserver()">
                     </div>
                     <div id="cognomeRegi">
-                        <p>Cognome</p>
-                        <input type="text" name="cognome" required>
+                        <p id="cognome_l">Cognome</p>
+                        <input type="text" id="cognome" name="cognome" required onchange="cognomeObserver()">
                     </div>
-                    <p>Email</p>
-                    <input type="text" name="email" required><br>
-                    <p>Password</p>
-                    <input type="password" name="password" required><br>
+                    <p id="email_l">Email</p>
+                    <input type="text" id="email" name="email" required onchange="emailObserver()"><br>
+                    <p id="password_l">Password</p>
+                    <input type="password" id="password" name="password" required onchange="passwordObserver()"><br>
                     <input class="btn" type="submit" value="REGISTRATI">
                 </form>
             </div>
