@@ -6,6 +6,12 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+    String errore = (String) request.getAttribute("invalidAccess");
+%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +40,19 @@
 
 
             <!-- per messaggi di errore e cose del genere -->
-            <div id="message"></div>
+            <div id="message">
+                <%
+                    if (errore != null) {
+                %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong>Errore! </strong> Username e/o password non validi.
+                </div>
+                <%
+                    }
+                %>
+            </div>
+
 
             <div id="formContent">
                 <div id="formSwitch">

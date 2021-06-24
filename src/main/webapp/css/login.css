@@ -15,6 +15,40 @@ html, body{
     background-color: #F1F6FF;
 }
 
+
+/*------alert error------*/
+
+#message{
+    position:absolute;
+    width: 550px;
+    top:409px;
+    margin-top: -320px;
+    right: 130px;
+}
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    border-radius:14px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+/*--------------------*/
+
 #content {
     width: 100%;
     min-height: 100vh;
@@ -49,7 +83,7 @@ h1{
     height: 650px;
     width: 550px;
     text-align: center;
-    top: 50%;
+    top: 55%;
     margin-top: -320px;
     right: 130px;
 }
@@ -155,6 +189,14 @@ h1{
         height: 582px;
     }
 
+    #message{
+        position: relative;
+        top: 0%;
+        margin: 0 auto 20px;
+        right: 0px;
+
+    }
+
     #motto h1{
         margin-bottom: 40px;
         font-size:40px;
@@ -182,7 +224,10 @@ h1{
 
     #formContent{
         width:90%;
+    }
 
+    #message{
+        width: 90%;
     }
 }
 
