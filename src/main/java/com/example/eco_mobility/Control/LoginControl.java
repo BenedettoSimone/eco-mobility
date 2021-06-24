@@ -30,7 +30,8 @@ public class LoginControl extends HttpServlet {
             if(checkLogin(email,password,request).equals("registrato")){
 
                 redirectedPage="/home.jsp";
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+                dispatcher.forward(request,response);
             }
         } catch (Exception throwables) {
 
