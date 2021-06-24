@@ -19,9 +19,7 @@ function selectRegi(){
     document.getElementById("selectLogin").style.borderRadius="0px";
 
     /*elimino eventuali messaggi*/
-    document.getElementById("alert1").style.display="none";
-    document.getElementById("alert").style.display="none";
-    document.getElementById("success").style.display="none";
+    document.getElementById("message").style.display="none";
 }
 
 
@@ -45,9 +43,7 @@ function selectLogin(){
     document.getElementById("selectRegi").style.borderRadius="0px";
 
     /*elimino eventuali messaggi*/
-    document.getElementById("alert1").style.display="none";
-    document.getElementById("alert").style.display="none";
-    document.getElementById("success").style.display="none";
+    document.getElementById("message").style.display="none";
 
 }
 
