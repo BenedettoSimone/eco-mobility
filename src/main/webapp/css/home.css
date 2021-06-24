@@ -103,11 +103,12 @@ html, body{
 
 }
 
-#home-card img{
-    width: 375px;
+#home-card lottie-player{
     position: absolute;
     right: 252px;
     top: -19px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 
@@ -218,20 +219,6 @@ html, body{
     width: 100%!important;
 }
 
-/*
-
-.chart-container{
-    width: 95%!important;
-    height: 84%!important;
-    margin:0!important;
-}
-
-.chart-container canvas{
-    height: 80%!important;
-    width: 101%!important;
-}
-
- */
 
 
 /*--Query obiettivi list--*/
@@ -279,7 +266,7 @@ html, body{
         min-height: fit-content;
     }
 
-    #home-card img{
+    #home-card lottie-player{
         right: 151px;
     }
 
@@ -347,7 +334,7 @@ html, body{
         margin-top: 45px;
     }
 
-    #home-card img{
+    #home-card lottie-player{
         top:-19px;
     }
 
@@ -365,7 +352,7 @@ html, body{
 }
 
 @media screen and (max-width: 860px){
-    #home-card img{
+    #home-card lottie-player{
         display: none;
     }
 }

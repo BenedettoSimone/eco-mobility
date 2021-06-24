@@ -12,8 +12,11 @@
     <script src="../contrast-bootstrap-pro/js/cdb.js"></script>
     <script src="../contrast-bootstrap-pro/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
+
+
 
 <div class="row">
 
@@ -32,7 +35,9 @@
             <div id="home-card">
                 <h1>Home</h1>
                 <h3>Bentornato Benedetto</h3>
-                <img src="img/home-img.png">
+
+                <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_fco8dkvm.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                <!--<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_t1oxo4c1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>-->
             </div>
 
             <!--Section obiettivi-->
