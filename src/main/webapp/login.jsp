@@ -42,12 +42,11 @@
                     <a id="selectRegi" href="#" onclick="selectRegi()">Registrati</a>
                 </div>
 
-                <form id="fLogin"action="#">
+                <form id="fLogin" action="${pageContext.servletContext.contextPath}/LoginControl" method="post">
                     <p>Email</p>
-                    <input type="text" name="email"><br>
+                    <input type="text" name="email" required><br>
                     <p>Password</p>
-                    <input type="password" name="password"><br>
-
+                    <input type="password" name="password" required><br>
                     <input class="btn" type="submit" value="ACCEDI">
                 </form>
 

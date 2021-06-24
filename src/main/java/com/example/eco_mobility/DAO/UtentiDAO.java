@@ -30,11 +30,12 @@ public class UtentiDAO {
     }
 
     public synchronized UtentiDTO doRetrivebyEmail(String email) throws SQLException {
+
         PreparedStatement ps = null;
 
         UtentiDTO ut = new UtentiDTO();
 
-        String query="SELECT * FROM "+ UtentiDAO.TABLE_NAME + " WHERE email = ?";
+        String query="SELECT * FROM ecomobility.Utenti WHERE email = ? ";
         ps=con.prepareStatement(query);
 
         ps.setString(1,email);
@@ -43,10 +44,10 @@ public class UtentiDAO {
 
         while(rs.next()){
             ut.setIdUtenti(rs.getInt("idUtenti"));
-            ut.setNome(rs.getString("nome"));
-            ut.setCognome(rs.getString("cognome"));
             ut.setEmail(rs.getString("email"));
             ut.setPassword(rs.getString("password"));
+            ut.setNome(rs.getString("nome"));
+            ut.setCognome(rs.getString("cognome"));
         }
 
         return ut;

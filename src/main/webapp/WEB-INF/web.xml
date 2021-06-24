@@ -6,4 +6,15 @@
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+
+    <servlet>
+        <servlet-name>LoginControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.LoginControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginControl</servlet-name>
+        <url-pattern>/LoginControl</url-pattern>
+    </servlet-mapping>
+    
+    
 </web-app>
