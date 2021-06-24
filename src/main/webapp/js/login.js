@@ -6,9 +6,7 @@ function selectRegi(){
     /*il form di registrazione diventa visibile*/
     document.getElementById("fRegi").style.display="block";
 
-    /*elimino eventuali messaggi*/
-    document.getElementsByClassName("alert").style.display="none";
-    document.getElementsByClassName("success").style.display="none";
+
 
     /*cambio i colori al bottone cliccato*/
     document.getElementById("selectRegi").style.color="#5a87e8"
@@ -19,7 +17,14 @@ function selectRegi(){
     document.getElementById("selectLogin").style.color="#494848"
     document.getElementById("selectLogin").style.backgroundColor="#fff"
     document.getElementById("selectLogin").style.borderRadius="0px";
+
+    /*elimino eventuali messaggi*/
+    document.getElementById("alert1").style.display="none";
+    document.getElementById("alert").style.display="none";
+    document.getElementById("success").style.display="none";
 }
+
+
 
 /* cosa succede quando premo registrati */
 function selectLogin(){
@@ -28,9 +33,6 @@ function selectLogin(){
     /*il form di registrazione non si vede più*/
     document.getElementById("fRegi").style.display="none";
 
-    /*elimino eventuali messaggi*/
-    document.getElementsByClassName("alert").style.display="none";
-    document.getElementsByClassName("success").style.display="none";
 
     /*cambio i colori al bottone cliccato*/
     document.getElementById("selectLogin").style.color="#5a87e8"
@@ -41,5 +43,11 @@ function selectLogin(){
     document.getElementById("selectRegi").style.color="#494848"
     document.getElementById("selectRegi").style.backgroundColor="#fff"
     document.getElementById("selectRegi").style.borderRadius="0px";
+
+    /*elimino eventuali messaggi*/
+    document.getElementById("alert1").style.display="none";
+    document.getElementById("alert").style.display="none";
+    document.getElementById("success").style.display="none";
+
 }
 

@@ -22,7 +22,7 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body id="bod">
     <div id="content">
 
             <div class="logo_content">
@@ -47,7 +47,7 @@
                 <%
                     if (errore != null) {
                 %>
-                <div class="alert">
+                <div id="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong>Errore! </strong> Username e/o password non validi.
                 </div>
@@ -60,14 +60,14 @@
                 <%
                     if (message == "false") {
                 %>
-                <div class="alert">
+                <div id="alert1">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong>Errore!</strong> Email già esistente.
                 </div>
                 <%
-                    }else {
+                    }else if(message=="true"){
                 %>
-                <div class="success">
+                <div id="success">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong></strong> Registrazione effettuata con  <strong>successo.</strong>
                 </div>
@@ -113,5 +113,7 @@
     </div>
 
 <script type="text/javascript" src="js/login.js"></script>
+
+
 </body>
 </html>
