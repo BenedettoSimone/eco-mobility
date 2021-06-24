@@ -50,19 +50,19 @@
                     <input class="btn" type="submit" value="ACCEDI">
                 </form>
 
-                <form id="fRegi"action="#">
+                <form id="fRegi"action="${pageContext.servletContext.contextPath}/UtentiControl">
                     <div id="nomeRegi">
                         <p>Nome</p>
-                        <input type="text" name="nome">
+                        <input type="text" name="nome" required>
                     </div>
                     <div id="cognomeRegi">
                         <p>Cognome</p>
-                        <input type="text" name="cognome">
+                        <input type="text" name="cognome" required>
                     </div>
                     <p>Email</p>
-                    <input type="text" name="email"><br>
+                    <input type="text" name="email" required><br>
                     <p>Password</p>
-                    <input type="password" name="password"><br>
+                    <input type="password" name="password" required><br>
                     <input class="btn" type="submit" value="REGISTRATI">
                 </form>
             </div>

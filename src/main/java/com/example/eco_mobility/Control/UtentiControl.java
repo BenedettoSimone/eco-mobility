@@ -9,7 +9,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "UtentiControl", value = "/UtentiControl")
+
 public class UtentiControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -28,16 +28,18 @@ public class UtentiControl extends HttpServlet {
             try {
                 UtentiDTO ut= new UtentiDTO(0,email,password,nome,cognome);
                 int key=utDao.doSaveUtente(ut);
-                request.getSession().setAttribute("idUtente",key);
+                ut.setIdUtenti(key);
+                request.getSession().setAttribute("utente",ut);
 
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("src/main/webapp/home.jsp");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
                 dispatcher.forward(request, response);
             } catch (SQLException throwables) {
+                // se un form è vuoto
+                request.setAttribute("invalidForm", "true");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
+                dispatcher.forward(request, response);
                 throwables.printStackTrace();
             }
-        }else{
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("src/main/webapp/login.jsp");
-            dispatcher.forward(request, response);
         }
     }
 

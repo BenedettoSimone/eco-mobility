@@ -35,7 +35,7 @@ public class UtentiDAO {
 
         UtentiDTO ut = new UtentiDTO();
 
-        String query="SELECT * FROM ecomobility.Utenti WHERE email = ? ";
+        String query="SELECT * FROM "+UtentiDAO.TABLE_NAME+" WHERE email = ? ";
         ps=con.prepareStatement(query);
 
         ps.setString(1,email);
