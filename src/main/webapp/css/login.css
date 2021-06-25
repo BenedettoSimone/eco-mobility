@@ -209,6 +209,7 @@ h1{
         margin:0 auto;
         right: 0px;
         height: 582px;
+        float:none;
     }
 
     #formContent{
