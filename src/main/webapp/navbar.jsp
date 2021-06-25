@@ -69,7 +69,7 @@
             </li>
 
             <li>
-                <a class="logout-bottom"> <i class='bx bx-log-out'></i>
+                <a class="logout-bottom" href="${pageContext.servletContext.contextPath}/LogoutControl"><i class='bx bx-log-out'></i>
                     <span class="links_name">Logout</span>
                 </a>
             </li>

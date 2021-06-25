@@ -24,5 +24,14 @@
         <servlet-name>UtentiControl</servlet-name>
         <url-pattern>/UtentiControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.LogoutControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutControl</servlet-name>
+        <url-pattern>/LogoutControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>
