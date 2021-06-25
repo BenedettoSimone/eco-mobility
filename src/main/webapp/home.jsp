@@ -35,7 +35,7 @@
             <div id="home-card">
                 <h1>Home</h1>
                 <h3>Bentornato <%=ut.getNome()%></h3>
-                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fco8dkvm.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;"  loop autoplay></lottie-player>
+                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fco8dkvm.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;" stop></lottie-player>
             </div>
 
             <!--Section obiettivi-->
