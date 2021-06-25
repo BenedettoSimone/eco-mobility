@@ -8,7 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%
-    UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
+    //UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
+    /*Controllo per evitare l'accesso diretto alla home
+    if(ut==null){
+        response.sendRedirect("/LoginControl");
+        return;
+    }*/
+    String nome = (String) request.getAttribute("nome");
 %>
 
 <html>
@@ -64,7 +70,7 @@
         <ul>
             <li>
                 <a class="user-name"> <i class='bx bxs-user'></i>
-                    <span class="links_name"><%=ut.getNome()%> <%=ut.getCognome()%></span>
+                    <span class="links_name"><%=nome%></span>
                 </a>
             </li>
 

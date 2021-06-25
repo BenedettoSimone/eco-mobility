@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="com.example.eco_mobility.DTO.UtentiDTO" %>
+<%
+    UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
+%>
 <!DOCTYPE html>
 <html lang="en" xmlns="">
 <head>
@@ -34,7 +38,7 @@
             <!--Home section banner-->
             <div id="home-card">
                 <h1>Home</h1>
-                <h3>Bentornato Benedetto</h3>
+                <h3>Bentornato <%=ut.getNome()%></h3>
                 <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_fco8dkvm.json"  background="transparent"  speed="1"  style="width: 280px; height: 280px;"  loop autoplay></lottie-player>
             </div>
 

@@ -51,6 +51,7 @@ public class LoginControl extends HttpServlet {
         if (ut.getEmail().equals(email) && ut.getPassword().equals(password)) {
 
             request.getSession().setAttribute("utente",ut);
+            request.setAttribute("nome", ut.getNome()+" "+ut.getCognome());
 
             return "registrato";
         } else
