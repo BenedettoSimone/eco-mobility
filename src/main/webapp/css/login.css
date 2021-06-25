@@ -86,7 +86,6 @@ h1{
 
 #left-side{
     position: absolute;
-    background: #F1F6FF;
     height: 736px;
     width: 550px;
     text-align: center;
@@ -201,6 +200,15 @@ h1{
 }
 
 @media screen and (max-width: 1600px){
+
+    #left-side{
+        position:relative;
+        top:0%;
+        margin:0 auto;
+        right: 0px;
+        height: 582px;
+    }
+
     #formContent{
         position:relative;
         top:0%;
@@ -242,12 +250,12 @@ h1{
 
 @media screen and (max-width: 650px){
 
-    #formContent{
+    #left-side{
         width:90%;
     }
 
-    #message{
-        width: 90%;
+    #formContent, #message{
+        width: 100%;
     }
 }
 
@@ -301,7 +309,7 @@ h1{
     line-height: 19px;
     text-transform: uppercase;
     position: absolute;
-    top: 47px;
+    top: 53px;
     z-index: 9999;
     right: 41px;
 }
