@@ -62,14 +62,14 @@
                 <!--message registrazione-->
 
                 <%
-                    if (message == "false") {
+                    if (message!=null && message.equalsIgnoreCase("false")) {
                 %>
                 <div id="alert1">
                     <span class="closebtn" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                     <strong>Errore!</strong> Email già esistente.
                 </div>
                 <%
-                    }else if(message=="true"){
+                    }else if(message!=null && message.equalsIgnoreCase("true")){
                 %>
                 <div id="success">
                     <span class="closebtn" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
