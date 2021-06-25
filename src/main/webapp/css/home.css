@@ -220,30 +220,6 @@ html, body{
 
 
 
-/*--Query obiettivi list--*/
-@media screen and (max-width: 1818px){
-
-    .scroll-bar{
-        overflow-x:scroll ;
-        height: 150px;
-        overflow-y: hidden;
-        margin-bottom: -162px;
-    }
-
-    .scroll-bar::-webkit-scrollbar{
-        display: none;
-    }
-    .row-obiettivi{
-        width: 1420px;
-        overflow-x: scroll;
-    }
-
-    .column-obiettivi{
-        width: 472px;
-    }
-
-}
-
 /*---Minimize navbar, expand content */
 @media screen and (max-width:1520px){
 
@@ -269,12 +245,18 @@ html, body{
         right: 151px;
     }
 
-    .column-obiettivi{
-        width: 389px;
+    .row-obiettivi{
+        width: 100%;
+        margin:0;
     }
 
-    .row-obiettivi{
-        width: 1167px;
+    .card-obiettivi{
+        margin-bottom: 20px;
+    }
+
+    .column-obiettivi{
+        width: 100%;
+        padding: 0;
     }
 
     .column-chart1, .column-chart2 {
@@ -339,16 +321,6 @@ html, body{
 
 }
 
-@media screen and (max-width: 938px){
-    .row-obiettivi{
-    margin:0 -10px;
-    }
-
-    .column-obiettivi{
-        width: 320px;
-        padding:0 10px;
-    }
-}
 
 @media screen and (max-width: 860px){
     #home-card img{

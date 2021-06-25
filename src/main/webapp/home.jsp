@@ -42,7 +42,7 @@
 
                 <h5>Obiettivi in corso</h5>
 
-                <div class="scroll-bar">
+
                     <div class="row-obiettivi">
                         <div class="column-obiettivi">
                             <div class="card-obiettivi">
@@ -70,7 +70,6 @@
 
 
                     </div>
-                </div>
             </div>
 
             <!--Section chart-->
