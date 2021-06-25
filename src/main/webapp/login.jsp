@@ -42,6 +42,7 @@
             </div>
 
 
+        <div id="left-side">
             <!-- per messaggi di errore e cose del genere -->
             <div id="message">
 
@@ -111,7 +112,7 @@
                     <input class="btn" type="submit" value="REGISTRATI">
                 </form>
             </div>
-
+        </div>
 
     </div>
 

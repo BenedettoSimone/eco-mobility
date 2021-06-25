@@ -20,12 +20,10 @@ html{
 /*------alert error------*/
 
 #message{
-    position:absolute;
+    position:relative;
     width: 550px;
-    top:409px;
-    margin-top: -320px;
-    right: 130px;
 }
+
 #alert, #alert1 {
     display: block;
     padding: 20px;
@@ -86,16 +84,26 @@ h1{
 }
 
 
-#formContent{
+#left-side{
     position: absolute;
+    background: #F1F6FF;
+    height: 736px;
+    width: 550px;
+    text-align: center;
+    top: 50%;
+    margin-top: -368px;
+    right: 130px;
+}
+
+#formContent{
+    position: relative;
     background: #ffffff;
     border-radius: 26px;
     height: 650px;
     width: 550px;
     text-align: center;
-    top: 55%;
-    margin-top: -320px;
-    right: 130px;
+    top: 50%;
+    margin-top: -325px;
 }
 
 #formSwitch{
