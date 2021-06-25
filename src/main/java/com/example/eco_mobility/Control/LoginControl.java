@@ -30,11 +30,14 @@ public class LoginControl extends HttpServlet {
             if(checkLogin(email,password,request).equals("registrato")){
 
                 redirectedPage="/home.jsp";
+
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+
                 dispatcher.forward(request,response);
             }
         } catch (Exception throwables) {
 
+            throwables.printStackTrace();
             //Se l'utente non è risulta nel database o la password è errata
             request.setAttribute("invalidAccess","true");
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/login.jsp");
@@ -51,7 +54,6 @@ public class LoginControl extends HttpServlet {
         if (ut.getEmail().equals(email) && ut.getPassword().equals(password)) {
 
             request.getSession().setAttribute("utente",ut);
-            request.setAttribute("nome", ut.getNome()+" "+ut.getCognome());
 
             return "registrato";
         } else

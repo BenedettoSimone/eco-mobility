@@ -48,7 +48,7 @@
 
                 <!--message error login-->
                 <%
-                    if(errore=="true"){
+                    if( errore!=null && errore.equalsIgnoreCase("true")){
 
                 %>
                 <div id="alert">
