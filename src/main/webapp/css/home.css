@@ -103,12 +103,11 @@ html, body{
 
 }
 
-#home-card lottie-player{
+#home-card img{
+    width: 375px;
     position: absolute;
     right: 252px;
-    top: -49px;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+    top: -19px;
 }
 
 
@@ -266,7 +265,7 @@ html, body{
         min-height: fit-content;
     }
 
-    #home-card lottie-player{
+    #home-card img{
         right: 151px;
     }
 
@@ -334,8 +333,8 @@ html, body{
         margin-top: 45px;
     }
 
-    #home-card lottie-player{
-        top:-49px;
+    #home-card img{
+        top:-19px;
     }
 
 }
@@ -352,7 +351,7 @@ html, body{
 }
 
 @media screen and (max-width: 860px){
-    #home-card lottie-player{
+    #home-card img{
         display: none;
     }
 }
