@@ -85,13 +85,15 @@ h1{
 
 
 #left-side{
-    position: absolute;
+    position: relative;
     height: 736px;
     width: 550px;
     text-align: center;
-    top: 50%;
-    margin-top: -368px;
-    right: 130px;
+    top: 0%;
+    right: 124px;
+    margin-right: 22px;
+    float: right;
+    margin-top: -141px;
 }
 
 #formContent{
