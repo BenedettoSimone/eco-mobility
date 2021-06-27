@@ -1,4 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    int[] km;
+    km= (int[]) request.getAttribute("kmSettimanali");
+    if(km==null){
+        response.sendRedirect("./SpostamentiControl");
+    }
+%>
 <!DOCTYPE html>
 <html lang="en" xmlns="">
 <head>
