@@ -33,5 +33,14 @@
         <servlet-name>LogoutControl</servlet-name>
         <url-pattern>/LogoutControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SpostamentiControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.SpostamentiControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpostamentiControl</servlet-name>
+        <url-pattern>/SpostamentiControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>

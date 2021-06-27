@@ -6,7 +6,11 @@ import com.example.eco_mobility.Model.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 
 public class SpostamentiDAO {
@@ -25,6 +29,53 @@ public class SpostamentiDAO {
         ps.setInt(4,spostamento.getIdUtenti());
 
         ps.executeUpdate();
+
+    }
+
+    public synchronized List<SpostamentiDTO> doRetiveDate(int idUtente) throws SQLException {
+        List<SpostamentiDTO> sp = new ArrayList<SpostamentiDTO>();
+
+        PreparedStatement ps = null;
+
+        String query="SELECT data,sum(kmPercorsi) FROM ecomobility.Spostamenti WHERE data>current_date()-7 OR data=current_date() AND idUtente = ? GROUP BY data order by data desc;";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,idUtente);
+
+        ResultSet rs=ps.executeQuery();
+
+        while(rs.next()){
+            SpostamentiDTO spostamenti = new SpostamentiDTO();
+            spostamenti.setData(rs.getDate("data"));
+            spostamenti.setKmPercorsi(rs.getInt("sum(kmPercorsi)"));
+
+            sp.add(spostamenti);
+        }
+
+        return sp;
+
+    }
+
+    public synchronized int doRetriveKMByData(String data, int idUtente) throws SQLException {
+        PreparedStatement ps = null;
+
+        String query="SELECT sum(kmPercorsi) FROM ecomobility.Spostamenti WHERE data = ? AND idUtente = ?";
+
+        ps=con.prepareStatement(query);
+
+        ps.setString(1,data);
+        ps.setInt(2,idUtente);
+
+        ResultSet rs = ps.executeQuery();
+
+        int km = 0;
+
+        while (rs.next()){
+            km=rs.getInt("sum(kmPercorsi)");
+        }
+
+        return km;
 
     }
 
