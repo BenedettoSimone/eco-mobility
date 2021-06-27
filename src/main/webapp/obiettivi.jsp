@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: SalernoDaniele
   Date: 14/06/21
@@ -6,6 +7,13 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    List <ObiettiviDTO> obiettivi= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettivi");
+    if(obiettivi==null){
+        response.sendRedirect("./RetriveObiettiviControl");
+        return;
+    }
+%>
 <html>
 <head>
     <link rel="stylesheet" href="css/obiettivi.css">
@@ -166,30 +174,22 @@
 
         <div class="listaSpese">
 
+            <%
+                if(obiettivi.isEmpty()){
+            %>
+            No obiettivi
+            <%
+                }else{
+                    for (int i=0;i<obiettivi.size();i++){
+            %>
             <div class="cardList">
-                <div class="dataCard">20/02/2021</div>
-                <div class="priceCard">Obiettivo riduzione chilometri: 10/400</div>
+                <div class="dataCard"><%=obiettivi.get(i).getScadenza()%></div>
+                <div class="priceCard"><%=obiettivi.get(i).getTipoObiettivo()%>: <%=obiettivi.get(i).getObiettivo()%></div>
             </div>
-            <div class="cardList">
-                <div class="dataCard">10/01/2021</div>
-                <div class="priceCard">Euro spesi: 30</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">17/11/2020</div>
-                <div class="priceCard">Euro spesi: 20</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">12/10/2020</div>
-                <div class="priceCard">Euro spesi: 80</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">26/07/2020</div>
-                <div class="priceCard">Euro spesi: 100</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">22/04/2020</div>
-                <div class="priceCard">Euro spesi: 70</div>
-            </div>
+            <%
+                    }
+                }
+            %>
 
         </div>
 

@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
 
-@WebServlet(name = "ObiettivoControl", value = "/ObiettivoControl")
 public class ObiettivoControl extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -59,8 +58,7 @@ public class ObiettivoControl extends HttpServlet {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/obiettivi.jsp");
-
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/RetriveObiettiviControl");
         dispatcher.forward(request,response);
     }
 

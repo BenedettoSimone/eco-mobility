@@ -60,5 +60,23 @@
         <servlet-name>SpostamentiControl</servlet-name>
         <url-pattern>/SpostamentiControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ObiettivoControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.ObiettivoControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ObiettivoControl</servlet-name>
+        <url-pattern>/ObiettivoControl</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RetriveObiettiviControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.RetriveObiettiviControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetriveObiettiviControl</servlet-name>
+        <url-pattern>/RetriveObiettiviControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>
