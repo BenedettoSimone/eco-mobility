@@ -6,7 +6,9 @@ import com.example.eco_mobility.Model.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class SpeseCarburanteDAO {
@@ -27,5 +29,29 @@ public class SpeseCarburanteDAO {
 
     }
 
+    public synchronized ArrayList<SpeseCarburanteDTO> doRetriveByUser(int idUtente)throws SQLException{
+        PreparedStatement ps = null;
+
+        String query="SELECT * FROM "+ SpeseCarburanteDAO.TABLE_NAME+" where idUtenti=?";
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,idUtente);
+
+        ResultSet rs=ps.executeQuery();
+
+        ArrayList <SpeseCarburanteDTO> spese= new ArrayList<>();
+
+        while (rs.next()){
+            SpeseCarburanteDTO spesa= new SpeseCarburanteDTO();
+
+            spesa.setEuroSpesi(rs.getInt("euroSpesi"));
+            spesa.setData(rs.getString("data"));
+
+            spese.add(spesa);
+        }
+
+        return spese;
+
+    }
 
 }

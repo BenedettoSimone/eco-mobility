@@ -8,6 +8,15 @@
     </welcome-file-list>
 
     <servlet>
+        <servlet-name>RetriveSpeseControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.RetriveSpeseControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetriveSpeseControl</servlet-name>
+        <url-pattern>/RetriveSpeseControl</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>AddSpeseControl</servlet-name>
         <servlet-class>com.example.eco_mobility.Control.AddSpeseControl</servlet-class>
     </servlet>

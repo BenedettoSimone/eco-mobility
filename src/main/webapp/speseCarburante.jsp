@@ -1,4 +1,7 @@
-<%--
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.example.eco_mobility.DTO.SpeseCarburanteDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: benedettosimone
   Date: 13/06/21
@@ -6,6 +9,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<%
+
+    List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getSession().getAttribute("spese");
+    if(spese==null){
+        response.sendRedirect("./RetriveSpeseControl");
+        return;
+    }
+%>
 <html>
 <head>
     <link rel="stylesheet" href="css/speseCarburante.css">
@@ -41,7 +53,7 @@
                     <form action="${pageContext.servletContext.contextPath}/AddSpeseControl" method="post">
                         <div class="textCard">
                             Data<br>
-                            <input type="date" name="data" class="formCard">
+                            <input type="date" name="data" class="formCard" max="<%=LocalDate.now()%>">
                         </div>
 
                         <div class="textCard">
@@ -78,32 +90,22 @@
         <input type="text" class="textbox">
 
         <div class="listaSpese">
-
-            <div class="cardList">
-                <div class="dataCard">20/02/2021</div>
-                <div class="priceCard">Euro spesi: 50</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">10/01/2021</div>
-                <div class="priceCard">Euro spesi: 30</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">17/11/2020</div>
-                <div class="priceCard">Euro spesi: 20</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">12/10/2020</div>
-                <div class="priceCard">Euro spesi: 80</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">26/07/2020</div>
-                <div class="priceCard">Euro spesi: 100</div>
-            </div>
-            <div class="cardList">
-                <div class="dataCard">22/04/2020</div>
-                <div class="priceCard">Euro spesi: 70</div>
-            </div>
-
+            <%
+                if(spese.isEmpty()==false){
+                    for(int i=0; i<spese.size();i++){
+            %>
+                    <div class="cardList">
+                        <div class="dataCard"><%=spese.get(i).getData()%></div>
+                        <div class="priceCard"><%=spese.get(i).getEuroSpesi()%>€</div>
+                    </div>
+            <%
+                 }
+                }else{
+            %>
+                No Spese
+            <%
+                }
+            %>
         </div>
 
     </div>
