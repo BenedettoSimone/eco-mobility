@@ -43,43 +43,19 @@ public class SpostamentiControl extends HttpServlet {
 
             for (int i=0;i<sp.size();i++){
                 dateSP.add(sp.get(i).getData().toString());
-                System.out.println("Vettore date di sp"+dateSP.get(i));
             }
 
             for (int i=0; i<7;i++){
                 if(dateSP.contains(strData)){
-                    System.out.println(strData+" è contenuto in dataSP");
                     km[i]=spDAO.doRetriveKMByData(strData, utente.getIdUtenti());
                     data= new Date(milliseconds-86400000*(i+1));
                     strData = data.toString();
                 }
                 else{
-                    System.out.println(strData+" NON è contenuto in dataSP");
                     data= new Date(milliseconds-86400000*(i+1));
                     strData = data.toString();
                 }
             }
-
-            for(int i=0;i<7;i++){
-                System.out.println(km[i]);
-            }
-
-          /*  for (int i=0; i<7;i++){
-                System.out.println(strData+" : "+sp.get(i).getData().toString());
-
-                if(strData.equalsIgnoreCase(sp.get(i).getData().toString())){
-
-                    km[i]=sp.get(i).getKmPercorsi();
-                    data= new Date(milliseconds-86400000*(i+1));//Aggiungo un giorno alla data, così da far scorrere una settimana
-                    strData = data.toString();
-                    System.out.println("Aumento di un giorno "+ data);
-
-                }else{
-                    data= new Date(milliseconds-86400000*(i+1));
-                    strData=data.toString();
-                    System.out.println("else Aumento di un giorno "+ data);
-                }
-            }*/
 
             request.setAttribute("kmSettimanali", km);
 
