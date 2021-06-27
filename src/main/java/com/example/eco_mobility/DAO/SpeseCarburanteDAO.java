@@ -16,10 +16,10 @@ public class SpeseCarburanteDAO {
     public synchronized void doSaveSpeseCarburante(SpeseCarburanteDTO spesa) throws SQLException{
         PreparedStatement ps = null;
 
-        String query="INSERT INTO "+ SpeseCarburanteDAO.TABLE_NAME+" (dat, euroSpesi, idUtenti) VALUES (?,?,?);";
+        String query="INSERT INTO "+ SpeseCarburanteDAO.TABLE_NAME+" (data, euroSpesi, idUtenti) VALUES (?,?,?)";
         ps=con.prepareStatement(query);
 
-        ps.setDate(1,spesa.getData());
+        ps.setString(1,spesa.getData());
         ps.setInt(2, spesa.getEuroSpesi());
         ps.setInt(3,spesa.getIdUtenti());
 

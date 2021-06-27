@@ -5,14 +5,14 @@ import java.sql.Date;
 public class SpeseCarburanteDTO {
 
     int idSpeseCarburante;
-    Date data;
+    String data;
     int euroSpesi;
     int idUtenti;
 
     public SpeseCarburanteDTO(){
     }
 
-    public SpeseCarburanteDTO(int idSpeseCarburante, Date data, int euroSpesi, int idUtenti){
+    public SpeseCarburanteDTO(int idSpeseCarburante, String data, int euroSpesi, int idUtenti){
         this.idSpeseCarburante=idSpeseCarburante;
         this.data=data;
         this.euroSpesi=euroSpesi;
@@ -27,11 +27,11 @@ public class SpeseCarburanteDTO {
         this.idSpeseCarburante = idSpeseCarburante;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

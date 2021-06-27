@@ -38,20 +38,21 @@
                 <div class="cardSX">
 
                     <b>NUOVA SPESA CARBURANTE</b>
+                    <form action="${pageContext.servletContext.contextPath}/AddSpeseControl" method="post">
+                        <div class="textCard">
+                            Data<br>
+                            <input type="date" name="data" class="formCard">
+                        </div>
 
-                    <div class="textCard">
-                        Data<br>
-                        <input type="text" class="formCard">
-                    </div>
+                        <div class="textCard">
+                            Euro Spesi<br>
+                            <input type="text" name="euro" class="formCard">
+                        </div>
+                        <input class="buttonCard" type="submit" value="AGGIUNGI">
 
-                    <div class="textCard">
-                        Euro Spesi<br>
-                        <input type="text" class="formCard">
-                    </div>
+                        <!-- <a class="buttonCard">Aggiungi</a> -->
 
-                    <a class="buttonCard">Accedi</a>
-
-
+                    </form>
                 </div >
 
 
