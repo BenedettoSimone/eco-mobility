@@ -16,14 +16,14 @@ public class ObiettivoDAO {
     public synchronized void doSaveObiettivi(ObiettiviDTO obiettivo) throws SQLException{
         PreparedStatement ps = null;
 
-        String query="INSERT INTO "+ ObiettivoDAO.TABLE_NAME+" (tipoObiettivo, obiettivo, status, scadenza, idUtenti) VALUES (?,?,?,?,?);";
+        String query="INSERT INTO "+ ObiettivoDAO.TABLE_NAME+" (tipoObiettivi, obiettivo, status, scadenza, idUtenti) VALUES (?,?,?,?,?);";
         ps=con.prepareStatement(query);
 
         ps.setString(1,obiettivo.getTipoObiettivo());
         ps.setInt(2,obiettivo.getObiettivo());
         ps.setBoolean(3,obiettivo.isStatus());
         ps.setDate(4,obiettivo.getScadenza());
-        ps.setInt(4,obiettivo.getIdUtenti());
+        ps.setInt(5,obiettivo.getIdUtenti());
 
 
         ps.executeUpdate();

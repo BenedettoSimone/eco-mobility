@@ -36,20 +36,26 @@
                 <div id="cardKM" class="card">
                     <div class="cardALONE">
 
-                        <b>RIDUZIONE CHILOMETRI</b>
+                        <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
 
-                        <div class="textCardUp">
-                            Negli ultimi 7 giorni hai percorso in media 100km<br>
+                            <b>RIDUZIONE CHILOMETRI</b>
 
-                        </div>
+                            <div class="textCardUp">
+                                Negli ultimi 7 giorni hai percorso in media 100km<br>
 
-                        <div class="textCard">
-                            quanti chilometri vuoi percorrere nei prossimi 7 giorni?<br>
-                            <input type="text" class="formCard">
-                        </div>
+                            </div>
 
-                        <a class="buttonCard">Aggiungi</a>
+                            <div class="textCard">
+                                quanti chilometri vuoi percorrere nei prossimi 7 giorni?<br>
+                                <input type="text" name="obiettivo" class="formCard">
+                                <input type="hidden" name="action" value="1">
+                            </div>
 
+                            <input class="buttonCard" type="submit" value="AGGIUNGI">
+
+                            <!--<a class="buttonCard">Aggiungi</a>-->
+
+                        </form>
 
                     </div>
 
@@ -65,20 +71,25 @@
                 <div id="cardSPESE" class="card">
                     <div class="cardALONE">
 
-                        <b>RIDUZIONE SPESE CARBURANTE</b>
+                        <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
+                            <b>RIDUZIONE SPESE CARBURANTE</b>
 
-                        <div class="textCardUp">
-                            Negli ultimi 7 giorni hai speso 200€<br>
+                            <div class="textCardUp">
+                                Negli ultimi 7 giorni hai speso 200€<br>
 
-                        </div>
+                            </div>
 
-                        <div class="textCard">
-                            Quanto vuoi spendere nei prossimi 7 giorni?<br>
-                            <input type="text" class="formCard">
-                        </div>
+                            <div class="textCard">
+                                Quanto vuoi spendere nei prossimi 7 giorni?<br>
+                                <input type="text" name="obiettivo" class="formCard">
+                                <input type="hidden" name="action" value="2">
+                            </div>
 
-                        <a class="buttonCard">Aggiungi</a>
+                            <input class="buttonCard" type="submit" value="AGGIUNGI">
 
+                            <!--<a class="buttonCard">Aggiungi</a>-->
+
+                        </form>
 
                     </div>
 
@@ -90,21 +101,25 @@
                 <!-- card UTILIZZO MEZZO ECO -->
                 <div id="cardECO" class="card">
                     <div class="cardSX">
+                        <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
+                            <b>UTILIZZO MEZZO ECO-SOSTENIBILE</b>
 
-                        <b>UTILIZZO MEZZO ECO-SOSTENIBILE</b>
+                            <div class="textCardUp">
+                                Negli ultimi 7 giorni hai utilizzato 0 volte un mezzo eco-sostenibile<br>
+                            </div>
 
-                        <div class="textCardUp">
-                            Negli ultimi 7 giorni hai utilizzato 0 volte un mezzo eco-sostenibile<br>
+                            <div class="textCard">
+                                Quante volte vuoi utilizzare un mezzo ecosostenibile nei prossimi 7 giorni?<br>
+                                <input type="text" name="obiettivo" class="formCard">
+                                <input type="hidden" name="action" value="3">
 
-                        </div>
+                            </div>
 
-                        <div class="textCard">
-                            Quante volte vuoi utilizzare un mezzo ecosostenibile nei prossimi 7 giorni?<br>
-                            <input type="text" class="formCard">
-                        </div>
+                            <input class="buttonCard" type="submit" value="AGGIUNGI">
 
-                        <a class="buttonCard">Aggiungi</a>
+                            <!--<a class="buttonCard">Aggiungi</a>-->
 
+                        </form>
 
                     </div>
 

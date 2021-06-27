@@ -52,7 +52,7 @@
             </a>
         </li>
         <li>
-            <a id="obiettivi" class="top" href="#">
+            <a id="obiettivi" class="top" href="obiettivi.jsp">
                 <i class='bx bxs-trophy'></i>
                 <span class="links_name">Obiettivi</span>
             </a>
