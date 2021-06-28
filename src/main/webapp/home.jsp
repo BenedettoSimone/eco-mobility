@@ -4,9 +4,11 @@
 <%
     int[] km;
     km= (int[]) request.getAttribute("kmSettimanali");
+    int mediaKm = (int) request.getAttribute("mediaSet");
     if(km==null){
         response.sendRedirect("./SpostamentiControl");
     }
+
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
 
@@ -89,7 +91,7 @@
                         <div class="chart-card">
 
                             <h1>Media chilometri</h1>
-                            <h5>Negli ultimi 7 giorni hai percorso in media <p id="mediaKm">null</p> km.</h5>
+                            <h5>Negli ultimi 7 giorni hai percorso in media <%=mediaKm%> km.</h5>
 
                             <div class="card chart-container">
                                 <canvas id="chart"></canvas>
@@ -127,6 +129,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script>
 
+    const array=[];
+    function getDate() {
+
+        //trovo la data corrente (indice)
+        const d = new Date();
+        const days = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"];
+        //indice giorno corrente
+        var final=d.getDay();
+        days.subarray(0, final);
+        days.subarray(6, final);
+    }
 
 
     //line chart
@@ -163,7 +176,7 @@
             labels: ["Sab", "Dom", "Lun", "Mar", "Mer", "Gio", "Ven"],
             datasets: [{
                 label: 'Media spese',
-                data: [],
+                data: [seventhDaySp, sixthDaySp , fifthDaySp, fourthDaySp, thirdDaySp, secondDaySp, firstDaySp],
                 backgroundColor: '#F1F6FF',
                 borderColor: '#5a87e8',
 
