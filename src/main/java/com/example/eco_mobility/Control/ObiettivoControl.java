@@ -10,6 +10,8 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.Date;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ObiettivoControl extends HttpServlet {
     @Override
@@ -26,6 +28,22 @@ public class ObiettivoControl extends HttpServlet {
         Date data = new Date(milliseconds+86400000*(7));
 
         try {
+            List<ObiettiviDTO>obiettivi=new ArrayList<ObiettiviDTO>();
+            obiettivi=obDAO.doRetriveObiettivi(ut.getIdUtenti());
+
+            for(int i=0;i<obiettivi.size();i++){
+                if(action==1 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Obiettivo riduzione chilometri")){
+                    action=0;
+                }
+                if(action==2 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Obiettivo riduzione spese carburante")){
+                    action=0;
+                }
+                if(action==3 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Obiettivo utilizzo mezzo ECO-SOSTENIBILE")){
+                    action=0;
+                }
+
+            }
+
             if(action==1) {
                 ob.setTipoObiettivo("Obiettivo riduzione chilometri");
                 ob.setObiettivo(obiettivo);
@@ -51,8 +69,9 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setStatus(false);
 
                 obDAO.doSaveObiettivi(ob);
+            }else if(action==0){
+                request.setAttribute("ErrObiettivo", "true");
             }
-
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
