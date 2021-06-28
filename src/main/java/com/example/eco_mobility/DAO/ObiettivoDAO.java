@@ -58,5 +58,30 @@ public class ObiettivoDAO {
         return obiettivi;
     }
 
+    public synchronized List<ObiettiviDTO> doRetriveObiettiviInCorso(int utente) throws SQLException {
+        List<ObiettiviDTO> obiettivi = new ArrayList<ObiettiviDTO>();
+        PreparedStatement ps = null;
+
+        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? and current_date()<=scadenza ";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()){
+            ObiettiviDTO ob = new ObiettiviDTO();
+            ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
+            ob.setObiettivo(rs.getInt("obiettivo"));
+            ob.setScadenza(rs.getDate("scadenza"));
+            ob.setIdUtenti(rs.getInt("idUtenti"));
+            ob.setStatus(rs.getBoolean("status"));
+
+            obiettivi.add(ob);
+        }
+        return obiettivi;
+    }
+
 
 }

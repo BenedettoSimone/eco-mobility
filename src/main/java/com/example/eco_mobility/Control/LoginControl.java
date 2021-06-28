@@ -1,5 +1,6 @@
 package com.example.eco_mobility.Control;
 
+import com.example.eco_mobility.DAO.ObiettivoDAO;
 import com.example.eco_mobility.DAO.UtentiDAO;
 import com.example.eco_mobility.DTO.UtentiDTO;
 
@@ -51,10 +52,12 @@ public class LoginControl extends HttpServlet {
         UtentiDAO utDAO = new UtentiDAO();
         UtentiDTO ut = utDAO.doRetrivebyEmail(email);
 
+        ObiettivoDAO obbDao = new ObiettivoDAO();
+
         if (ut.getEmail().equals(email) && ut.getPassword().equals(password)) {
 
             request.getSession().setAttribute("utente",ut);
-
+            request.getSession().setAttribute("obiettiviInCorso",obbDao.doRetriveObiettiviInCorso(ut.getIdUtenti()));
             return "registrato";
         } else
             throw new Exception("Invalid login and password");

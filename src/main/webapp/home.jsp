@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     int[] km;
@@ -5,6 +7,9 @@
     if(km==null){
         response.sendRedirect("./SpostamentiControl");
     }
+
+    List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
+
 %>
 <!DOCTYPE html>
 <html lang="en" xmlns="">
@@ -51,31 +56,26 @@
 
 
                     <div class="row-obiettivi">
+                        <% if(obiettiviInCorso.isEmpty()==false){
+
+                            for(ObiettiviDTO obb : obiettiviInCorso){
+                        %>
                         <div class="column-obiettivi">
                             <div class="card-obiettivi">
-                                <h3>Riduzione spesa</h3>
+                                <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Km percorsi: 30 &nbsp &nbsp &nbsp Km massimi: 400</p>
+                                <p>Descrizione: <%=obb.getObiettivo()%></p>
+                                <p></p>
                             </div>
                         </div>
-
-                        <div class="column-obiettivi">
-                            <div class="card-obiettivi">
-                                <h3>Card 2</h3>
-                                <p>Some text</p>
-                                <p>Some text</p>
-                            </div>
-                        </div>
-
-                        <div class="column-obiettivi">
-                            <div class="card-obiettivi">
-                                <h3>Card 3</h3>
-                                <p>Some text</p>
-                                <p>Some text</p>
-                            </div>
-                        </div>
-
-
+                        <%
+                                }
+                            }else{
+                        %>
+                        nessun obiettivo in corso
+                        <%
+                                }
+                        %>
                     </div>
             </div>
 
