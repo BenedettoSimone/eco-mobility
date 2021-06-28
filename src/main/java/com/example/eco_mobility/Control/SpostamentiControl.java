@@ -57,7 +57,14 @@ public class SpostamentiControl extends HttpServlet {
                 }
             }
 
+            int tot=0, media=0;
+            for(int i=0;i<7;i++){
+                tot=km[i]+tot;
+            }
+            media=tot/7;
+
             request.setAttribute("kmSettimanali", km);
+            request.setAttribute("mediaSet", media);
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
 
