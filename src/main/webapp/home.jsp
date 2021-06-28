@@ -89,7 +89,7 @@
                         <div class="chart-card">
 
                             <h1>Media chilometri</h1>
-                            <h5>Negli ultimi 7 giorni hai percorso in media 53 km.</h5>
+                            <h5>Negli ultimi 7 giorni hai percorso in media <p id="mediaKm">null</p> km.</h5>
 
                             <div class="card chart-container">
                                 <canvas id="chart"></canvas>
@@ -125,7 +125,62 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
-<script src="js/home.js"></script>
+<script>
+
+
+
+    //line chart
+    var ctxL = document.getElementById("chart").getContext('2d');
+    var myLineChart = new Chart(ctxL, {
+        type: 'line',
+        data: {
+            labels: ["Sab", "Dom", "Lun", "Mar", "Mer", "Gio", "Ven"],
+            datasets: [{
+                label: 'Km percorsi',
+                data: [<%=km[6]%>, <%=km[5]%>, <%=km[4]%>, <%=km[3]%>, <%=km[2]%>, <%=km[1]%>, <%=km[0]%>],
+                backgroundColor: [
+                    '#F1F6FF',
+                ],
+                borderColor: [
+                    '#5a87e8',
+                ],
+                borderWidth: 2
+            }
+            ]
+        },
+        options: {
+            responsive: true
+        }
+    });
+
+
+
+    //bar chart
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Sab", "Dom", "Lun", "Mar", "Mer", "Gio", "Ven"],
+            datasets: [{
+                label: 'Media spese',
+                data: [],
+                backgroundColor: '#F1F6FF',
+                borderColor: '#5a87e8',
+
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
