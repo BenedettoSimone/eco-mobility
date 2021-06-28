@@ -32,7 +32,7 @@ public class LoginControl extends HttpServlet {
 
                 redirectedPage="/home.jsp";
 
-                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+                RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/SpostamentiControl");
 
                 dispatcher.forward(request,response);
             }
