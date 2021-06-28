@@ -129,17 +129,25 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script>
 
-    const array=[];
-    function getDate() {
+
+    window.onload=function getDate() {
 
         //trovo la data corrente (indice)
         const d = new Date();
         const days = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"];
         //indice giorno corrente
         var final=d.getDay();
-        days.subarray(0, final);
-        days.subarray(6, final);
+
+        //trovo i nomi giorni
+        var array2 = days.slice(0, final);
+        var array3 = days.slice(final, 7);
+
+         var array1= array3.concat(array2);
+
+         alert(array1);
+
     }
+
 
 
     //line chart
@@ -147,7 +155,7 @@
     var myLineChart = new Chart(ctxL, {
         type: 'line',
         data: {
-            labels: ["Sab", "Dom", "Lun", "Mar", "Mer", "Gio", "Ven"],
+            labels: [array1[6], array1[5], array1[4], array1[3], array1[4], array1[5], array1[6]],
             datasets: [{
                 label: 'Km percorsi',
                 data: [<%=km[6]%>, <%=km[5]%>, <%=km[4]%>, <%=km[3]%>, <%=km[2]%>, <%=km[1]%>, <%=km[0]%>],
