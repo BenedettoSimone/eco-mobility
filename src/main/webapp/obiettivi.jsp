@@ -55,15 +55,15 @@
 
                         <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
 
-                            <b>RIDUZIONE CHILOMETRI</b>
+                            <h4>RIDUZIONE CHILOMETRI</h4>
 
                             <div class="textCardUp">
-                                Negli ultimi 7 giorni hai percorso in media 100km<br>
+                                <h6>Negli ultimi 7 giorni hai percorso in media 100km</h6><br>
 
                             </div>
 
                             <div class="textCard">
-                                quanti chilometri vuoi percorrere nei prossimi 7 giorni?<br>
+                                Quanti chilometri vuoi percorrere nei prossimi 7 giorni?<br>
                                 <input type="text" name="obiettivo" class="formCard">
                                 <input type="hidden" name="action" value="1">
                             </div>
@@ -89,10 +89,10 @@
                     <div class="cardALONE">
 
                         <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
-                            <b>RIDUZIONE SPESE CARBURANTE</b>
+                            <h4>RIDUZIONE SPESE CARBURANTE</h4>
 
                             <div class="textCardUp">
-                                Negli ultimi 7 giorni hai speso 200€<br>
+                                <h6>Negli ultimi 7 giorni hai speso 200€</h6><br>
 
                             </div>
 
@@ -119,7 +119,7 @@
                 <div id="cardECO" class="card">
                     <div class="cardSX">
                         <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
-                            <b>UTILIZZO MEZZO ECO-SOSTENIBILE
+                            <h4>UTILIZZO MEZZO ECO-SOSTENIBILE
 
                                 <i class='bx bx-question-mark tooltip'>
 
@@ -133,10 +133,10 @@
                                     -qualsiasi mezzo con motore elettrico<br>
                                     </span>
                                  </i>
-                            </b>
+                            </h4>
 
                             <div class="textCardUp">
-                                Negli ultimi 7 giorni hai utilizzato 0 volte un mezzo eco-sostenibile<br>
+                                <h6>Negli ultimi 7 giorni hai utilizzato 0 volte un mezzo eco-sostenibile</h6><br>
                             </div>
 
                             <div class="textCard">

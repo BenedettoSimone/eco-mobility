@@ -131,7 +131,7 @@ html, body{
 
 #content #titleContent{
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
 
 
     font-size: 45px;
@@ -154,10 +154,11 @@ html, body{
 /*icona obiettivi*/
 #obiettIcon{
     float:right;
-    background-color: #FFFFFF;
+    background-color: #5a87e8;
     border-radius:10px;
     padding:2px;
     display: none;
+    color:#fff;
 }
 
 /*Card centrale*/
@@ -190,30 +191,41 @@ html, body{
     box-sizing: border-box;
 }
 
+.card .cardSX h4, .card .cardALONE h4{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
 
+.textCardUp h6{
+    margin-top: 0px;
+    font-size: 17px;
+}
 
 .textCard{
-    margin-top: 10%;
+    margin-top: -23px;
     font-family: Helvetica Neue;
-    font-size: 20px;
     color: 	#858585;
 }
 .textCardUp{
-    margin-top: 1%;
+    margin-top: 12px;
     font-family: Helvetica Neue;
-    font-size: 20px;
+    font-size: 24px;
     color: 	#858585;
 }
 
+
+
+
 .formCard{
-    border-radius: 10px;
-    margin-top: 10px;
-    border-color: #858585;
-    border-bottom-width: 2px;
-    background: white;
-    font-size: 18px;
-    line-height: 32px;
+    border-radius: 12px;
+    height: 41px;
     width: 100%;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 17px;
+    margin-top: 12px;
 }
 
 .buttonCard{
@@ -224,10 +236,9 @@ html, body{
     font-size: 18px;
     background-color: #486fe4;
     border-radius: 10px;
-    width: 120px;
-    height: 40px;
-    margin: 5% 0px 5% 0px;
-    padding-top: 10px;
+    margin-top: 20px;
+    padding: 13px;
+    border: 0;
 }
 
 .imgCard{
