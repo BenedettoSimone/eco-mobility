@@ -17,6 +17,7 @@ html, body{
     margin:0;
 }
 
+
 .row {
     height: 100%;
     width: 100%;
@@ -150,6 +151,15 @@ html, body{
 
 }
 
+/*icona obiettivi*/
+#obiettIcon{
+    float:right;
+    background-color: #FFFFFF;
+    border-radius:10px;
+    padding:2px;
+    display: none;
+}
+
 /*Card centrale*/
 
 .card{
@@ -266,6 +276,8 @@ html, body{
 }
 
 
+
+
 */
 
 /* NAV BAR */
@@ -307,6 +319,11 @@ html, body{
         float:left;
     }
 
+    #obiettIcon{
+        display: block;
+
+    }
+
 
 }
 
@@ -332,6 +349,6 @@ html, body{
         padding: 20px 20px 20px 20px;
         margin-top: 36px;
     }
-    #
+
 }
 

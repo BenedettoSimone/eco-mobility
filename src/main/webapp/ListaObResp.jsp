@@ -10,6 +10,7 @@
 <head>
     <title>Lista obiettivi resp</title>
     <link href="css/obiettResp.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 

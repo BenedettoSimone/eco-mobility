@@ -20,18 +20,27 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <script src="js/ListaObiettiviResp.js"></script>
 <body>
 
 <%@ include file="ListaObResp.jsp" %>
 
 
-<span style="font-size:30px;cursor:pointer" onclick="openBar()">&#9776; open</span>
+
 <div class="row" id="myrow">
+
+    <div id="navbar">
+        <%@include file="navbar.jsp"%>
+    </div>
+
+    <div id="navbar_responsive">
+        <%@include file="navbar-resp.jsp"%>
+    </div>
 
 
     <div id="content">
         <div class="background-content">
+            <span id="obiettIcon" style="font-size:35px;cursor:pointer" onclick="openBar()"><i class='bx bx-list-ol'></i></span>
             <div id="titleContent">
                 OBIETTIVI
             </div>
@@ -180,69 +189,5 @@
 
 </div>
 
-<script>
-
-    var div = document.getElementById("list-responsive");
-    var list = document.getElementById("list");
-    var divrow=document.getElementById("myrow");
-    window.onresize = function myFunction() {
-
-        if (window.innerWidth <= 1540) {
-
-            div.appendChild(list);
-
-        }
-
-        if(window.innerWidth > 1540){
-
-
-            divrow.appendChild(list);
-        }
-    }
-    window.onload = function myFunction() {
-        div = document.getElementById("list-responsive");
-        list = document.getElementById("list");
-        divrow=document.getElementById("myrow");
-        if (window.innerWidth <= 1540) {
-
-            div.appendChild(list);
-
-        }
-
-
-        if(window.innerWidth>1540){
-
-            divrow.appendChild(list);
-        }
-    }
-
-    function openBar() {
-        document.getElementById("mySidebar").style.width = "50%";
-        div = document.getElementById("mySidebar");
-        list = document.getElementById("list");
-        divrow=document.getElementById("myrow");
-        list.style.width="100%";
-        list.style.backgroundColor="#5a87e8";
-        list.style.padding="25px 30px 0 30px"
-
-        div.appendChild(list);
-    }
-
-    function closeBar() {
-        document.getElementById("mySidebar").style.width = "0px";
-
-        div = document.getElementById("mySidebar");
-        list = document.getElementById("list");
-        divrow=document.getElementById("myrow");
-        list.style.width="20%";
-        list.style.backgroundColor="white";
-        list.style.padding="130px 30px 0 30px"
-
-        divrow.appendChild(list);
-    }
-
-
-
-</script>
 </body>
 </html>
