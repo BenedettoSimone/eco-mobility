@@ -119,7 +119,21 @@
                 <div id="cardECO" class="card">
                     <div class="cardSX">
                         <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
-                            <b>UTILIZZO MEZZO ECO-SOSTENIBILE</b>
+                            <b>UTILIZZO MEZZO ECO-SOSTENIBILE
+
+                                <i class='bx bx-question-mark tooltip'>
+
+                                <span class="tooltiptext">
+
+                                    <strong>Quali sono i mezzi eco-sostenibili?</strong><br><br>
+                                    -treno<br>
+                                    -metro<br>
+                                    -pullman<br>
+                                    -qualsiasi mezzo privo di motore<br>
+                                    -qualsiasi mezzo con motore elettrico<br>
+                                    </span>
+                                 </i>
+                            </b>
 
                             <div class="textCardUp">
                                 Negli ultimi 7 giorni hai utilizzato 0 volte un mezzo eco-sostenibile<br>
