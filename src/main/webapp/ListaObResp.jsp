@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div id="mySidebar" class="sidebar">
+<div id="myOb-bar" class="ob-bar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
 
 </div>
