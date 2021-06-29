@@ -32,8 +32,8 @@
     <div id="links_resp">
         <a href="#">Home</a>
         <a href="#">Spostamenti</a>
-        <a href="#">Obiettivi</a>
-        <a href="#">Spesa Carburante</a>
+        <a href="obiettivi.jsp">Obiettivi</a>
+        <a href="speseCarburante.jsp">Spesa Carburante</a>
         <a href="#">Premi</a>
     </div>
 
@@ -42,7 +42,7 @@
             <span class="links_name">Benedetto Simone</span>
         </a>
 
-        <a class="logout-bottom"> <i class='bx bx-log-out'></i>
+        <a class="logout-bottom" href="${pageContext.servletContext.contextPath}/LogoutControl"> <i class='bx bx-log-out'></i>
             <span class="links_name">Logout</span>
         </a>
     </div>
