@@ -115,10 +115,11 @@
                         }
                             }else{
                         %>
-                        <p>Nessun obiettivo in corso</p>
+                        <p class="no_obiettivo">Nessun obiettivo in corso. <a href="obiettivi.jsp">Imposta un nuovo obiettivo</a></p>
                         <%
                                 }
                         %>
+
                     </div>
             </div>
 
@@ -219,7 +220,7 @@
             data: {
                 labels: [array1[0], array1[1], array1[2], array1[3], array1[4], array1[5], array1[6]],
                 datasets: [{
-                    label: 'Media spese',
+                    label: 'Spesa carburante',
                     data: [<%=carburante[6]%>, <%=carburante[5]%>, <%=carburante[4]%>, <%=carburante[3]%>, <%=carburante[2]%>, <%=carburante[1]%>, <%=carburante[0]%>],
                     backgroundColor: '#F1F6FF',
                     borderColor: '#5a87e8',
