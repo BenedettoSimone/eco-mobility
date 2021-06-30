@@ -64,7 +64,7 @@
 
                             <div class="textCard">
                                 Quanti chilometri vuoi percorrere nei prossimi 7 giorni?<br>
-                                <input type="text" name="obiettivo" class="formCard">
+                                <input type="text" name="obiettivo" class="formCard" required>
                                 <input type="hidden" name="action" value="1">
                             </div>
 
@@ -98,7 +98,7 @@
 
                             <div class="textCard">
                                 Quanto vuoi spendere nei prossimi 7 giorni?<br>
-                                <input type="text" name="obiettivo" class="formCard">
+                                <input type="text" name="obiettivo" class="formCard" required>
                                 <input type="hidden" name="action" value="2">
                             </div>
 
@@ -141,7 +141,7 @@
 
                             <div class="textCard">
                                 Quante volte vuoi utilizzare un mezzo ecosostenibile nei prossimi 7 giorni?<br>
-                                <input type="text" name="obiettivo" class="formCard">
+                                <input type="text" name="obiettivo" class="formCard" required>
                                 <input type="hidden" name="action" value="3">
 
                             </div>
@@ -187,9 +187,12 @@
                 }else{
                     for (int i=0;i<obiettivi.size();i++){
             %>
-            <div class="cardList">
-                <div class="dataCard"><%=obiettivi.get(i).getScadenza()%></div>
-                <div class="priceCard"><%=obiettivi.get(i).getTipoObiettivo()%>: <%=obiettivi.get(i).getObiettivo()%></div>
+
+            <div class="card-obiettivi">
+                <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
+                <p>Status: in corso</p>
+                <p>Euro spesi: 20 &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
+                <p>Scadenza: <%=obiettivi.get(i).getScadenza()%> </p>
             </div>
             <%
                     }

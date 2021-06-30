@@ -85,27 +85,30 @@ html, body{
 }
 
 
-.cardList{
-    width: 100%;
-    background-color: #edf3fe;
-    border: 1px solid #4c71e1;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    padding:30px;
-    text-align: center;
+/* Style the counter cards */
+.card-obiettivi {
+    background-color: #F1F6FF;
+    border:1px solid #5a87e8;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
 }
 
-.dataCard{
-    color: #4c71e1;
-    font-weight: bolder;
-    font-size: 22px;
-    font-family: Helvetica Neue;
+.card-obiettivi p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #5a87e8;
 }
 
-.priceCard{
-    color: #4c71e1;
-    font-size: 20px;
-    font-family: Helvetica Neue;
+.card-obiettivi h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#5a87e8;
+    text-transform: uppercase;
 }
 
 #ContainerObiettivi{
