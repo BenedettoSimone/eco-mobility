@@ -13,10 +13,10 @@
     String progressKm= (String) request.getSession().getAttribute("progressKm");
 
     //avanzamento utilizzo mezzo eco
-    int progressMezzo=(int)request.getSession().getAttribute("progressMezzo");
+    String progressMezzo=(String)request.getSession().getAttribute("progressMezzo");
 
     //avanzamento spese carburante
-    int progressEuro=(int)request.getSession().getAttribute("progressEuro");
+    String progressEuro=(String)request.getSession().getAttribute("progressEuro");
 
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
@@ -95,7 +95,7 @@
                         </div>
                         <%
                             }
-                              else if(obb.getTipoObiettivo().equalsIgnoreCase("Riduzione spesa")){
+                              else{
                         %>
                         <div class="column-obiettivi">
                             <div class="card-obiettivi">
