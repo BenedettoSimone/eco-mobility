@@ -148,7 +148,7 @@
 
 
                             <h1>Media spese carburante</h1>
-                            <h5>Negli ultimi 7 giorni hai speso in media NULL euro.</h5>
+                            <h5>Negli ultimi 7 giorni hai speso in media <%=mediaCarburante%> euro.</h5>
 
                             <div class="card chart-container">
                                 <canvas id="myChart"></canvas>
@@ -220,7 +220,7 @@
                 labels: [array1[0], array1[1], array1[2], array1[3], array1[4], array1[5], array1[6]],
                 datasets: [{
                     label: 'Media spese',
-                    data: ["0", "0", "0", "0", "0", "0", "0"],
+                    data: [<%=carburante[6]%>, <%=carburante[5]%>, <%=carburante[4]%>, <%=carburante[3]%>, <%=carburante[2]%>, <%=carburante[1]%>, <%=carburante[0]%>],
                     backgroundColor: '#F1F6FF',
                     borderColor: '#5a87e8',
 
