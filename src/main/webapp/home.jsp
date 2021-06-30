@@ -10,6 +10,15 @@
     }
 
 
+    String progressKm= (String) request.getSession().getAttribute("progressKm");
+
+    //avanzamento utilizzo mezzo eco
+    int progressMezzo=(int)request.getSession().getAttribute("progressMezzo");
+
+    //avanzamento spese carburante
+    int progressEuro=(int)request.getSession().getAttribute("progressEuro");
+
+
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
 
 %>
@@ -61,17 +70,44 @@
                         <% if(obiettiviInCorso.isEmpty()==false){
 
                             for(ObiettiviDTO obb : obiettiviInCorso){
+
+                              if(obb.getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
                         %>
                         <div class="column-obiettivi">
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Descrizione: <%=obb.getObiettivo()%></p>
+                                <p>Km percorsi:<%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obb.getObiettivo()%></p>
                                 <p></p>
                             </div>
                         </div>
                         <%
-                                }
+                                }else if(obb.getTipoObiettivo().equalsIgnoreCase("Utilizzo mezzo eco")) {
+
+                                %>
+                        <div class="column-obiettivi">
+                            <div class="card-obiettivi">
+                                <h3><%=obb.getTipoObiettivo()%></h3>
+                                <p>Status: in corso</p>
+                                <p>Utilizzo:<%=progressMezzo%> / <%=obb.getObiettivo()%></p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <%
+                            }
+                              else if(obb.getTipoObiettivo().equalsIgnoreCase("Riduzione spesa")){
+                        %>
+                        <div class="column-obiettivi">
+                            <div class="card-obiettivi">
+                                <h3><%=obb.getTipoObiettivo()%></h3>
+                                <p>Status: in corso</p>
+                                <p>Euro spesi:<%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obb.getObiettivo()%></p>
+                                <p></p>
+                            </div>
+                        </div>
+                        <%
+                            }
+                        }
                             }else{
                         %>
                         <p>Nessun obiettivo in corso</p>

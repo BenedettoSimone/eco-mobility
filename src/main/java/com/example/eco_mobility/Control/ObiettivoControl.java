@@ -32,20 +32,20 @@ public class ObiettivoControl extends HttpServlet {
             obiettivi=obDAO.doRetriveObiettivi(ut.getIdUtenti());
 
             for(int i=0;i<obiettivi.size();i++){
-                if(action==1 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Obiettivo riduzione chilometri")){
+                if(action==1 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
                     action=0;
                 }
-                if(action==2 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Obiettivo riduzione spese carburante")){
+                if(action==2 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione spesa")){
                     action=0;
                 }
-                if(action==3 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Obiettivo utilizzo mezzo ECO-SOSTENIBILE")){
+                if(action==3 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Utilizzo mezzo eco")){
                     action=0;
                 }
 
             }
 
             if(action==1) {
-                ob.setTipoObiettivo("Obiettivo riduzione chilometri");
+                ob.setTipoObiettivo("Riduzione chilometri");
                 ob.setObiettivo(obiettivo);
                 ob.setIdUtenti(ut.getIdUtenti());
                 ob.setScadenza(data);
@@ -54,7 +54,7 @@ public class ObiettivoControl extends HttpServlet {
                 obDAO.doSaveObiettivi(ob);
 
             }else if(action==2) {
-                ob.setTipoObiettivo("Obiettivo riduzione spese carburante");
+                ob.setTipoObiettivo("Riduzione spesa");
                 ob.setObiettivo(obiettivo);
                 ob.setIdUtenti(ut.getIdUtenti());
                 ob.setScadenza(data);
@@ -62,7 +62,7 @@ public class ObiettivoControl extends HttpServlet {
 
                 obDAO.doSaveObiettivi(ob);
             }else if(action==3){
-                ob.setTipoObiettivo("Obiettivo utilizzo mezzo ECO-SOSTENIBILE");
+                ob.setTipoObiettivo("Utilizzo mezzo eco");
                 ob.setObiettivo(obiettivo);
                 ob.setIdUtenti(ut.getIdUtenti());
                 ob.setScadenza(data);
