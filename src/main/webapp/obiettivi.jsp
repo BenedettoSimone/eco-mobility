@@ -22,6 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/ListaObiettiviResp.js"></script>
+    <script src="js/obiettivi.js"></script>
 <body>
 
 <%@ include file="ListaObResp.jsp" %>
@@ -54,19 +55,21 @@
                 <div id="cardKM" class="card">
                     <div class="cardALONE">
 
-                        <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
+                        <form id="fChilometri" action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
 
                             <h4>RIDUZIONE CHILOMETRI</h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai percorso in media 100km</h6><br>
+                                <h6>Negli ultimi 7 giorni hai percorso in media <%=mediaKm%>km</h6><br>
 
                             </div>
 
                             <div class="textCard">
                                 Quanti chilometri vuoi percorrere nei prossimi 7 giorni?<br>
-                                <input type="text" name="obiettivo" class="formCard" required>
+                                <input id="chilometri_input" type="text" name="obiettivo" class="formCard" required onchange="kmObserver()">
+                                <label id="km_l"></label>
                                 <input type="hidden" name="action" value="1">
+
                             </div>
 
                             <input class="buttonCard" type="submit" value="AGGIUNGI">
@@ -89,18 +92,20 @@
                 <div id="cardSPESE" class="card">
                     <div class="cardALONE">
 
-                        <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
+                        <form id="fSpese" action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
                             <h4>RIDUZIONE SPESE CARBURANTE</h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai speso 200€</h6><br>
+                                <h6>Negli ultimi 7 giorni hai speso <%=mediaCarburante%> euro.</h6><br>
 
                             </div>
 
                             <div class="textCard">
                                 Quanto vuoi spendere nei prossimi 7 giorni?<br>
-                                <input type="text" name="obiettivo" class="formCard" required>
+                                <input id="spese_input" type="text" name="obiettivo" class="formCard" required onchange="spesaObserver()">
+                                <label id="spese_l"></label>
                                 <input type="hidden" name="action" value="2">
+
                             </div>
 
                             <input class="buttonCard" type="submit" value="AGGIUNGI">
@@ -119,7 +124,7 @@
                 <!-- card UTILIZZO MEZZO ECO -->
                 <div id="cardECO" class="card">
                     <div class="cardSX">
-                        <form action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
+                        <form id="fMezzo" action="${pageContext.servletContext.contextPath}/ObiettivoControl" method="post">
                             <h4>UTILIZZO MEZZO ECO-SOSTENIBILE
 
                                 <i class='bx bx-question-mark tooltip'>
@@ -137,12 +142,13 @@
                             </h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai utilizzato 0 volte un mezzo eco-sostenibile</h6><br>
+                                <h6>Negli ultimi 7 giorni hai utilizzato <%=progressMezzo%> volte un mezzo eco-sostenibile</h6><br>
                             </div>
 
                             <div class="textCard">
                                 Quante volte vuoi utilizzare un mezzo ecosostenibile nei prossimi 7 giorni?<br>
-                                <input type="text" name="obiettivo" class="formCard" required>
+                                <input id="mezzo_input" type="text" name="obiettivo" class="formCard" required onchange="mezzoObserver()">
+                                <label id="mezzo_label"></label>
                                 <input type="hidden" name="action" value="3">
 
                             </div>
@@ -204,7 +210,7 @@
                     <p>Status: in corso</p>
                     <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
-                    <p class="scadenza">Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
+                    <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
 
             <%
@@ -213,11 +219,11 @@
             %>
 
                 <div class="card-obiettivi">
-                    <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
+                    <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: in corso</p>
                     <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
-                    <p class="scadenza">Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
+                    <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
 
             <%
@@ -226,11 +232,11 @@
             %>
 
                 <div class="card-obiettivi">
-                    <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
+                    <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: in corso</p>
                     <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
-                    <p class="scadenza">Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
+                    <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
 
             <%

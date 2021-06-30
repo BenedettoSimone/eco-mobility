@@ -66,10 +66,11 @@ html, body{
 }
 
 .listaSpese {
-    height: 86.9%;
+    height: 83.9%;
     box-sizing: border-box;
     margin: 30px 0px 0px 0px;
     overflow: scroll;
+    padding: 2px;
 }
 
 .listaSpese::-webkit-scrollbar{
@@ -283,6 +284,11 @@ html, body{
     font-family: Helvetica Neue;
     color: 	#858585;
 }
+
+#mezzo_input, #chilometri_input, #spese_input{
+    margin-bottom: 7px;
+}
+
 .textCardUp{
     margin-top: 12px;
     font-family: Helvetica Neue;
