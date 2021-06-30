@@ -69,6 +69,18 @@ public class ObiettiviDTO {
     public void setIdUtenti(int idUtenti) {
         this.idUtenti = idUtenti;
     }
+
+    @Override
+    public String toString() {
+        return "ObiettiviDTO{" +
+                "idObiettivi=" + idObiettivi +
+                ", tipoObiettivo='" + tipoObiettivo + '\'' +
+                ", obiettivo=" + obiettivo +
+                ", status=" + status +
+                ", scadenza=" + scadenza +
+                ", idUtenti=" + idUtenti +
+                '}';
+    }
 }
 
 

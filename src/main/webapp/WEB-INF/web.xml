@@ -88,4 +88,13 @@
         <url-pattern>/SpeseCarburanteControl</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>FiltroControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.FiltroControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FiltroControl</servlet-name>
+        <url-pattern>/FiltroControl</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

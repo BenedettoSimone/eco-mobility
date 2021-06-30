@@ -143,4 +143,32 @@ public class ObiettivoDAO {
         return euro;
     }
 
+    public synchronized List<ObiettiviDTO> obiettiviPerFiltro(String fil, int ut) throws SQLException {
+        PreparedStatement ps=null;
+        List<ObiettiviDTO> obiettivi =  new ArrayList<ObiettiviDTO>();
+
+        String query="SELECT * FROM ecomobility.Obiettivi where tipoObiettivi like \"%"+fil+"%\" and idUtenti=?;";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,ut);
+
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()){
+            ObiettiviDTO ob = new ObiettiviDTO();
+            ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
+            ob.setObiettivo(rs.getInt("obiettivo"));
+            ob.setScadenza(rs.getDate("scadenza"));
+            ob.setIdUtenti(rs.getInt("idUtenti"));
+            ob.setStatus(rs.getBoolean("status"));
+
+            System.out.println(ob.toString());
+
+            obiettivi.add(ob);
+        }
+
+        return obiettivi;
+    }
+
 }
