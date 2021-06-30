@@ -60,7 +60,7 @@
                             <h4>RIDUZIONE CHILOMETRI</h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai percorso in media <%=mediaKm%>km</h6><br>
+                                <h6>Negli ultimi 7 giorni hai percorso in media null km</h6><br>
 
                             </div>
 
@@ -96,7 +96,7 @@
                             <h4>RIDUZIONE SPESE CARBURANTE</h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai speso <%=mediaCarburante%> euro.</h6><br>
+                                <h6>Negli ultimi 7 giorni hai speso null euro.</h6><br>
 
                             </div>
 
