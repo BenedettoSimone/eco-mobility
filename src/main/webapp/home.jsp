@@ -8,7 +8,6 @@
 
     carburante= (int[]) request.getAttribute("speseSettimanali");
     int mediaCarburante=(int) request.getAttribute("mediaSpCarburante");
-    System.out.println(mediaCarburante);
 
     if(km==null || carburante==null){
         response.sendRedirect("./SpostamentiControl");

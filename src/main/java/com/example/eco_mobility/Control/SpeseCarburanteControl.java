@@ -64,11 +64,6 @@ public class SpeseCarburanteControl extends HttpServlet {
             request.setAttribute("speseSettimanali", sp);
             request.setAttribute("mediaSpCarburante", media);
 
-            for(int i=0;i<7;i++) {
-                System.out.println(sp[i]);
-            }
-            System.out.println(media);
-
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
 
             dispatcher.forward(request,response);
