@@ -189,38 +189,41 @@
 
                         if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
             %>
-            <div class="column-obiettivi">
-                <div class="card-obiettivi">
+
+                <div class="card-obiettivi chilometri">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
                     <p>Status: in corso</p>
                     <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <hr>
                     <p>Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
-            </div>
+
             <%
             }else if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Utilizzo mezzo eco")) {
 
             %>
-            <div class="column-obiettivi">
-                <div class="card-obiettivi">
+
+                <div class="card-obiettivi mezzo">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
                     <p>Status: in corso</p>
                     <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
+                    <hr>
                     <p>Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
-            </div>
+
             <%
             }
             else{
             %>
-            <div class="column-obiettivi">
-                <div class="card-obiettivi">
+
+                <div class="card-obiettivi carburante">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
                     <p>Status: in corso</p>
                     <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <hr>
                     <p>Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
-            </div>
+
             <%
                         }
                     }
