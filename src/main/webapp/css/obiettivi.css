@@ -124,6 +124,7 @@ html, body{
     color:white;
 }
 
+
 /* Style the counter cards */
 .card-obiettivi {
     background-color: #F1F6FF;
@@ -132,6 +133,7 @@ html, body{
     padding: 16px;
     text-align: left;
     margin-bottom:20px;
+    position: relative;
 }
 
 .card-obiettivi p{
@@ -150,6 +152,12 @@ html, body{
     text-transform: uppercase;
 }
 
+.bxs-down-arrow{
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    color: #5a87e8;
+}
 #ContainerObiettivi{
     display:grid;
     grid-template-rows: 50% 50%;

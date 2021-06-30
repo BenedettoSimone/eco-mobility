@@ -178,10 +178,10 @@
         <div class="dropdown">
             <button class="dropbtn">Filtra obiettivi per...</button>
             <div class="dropdown-content">
-                <a href="#">Riduzione chilometri</a>
-                <a href="#">Riduzione spesa</a>
-                <a href="#">Utilizzo mezzo eco </a>
-                <a href="#">Tutti</a>
+                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=chilometri">Riduzione chilometri</a>
+                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=spesa">Riduzione spesa</a>
+                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=mezzo">Utilizzo mezzo eco </a>
+                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=allObb">Tutti</a>
             </div>
         </div>
 
@@ -198,8 +198,8 @@
                         if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
             %>
 
-                <div class="card-obiettivi chilometri">
-                    <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
+                <div class="card-obiettivi">
+                    <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: in corso</p>
                     <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
@@ -211,7 +211,7 @@
 
             %>
 
-                <div class="card-obiettivi mezzo">
+                <div class="card-obiettivi">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
                     <p>Status: in corso</p>
                     <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
@@ -224,7 +224,7 @@
             else{
             %>
 
-                <div class="card-obiettivi carburante">
+                <div class="card-obiettivi">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3>
                     <p>Status: in corso</p>
                     <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
@@ -244,6 +244,5 @@
 
 
 </div>
-
 </body>
 </html>
