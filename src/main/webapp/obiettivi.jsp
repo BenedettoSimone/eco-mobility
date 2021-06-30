@@ -20,6 +20,7 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/ListaObiettiviResp.js"></script>
 <body>
 
@@ -178,10 +179,10 @@
         <div class="dropdown">
             <button class="dropbtn">Filtra obiettivi per...</button>
             <div class="dropdown-content">
-                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=chilometri">Riduzione chilometri</a>
-                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=spesa">Riduzione spesa</a>
-                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=mezzo">Utilizzo mezzo eco </a>
-                <a href="${pageContext.servletContext.contextPath}/RetriveObiettiviControl?filter=allObb">Tutti</a>
+                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=chilometri">Riduzione chilometri</a>
+                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=spesa">Riduzione spesa</a>
+                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=mezzo">Utilizzo mezzo eco </a>
+                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=allObb">Tutti</a>
             </div>
         </div>
 
@@ -203,7 +204,7 @@
                     <p>Status: in corso</p>
                     <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
-                    <p>Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
+                    <p class="scadenza">Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
 
             <%
@@ -216,7 +217,7 @@
                     <p>Status: in corso</p>
                     <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
-                    <p>Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
+                    <p class="scadenza">Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
 
             <%
@@ -229,7 +230,7 @@
                     <p>Status: in corso</p>
                     <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
-                    <p>Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
+                    <p class="scadenza">Scadenza: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
 
             <%
@@ -244,5 +245,21 @@
 
 
 </div>
+
+<script>
+    $('.card-obiettivi').click(function() {
+        clickToExpandCards($(this));
+    });
+
+    function clickToExpandCards($obj){
+        var clickedElement = $obj;
+        if (clickedElement.hasClass('expanded')) {
+            clickedElement.removeClass('expanded');
+        } else {
+            clickedElement.addClass('expanded');
+        }
+
+    };
+</script>
 </body>
 </html>

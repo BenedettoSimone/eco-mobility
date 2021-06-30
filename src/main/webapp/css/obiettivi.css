@@ -134,6 +134,7 @@ html, body{
     text-align: left;
     margin-bottom:20px;
     position: relative;
+    cursor:pointer;
 }
 
 .card-obiettivi p{
@@ -152,12 +153,37 @@ html, body{
     text-transform: uppercase;
 }
 
+.card-obiettivi hr{
+    display: none;
+    border: 1px solid #5a87e8;
+}
+
+.card-obiettivi .scadenza{
+    display: none;
+}
+
+.card-obiettivi.expanded hr{
+    display: block;
+    border: 0.8px solid #5a87e8;
+}
+
+.card-obiettivi.expanded .scadenza{
+    display: block;
+}
+
+.card-obiettivi.expanded .bxs-down-arrow{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    transform: rotate(180deg); /* Standard syntax */
+}
+
 .bxs-down-arrow{
     position: absolute;
     top: 28px;
     right: 16px;
     color: #5a87e8;
+    cursor:pointer;
 }
+
 #ContainerObiettivi{
     display:grid;
     grid-template-rows: 50% 50%;
