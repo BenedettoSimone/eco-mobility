@@ -142,8 +142,8 @@
                         <div class="chart-card">
 
 
-                            <h1>Media chilometri</h1>
-                            <h5>Negli ultimi 7 giorni hai percorso in media NULL km.</h5>
+                            <h1>Media spese carburante</h1>
+                            <h5>Negli ultimi 7 giorni hai speso in media NULL euro.</h5>
 
                             <div class="card chart-container">
                                 <canvas id="myChart"></canvas>
