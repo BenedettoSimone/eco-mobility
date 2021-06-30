@@ -79,5 +79,13 @@
         <url-pattern>/RetriveObiettiviControl</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>SpeseCarburanteControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.SpeseCarburanteControl</servlet-class>        
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SpeseCarburanteControl</servlet-name>
+        <url-pattern>/SpeseCarburanteControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>

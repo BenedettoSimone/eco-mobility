@@ -2,24 +2,27 @@
 <%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    int[] km;
+    int[] km,carburante;
     km= (int[]) request.getAttribute("kmSettimanali");
     int mediaKm = (int) request.getAttribute("mediaSet");
-    if(km==null){
+
+    carburante= (int[]) request.getAttribute("speseSettimanali");
+    int mediaCarburante=(int) request.getAttribute("mediaSpCarburante");
+    System.out.println(mediaCarburante);
+
+    if(km==null || carburante==null){
         response.sendRedirect("./SpostamentiControl");
     }
 
 
+
     int progressKm= (int) request.getSession().getAttribute("progressKm");
-    System.out.println(progressKm);
 
     //avanzamento utilizzo mezzo eco
     int progressMezzo= (int) request.getSession().getAttribute("progressMezzo");
-    System.out.println(progressMezzo);
 
     //avanzamento spese carburante
     int progressEuro= (int) request.getSession().getAttribute("progressEuro");
-    System.out.println(progressEuro);
 
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
