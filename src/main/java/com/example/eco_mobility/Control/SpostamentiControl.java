@@ -64,7 +64,7 @@ public class SpostamentiControl extends HttpServlet {
             media=tot/7;
 
             request.setAttribute("kmSettimanali", km);
-            request.setAttribute("mediaSet", media);
+            request.getSession().setAttribute("mediaSet", media);
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/SpeseCarburanteControl");
 
