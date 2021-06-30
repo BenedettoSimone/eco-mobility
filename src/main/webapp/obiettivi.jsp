@@ -175,7 +175,15 @@
         </div>
         <br>
 
-        <input type="text" class="textbox">
+        <div class="dropdown">
+            <button class="dropbtn">Filtra obiettivi per...</button>
+            <div class="dropdown-content">
+                <a href="#">Riduzione chilometri</a>
+                <a href="#">Riduzione spesa</a>
+                <a href="#">Utilizzo mezzo eco </a>
+                <a href="#">Tutti</a>
+            </div>
+        </div>
 
         <div class="listaSpese">
 
