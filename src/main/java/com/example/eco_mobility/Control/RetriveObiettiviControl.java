@@ -22,15 +22,6 @@ public class RetriveObiettiviControl extends HttpServlet {
         try {
             request.getSession().setAttribute("obiettivi",obDAO.doRetriveObiettivi(ut.getIdUtenti()));
 
-            //avanzamento km per obiettivi in corso
-            request.getSession().setAttribute("progressKm",obDAO.doRetriveProgressKm(ut.getIdUtenti()));
-
-            //avanzamento utilizzo mezzo eco
-            request.getSession().setAttribute("progressMezzo",obDAO.doRetriveProgressMezzoEco(ut.getIdUtenti()));
-
-            //avanzamento spese carburante
-            request.getSession().setAttribute("progressEuro",obDAO.doRetriveProgressCarburante(ut.getIdUtenti()));
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

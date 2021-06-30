@@ -10,13 +10,16 @@
     }
 
 
-    String progressKm= (String) request.getSession().getAttribute("progressKm");
+    int progressKm= (int) request.getSession().getAttribute("progressKm");
+    System.out.println(progressKm);
 
     //avanzamento utilizzo mezzo eco
-    String progressMezzo=(String)request.getSession().getAttribute("progressMezzo");
+    int progressMezzo= (int) request.getSession().getAttribute("progressMezzo");
+    System.out.println(progressMezzo);
 
     //avanzamento spese carburante
-    String progressEuro=(String)request.getSession().getAttribute("progressEuro");
+    int progressEuro= (int) request.getSession().getAttribute("progressEuro");
+    System.out.println(progressEuro);
 
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
