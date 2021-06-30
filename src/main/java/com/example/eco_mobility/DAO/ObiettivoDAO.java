@@ -83,5 +83,64 @@ public class ObiettivoDAO {
         return obiettivi;
     }
 
+    public synchronized int doRetriveProgressKm(int utente) throws SQLException {
+        PreparedStatement ps = null;
+
+        String query="SELECT sum(kmPercorsi) FROM ecomobility.Spostamenti where current_date()<=data+7 and idUtente= ?  ";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs = ps.executeQuery();
+
+        int km=0;
+
+        while(rs.next()){
+            km=rs.getInt("sum(kmPercorsi)");
+        }
+
+        return km;
+    }
+
+    public synchronized int doRetriveProgressMezzoEco(int utente) throws SQLException {
+        PreparedStatement ps = null;
+
+        String query="SELECT count(*) as mezzo FROM ecomobility.Spostamenti where current_date()<=data+7 and tipoMezzo='1' and idUtente=?";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs = ps.executeQuery();
+
+        int eco=0;
+
+        while(rs.next()){
+            eco=rs.getInt("mezzo");
+        }
+
+        return eco;
+    }
+
+    public synchronized int doRetriveProgressCarburante(int utente) throws SQLException {
+        PreparedStatement ps = null;
+
+        String query="SELECT sum(euroSpesi) FROM ecomobility.SpeseCarburante where current_date()<=data+7 and idUtenti=?";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs = ps.executeQuery();
+
+        int euro=0;
+
+        while(rs.next()){
+            euro=rs.getInt("sum(euroSpesi)");
+        }
+
+        return euro;
+    }
 
 }
