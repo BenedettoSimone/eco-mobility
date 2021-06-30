@@ -58,6 +58,14 @@ public class LoginControl extends HttpServlet {
 
             request.getSession().setAttribute("utente",ut);
             request.getSession().setAttribute("obiettiviInCorso",obbDao.doRetriveObiettiviInCorso(ut.getIdUtenti()));
+            //avanzamento km per obiettivi in corso
+            request.getSession().setAttribute("progressKm",obbDao.doRetriveProgressKm(ut.getIdUtenti()));
+
+            //avanzamento utilizzo mezzo eco
+            request.getSession().setAttribute("progressMezzo",obbDao.doRetriveProgressMezzoEco(ut.getIdUtenti()));
+
+            //avanzamento spese carburante
+            request.getSession().setAttribute("progressEuro",obbDao.doRetriveProgressCarburante(ut.getIdUtenti()));
             return "registrato";
         } else
             throw new Exception("Invalid login and password");
