@@ -13,17 +13,6 @@
         response.sendRedirect("./SpostamentiControl");
     }
 
-
-
-    int progressKm= (int) request.getSession().getAttribute("progressKm");
-
-    //avanzamento utilizzo mezzo eco
-    int progressMezzo= (int) request.getSession().getAttribute("progressMezzo");
-
-    //avanzamento spese carburante
-    int progressEuro= (int) request.getSession().getAttribute("progressEuro");
-
-
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
 
 %>
@@ -83,7 +72,6 @@
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
                                 <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obb.getObiettivo()%></p>
-                                <p></p>
                             </div>
                         </div>
                         <%
@@ -95,7 +83,6 @@
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
                                 <p>Utilizzo: <%=progressMezzo%> / <%=obb.getObiettivo()%></p>
-                                <p></p>
                             </div>
                         </div>
                         <%
@@ -107,7 +94,6 @@
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
                                 <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obb.getObiettivo()%></p>
-                                <p></p>
                             </div>
                         </div>
                         <%

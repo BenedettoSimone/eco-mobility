@@ -14,6 +14,15 @@
         response.sendRedirect("/LoginControl");
         return;
     }
+
+
+    int progressKm= (int) request.getSession().getAttribute("progressKm");
+
+    //avanzamento utilizzo mezzo eco
+    int progressMezzo= (int) request.getSession().getAttribute("progressMezzo");
+
+    //avanzamento spese carburante
+    int progressEuro= (int) request.getSession().getAttribute("progressEuro");
 %>
 
 <html>
