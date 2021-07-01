@@ -60,7 +60,8 @@ public class SpeseCarburanteDAO {
 
         List<SpeseCarburanteDTO> spese = new ArrayList<SpeseCarburanteDTO>();
 
-        String query="SELECT data,sum(euroSpesi) FROM ecomobility.SpeseCarburante where current_date()<=data+7 and idUtenti= ? group by data;";
+        String query="SELECT DISTINCT data, sum(euroSpesi) FROM ecomobility.spesecarburante " +
+                "WHERE data between (curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY) AND (curdate()) AND idUtenti= ? GROUP BY data order by data desc";
 
         ps=con.prepareStatement(query);
 
