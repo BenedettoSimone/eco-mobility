@@ -58,7 +58,7 @@ html, body{
 
 #list #titleList{
     font-size: 26px;
-    color:#5d5d5d;
+    color:#494848;
     font-weight: bold;
     font-family: HelveticaNeue;
     padding-left: 6px;
@@ -212,7 +212,7 @@ html, body{
 
 
     font-size: 45px;
-    color:#393838;
+    color:#494848;
     font-weight: bolder;
     font-family: Helvetica Neue;
 
@@ -272,6 +272,7 @@ html, body{
     margin-top: 0px;
     font-size: 20px;
     margin-bottom: 0px;
+    color:#494848;
 }
 
 .textCardUp h6{
@@ -340,7 +341,7 @@ html, body{
     visibility: hidden;
     width: 343px;
     background-color: #fff;
-    color: #000000;
+    color: #707070;
     text-align: left;
     border-radius: 6px;
     padding: 13px;
@@ -351,7 +352,13 @@ html, body{
     margin-left:11px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     z-index: 1;
+    font-size: 14px;
 }
+
+.tooltiptext strong{
+    color:#494948;
+}
+
 
 .tooltip:after {
     position: absolute;
@@ -442,14 +449,13 @@ html, body{
     }
 
     #list #titleList{
-        margin-top:-102px;
         display: flex;
 
     }
     .listaSpese{
         background-color: red;
-        width:1000px;
         overflow-x:scroll;
+        height: 223.9%;
     }
 
     .cardList{
