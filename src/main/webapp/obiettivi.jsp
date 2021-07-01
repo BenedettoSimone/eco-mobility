@@ -230,6 +230,7 @@
                 }else{
                     for (int i=0;i<obiettivi.size();i++){
 
+
                         if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
             %>
 
@@ -294,6 +295,17 @@
         }
 
     };
+</script>
+
+
+<script>
+    function fallito(){
+    document.getElementById("card-obiettivi").classList.add("obiettivo-fallito");
+    }
+
+    function completato(){
+    document.getElementById("card-obiettivi").classList.add("obiettivo-completato");
+    }
 </script>
 </body>
 </html>
