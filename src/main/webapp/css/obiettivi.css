@@ -481,6 +481,7 @@ html, body{
 
     #ContainerObiettivi{
         display:block;
+        margin-right: 0;
     }
 
     #list #titleList{
@@ -502,6 +503,10 @@ html, body{
     #obiettIcon{
         display: block;
 
+    }
+
+    #alert{
+        margin-top: 50px;
     }
 
 
