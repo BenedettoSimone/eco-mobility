@@ -3,32 +3,35 @@ var list = document.getElementById("list");
 var divrow=document.getElementById("myrow");
 window.onresize = function myFunction() {
 
-    if (window.innerWidth < 1520) {
+    if (window.innerWidth <= 1520) {
 
         div.appendChild(list);
 
+
     }
 
-    if(window.innerWidth >= 1520){
+    if(window.innerWidth > 1520){
 
 
         divrow.appendChild(list);
+        closeBar();
     }
 }
 window.onload = function myFunction() {
     div = document.getElementById("myOb-bar");
     list = document.getElementById("list");
     divrow=document.getElementById("myrow");
-    if (window.innerWidth < 1520) {
+    if (window.innerWidth <= 1520) {
 
         div.appendChild(list);
+
 
     }
 
 
-    if(window.innerWidth>=1520){
+    if(window.innerWidth>1520){
 
-        divrow.appendChild(list);
+        closeBar();
     }
 }
 
