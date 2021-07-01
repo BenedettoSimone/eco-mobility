@@ -289,11 +289,13 @@ html, body{
 }
 
 .cardDX{
-    width: 40%;
+    width: 280px;
     height: 100%;
+    margin-right: 0px;
+    position: relative;
 }
 .cardSX{
-    width: 60%;
+    width: 71%;
     height: 100%;
     box-sizing: border-box;
 }
@@ -361,10 +363,11 @@ html, body{
 }
 
 .imgCard{
-    float: right;
     width: 80%;
     height: 90%;
     box-sizing: border-box;
+    position: absolute;
+    right: 0;
 }
 
 .tooltip{

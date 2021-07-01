@@ -191,7 +191,7 @@
 
 
                     <div class="cardDX">
-                        <img src="img/macchinaELE.webp"
+                        <img src="img/ecoForm.png"
                              class="imgCard"/></div>
                 </div>
             </div>
@@ -229,6 +229,7 @@
             <%
                 }else{
                     for (int i=0;i<obiettivi.size();i++){
+
 
 
                         if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
