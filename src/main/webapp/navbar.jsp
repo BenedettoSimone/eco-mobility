@@ -15,7 +15,10 @@
         return;
     }
 
+    //media chilometri settimana corrente
     int mediaKm = (int) request.getSession().getAttribute("mediaSet");
+
+    //media spesa carburante settimana corrente
     int mediaCarburante=(int) request.getSession().getAttribute("mediaSpCarburante");
 
 

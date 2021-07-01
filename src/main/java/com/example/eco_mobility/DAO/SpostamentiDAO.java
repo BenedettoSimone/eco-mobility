@@ -37,7 +37,8 @@ public class SpostamentiDAO {
 
         PreparedStatement ps = null;
 
-        String query="SELECT data,sum(kmPercorsi) FROM ecomobility.Spostamenti WHERE data>current_date()-7 OR data=current_date() AND idUtente = ? GROUP BY data order by data desc;";
+        String query="SELECT DISTINCT data, sum(kmPercorsi) FROM ecomobility.Spostamenti " +
+                "WHERE data between (curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY) AND (curdate()) AND idUtente= ? GROUP BY data order by data desc";
 
         ps=con.prepareStatement(query);
 

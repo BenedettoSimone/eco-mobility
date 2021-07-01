@@ -4,6 +4,10 @@
 <%
     int[] km,carburante;
     km= (int[]) request.getAttribute("kmSettimanali");
+    System.out.println("valori chilometri");
+    for(int i=0;i<7;i++){
+        System.out.println("km "+ km[i]);
+    }
 
 
     carburante= (int[]) request.getAttribute("speseSettimanali");
