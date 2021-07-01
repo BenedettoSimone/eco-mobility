@@ -34,17 +34,17 @@ public class SpostamentiControl extends HttpServlet {
         for(int i=0;i<7;i++){
             km[i]=0;
         }
-        System.out.println("cane1");
+
 
         try {
             //Salvo nell'arraylist i km e i giorni corrispondeti
             sp=spDAO.doRetiveDate(utente.getIdUtenti());
 
             List<String> dateSP = new ArrayList<String>();
-            System.out.println("size" +sp.size());
+
             for (int i=0;i<sp.size();i++){
                 dateSP.add(sp.get(i).getData().toString());
-                System.out.println("cane"+sp.get(i).getData().toString());
+
             }
 
             for (int i=0; i<7;i++){
