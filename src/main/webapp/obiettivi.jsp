@@ -14,6 +14,9 @@
         return;
     }
 
+    String error= (String) request.getAttribute("ErrObiettivo");
+    String success= (String) request.getAttribute("SuccessObiettivo");
+
 
 %>
 <html>
@@ -45,14 +48,29 @@
     <div id="content">
         <div class="background-content">
             <span id="obiettIcon" style="font-size:35px;cursor:pointer" onclick="openBar()"><i class='bx bx-list-ol'></i></span>
+
+            <%
+                if(error!=null && error.equalsIgnoreCase("true")){
+            %>
             <div id="alert">
                 <span class="closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
-                <strong>Errore! </strong> Username e/o password non validi.
+                <strong>Errore! </strong> Impossibile aggiungere due obiettivi dello stesso tipo in una settimana.
             </div>
-         <!--   <div id="success"
-                <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
-                <strong></strong> Registrazione effettuata con  <strong>successo.</strong>
-            </div>>-->
+        <%
+            }
+        %>
+
+            <%
+                if(success!=null && success.equalsIgnoreCase("true")){
+            %>
+              <div id="success">
+                   <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
+                   <strong></strong>Obiettivo aggiunto con <strong>successo.</strong>
+               </div>
+
+            <%
+                }
+            %>
             <div id="titleContent">
                 OBIETTIVI
             </div>

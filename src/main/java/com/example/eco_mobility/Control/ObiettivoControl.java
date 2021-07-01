@@ -52,6 +52,7 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setStatus(false);
 
                 obDAO.doSaveObiettivi(ob);
+                request.setAttribute("SuccessObiettivo", "true");
 
             }else if(action==2) {
                 ob.setTipoObiettivo("Riduzione spesa");
@@ -61,6 +62,7 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setStatus(false);
 
                 obDAO.doSaveObiettivi(ob);
+                request.setAttribute("SuccessObiettivo", "true");
             }else if(action==3){
                 ob.setTipoObiettivo("Utilizzo mezzo eco");
                 ob.setObiettivo(obiettivo);
@@ -69,6 +71,7 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setStatus(false);
 
                 obDAO.doSaveObiettivi(ob);
+                request.setAttribute("SuccessObiettivo", "true");
             }else if(action==0){
                 request.setAttribute("ErrObiettivo", "true");
             }
