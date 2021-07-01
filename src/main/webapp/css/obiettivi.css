@@ -49,7 +49,7 @@ html, body{
 
 
 
-#alert, #alert1 {
+#alert{
     display: block;
     padding: 20px;
     background-color:#C34D4C;

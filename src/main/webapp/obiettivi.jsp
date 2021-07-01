@@ -49,10 +49,10 @@
                 <span class="closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
                 <strong>Errore! </strong> Username e/o password non validi.
             </div>
-            <div id="success">
+         <!--   <div id="success"
                 <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                 <strong></strong> Registrazione effettuata con  <strong>successo.</strong>
-            </div>
+            </div>>-->
             <div id="titleContent">
                 OBIETTIVI
             </div>
