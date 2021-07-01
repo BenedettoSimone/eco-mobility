@@ -76,10 +76,32 @@ function kmObserver() {
 }
 
 
-$(document).on("submit", "#fChilometri", function (event) {
+$(document).on("submit", "#fMezzo", function (event) {
     let mezzo = mezzoObserver();
 
     if (mezzo){
+
+        return true;
+    } else {
+        return false;
+    }
+});
+
+$(document).on("submit", "#fChilometri", function (event) {
+    let km = kmObserver();
+
+    if (km){
+
+        return true;
+    } else {
+        return false;
+    }
+});
+
+$(document).on("submit", "#fSpese", function (event) {
+    let spesa = spesaObserver();
+
+    if (spesa){
 
         return true;
     } else {
