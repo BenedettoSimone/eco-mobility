@@ -24,26 +24,27 @@ html{
     width: 550px;
 }
 
+
 #alert, #alert1 {
     display: block;
     padding: 20px;
-    background-color: #f44336;
-    color: white;
+    background-color:#C34D4C;
+    color:white ;
     border-radius:14px;
 }
 
 #success{
     display: block;
     padding: 20px;
-    background-color: green;
+    background-color:#57A758;
     color: white;
     border-radius:14px;
 }
 
-.closebtn {
+.closebtn-success, .closebtn-error{
     display: block;
-    margin-left: 15px;
     color: white;
+    margin-left: 15px;
     font-weight: bold;
     float: right;
     font-size: 22px;
@@ -52,9 +53,10 @@ html{
     transition: 0.3s;
 }
 
-.closebtn:hover {
-    color: black;
+.closebtn-error:hover, .closebtn-success:hover {
+    color: #707070;
 }
+
 
 /*--------------------*/
 

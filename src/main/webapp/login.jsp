@@ -51,7 +51,7 @@
                     if( errore!=null && errore.equalsIgnoreCase("true")){
                 %>
                 <div id="alert">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <span class="closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
                     <strong>Errore! </strong> Username e/o password non validi.
                 </div>
                 <%
@@ -64,14 +64,14 @@
                     if (message!=null && message.equalsIgnoreCase("false")) {
                 %>
                 <div id="alert1">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
+                    <span class="closebtn-error" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                     <strong>Errore!</strong> Email già esistente.
                 </div>
                 <%
                     }else if(message!=null && message.equalsIgnoreCase("true")){
                 %>
                 <div id="success">
-                    <span class="closebtn" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
+                    <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                     <strong></strong> Registrazione effettuata con  <strong>successo.</strong>
                 </div>
                 <%

@@ -47,6 +47,41 @@ html, body{
     float: left;
 }
 
+
+
+#alert, #alert1 {
+    display: block;
+    padding: 20px;
+    background-color:#C34D4C;
+    color:white ;
+    border-radius:14px;
+}
+
+#success{
+    display: block;
+    padding: 20px;
+    background-color:#57A758;
+    color: white;
+    border-radius:14px;
+}
+
+.closebtn-success, .closebtn-error{
+    display: block;
+    color: white;
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn-error:hover, .closebtn-success:hover {
+    color: #707070;
+}
+
+
 /* Lista destra*/
 
 #list{
