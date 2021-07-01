@@ -4,10 +4,10 @@
 <%
     int[] km,carburante;
     km= (int[]) request.getAttribute("kmSettimanali");
-    int mediaKm = (int) request.getAttribute("mediaSet");
+
 
     carburante= (int[]) request.getAttribute("speseSettimanali");
-    int mediaCarburante=(int) request.getAttribute("mediaSpCarburante");
+
 
     if(km==null || carburante==null){
         response.sendRedirect("./SpostamentiControl");

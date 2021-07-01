@@ -15,6 +15,9 @@
         return;
     }
 
+    int mediaKm = (int) request.getSession().getAttribute("mediaSet");
+    int mediaCarburante=(int) request.getSession().getAttribute("mediaSpCarburante");
+
 
     int progressKm= (int) request.getSession().getAttribute("progressKm");
 

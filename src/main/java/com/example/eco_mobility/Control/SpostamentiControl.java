@@ -36,7 +36,7 @@ public class SpostamentiControl extends HttpServlet {
         }
 
         try {
-            //Salvo nell'arraylist i km e i giorni corrispondneti
+            //Salvo nell'arraylist i km e i giorni corrispondeti
             sp=spDAO.doRetiveDate(utente.getIdUtenti());
 
             List<String> dateSP = new ArrayList<String>();
