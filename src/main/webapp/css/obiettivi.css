@@ -539,5 +539,11 @@ html, body{
         margin-top: 45px;
     }
 
+
+    /*icona obiettivi*/
+    #obiettIcon{
+      display: none;
+    }
+
 }
 

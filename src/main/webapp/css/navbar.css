@@ -21,6 +21,11 @@
   display:none;
 }
 
+#obiettIconNav{
+ display: none;
+}
+
+
 /*---Navbar--*/
 .sidebar.active{
   position: fixed;
@@ -220,6 +225,19 @@
 
   .logo_resp_visible #logo-resp{
     width: 140px;
+  }
+
+
+  /*icona obiettivi*/
+  #obiettIconNav{
+    background-color: #5a87e8;
+    border-radius: 10px;
+    display: flex;
+    color: #fff;
+    z-index: 2222;
+    position: fixed;
+    top: 19px;
+    right: 20px;
   }
 
   .sidenav {
