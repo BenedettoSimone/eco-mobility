@@ -14,7 +14,7 @@
 %>
 <html>
 <head>
-    <link rel="stylesheet" href="css/obiettivi.css">
+    <link rel="stylesheet" href="css/spostamenti.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,7 @@
                 <strong>Errore! </strong> Impossibile aggiungere due obiettivi dello stesso tipo in una settimana.
             </div>
 
-            }
+
 
 
 
@@ -67,31 +67,37 @@
                 <div id="cardECO" class="card">
                     <div class="cardSX">
                         <form id="fMezzo" action="" method="post">
-                            <h4>UTILIZZO MEZZO ECO-SOSTENIBILE
-
-                                <i class='bx bx-question-mark tooltip'>
-
-                                <span class="tooltiptext">
-
-                                    <strong>Quali sono i mezzi eco-sostenibili?</strong><br><br>
-                                    -treno<br>
-                                    -metro<br>
-                                    -pullman<br>
-                                    -qualsiasi mezzo privo di motore<br>
-                                    -qualsiasi mezzo con motore elettrico<br>
-                                    </span>
-                                 </i>
-                            </h4>
-
-                            <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai utilizzato 6 volte un mezzo eco-sostenibile</h6><br>
-                            </div>
+                            <h4>NUOVO SPOSTAMENTO</h4>
 
                             <div class="textCard">
-                                Quante volte vuoi utilizzare un mezzo ecosostenibile nei prossimi 7 giorni?<br>
-                                <input id="mezzo_input" type="text" name="obiettivo" class="formCard" required onchange="mezzoObserver()">
-                                <label id="mezzo_label"></label>
+                                Data<br>
+                                <input id="data_input" type="text" name="spostamento" class="formCard" required onchange="dataObserver()">
+                                <label id="data_label"></label>
                                 <input type="hidden" name="action" value="3">
+
+                            </div>
+
+
+                            <div class="textCard">
+                                Chilometri Percorsi<br>
+                                <input id="chilometri_input" type="text" name="spostamento" class="formCard" required onchange="chilometriObserver()">
+                                <label id="choilometri_label"></label>
+                                <input type="hidden" name="action" value="3">
+
+                            </div>
+
+                            <div class="radioCard">
+                                Tipologia mezzo utilizzato<br>
+                                <div id="ecodiv">
+                                <input id="eco" type="radio" name="spostamento" class="formCard" required>
+                                <p>eco-sostenibile</p>
+                                </div>
+                                <div id="Notecodiv">
+                                <input id="Noteco" type="radio" name="spostamento" class="formCard" required>
+                                    <p>Non eco-sostenibile</p>
+                                </div>
+                                <input type="hidden" name="action" value="3">
+
 
                             </div>
 
@@ -173,20 +179,7 @@
 
 </div>
 
-<script>
-    $('.card-obiettivi').click(function() {
-        clickToExpandCards($(this));
-    });
 
-    function clickToExpandCards($obj){
-        var clickedElement = $obj;
-        if (clickedElement.hasClass('expanded')) {
-            clickedElement.removeClass('expanded');
-        } else {
-            clickedElement.addClass('expanded');
-        }
-
-    };
 </script>
 </body>
 </html>

@@ -1,0 +1,689 @@
+@font-face {
+    font-family: "CoolveticaCustom";
+    src: url("../font/coolvetica rg.ttf");
+}
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("../font/HelveticaNeue.ttf");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+
+.row {
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Create two equal columns that floats next to each other */
+#content, #navbar, #list,#card{
+    float: left;
+    height: 100%;
+}
+
+#navbar{
+    background-color: white;
+    width: 20%;
+    padding:30px 0 0 40px;
+}
+
+/*navbar content*/
+
+#navbar #logo{
+    width: 208px;
+}
+
+#navbar {
+    display: block;
+    float: left;
+}
+
+
+
+#alert{
+    display: block;
+    padding: 20px;
+    background-color:#C34D4C;
+    color:white ;
+    border-radius:14px;
+}
+
+#success{
+    display: block;
+    padding: 20px;
+    background-color:#57A758;
+    color: white;
+    border-radius:14px;
+}
+
+.closebtn-success, .closebtn-error{
+    display: block;
+    color: white;
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn-error:hover, .closebtn-success:hover {
+    color: #707070;
+}
+
+
+/* Lista destra*/
+
+#list{
+    background-color: white;
+    width: 20%;
+    padding: 130px 30px 0 30px;
+    height: 98%;
+}
+
+#list #titleList{
+    font-size: 26px;
+    color:#494848;
+    font-weight: bold;
+    font-family: HelveticaNeue;
+    padding-left: 6px;
+
+}
+
+.listaSpese {
+    height: 83.9%;
+    box-sizing: border-box;
+    margin: 30px 0px 0px 0px;
+    overflow: scroll;
+    padding: 2px;
+}
+
+.listaSpese::-webkit-scrollbar{
+    display: none;
+}
+
+
+/* Dropdown filter */
+.dropbtn {
+    width: 100%;
+    text-align: left;
+    background-color: #F8F7FA;
+    color: #707070;
+    padding:10px 0 10px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: #707070;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {color:#5a87e8;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #5a87e8;
+    color:white;
+}
+
+
+/* Style the counter cards */
+.corso {
+    background-color: #F1F6FF;
+    border:1px solid #5a87e8;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
+    position: relative;
+    cursor:pointer;
+}
+
+.corso p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #5a87e8;
+}
+
+.corso h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#5a87e8;
+    text-transform: uppercase;
+}
+
+.corso hr{
+    display: none;
+    border: 1px solid #5a87e8;
+}
+
+.corso.expanded hr{
+    display: block;
+    border: 0.8px solid #5a87e8;
+}
+
+/*card fallito*/
+
+.fallito {
+    background-color: #fde0e0;
+    border:1px solid #C34D4C;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
+    position: relative;
+    cursor:pointer;
+}
+
+.fallito p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #C34D4C;
+}
+
+.fallito h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#C34D4C;
+    text-transform: uppercase;
+}
+
+.fallito hr{
+    display: none;
+    border: 1px solid #C34D4C;
+}
+
+.fallito.expanded hr{
+    display: block;
+    border: 0.8px solid #C34D4C;
+}
+
+
+/*card completato*/
+.completato {
+    background-color: #f0fcec;
+    border:1px solid #57A758;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
+    position: relative;
+    cursor:pointer;
+}
+
+.completato p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #57A758;
+}
+
+.completato h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#57A758;
+    text-transform: uppercase;
+}
+
+.completato hr{
+    display: none;
+    border: 1px solid #57A758;
+}
+
+.completato.expanded hr{
+    display: block;
+    border: 0.8px solid #57A758;
+}
+
+
+
+
+
+
+.card-obiettivi .scadenza{
+    display: none;
+}
+
+.card-obiettivi.expanded .scadenza{
+    display: block;
+}
+
+.card-obiettivi.expanded .bxs-down-arrow{
+    -ms-transform: rotate(180deg); /* IE 9 */
+    transform: rotate(180deg); /* Standard syntax */
+}
+
+.corso .bxs-down-arrow{
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    color: #5a87e8;
+    cursor:pointer;
+}
+
+.fallito .bxs-down-arrow{
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    color: #C34D4C;
+    cursor:pointer;
+}
+
+.completato .bxs-down-arrow{
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    color: #57A758;
+    cursor:pointer;
+}
+
+#ContainerObiettivi{
+    display:grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+    margin-right: 1.4%;
+
+}
+
+#cardECO{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+
+#content{
+    background-color: white;
+    width: 60%;
+    padding:20px 20px 20px 0;
+}
+
+#content #titleContent{
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+
+    font-size: 45px;
+    color:#494848;
+    font-weight: bolder;
+    font-family: Helvetica Neue;
+
+}
+
+.background-content{
+    width: 100%;
+    height: 100%;
+    background-color: #EEECF2;
+    border-radius:30px;
+    padding:35px 35px 0 35px;
+    overflow-x: scroll;
+
+}
+
+/*icona obiettivi*/
+#obiettIcon{
+    float:right;
+    background-color: #5a87e8;
+    border-radius:10px;
+    padding:2px;
+    display: none;
+    color:#fff;
+}
+
+/*Card centrale*/
+
+.card{
+    display: flex;
+    font-family: Helvetica Neue;
+    float: left;
+    width: 100%;
+    height: fit-content;
+    background: white;
+    border-radius: 20px;
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.cardDX{
+    width: 280px;
+    height: 100%;
+    margin-right: 0px;
+    position: relative;
+}
+.cardSX{
+    width: 71%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cardALONE{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.card .cardSX h4, .card .cardALONE h4{
+    margin-top: 0px;
+    font-size: 20px;
+    margin-bottom: 0px;
+    color:#494848;
+}
+
+.textCardUp h6{
+    margin-top: 0px;
+    font-size: 17px;
+}
+
+.textCard{
+    margin-top: 40px;
+    font-family: Helvetica Neue;
+    color: 	#858585;
+}
+/*radio Button*/
+.radioCard{
+    margin-top: 40px;
+    font-family: Helvetica Neue;
+    color: 	#858585;
+}
+
+input#eco {
+    height: 20px;
+}
+
+input#Noteco {
+    height: 20px;
+}
+
+#mezzo_input, #chilometri_input, #spese_input{
+    margin-bottom: 7px;
+}
+
+.textCardUp{
+    margin-top: 12px;
+    font-family: Helvetica Neue;
+    font-size: 24px;
+    color: 	#858585;
+}
+
+
+
+
+.formCard{
+    border-radius: 12px;
+    height: 41px;
+    width: 100%;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.buttonCard{
+    font-family: HelveticaNeue;
+    float: right;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    background-color: #486fe4;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 13px;
+    border: 0;
+}
+
+.imgCard{
+    width: 80%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+}
+
+.tooltip{
+    background-color: #5a87e8;
+    color: #ffffff;
+    border-radius:50px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 343px;
+    background-color: #fff;
+    color: #707070;
+    text-align: left;
+    border-radius: 6px;
+    padding: 13px;
+
+    /* Position the tooltip */
+    position: absolute;
+    margin-top:-13px;
+    margin-left:11px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 14px;
+}
+
+.tooltiptext strong{
+    color:#494948;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+/* @media screen and (max-width: 1600px){
+
+    #list {
+        background-color: white;
+        width: 100%;
+        padding: 0;
+        height: 224px;
+    }
+
+    #list #titleList{
+        padding-left: 0;
+    }
+
+    .textbox{
+        width: 300px;
+    }
+
+    .listaSpese{
+        height: 119px;
+
+        margin: 30px 0px 0px 0px;
+        overflow-x: scroll;
+        width: 100%;
+    }
+
+    .cardList {
+        width: 290px;
+        float:left;
+        margin-right:30px;
+    }
+
+
+    #content #titleContent {
+        padding-bottom: 11px;
+    }
+}
+
+
+
+
+*/
+@media screen and (max-width:1790px) {
+    #content{
+        width:80%;
+    }
+
+    #obiettIcon{
+        display: block;
+
+    }
+
+    #alert, #success{
+        margin-top: 50px;
+    }
+
+}
+
+/* NAV BAR */
+@media screen and (max-width:1520px){
+
+    #navbar{
+        background-color: white;
+        width: 10%;
+        padding:0px 0 0 40px;
+    }
+
+    #content{
+        width:90%;
+    }
+
+
+    #list{
+        width:100%;
+        height: 300px;
+        float:left;
+    }
+
+    .card{
+        margin-bottom:20px;
+    }
+
+
+    #list #titleList{
+        display: flex;
+
+    }
+    .listaSpese{
+        background-color: #fff;
+        overflow-x:scroll;
+        height: 223.9%;
+    }
+
+    .cardList{
+        height:153px;
+        width: 430px;
+        float:left;
+    }
+
+
+}
+@media screen and (max-width: 1104px){
+    #ContainerObiettivi{
+        display:block;
+        margin-right: 0;
+    }
+
+    .cardDX{
+        display: none;
+    }
+
+    .cardSX{
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1081px) {
+    .sidenav{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    #navbar:not(sidenav) {
+        display: none;
+    }
+
+    #content {
+        background-color: white;
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+        margin-top: 45px;
+    }
+
+    /*icona obiettivi*/
+    #obiettIcon{
+        position: fixed;
+        z-index: 2222;
+        right: 20px;
+        top: 19px;
+    }
+
+    #alert, #success {
+        margin-top: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 890px){
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 343px;
+        background-color: #fff;
+        color: #707070;
+        text-align: left;
+        border-radius: 6px;
+        padding: 13px;
+        position: absolute;
+        /* margin-top: 28px; */
+        /* margin-left: -339px; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        font-size: 14px;
+        left: 0px;
+
+    }
+}
