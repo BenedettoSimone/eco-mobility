@@ -230,15 +230,12 @@
                 }else{
                     for (int i=0;i<obiettivi.size();i++){
 
-                      %>
-
-<%
                         if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
             %>
 
-                <div class="card-obiettivi completato">
+                <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
-                    <p>Status: in corso</p>
+                    <p>Status: <%=obiettivi.get(i).getStatus()%></p>
                     <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
@@ -249,9 +246,9 @@
 
             %>
 
-                <div class="card-obiettivi inCorso">
+                <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
-                    <p>Status: in corso</p>
+                    <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
                     <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
@@ -262,9 +259,9 @@
             else{
             %>
 
-                <div class="card-obiettivi fallito">
+                <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
-                    <p>Status: in corso</p>
+                    <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
                     <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
@@ -297,24 +294,6 @@
         }
 
     };
-</script>
-
-
-<script>
-    function coloraCard(status){
-        if(status.equals("fallito")){
-            document.getElementById("card-obiettivi").classList.add("fallito");
-        }
-        else if(status.equals("completato")){
-            document.getElementById("card-obiettivi").classList.add("completato");
-        }
-        else{
-            document.getElementById("card-obiettivi").classList.add("inCorso");
-        }
-
-    }
-
-
 </script>
 </body>
 </html>

@@ -162,7 +162,7 @@ html, body{
 
 
 /* Style the counter cards */
-.inCorso {
+.corso {
     background-color: #F1F6FF;
     border:1px solid #5a87e8;
     border-radius:30px;
@@ -173,14 +173,14 @@ html, body{
     cursor:pointer;
 }
 
-.inCorso p{
+.corso p{
     font-size: 16px;
     font-family: HelveticaNeueCustom;
     margin-bottom:16px;
     color: #5a87e8;
 }
 
-.inCorso h3{
+.corso h3{
     font-size:18px;
     font-family: HelveticaNeueCustom;
     margin-bottom:16px;
@@ -189,12 +189,12 @@ html, body{
     text-transform: uppercase;
 }
 
-.inCorso hr{
+.corso hr{
     display: none;
     border: 1px solid #5a87e8;
 }
 
-.inCorso.expanded hr{
+.corso.expanded hr{
     display: block;
     border: 0.8px solid #5a87e8;
 }
@@ -295,7 +295,7 @@ html, body{
     transform: rotate(180deg); /* Standard syntax */
 }
 
-.inCorso .bxs-down-arrow{
+.corso .bxs-down-arrow{
     position: absolute;
     top: 28px;
     right: 16px;
