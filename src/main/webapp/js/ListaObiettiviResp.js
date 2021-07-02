@@ -30,8 +30,9 @@ window.onload = function myFunction() {
 
 
     if(window.innerWidth>1790){
-
+        divrow.appendChild(list);
         closeBar();
+
     }
 }
 
@@ -54,5 +55,4 @@ function closeBar() {
     list.style.backgroundColor="white";
     list.style.padding="130px 30px 0 30px"
 
-    divrow.appendChild(list);
 }
