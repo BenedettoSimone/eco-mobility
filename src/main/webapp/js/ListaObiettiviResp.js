@@ -54,5 +54,4 @@ function closeBar() {
     list.style.width="20%";
     list.style.backgroundColor="white";
     list.style.padding="130px 30px 0 30px"
-
 }
