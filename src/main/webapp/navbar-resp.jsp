@@ -26,8 +26,6 @@
         <a href=""><img id="logo-resp" src="img/logo.png"></a>
     </div>
 
-    <span id="obiettIconNav" style="font-size:35px;cursor:pointer" onclick="openBar()"><i class='bx bx-list-ol'></i></span>
-
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

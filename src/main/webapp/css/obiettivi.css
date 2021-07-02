@@ -453,7 +453,13 @@ html, body{
         display: block;
 
     }
+
+    #alert{
+        margin-top: 50px;
+    }
+
 }
+
 /* NAV BAR */
 @media screen and (max-width:1520px){
 
@@ -493,10 +499,6 @@ html, body{
         height:153px;
         width: 430px;
         float:left;
-    }
-
-    #alert{
-        margin-top: 50px;
     }
 
 
@@ -539,11 +541,6 @@ html, body{
         margin-top: 45px;
     }
 
-
-    /*icona obiettivi*/
-    #obiettIcon{
-      display: none;
-    }
 
 }
 

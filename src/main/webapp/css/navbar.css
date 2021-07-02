@@ -21,11 +21,6 @@
   display:none;
 }
 
-#obiettIconNav{
- display: none;
-}
-
-
 /*---Navbar--*/
 .sidebar.active{
   position: fixed;
