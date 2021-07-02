@@ -553,7 +553,7 @@ html, body{
 
     }
 
-    #alert{
+    #alert, #success{
         margin-top: 50px;
     }
 
@@ -640,6 +640,37 @@ html, body{
         margin-top: 45px;
     }
 
+    /*icona obiettivi*/
+    #obiettIcon{
+        position: fixed;
+        z-index: 2222;
+        right: 20px;
+        top: 19px;
+    }
+
+    #alert, #success {
+        margin-top: 0;
+    }
 
 }
 
+
+@media screen and (max-width: 890px){
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 343px;
+        background-color: #fff;
+        color: #707070;
+        text-align: left;
+        border-radius: 6px;
+        padding: 13px;
+        position: absolute;
+        /* margin-top: 28px; */
+        /* margin-left: -339px; */
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        font-size: 14px;
+        left: 0px;
+
+    }
+}
