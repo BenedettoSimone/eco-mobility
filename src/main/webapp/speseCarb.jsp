@@ -14,15 +14,21 @@
 
 %>
 <html>
-<head>
+
     <link rel="stylesheet" href="css/speseCarburante.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <script src="js/ListaObiettiviResp.js"></script>
     <script src="js/obiettivi.js"></script>
+
+
 <body>
+
 
 <%@ include file="ListaObResp.jsp" %>
 
@@ -65,11 +71,10 @@
                     <div class="cardSX">
                         <form id="fSpesa" action="${pageContext.servletContext.contextPath}/AddSpeseControl" method="post">
                             <h4>NUOVA SPESA CARBURANTE</h4>
-                            <div class="textCard">
+                        <div class="textCard">
                                 Data<br>
-                                <input id="data_input" type="date" name="date" class="formCard" required max="<%=LocalDate.now()%>" onchange="mezzoObserver()">
-                                <label id="data_label"></label>
-                                <input type="hidden" name="action" value="3"> <br><br>
+
+                            <%@include file="calendarProva.jsp"%>
 
                                 Euro spesi<br>
                                 <input id="euro_input" type="text" name="obiettivo" class="formCard" required onchange="mezzoObserver()">
