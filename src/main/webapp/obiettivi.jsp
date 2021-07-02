@@ -230,12 +230,13 @@
                 }else{
                     for (int i=0;i<obiettivi.size();i++){
 
+                      %>
 
-
+<%
                         if(obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
             %>
 
-                <div class="card-obiettivi">
+                <div class="card-obiettivi completato">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: in corso</p>
                     <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
@@ -248,7 +249,7 @@
 
             %>
 
-                <div class="card-obiettivi">
+                <div class="card-obiettivi inCorso">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: in corso</p>
                     <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
@@ -261,7 +262,7 @@
             else{
             %>
 
-                <div class="card-obiettivi">
+                <div class="card-obiettivi fallito">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: in corso</p>
                     <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
@@ -300,13 +301,20 @@
 
 
 <script>
-    function fallito(){
-    document.getElementById("card-obiettivi").classList.add("obiettivo-fallito");
+    function coloraCard(status){
+        if(status.equals("fallito")){
+            document.getElementById("card-obiettivi").classList.add("fallito");
+        }
+        else if(status.equals("completato")){
+            document.getElementById("card-obiettivi").classList.add("completato");
+        }
+        else{
+            document.getElementById("card-obiettivi").classList.add("inCorso");
+        }
+
     }
 
-    function completato(){
-    document.getElementById("card-obiettivi").classList.add("obiettivo-completato");
-    }
+
 </script>
 </body>
 </html>

@@ -162,7 +162,7 @@ html, body{
 
 
 /* Style the counter cards */
-.card-obiettivi {
+.inCorso {
     background-color: #F1F6FF;
     border:1px solid #5a87e8;
     border-radius:30px;
@@ -173,14 +173,14 @@ html, body{
     cursor:pointer;
 }
 
-.card-obiettivi p{
+.inCorso p{
     font-size: 16px;
     font-family: HelveticaNeueCustom;
     margin-bottom:16px;
     color: #5a87e8;
 }
 
-.card-obiettivi h3{
+.inCorso h3{
     font-size:18px;
     font-family: HelveticaNeueCustom;
     margin-bottom:16px;
@@ -189,18 +189,101 @@ html, body{
     text-transform: uppercase;
 }
 
-.card-obiettivi hr{
+.inCorso hr{
     display: none;
     border: 1px solid #5a87e8;
 }
 
-.card-obiettivi .scadenza{
-    display: none;
-}
-
-.card-obiettivi.expanded hr{
+.inCorso.expanded hr{
     display: block;
     border: 0.8px solid #5a87e8;
+}
+
+/*card fallito*/
+
+.fallito {
+    background-color: #fde0e0;
+    border:1px solid #C34D4C;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
+    position: relative;
+    cursor:pointer;
+}
+
+.fallito p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #C34D4C;
+}
+
+.fallito h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#C34D4C;
+    text-transform: uppercase;
+}
+
+.fallito hr{
+    display: none;
+    border: 1px solid #C34D4C;
+}
+
+.fallito.expanded hr{
+    display: block;
+    border: 0.8px solid #C34D4C;
+}
+
+
+/*card completato*/
+.completato {
+    background-color: #f0fcec;
+    border:1px solid #57A758;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
+    position: relative;
+    cursor:pointer;
+}
+
+.completato p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #57A758;
+}
+
+.completato h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#57A758;
+    text-transform: uppercase;
+}
+
+.completato hr{
+    display: none;
+    border: 1px solid #57A758;
+}
+
+.completato.expanded hr{
+    display: block;
+    border: 0.8px solid #57A758;
+}
+
+
+
+
+
+
+.card-obiettivi .scadenza{
+    display: none;
 }
 
 .card-obiettivi.expanded .scadenza{
@@ -212,11 +295,27 @@ html, body{
     transform: rotate(180deg); /* Standard syntax */
 }
 
-.bxs-down-arrow{
+.inCorso .bxs-down-arrow{
     position: absolute;
     top: 28px;
     right: 16px;
     color: #5a87e8;
+    cursor:pointer;
+}
+
+.fallito .bxs-down-arrow{
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    color: #C34D4C;
+    cursor:pointer;
+}
+
+.completato .bxs-down-arrow{
+    position: absolute;
+    top: 28px;
+    right: 16px;
+    color: #57A758;
     cursor:pointer;
 }
 
