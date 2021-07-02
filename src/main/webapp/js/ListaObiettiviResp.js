@@ -3,14 +3,14 @@ var list = document.getElementById("list");
 var divrow=document.getElementById("myrow");
 window.onresize = function myFunction() {
 
-    if (window.innerWidth <= 1520) {
+    if (window.innerWidth <= 1790) {
 
         div.appendChild(list);
 
 
     }
 
-    if(window.innerWidth > 1520){
+    if(window.innerWidth > 1790){
 
 
         divrow.appendChild(list);
@@ -21,7 +21,7 @@ window.onload = function myFunction() {
     div = document.getElementById("myOb-bar");
     list = document.getElementById("list");
     divrow=document.getElementById("myrow");
-    if (window.innerWidth <= 1520) {
+    if (window.innerWidth <= 1790) {
 
         div.appendChild(list);
 
@@ -29,16 +29,16 @@ window.onload = function myFunction() {
     }
 
 
-    if(window.innerWidth>1520){
+    if(window.innerWidth>1790){
 
         closeBar();
     }
 }
 
 function openBar() {
-    document.getElementById("myOb-bar").style.width = "50%";
+    document.getElementById("myOb-bar").style.width = "400px";
     list.style.width="100%";
-    list.style.backgroundColor="#5a87e8";
+    list.style.backgroundColor="#fff";
     list.style.padding="25px 30px 0 30px"
 
 

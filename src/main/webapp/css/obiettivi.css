@@ -444,7 +444,16 @@ html, body{
 
 
 */
+@media screen and (max-width:1790px) {
+    #content{
+        width:80%;
+    }
 
+    #obiettIcon{
+        display: block;
+
+    }
+}
 /* NAV BAR */
 @media screen and (max-width:1520px){
 
@@ -453,9 +462,11 @@ html, body{
         width: 10%;
         padding:0px 0 0 40px;
     }
+
     #content{
         width:90%;
     }
+
 
     #list{
         width:100%;
@@ -467,17 +478,13 @@ html, body{
         margin-bottom:20px;
     }
 
-    #ContainerObiettivi{
-        display:block;
-        margin-right: 0;
-    }
 
     #list #titleList{
         display: flex;
 
     }
     .listaSpese{
-        background-color: red;
+        background-color: #fff;
         overflow-x:scroll;
         height: 223.9%;
     }
@@ -488,13 +495,16 @@ html, body{
         float:left;
     }
 
-    #obiettIcon{
-        display: block;
-
-    }
-
     #alert{
         margin-top: 50px;
+    }
+
+
+}
+@media screen and (max-width: 1104px){
+    #ContainerObiettivi{
+        display:block;
+        margin-right: 0;
     }
 
     .cardDX{
@@ -505,9 +515,7 @@ html, body{
         width: 100%;
     }
 
-
 }
-
 
 @media screen and (min-width: 1081px) {
     .sidenav{
