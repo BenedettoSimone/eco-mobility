@@ -12,6 +12,7 @@
 
     carburante= (int[]) request.getAttribute("speseSettimanali");
 
+    response.sendRedirect("./ObiettiviScadutiControl");
 
     if(km==null || carburante==null){
         response.sendRedirect("./SpostamentiControl");

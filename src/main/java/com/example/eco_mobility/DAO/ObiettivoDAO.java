@@ -163,12 +163,50 @@ public class ObiettivoDAO {
             ob.setIdUtenti(rs.getInt("idUtenti"));
             ob.setStatus(rs.getString("status"));
 
-            System.out.println(ob.toString());
+            obiettivi.add(ob);
+        }
+
+        return obiettivi;
+    }
+
+    public synchronized List<ObiettiviDTO> RetriveObiettiviScaduti(int utente) throws SQLException {
+        PreparedStatement ps = null;
+        List<ObiettiviDTO> obiettivi =  new ArrayList<ObiettiviDTO>();
+
+        String query="SELECT * FROM ecomobility.Obiettivi WHERE scadenza < (curdate() - interval dayofweek(curdate())+6 day) and idUtenti=? and status=\"in corso\"";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs = ps.executeQuery();
+
+        while(rs.next()){
+            ObiettiviDTO ob = new ObiettiviDTO();
+            ob.setIdObiettivi((rs.getInt("idObiettivi")));
+            ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
+            ob.setObiettivo(rs.getInt("obiettivo"));
+            ob.setScadenza(rs.getDate("scadenza"));
+            ob.setIdUtenti(rs.getInt("idUtenti"));
+            ob.setStatus(rs.getString("status"));
 
             obiettivi.add(ob);
         }
 
         return obiettivi;
+    }
+
+    public synchronized void UpdateStatus(String status, int obiettivo) throws SQLException {
+        PreparedStatement ps=null;
+
+        String query="UPDATE `ecomobility`.`Obiettivi` SET `status` = ? WHERE (`idObiettivi` = ?)";
+
+        ps=con.prepareStatement(query);
+
+        ps.setString(1,status);
+        ps.setInt(2,obiettivo);
+
+        ps.executeUpdate();
     }
 
 }

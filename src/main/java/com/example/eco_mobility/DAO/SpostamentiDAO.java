@@ -80,5 +80,26 @@ public class SpostamentiDAO {
 
     }
 
+    public synchronized int doRetriveKmOb(String dateDa, String dateA) throws SQLException {
+        PreparedStatement ps= null;
+
+        String query="SELECT sum(kmPercorsi) FROM ecomobility.Spostamenti where data between ? and ?;";
+
+        ps=con.prepareStatement(query);
+
+        ps.setString(1,dateDa);
+        ps.setString(2,dateA);
+
+        ResultSet rs = ps.executeQuery();
+
+        int km=0;
+
+        while(rs.next()){
+            km=rs.getInt("sum(kmPercorsi)");
+        }
+
+        return km;
+    }
+
 
 }

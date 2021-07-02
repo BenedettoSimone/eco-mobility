@@ -97,4 +97,13 @@
         <url-pattern>/FiltroControl</url-pattern>
     </servlet-mapping>
     
+    <servlet>
+        <servlet-name>ObiettiviScadutiControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.ObiettiviScadutiControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ObiettiviScadutiControl</servlet-name>
+        <url-pattern>/ObiettiviScadutiControl</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
