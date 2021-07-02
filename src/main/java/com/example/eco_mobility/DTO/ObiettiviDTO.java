@@ -7,13 +7,13 @@ public class ObiettiviDTO {
     int idObiettivi;
     String tipoObiettivo;
     int obiettivo;
-    boolean status;
+    String status;
     Date scadenza;
     int idUtenti;
 
     public ObiettiviDTO(){}
 
-    public ObiettiviDTO(int idObiettivi, String tipoObiettivo, int obiettivo, boolean status, Date scadenza, int idUtenti){
+    public ObiettiviDTO(int idObiettivi, String tipoObiettivo, int obiettivo, String status, Date scadenza, int idUtenti){
         this.idObiettivi=idObiettivi;
         this.tipoObiettivo=tipoObiettivo;
         this.obiettivo=obiettivo;
@@ -46,14 +46,6 @@ public class ObiettiviDTO {
         this.obiettivo = obiettivo;
     }
 
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
     public Date getScadenza() {
         return scadenza;
     }
@@ -68,6 +60,14 @@ public class ObiettiviDTO {
 
     public void setIdUtenti(int idUtenti) {
         this.idUtenti = idUtenti;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override

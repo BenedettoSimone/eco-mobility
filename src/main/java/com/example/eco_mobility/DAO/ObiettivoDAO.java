@@ -24,7 +24,7 @@ public class ObiettivoDAO {
 
         ps.setString(1,obiettivo.getTipoObiettivo());
         ps.setInt(2,obiettivo.getObiettivo());
-        ps.setBoolean(3,obiettivo.isStatus());
+        ps.setString(3,obiettivo.getStatus());
         ps.setDate(4,obiettivo.getScadenza());
         ps.setInt(5,obiettivo.getIdUtenti());
 
@@ -51,7 +51,7 @@ public class ObiettivoDAO {
             ob.setObiettivo(rs.getInt("obiettivo"));
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
-            ob.setStatus(rs.getBoolean("status"));
+            ob.setStatus(rs.getString("status"));
 
             obiettivi.add(ob);
         }
@@ -76,7 +76,7 @@ public class ObiettivoDAO {
             ob.setObiettivo(rs.getInt("obiettivo"));
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
-            ob.setStatus(rs.getBoolean("status"));
+            ob.setStatus(rs.getString("status"));
 
             obiettivi.add(ob);
         }
@@ -161,7 +161,7 @@ public class ObiettivoDAO {
             ob.setObiettivo(rs.getInt("obiettivo"));
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
-            ob.setStatus(rs.getBoolean("status"));
+            ob.setStatus(rs.getString("status"));
 
             System.out.println(ob.toString());
 
