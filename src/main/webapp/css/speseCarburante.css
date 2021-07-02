@@ -1,12 +1,3 @@
-@font-face {
-    font-family: "CoolveticaCustom";
-    src: url("../font/coolvetica rg.ttf");
-}
-@font-face {
-    font-family: "HelveticaNeue";
-    src: url("../font/HelveticaNeue.ttf");
-}
-
 *{
     box-sizing: border-box;
 }
@@ -16,6 +7,7 @@ html, body{
     height: 100%;
     margin:0;
 }
+
 
 .row {
     height: 100%;
@@ -46,6 +38,41 @@ html, body{
     float: left;
 }
 
+
+
+#alert{
+    display: block;
+    padding: 20px;
+    background-color:#C34D4C;
+    color:white ;
+    border-radius:14px;
+}
+
+#success{
+    display: block;
+    padding: 20px;
+    background-color:#57A758;
+    color: white;
+    border-radius:14px;
+}
+
+.closebtn-success, .closebtn-error{
+    display: block;
+    color: white;
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn-error:hover, .closebtn-success:hover {
+    color: #707070;
+}
+
+
 /* Lista destra*/
 
 #list{
@@ -57,7 +84,7 @@ html, body{
 
 #list #titleList{
     font-size: 26px;
-    color:#5d5d5d;
+    color:#494848;
     font-weight: bold;
     font-family: HelveticaNeue;
     padding-left: 6px;
@@ -65,50 +92,66 @@ html, body{
 }
 
 .listaSpese {
-    height: 86.9%;
+    height: 83.9%;
     box-sizing: border-box;
     margin: 30px 0px 0px 0px;
     overflow: scroll;
+    padding: 2px;
 }
 
 .listaSpese::-webkit-scrollbar{
     display: none;
 }
 
-.textbox{
-    border-radius: 10px;
-    background: #eae7ef;
-    border: #eae7ef;
-    font-size: 18px;
-    width: 100%;
+
+
+
+/* Style the counter cards */
+.card-spesa {
+    background-color: #F1F6FF;
+    border:1px solid #5a87e8;
+    border-radius:30px;
+    padding: 16px;
+    text-align: left;
+    margin-bottom:20px;
+    position: relative;
+    cursor:pointer;
+}
+
+.card-spesa p{
+    font-size: 16px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    color: #5a87e8;
+}
+
+.card-spesa h3{
+    font-size:18px;
+    font-family: HelveticaNeueCustom;
+    margin-bottom:16px;
+    margin-top:10px;
+    color:#5a87e8;
+    text-transform: uppercase;
 }
 
 
-.cardList{
-    width: 100%;
-    background-color: #edf3fe;
-    border: 1px solid #4c71e1;
-    border-radius: 20px;
-    margin-bottom: 15px;
-    padding:30px;
-    text-align: center;
+
+#cardSPESA{
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
-.dataCard{
-    color: #4c71e1;
+#content #titleContent{
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+
+    font-size: 45px;
+    color:#494848;
     font-weight: bolder;
-    font-size: 22px;
     font-family: Helvetica Neue;
+
 }
-
-.priceCard{
-    color: #4c71e1;
-    font-size: 20px;
-    font-family: Helvetica Neue;
-}
-
-
-
 
 #content{
     background-color: white;
@@ -116,17 +159,7 @@ html, body{
     padding:20px 20px 20px 0;
 }
 
-#content #titleContent{
-    padding-top: 80px;
-    padding-bottom: 60px;
 
-
-    font-size: 45px;
-    color:#393838;
-    font-weight: bolder;
-    font-family: Helvetica Neue;
-
-}
 
 .background-content{
     width: 100%;
@@ -134,49 +167,102 @@ html, body{
     background-color: #EEECF2;
     border-radius:30px;
     padding:35px 35px 0 35px;
+    overflow-x: scroll;
 
 }
 
+
+
+
+/*icona obiettivi*/
+#obiettIcon{
+    float:right;
+    background-color: #5a87e8;
+    border-radius:10px;
+    padding:2px;
+    display: none;
+    color:#fff;
+}
+
+
+
+
+
+
+#ContainerObiettivi{
+    display:grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    grid-gap: 15px;
+    margin-right: 1.4%;
+
+}
+
+
+
+
+
+
 /*Card centrale*/
 
-#card{
+.card{
     display: flex;
     font-family: Helvetica Neue;
     float: left;
     width: 100%;
-    height: 450px;
+    height: fit-content;
     background: white;
     border-radius: 20px;
     padding:20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
 }
 
 .cardDX{
-    width: 60%;
+    width: 280px;
     height: 100%;
+    margin-right: 0px;
+    position: relative;
 }
 .cardSX{
-    width: 40%;
+    width: 71%;
     height: 100%;
     box-sizing: border-box;
 }
 
-.textCard{
-    margin-top: 10%;
-    font-family: Helvetica Neue;
+
+
+.card .cardSX h4{
+    margin-top: 0px;
     font-size: 20px;
+    margin-bottom: 0px;
+    color:#494848;
+}
+
+
+.textCard{
+    margin-top: 40px;
+    font-family: Helvetica Neue;
     color: 	#858585;
 }
 
+
+
+#euro_input, #data_input{
+    margin-bottom: 7px;
+}
+
+
+
 .formCard{
-    border-radius: 10px;
-    margin-top: 10px;
-    border-color: #858585;
-    border-bottom-width: 2px;
-    background: white;
-    font-size: 18px;
-    line-height: 32px;
+    border-radius: 12px;
+    height: 41px;
     width: 100%;
+    border: 1px solid #707070;
+    box-sizing: border-box;
+    padding-left: 12px;
+    font-size: 17px;
+    margin-top: 12px;
 }
 
 .buttonCard{
@@ -187,58 +273,33 @@ html, body{
     font-size: 18px;
     background-color: #486fe4;
     border-radius: 10px;
-    width: 120px;
-    height: 40px;
-    margin: 15% 0px 5% 0px;
-    padding-top: 10px;
+    margin-top: 20px;
+    padding: 13px;
+    border: 0;
 }
 
 .imgCard{
-    float: right;
-    width: auto;
-    height: 90%;
+    width: 80%;
     box-sizing: border-box;
+    position: absolute;
+    right: 0;
 }
 
-
-@media screen and (max-width: 1600px){
-
-    #list {
-        background-color: white;
-        width: 100%;
-        padding: 0;
-        height: 224px;
+@media screen and (max-width:1790px) {
+    #content{
+        width:80%;
     }
 
-    #list #titleList{
-        padding-left: 0;
+    #obiettIcon{
+        display: block;
+
     }
 
-    .textbox{
-        width: 300px;
+    #alert, #success{
+        margin-top: 50px;
     }
 
-    .listaSpese{
-        height: 119px;
-
-        margin: 30px 0px 0px 0px;
-        overflow-x: scroll;
-        width: 100%;
-    }
-
-    .cardList {
-        width: 290px;
-        float:left;
-        margin-right:30px;
-    }
-
-
-    #content #titleContent {
-        padding-bottom: 11px;
-    }
 }
-
-
 
 /* NAV BAR */
 @media screen and (max-width:1520px){
@@ -248,11 +309,56 @@ html, body{
         width: 10%;
         padding:0px 0 0 40px;
     }
+
     #content{
         width:90%;
     }
-}
 
+
+    #list{
+        width:100%;
+        height: 300px;
+        float:left;
+    }
+
+    .card{
+        margin-bottom:20px;
+    }
+
+
+    #list #titleList{
+        display: flex;
+
+    }
+    .listaSpese{
+        background-color: #fff;
+        overflow-x:scroll;
+        height: 223.9%;
+    }
+
+    .cardList{
+        height:153px;
+        width: 430px;
+        float:left;
+    }
+
+
+}
+@media screen and (max-width: 1104px){
+    #ContainerObiettivi{
+        display:block;
+        margin-right: 0;
+    }
+
+    .cardDX{
+        display: none;
+    }
+
+    .cardSX{
+        width: 100%;
+    }
+
+}
 
 @media screen and (min-width: 1081px) {
     .sidenav{
@@ -273,7 +379,18 @@ html, body{
         background-color: white;
         width: 100%;
         padding: 20px 20px 20px 20px;
-        margin-top: 36px;
+        margin-top: 45px;
+    }
+
+    /*icona obiettivi*/
+    #obiettIcon{
+        position: fixed;
+        z-index: 2222;
+        right: 20px;
+        top: 19px;
+    }
+
+    #alert, #success {
+        margin-top: 0;
     }
 }
-
