@@ -59,7 +59,7 @@
 
 
             <div id="titleContent">
-                OBIETTIVI
+                SPOSTAMENTI
             </div>
 
             <div id="list-responsive">
@@ -88,15 +88,16 @@
 
                             <div class="radioCard">
                                 Tipologia mezzo utilizzato<br>
+                                <div id="content-radio">
                                 <div id="ecodiv">
-                                <input id="eco" type="radio" name="spostamento" class="formCard" required>
+                                <input id="eco" type="radio" name="spostamento" required checked>
                                 <p>eco-sostenibile</p>
                                 </div>
                                 <div id="Notecodiv">
-                                <input id="Noteco" type="radio" name="spostamento" class="formCard" required>
-                                    <p>Non eco-sostenibile</p>
+                                <input id="Noteco" type="radio" name="spostamento" required>
+                                    <p>non eco-sostenibile</p>
                                 </div>
-                                <input type="hidden" name="action" value="3">
+                                </div>
 
 
                             </div>
@@ -111,7 +112,7 @@
 
 
                     <div class="cardDX">
-                        <img src="img/ecoForm.png"
+                        <img src="img/spostamenti.png"
                              class="imgCard"/></div>
                 </div>
             </div>
@@ -126,51 +127,25 @@
 
 
         <div id="titleList">
-            Lista Obiettivi
+            Lista Spostamenti
         </div>
         <br>
 
-        <div class="dropdown">
-            <button class="dropbtn">Filtra obiettivi per...</button>
-            <div class="dropdown-content">
-                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=chilometri">Riduzione chilometri</a>
-                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=spesa">Riduzione spesa</a>
-                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=mezzo">Utilizzo mezzo eco </a>
-                <a href="${pageContext.servletContext.contextPath}/FiltroControl?filter=allObb">Tutti</a>
-            </div>
-        </div>
+        <input type="text" class="textbox">
 
         <div class="listaSpese">
 
-
-
-                <div class="card-obiettivi ">
-                    <h3></h3><i class='bx bxs-down-arrow'></i>
-                    <p>Status:</p>
-                    <p>Km percorsi:  &nbsp &nbsp &nbsp Km massimi: </p>
-                    <hr>
-                    <p class="scadenza">Scadenza obiettivo: </p>
+                <div class="not-eco ">
+                    <h3>19/04/2021</h3>
+                    <p>Mezzo utilizzato: non-ecosostenibile</p>
+                    <p>Km percorsi: null </p>
                 </div>
 
-            <div class="card-obiettivi ">
-                <h3></h3><i class='bx bxs-down-arrow'></i>
-                <p>Status:</p>
-                <p>Km percorsi:  &nbsp &nbsp &nbsp Km massimi: </p>
-                <hr>
-                <p class="scadenza">Scadenza obiettivo: </p>
+            <div class="eco">
+                <h3>19/04/2021</h3>
+                <p>Mezzo utilizzato: ecosostenibile</p>
+                <p>Km percorsi: null </p>
             </div>
-
-
-            <div class="card-obiettivi ">
-                <h3></h3><i class='bx bxs-down-arrow'></i>
-                <p>Status:</p>
-                <p>Km percorsi:  &nbsp &nbsp &nbsp Km massimi: </p>
-                <hr>
-                <p class="scadenza">Scadenza obiettivo: </p>
-            </div>
-
-
-
 
         </div>
 
