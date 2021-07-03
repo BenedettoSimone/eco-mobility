@@ -66,6 +66,7 @@
         .date-picker .input button:hover {
             background-color: #5a87e8;
             color:white;
+            cursor: pointer;
         }
         .date-picker .input button:focus {
             outline: 0;
@@ -166,10 +167,12 @@
         }
         .date-picker.open {
             max-height: 400px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         }
         .date-picker.open .input button {
             background: #5a87e8;
             color:white;
+
         }
     </style>
 
