@@ -68,8 +68,6 @@ public class SpeseCarburanteControl extends HttpServlet {
 
             dispatcher.forward(request,response);
 
-
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

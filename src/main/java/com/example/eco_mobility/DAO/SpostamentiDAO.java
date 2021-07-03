@@ -80,15 +80,16 @@ public class SpostamentiDAO {
 
     }
 
-    public synchronized int doRetriveKmOb(String dateDa, String dateA) throws SQLException {
+    public synchronized int doRetriveKmOb(int utente, String dateDa, String dateA) throws SQLException {
         PreparedStatement ps= null;
 
-        String query="SELECT sum(kmPercorsi) FROM ecomobility.Spostamenti where data between ? and ?;";
+        String query="SELECT sum(kmPercorsi) FROM ecomobility.Spostamenti where idUtente=? and data between ? and ?;";
 
         ps=con.prepareStatement(query);
 
-        ps.setString(1,dateDa);
-        ps.setString(2,dateA);
+        ps.setInt(1,utente);
+        ps.setString(2,dateDa);
+        ps.setString(3,dateA);
 
         ResultSet rs = ps.executeQuery();
 
@@ -100,6 +101,28 @@ public class SpostamentiDAO {
 
         return km;
     }
+
+    public synchronized  int UtilizzoEcoProgressData(int utente, String dateDa, String dateA) throws SQLException {
+        PreparedStatement ps=null;
+
+        String query="SELECT count(tipoMezzo) FROM ecomobility.Spostamenti where tipoMezzo=1 and idUtente=? and data between ? and ?";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+        ps.setString(2,dateDa);
+        ps.setString(3,dateA);
+
+        ResultSet rs = ps.executeQuery();
+
+        int mezzo=0;
+        while(rs.next()){
+            mezzo=rs.getInt("count(tipoMezzo)");
+        }
+
+        return mezzo;
+    }
+
 
 
 }
