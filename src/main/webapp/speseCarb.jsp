@@ -80,10 +80,11 @@
                         <div class="textCard">
                                 <p>Data</p>
 
+
                             <%@include file="calendarProva.jsp"%>
 
                             <p id="bottom_p">Euro spesi</p>
-                                <input id="euro_input" type="text" name="obiettivo" class="formCard" required onchange="mezzoObserver()">
+                                <input id="euro_input" type="text" name="euro" class="formCard" required onchange="mezzoObserver()">
                                 <label id="euro_label"></label>
                                 <!--<input type="hidden" name="action" value="3">-->
 
