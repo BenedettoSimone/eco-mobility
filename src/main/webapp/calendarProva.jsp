@@ -40,7 +40,7 @@
             font-size: 0;
             cursor: pointer;
         }
-        .date-picker .input .result, .date-picker .input button {
+        .date-picker .input .result, .date-picker .input a {
             display: inline-block;
             vertical-align: top;
         }
@@ -53,7 +53,7 @@
             color: #000;
             box-sizing: border-box;
         }
-        .date-picker .input button {
+        .date-picker .input a {
             width: 50px;
             height: 50px;
             background-color: #F8F7FA;
@@ -61,14 +61,15 @@
             line-height: 50px;
             border: 0;
             font-size: 18px;
-            padding: 0;
+            padding: 14px;
+            text-align: center;
         }
-        .date-picker .input button:hover {
+        .date-picker .input a:hover {
             background-color: #5a87e8;
             color:white;
             cursor: pointer;
         }
-        .date-picker .input button:focus {
+        .date-picker .input a:focus {
             outline: 0;
         }
         .date-picker .calendar {
@@ -169,7 +170,7 @@
             max-height: 400px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         }
-        .date-picker.open .input button {
+        .date-picker.open .input a {
             background: #5a87e8;
             color:white;
 
@@ -195,7 +196,7 @@
 <div class="date-picker">
     <div class="input">
         <div class="result"><span></span></div>
-        <button><i class="fa fa-calendar"></i></button>
+        <a><i class="fa fa-calendar"></i></a>
     </div>
     <div class="calendar"></div>
 </div>
