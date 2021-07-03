@@ -31,6 +31,8 @@
             position: absolute;
             overflow: hidden;
             transition: all 0.3s 0s ease-in-out;
+            border: 1px solid #707070;
+            border-radius: 12px;
         }
         .date-picker .input {
             width: 100%;
@@ -189,7 +191,7 @@
 <body translate="no" >
 <div class="date-picker">
     <div class="input">
-        <div class="result">Select Date: <span></span></div>
+        <div class="result"><span></span></div>
         <button><i class="fa fa-calendar"></i></button>
     </div>
     <div class="calendar"></div>
@@ -201,7 +203,7 @@
 <script id="rendered-js" >
     $(function () {
         $(".calendar").datepicker({
-            dateFormat: 'dd/mm/yy',
+            dateFormat: 'yy-mm-dd',
             firstDay: 1 });
 
 

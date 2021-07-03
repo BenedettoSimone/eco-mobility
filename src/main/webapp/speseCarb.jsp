@@ -72,11 +72,11 @@
                         <form id="fSpesa" action="${pageContext.servletContext.contextPath}/AddSpeseControl" method="post">
                             <h4>NUOVA SPESA CARBURANTE</h4>
                         <div class="textCard">
-                                Data<br>
+                                <p>Data</p>
 
                             <%@include file="calendarProva.jsp"%>
 
-                                Euro spesi<br>
+                            <p id="bottom_p">Euro spesi</p>
                                 <input id="euro_input" type="text" name="obiettivo" class="formCard" required onchange="mezzoObserver()">
                                 <label id="euro_label"></label>
                                 <!--<input type="hidden" name="action" value="3">-->
@@ -90,7 +90,7 @@
 
 
                     <div class="cardDX">
-                        <img src="img/ecoForm.png"
+                        <img src="img/speseForm.png"
                              class="imgCard"/></div>
                 </div>
             </div>

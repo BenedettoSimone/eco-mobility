@@ -219,7 +219,7 @@ html, body{
 }
 
 .cardDX{
-    width: 280px;
+    width: 346px;
     height: 100%;
     margin-right: 0px;
     position: relative;
@@ -228,6 +228,10 @@ html, body{
     width: 71%;
     height: 100%;
     box-sizing: border-box;
+}
+
+.textCard #bottom_p{
+    margin-top:100px;
 }
 
 
@@ -256,13 +260,12 @@ html, body{
 
 .formCard{
     border-radius: 12px;
-    height: 41px;
+    height: 50px;
     width: 100%;
     border: 1px solid #707070;
     box-sizing: border-box;
     padding-left: 12px;
     font-size: 17px;
-    margin-top: 12px;
 }
 
 .buttonCard{
@@ -279,7 +282,7 @@ html, body{
 }
 
 .imgCard{
-    width: 80%;
+    width: 94%;
     box-sizing: border-box;
     position: absolute;
     right: 0;
