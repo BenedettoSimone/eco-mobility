@@ -100,4 +100,30 @@ public class SpeseCarburanteDAO {
         return spese;
     }
 
+
+    public synchronized ArrayList<SpeseCarburanteDTO> retriveSpeseByData(String data, int idUtente) throws SQLException {
+        PreparedStatement ps = null;
+
+        String query="SELECT * FROM ecomobility.SpeseCarburante WHERE data = ? AND idUtenti = ?";
+
+        ps=con.prepareStatement(query);
+
+        ps.setString(1,data);
+        ps.setInt(2,idUtente);
+
+        ResultSet rs=ps.executeQuery();
+
+        ArrayList<SpeseCarburanteDTO> spese = new ArrayList<>();
+        while (rs.next()){
+            SpeseCarburanteDTO spesa = new SpeseCarburanteDTO();
+
+            spesa.setData(rs.getString("data"));
+            spesa.setIdUtenti(rs.getInt("idUtenti"));
+            spesa.setEuroSpesi(rs.getInt("euroSpesi"));
+
+            spese.add(spesa);
+        }
+
+        return spese;
+    }
 }
