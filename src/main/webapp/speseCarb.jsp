@@ -1,6 +1,7 @@
 <%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
 <%@ page import="java.util.List" %>
-<%@ page import="java.time.LocalDate" %><%--
+<%@ page import="java.time.LocalDate" %>
+<%@ page import="com.example.eco_mobility.DTO.SpeseCarburanteDTO" %><%--
   Created by IntelliJ IDEA.
   User: SalernoDaniele
   Date: 14/06/21
@@ -8,11 +9,16 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%
 
-
-
+    List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getSession().getAttribute("spese");
+    if(spese==null){
+        response.sendRedirect("./RetriveSpeseControl");
+        return;
+    }
 %>
+
 <html>
 
     <link rel="stylesheet" href="css/speseCarburante.css">
@@ -109,14 +115,29 @@
         </div>
         <br>
 
-        <input type="text" class="textbox">
+        <%@include file="calendarProva1.jsp"%>
 
         <div class="listaSpese">
 
+            <%
+                if(spese.isEmpty()==false){
+                    for(int i=0; i<spese.size();i++){
+            %>
+
             <div class="card-spesa ">
-                <h3>19/04/2021</h3>
-                <p>Euro spesi: 30€</p>
+                <h3><%=spese.get(i).getData()%></h3>
+                <p>Euro spesi: <%=spese.get(i).getEuroSpesi()%>€</p>
             </div>
+
+
+            <%
+                }
+            }else{
+            %>
+            No Spese
+            <%
+                }
+            %>
         </div>
 
     </div>

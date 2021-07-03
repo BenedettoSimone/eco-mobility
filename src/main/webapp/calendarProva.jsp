@@ -50,7 +50,7 @@
             line-height: 50px;
             font-size: 16px;
             padding: 0 10px;
-            color: grey;
+            color: #000;
             box-sizing: border-box;
         }
         .date-picker .input button {
