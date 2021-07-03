@@ -28,7 +28,7 @@ public class RetriveSpeseControl extends HttpServlet {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarburante.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarb.jsp");
         dispatcher.forward(req, resp);
     }
 

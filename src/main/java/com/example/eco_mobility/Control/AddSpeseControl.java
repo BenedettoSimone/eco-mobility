@@ -37,7 +37,7 @@ public class AddSpeseControl extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarburante.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarb.jsp");
         dispatcher.forward(req, resp);
     }
 
