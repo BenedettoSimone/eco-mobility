@@ -12,10 +12,8 @@
 
     carburante= (int[]) request.getAttribute("speseSettimanali");
 
-    //response.sendRedirect("./ObiettiviScadutiControl");
-
     if(km==null || carburante==null){
-        response.sendRedirect("./ObiettiviScadutiControl");
+        response.sendRedirect("./SpostamentiControl");
     }
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
