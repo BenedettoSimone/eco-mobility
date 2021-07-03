@@ -195,7 +195,7 @@
 <body translate="no" >
 <div class="date-picker">
     <div class="input">
-        <div class="result"><span></span></div>
+        <div class="result"><span id="dataCal"></span></div>
         <a><i class="fa fa-calendar"></i></a>
     </div>
     <div class="calendar"></div>
@@ -223,6 +223,11 @@
                 $selected = $me.val(),
                 $parent = $me.parents('.date-picker');
             $parent.find('.result').children('span').html($selected);
+            var span_val = $('dataCal');
+            var spantext=span_val.value();
+            var data=$('data');
+            data.attr('value', spantext);
+
         });
     });
     //# sourceURL=pen.js
