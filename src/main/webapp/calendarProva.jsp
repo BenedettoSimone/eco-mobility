@@ -205,10 +205,19 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 <script id="rendered-js" >
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+
     $(function () {
         $(".calendar").datepicker({
             dateFormat: 'yy-mm-dd',
-            firstDay: 1 });
+            firstDay: 1,
+        maxDate: today });
 
 
         $(document).on('click', '.date-picker .input', function (e) {

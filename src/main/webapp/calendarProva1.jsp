@@ -34,17 +34,17 @@
             border: 1px solid #707070;
             border-radius: 12px;
         }
-        .date-picker1 .input {
+        .date-picker1 .input1{
             width: 100%;
             height: 50px;
             font-size: 0;
             cursor: pointer;
         }
-        .date-picker1 .input .result, .date-picker1 .input button {
+        .date-picker1 .input1 .result1, .date-picker1 .input1 button {
             display: inline-block;
             vertical-align: top;
         }
-        .date-picker1 .input .result {
+        .date-picker1 .input1 .result1 {
             width: calc(100% - 50px);
             height: 50px;
             line-height: 50px;
@@ -53,7 +53,7 @@
             color: grey;
             box-sizing: border-box;
         }
-        .date-picker1 .input button {
+        .date-picker1 .input1 button {
             width: 50px;
             height: 50px;
             background-color: #F8F7FA;
@@ -63,15 +63,15 @@
             font-size: 18px;
             padding: 0;
         }
-        .date-picker1 .input button:hover {
+        .date-picker1 .input1 button:hover {
             background-color: #5a87e8;
             color:white;
             cursor: pointer;
         }
-        .date-picker1 .input button:focus {
+        .date-picker1 .input1 button:focus {
             outline: 0;
         }
-        .date-picker1 .calendar {
+        .date-picker1 .calendar1 {
             position: relative;
             width: 100%;
             background: #fff;
@@ -132,11 +132,11 @@
         .date-picker1 .ui-datepicker-title {
             text-align: center;
         }
-        .date-picker .ui-datepicker-calendar {
+        .date-picker1 .ui-datepicker-calendar1 {
             width: 100%;
             text-align: center;
         }
-        .date-picker1 .ui-datepicker-calendar thead tr th span {
+        .date-picker1 .ui-datepicker-calendar1 thead tr th span {
             display: block;
             width: 100%;
             color: #8392A7;
@@ -169,7 +169,7 @@
             max-height: 400px;
             box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
         }
-        .date-picker1.open .input button {
+        .date-picker1.open .input1 button {
             background: #5a87e8;
             color:white;
 
@@ -193,11 +193,11 @@
 
 <body translate="no" >
 <div class="date-picker1">
-    <div class="input">
-        <div class="result"><span></span></div>
+    <div class="input1">
+        <div class="result1"><span></span></div>
         <button><i class="fa fa-calendar"></i></button>
     </div>
-    <div class="calendar"></div>
+    <div class="calendar1"></div>
 </div>
 <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
 
@@ -205,23 +205,23 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 <script id="rendered-js" >
     $(function () {
-        $(".calendar").datepicker1({
+        $(".calendar1").datepicker1({
             dateFormat: 'yy-mm-dd',
             firstDay: 1 });
 
 
-        $(document).on('click', '.date-picker1 .input', function (e) {
+        $(document).on('click', '.date-picker1 .input1', function (e) {
             var $me = $(this),
                 $parent = $me.parents('.date-picker1');
             $parent.toggleClass('open');
         });
 
 
-        $(".calendar").on("change", function () {
+        $(".calendar1").on("change", function () {
             var $me = $(this),
                 $selected = $me.val(),
                 $parent = $me.parents('.date-picker1');
-            $parent.find('.result').children('span').html($selected);
+            $parent.find('.result1').children('span').html($selected);
         });
     });
     //# sourceURL=pen.js
