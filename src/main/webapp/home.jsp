@@ -68,6 +68,8 @@
 
                             for(ObiettiviDTO obb : obiettiviInCorso){
 
+                              if(obb.getStatus().equals("in corso")){
+
                               if(obb.getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
                         %>
                         <div class="column-obiettivi">
@@ -101,6 +103,7 @@
                         </div>
                         <%
                             }
+                        }
                         }
                             }else{
                         %>
