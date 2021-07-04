@@ -71,7 +71,7 @@
 
                             <div class="textCard">
                                 Data<br>
-                                <input id="data_input" type="text" name="spostamento" class="formCard" required onchange="dataObserver()">
+                                <%@include file="calendarProva.jsp"%>
                                 <label id="data_label"></label>
                                 <input type="hidden" name="action" value="3">
 
@@ -131,9 +131,13 @@
         </div>
         <br>
 
-        <input type="text" class="textbox">
+
 
         <div class="listaSpese">
+            <form id="cercaData"  action="" method="post">
+                <%@include file="calendarProva1.jsp"%>
+                <input class="buttonFilter" type="submit" value="Cerca">
+            </form>
 
                 <div class="not-eco ">
                     <h3>19/04/2021</h3>
