@@ -235,6 +235,7 @@
             var $me = $(this),
                 $selected = $me.val(),
                 $parent = $me.parents('.date-picker1');
+            $parent.toggleClass('open');
 
             $parent.find('.result').children('span').html($selected);
             $parent.find('.result').children('input').attr("value",$selected);

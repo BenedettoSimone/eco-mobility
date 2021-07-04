@@ -70,7 +70,7 @@
                             <h4>NUOVO SPOSTAMENTO</h4>
 
                             <div class="textCard">
-                                Data<br>
+                                <p>Data</p>
                                 <%@include file="calendarProva.jsp"%>
                                 <label id="data_label"></label>
                                 <input type="hidden" name="action" value="3">
@@ -79,7 +79,8 @@
 
 
                             <div class="textCard">
-                                Chilometri Percorsi<br>
+                                <p id="bottom_p">Chilometri Percorsi</p>
+
                                 <input id="chilometri_input" type="text" name="spostamento" class="formCard" required onchange="chilometriObserver()">
                                 <label id="choilometri_label"></label>
                                 <input type="hidden" name="action" value="3">
@@ -132,12 +133,13 @@
         <br>
 
 
+        <form id="cercaData"  action="" method="post">
+            <%@include file="calendarProva1.jsp"%>
+            <input class="buttonFilter" type="submit" value="Cerca">
+        </form>
 
         <div class="listaSpese">
-            <form id="cercaData"  action="" method="post">
-                <%@include file="calendarProva1.jsp"%>
-                <input class="buttonFilter" type="submit" value="Cerca">
-            </form>
+
 
                 <div class="not-eco ">
                     <h3>19/04/2021</h3>

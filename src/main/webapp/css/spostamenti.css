@@ -103,7 +103,7 @@ html, body{
 .listaSpese {
     height: 83.9%;
     box-sizing: border-box;
-    margin: 30px 0px 0px 0px;
+    margin: 73px 0px 0px 0px;
     overflow: scroll;
     padding: 2px;
 }
@@ -241,7 +241,7 @@ html, body{
 }
 
 .cardDX{
-    width: 526px;
+    width: 664px;
     height: 100%;
     margin-right: 10px;
     position: relative;
@@ -275,6 +275,11 @@ html, body{
     font-family: Helvetica Neue;
     color: 	#858585;
 }
+
+.textCard #bottom_p{
+    margin-top:100px;
+}
+
 /*radio Button*/
 .radioCard{
     margin-top: 40px;
@@ -328,7 +333,7 @@ input#eco, input#Noteco {
 
 .formCard{
     border-radius: 12px;
-    height: 41px;
+    height: 50px;
     width: 100%;
     border: 1px solid #707070;
     box-sizing: border-box;
@@ -348,6 +353,22 @@ input#eco, input#Noteco {
     margin-top: 20px;
     padding: 13px;
     border: 0;
+}
+
+
+
+.buttonFilter{
+    font-family: HelveticaNeue;
+    float: right;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    background-color: #486fe4;
+    border-radius: 10px;
+    padding: 13px;
+    border: 0;
+    cursor: pointer;
 }
 
 .imgCard{
