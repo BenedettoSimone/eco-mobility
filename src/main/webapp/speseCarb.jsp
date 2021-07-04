@@ -104,7 +104,7 @@
                             <%@include file="calendarProva.jsp"%>
 
                             <p id="bottom_p">Euro spesi</p>
-                                <input id="euro_input" type="text" name="euro" class="formCard" required onchange="euroObserver()">
+                                <input id="euro_input" type="text" name="euro" class="formCard" onchange="euroObserver()">
                                 <label id="euro_label"></label>
 
 
