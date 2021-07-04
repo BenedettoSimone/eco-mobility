@@ -73,9 +73,6 @@
 
             <%
                 if(message!=null && message.equalsIgnoreCase("successo")){
-
-                  System.out.println("cane");
-
             %>
 
             <div id="success">
