@@ -282,6 +282,20 @@ html, body{
     cursor: pointer;
 }
 
+.buttonFilter{
+    font-family: HelveticaNeue;
+    float: right;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    background-color: #486fe4;
+    border-radius: 10px;
+    padding: 13px;
+    border: 0;
+    cursor: pointer;
+}
+
 .imgCard{
     width: 94%;
     box-sizing: border-box;

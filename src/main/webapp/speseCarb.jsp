@@ -137,7 +137,10 @@
         </div>
         <br>
 
+        <form id="cercaData"  action="" method="post">
         <%@include file="calendarProva1.jsp"%>
+            <input class="buttonFilter" type="submit" value="Cerca">
+        </form>
 
         <div class="listaSpese">
 

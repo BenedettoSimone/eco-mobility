@@ -25,7 +25,7 @@
         }
 
         .date-picker1 {
-            width: 260px;
+            width: 212px;
             height: auto;
             max-height: 50px;
             background: white;
