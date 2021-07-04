@@ -86,7 +86,7 @@
                             <p id="bottom_p">Euro spesi</p>
                                 <input id="euro_input" type="text" name="euro" class="formCard" required onchange="mezzoObserver()">
                                 <label id="euro_label"></label>
-                                <input id="data" type="hidden" name="data" value="">
+
 
                             </div>
 

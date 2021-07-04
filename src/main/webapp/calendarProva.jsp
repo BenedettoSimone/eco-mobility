@@ -195,7 +195,7 @@
 <body translate="no" >
 <div class="date-picker">
     <div class="input">
-        <div class="result"><span id="dataCal"></span></div>
+        <div class="result"><input type="text" readonly id="data" value=""></div>
         <a><i class="fa fa-calendar"></i></a>
     </div>
     <div class="calendar"></div>
@@ -231,11 +231,11 @@
             var $me = $(this),
                 $selected = $me.val(),
                 $parent = $me.parents('.date-picker');
-            $parent.find('.result').children('span').html($selected);
-            var span_val = $('dataCal');
-            var spantext=span_val.value();
-            var data=$('data');
-            data.attr('value', spantext);
+
+            $parent.find('.result').children('input').attr("value",$selected);
+
+
+
 
         });
     });
