@@ -19,8 +19,14 @@ public class AddSpeseControl extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         String data = req.getParameter("data");
         int euro =Integer.parseInt(req.getParameter("euro"));
+        System.out.println("d "+ data);
+        System.out.println("eur "+euro);
+
+
+
 
         UtentiDTO utente= (UtentiDTO) req.getSession().getAttribute("utente");
         int idUtente=utente.getIdUtenti();
@@ -37,6 +43,8 @@ public class AddSpeseControl extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+        req.getSession().setAttribute("spese",null);
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarb.jsp");
         dispatcher.forward(req, resp);
     }

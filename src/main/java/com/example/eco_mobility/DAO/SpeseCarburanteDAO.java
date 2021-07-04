@@ -33,7 +33,7 @@ public class SpeseCarburanteDAO {
     public synchronized ArrayList<SpeseCarburanteDTO> doRetriveByUser(int idUtente)throws SQLException{
         PreparedStatement ps = null;
 
-        String query="SELECT * FROM "+ SpeseCarburanteDAO.TABLE_NAME+" where idUtenti=?";
+        String query="SELECT * FROM "+ SpeseCarburanteDAO.TABLE_NAME+" where idUtenti=? order by data desc";
         ps=con.prepareStatement(query);
 
         ps.setInt(1,idUtente);
