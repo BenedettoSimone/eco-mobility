@@ -198,7 +198,7 @@
 
     <div class="input">
         <div class="result">
-            <input name="data" type='text' value="" hidden id="data"><span></span></div>
+            <input name="data" type='text' value="" hidden id="data" required><span></span></div>
         <a><i class="fa fa-calendar"></i></a>
     </div>
     <div class="calendar"></div>

@@ -22,11 +22,6 @@ public class AddSpeseControl extends HttpServlet {
 
         String data = req.getParameter("data");
         int euro =Integer.parseInt(req.getParameter("euro"));
-        System.out.println("d "+ data);
-        System.out.println("eur "+euro);
-
-
-
 
         UtentiDTO utente= (UtentiDTO) req.getSession().getAttribute("utente");
         int idUtente=utente.getIdUtenti();
@@ -40,12 +35,14 @@ public class AddSpeseControl extends HttpServlet {
 
         try {
             dao.doSaveSpeseCarburante(spesa);
+            req.setAttribute("addSpesa","successo");
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+            req.setAttribute("addSpesa","fallito");
         }
-        req.getSession().setAttribute("spese",null);
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarb.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
         dispatcher.forward(req, resp);
     }
 

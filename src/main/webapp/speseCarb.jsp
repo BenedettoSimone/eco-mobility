@@ -12,11 +12,14 @@
 
 <%
 
+    String message= (String) request.getAttribute("addSpesa");
+
     List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getSession().getAttribute("spese");
     if(spese==null){
         response.sendRedirect("./RetriveSpeseControl");
         return;
     }
+
 %>
 
 <html>
@@ -55,17 +58,34 @@
         <div class="background-content">
             <span id="obiettIcon" style="font-size:35px;cursor:pointer" onclick="openBar()"><i class='bx bx-list-ol'></i></span>
 
+            <%
+                if(message!=null && message.equalsIgnoreCase("fallito")){
+            %>
 
             <div id="alert">
                 <span class="closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
                 <strong>Errore! </strong> La spesa non è stata aggiunta correttamente. Riprova!
             </div>
 
+            <%
+                }
+            %>
+
+            <%
+                if(message!=null && message.equalsIgnoreCase("successo")){
+
+                  System.out.println("cane");
+
+            %>
+
             <div id="success">
                 <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
                 <strong></strong>Nuova spesa aggiunta con <strong>successo.</strong>
             </div>
+            <%
 
+                }
+            %>
 
             <div id="titleContent">
                 SPESE CARBURANTE
@@ -84,7 +104,7 @@
                             <%@include file="calendarProva.jsp"%>
 
                             <p id="bottom_p">Euro spesi</p>
-                                <input id="euro_input" type="text" name="euro" class="formCard" required onchange="mezzoObserver()">
+                                <input id="euro_input" type="text" name="euro" class="formCard" required onchange="euroObserver()">
                                 <label id="euro_label"></label>
 
 
@@ -145,8 +165,6 @@
     </div>
 </div>
 
-<script>
-
-</script>
+<script src="js/speseCarb.js"></script>
 </body>
 </html>
