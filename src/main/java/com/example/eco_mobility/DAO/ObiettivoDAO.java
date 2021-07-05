@@ -176,6 +176,33 @@ public class ObiettivoDAO {
         return obiettivi;
     }
 
+    public synchronized ObiettiviDTO obiettiviPerFiltroInCorso(String fil, int ut) throws SQLException {
+        PreparedStatement ps=null;
+
+        String query="SELECT * FROM ecomobility.Obiettivi where tipoObiettivi like \"%"+fil+"%\" and idUtenti=? and status='in corso';";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,ut);
+
+        ResultSet rs = ps.executeQuery();
+
+        ObiettiviDTO ob = new ObiettiviDTO();
+
+        while(rs.next()){
+
+            ob.setIdObiettivi((rs.getInt("idObiettivi")));
+            ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
+            ob.setObiettivo(rs.getInt("obiettivo"));
+            ob.setScadenza(rs.getDate("scadenza"));
+            ob.setIdUtenti(rs.getInt("idUtenti"));
+            ob.setStatus(rs.getString("status"));
+            ob.setProgresso(rs.getInt("progresso"));
+        }
+
+        return ob;
+    }
+
     public synchronized List<ObiettiviDTO> RetriveObiettiviScaduti(int utente) throws SQLException {
         PreparedStatement ps = null;
         List<ObiettiviDTO> obiettivi =  new ArrayList<ObiettiviDTO>();
