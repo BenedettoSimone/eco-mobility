@@ -28,8 +28,6 @@ public class SpostamentiControl extends HttpServlet {
         Date data = new Date(milliseconds);
         String strData = data.toString();
 
-        System.out.println(strData);
-
         //Creo un vettore dove salvare i km da posizionare nel grafico della home
         int km[] = new int[7];
 
@@ -53,14 +51,10 @@ public class SpostamentiControl extends HttpServlet {
                     km[i]=spDAO.doRetriveKMByData(strData, utente.getIdUtenti());
                     data= new Date(milliseconds-86400000*(i+1));
                     strData = data.toString();
-                    System.out.println(strData);
-                    System.out.println(i);
                 }
                 else{
                     data= new Date(milliseconds-86400000*(i+1));
                     strData = data.toString();
-                    System.out.println(strData);
-                    System.out.println(i);
                 }
             }
 

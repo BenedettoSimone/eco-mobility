@@ -82,6 +82,21 @@ public class ObiettiviScadutiControl extends HttpServlet {
                     }
                 }
             }
+
+            ObiettiviDTO obInCorso = new ObiettiviDTO();
+            obInCorso=obDao.obiettiviPerFiltroInCorso("Riduzione spesa",ut.getIdUtenti());
+            if(obInCorso.getProgresso()>obInCorso.getObiettivo()){
+                obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
+            }
+            obInCorso=obDao.obiettiviPerFiltroInCorso("Riduzione chilometri",ut.getIdUtenti());
+            if(obInCorso.getProgresso()>obInCorso.getObiettivo()){
+                obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
+            }
+            obInCorso=obDao.obiettiviPerFiltroInCorso("Utilizzo mezzo eco",ut.getIdUtenti());
+            if(obInCorso.getProgresso()>obInCorso.getObiettivo()){
+                obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
+            }
+
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
             dispatcher.forward(request,response);
 
