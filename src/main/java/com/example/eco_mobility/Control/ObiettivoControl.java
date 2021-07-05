@@ -32,13 +32,13 @@ public class ObiettivoControl extends HttpServlet {
             obiettivi=obDAO.doRetriveObiettivi(ut.getIdUtenti());
 
             for(int i=0;i<obiettivi.size();i++){
-                if(action==1 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri")){
+                if(action==1 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione chilometri") && (obiettivi.get(i).getStatus().equals("in corso"))){
                     action=0;
                 }
-                if(action==2 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione spesa")){
+                if(action==2 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Riduzione spesa") && (obiettivi.get(i).getStatus().equals("in corso"))){
                     action=0;
                 }
-                if(action==3 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Utilizzo mezzo eco")){
+                if(action==3 && obiettivi.get(i).getTipoObiettivo().equalsIgnoreCase("Utilizzo mezzo eco") && (obiettivi.get(i).getStatus().equals("in corso"))){
                     action=0;
                 }
 
