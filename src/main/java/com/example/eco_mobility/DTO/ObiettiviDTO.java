@@ -10,16 +10,18 @@ public class ObiettiviDTO {
     String status;
     Date scadenza;
     int idUtenti;
+    int progresso;
 
     public ObiettiviDTO(){}
 
-    public ObiettiviDTO(int idObiettivi, String tipoObiettivo, int obiettivo, String status, Date scadenza, int idUtenti){
+    public ObiettiviDTO(int idObiettivi, String tipoObiettivo, int obiettivo, String status, Date scadenza, int idUtenti, int progresso){
         this.idObiettivi=idObiettivi;
         this.tipoObiettivo=tipoObiettivo;
         this.obiettivo=obiettivo;
         this.status=status;
         this.scadenza=scadenza;
         this.idUtenti=idUtenti;
+        this.progresso=progresso;
     }
 
     public int getIdObiettivi() {
@@ -68,6 +70,14 @@ public class ObiettiviDTO {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public int getProgresso() {
+        return progresso;
+    }
+
+    public void setProgresso(int progresso) {
+        this.progresso = progresso;
     }
 
     @Override
