@@ -41,13 +41,13 @@
     </div>
     <ul class="nav_list">
         <li>
-            <a id="home" class="top" href="#">
+            <a id="home" class="top" href="">
                 <i class='bx bxs-home'></i>
                 <span class="links_name">Home</span>
             </a>
         </li>
         <li>
-            <a id="spostamenti" class="top" href="#">
+            <a id="spostamenti" class="top" href="spostamentiDan.jsp">
                 <i class='bx bxs-car'></i>
                 <span class="links_name">Spostamenti</span>
             </a>

@@ -27,7 +27,7 @@ public class SearchSpeseByDateControl extends HttpServlet {
         //nessuna data selezionata
         if (data.isEmpty()){
             try {
-                req.getSession().setAttribute("spese",speseDao.doRetriveByUser(ut.getIdUtenti()));
+                req.setAttribute("spese",speseDao.doRetriveByUser(ut.getIdUtenti()));
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
@@ -40,7 +40,7 @@ public class SearchSpeseByDateControl extends HttpServlet {
 
 
         try {
-            req.getSession().setAttribute("spese",speseDao.speseByData(data, ut.getIdUtenti()));
+            req.setAttribute("spese",speseDao.speseByData(data, ut.getIdUtenti()));
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
