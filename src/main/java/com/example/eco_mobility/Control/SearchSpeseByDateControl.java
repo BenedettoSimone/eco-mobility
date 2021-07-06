@@ -22,8 +22,22 @@ public class SearchSpeseByDateControl extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UtentiDTO ut = (UtentiDTO) req.getSession().getAttribute("utente");
         String data = req.getParameter("data");
-
         SpeseCarburanteDAO speseDao= new SpeseCarburanteDAO();
+
+        //nessuna data selezionata
+        if (data.isEmpty()){
+            try {
+                req.getSession().setAttribute("spese",speseDao.doRetriveByUser(ut.getIdUtenti()));
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/speseCarb.jsp");
+            dispatcher.forward(req, resp);
+            return;
+        }
+
+
 
         try {
             req.getSession().setAttribute("spese",speseDao.speseByData(data, ut.getIdUtenti()));
