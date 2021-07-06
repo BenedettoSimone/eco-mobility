@@ -221,12 +221,16 @@
         $(".calendar").datepicker({
             dateFormat: 'yy-mm-dd',
             firstDay: 1,
-            maxDate: today });
+            maxDate: today,
+        });
 
 
         $(document).on('click', '.date-picker1 .input', function (e) {
             var $me = $(this),
                 $parent = $me.parents('.date-picker1');
+
+            var $tutti= 'Tutti gli spostamenti';
+            $parent.find('.result').children('span').html($tutti);
             $parent.toggleClass('open');
         });
 
@@ -239,8 +243,6 @@
 
             $parent.find('.result').children('span').html($selected);
             $parent.find('.result').children('input').attr("value",$selected);
-
-
 
 
 
