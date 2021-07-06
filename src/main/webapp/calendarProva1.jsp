@@ -229,7 +229,7 @@
             var $me = $(this),
                 $parent = $me.parents('.date-picker1');
 
-            var $tutti= 'Tutti gli spostamenti';
+            var $tutti= 'Cerca tutti';
             $parent.find('.result').children('span').html($tutti);
             $parent.toggleClass('open');
         });
