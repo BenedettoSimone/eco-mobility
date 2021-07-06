@@ -14,7 +14,7 @@
 
     String message= (String) request.getAttribute("addSpesa");
 
-    List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getSession().getAttribute("spese");
+    List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getAttribute("spese");
     if(spese==null){
         response.sendRedirect("./RetriveSpeseControl");
         return;
