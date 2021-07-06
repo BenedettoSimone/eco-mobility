@@ -170,7 +170,7 @@
                             </h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai utilizzato <%=progressMezzo%> volte un mezzo eco-sostenibile</h6><br>
+                                <h6>Negli ultimi 7 giorni hai utilizzato NULL volte un mezzo eco-sostenibile</h6><br>
                             </div>
 
                             <div class="textCard">
@@ -236,7 +236,7 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <p>Km percorsi: <%=obiettivi.get(i).getProgresso()%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
@@ -249,7 +249,7 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
+                    <p>Utilizzo: <%=obiettivi.get(i).getProgresso()%> / <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
@@ -262,7 +262,7 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <p>Euro spesi: <%=obiettivi.get(i).getProgresso()%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>

@@ -24,13 +24,13 @@ public class LoginControl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        request.getSession().setAttribute("page","home");
 
-        String redirectedPage;
 
         try {
             if(checkLogin(email,password,request).equals("registrato")){
 
-                redirectedPage="/home.jsp";
+
 
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/SpostamentiControl");
 

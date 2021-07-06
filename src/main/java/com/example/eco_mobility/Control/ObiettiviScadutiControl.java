@@ -23,6 +23,7 @@ public class ObiettiviScadutiControl extends HttpServlet {
         List<ObiettiviDTO> ob = new ArrayList<ObiettiviDTO>();
         UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
 
+
         try {
             //ob è la lista degli obiettivi scaduti
             ob=obDao.RetriveObiettiviScaduti(ut.getIdUtenti());
@@ -97,7 +98,14 @@ public class ObiettiviScadutiControl extends HttpServlet {
                 obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
             }
 
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+            RequestDispatcher dispatcher;
+
+            if(request.getSession().getAttribute("page").equals("spesa") && request.getSession().getAttribute("page")!=null ) {
+                dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
+            }
+            else {
+                 dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+            }
             dispatcher.forward(request,response);
 
         } catch (SQLException throwables) {
