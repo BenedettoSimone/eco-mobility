@@ -82,7 +82,7 @@
                                 <p id="bottom_p">Chilometri Percorsi</p>
 
                                 <input id="chilometri_input" type="text" name="spostamento" class="formCard" required onchange="chilometriObserver()">
-                                <label id="choilometri_label"></label>
+                                <label id="chilometri_label"></label>
                                 <input type="hidden" name="action" value="3">
 
                             </div>
@@ -160,7 +160,6 @@
 
 </div>
 
-
-</script>
+<script src="js/spostamenti.js"></script>
 </body>
 </html>
