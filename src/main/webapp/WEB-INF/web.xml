@@ -105,5 +105,14 @@
         <servlet-name>ObiettiviScadutiControl</servlet-name>
         <url-pattern>/ObiettiviScadutiControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchSpeseByDateControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.SearchSpeseByDateControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchSpeseByDateControl</servlet-name>
+        <url-pattern>/SearchSpeseByDateControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>

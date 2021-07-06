@@ -19,7 +19,6 @@
         response.sendRedirect("./RetriveSpeseControl");
         return;
     }
-
 %>
 
 <html>
@@ -134,7 +133,7 @@
         </div>
         <br>
 
-        <form id="cercaData"  action="" method="post">
+        <form id="cercaData"  action="${pageContext.servletContext.contextPath}/SearchSpeseByDateControl" method="post">
         <%@include file="calendarProva1.jsp"%>
             <input class="buttonFilter" type="submit" value="Cerca">
         </form>
@@ -154,7 +153,7 @@
 
             <%
                 }
-            }else{
+            }else {
             %>
             No Spese
             <%
