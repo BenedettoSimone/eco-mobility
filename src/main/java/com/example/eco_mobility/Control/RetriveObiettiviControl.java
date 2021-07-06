@@ -19,14 +19,19 @@ public class RetriveObiettiviControl extends HttpServlet {
         ObiettivoDAO obDAO = new ObiettivoDAO();
         UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
 
+        request.getSession().setAttribute("page","ob");
+
         try {
-            request.getSession().setAttribute("obiettivi",obDAO.doRetriveObiettivi(ut.getIdUtenti()));
+            request.setAttribute("obiettivi",obDAO.doRetriveObiettivi(ut.getIdUtenti()));
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/obiettivi.jsp");
+
+
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ObiettiviScadutiControl");
 
         dispatcher.forward(request,response);
 

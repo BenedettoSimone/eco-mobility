@@ -22,6 +22,8 @@ public class RetriveSpeseControl extends HttpServlet {
         UtentiDTO utente= (UtentiDTO) req.getSession().getAttribute("utente");
         int idUtente=utente.getIdUtenti();
 
+
+
         try {
             req.getSession().setAttribute("spese",dao.doRetriveByUser(idUtente));
         } catch (SQLException throwables) {

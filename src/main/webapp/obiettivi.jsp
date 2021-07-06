@@ -8,11 +8,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    List <ObiettiviDTO> obiettivi= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettivi");
+    List <ObiettiviDTO> obiettivi= (List<ObiettiviDTO>) request.getAttribute("obiettivi");
     if(obiettivi==null){
         response.sendRedirect("./RetriveObiettiviControl");
         return;
     }
+
 
     String error= (String) request.getAttribute("ErrObiettivo");
     String success= (String) request.getAttribute("SuccessObiettivo");
