@@ -26,9 +26,11 @@ public class AddSpeseControl extends HttpServlet {
 
 
 
-
+        String page=req.getParameter("spesa");
+        req.getSession().setAttribute("page",page);
         String data = req.getParameter("data");
         int euro =Integer.parseInt(req.getParameter("euro"));
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
 
         UtentiDTO utente= (UtentiDTO) req.getSession().getAttribute("utente");
         int idUtente=utente.getIdUtenti();
@@ -53,6 +55,9 @@ public class AddSpeseControl extends HttpServlet {
             req.setAttribute("addSpesa","successo");
 
             ob.UpdateProgresso(obiettivo.getProgresso()+euro, obiettivo.getIdObiettivi());
+            if(page!=null && page.equalsIgnoreCase("spesa")) {
+                dispatcher = getServletContext().getRequestDispatcher("/ObiettiviScadutiControl");
+            }
 
 
 
@@ -61,7 +66,7 @@ public class AddSpeseControl extends HttpServlet {
             req.setAttribute("addSpesa","fallito");
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
+
         dispatcher.forward(req, resp);
     }
 

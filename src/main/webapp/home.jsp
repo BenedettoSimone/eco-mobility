@@ -9,7 +9,7 @@
         System.out.println("km "+ km[i]);
     }
 
-
+    request.getSession().setAttribute("flag",0);
     carburante= (int[]) request.getAttribute("speseSettimanali");
 
     if(km==null || carburante==null){
@@ -76,7 +76,7 @@
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obb.getObiettivo()%></p>
+                                <p>Km percorsi: <%=obb.getProgresso()%> &nbsp &nbsp &nbsp Km massimi: <%=obb.getObiettivo()%></p>
                             </div>
                         </div>
                         <%
@@ -87,7 +87,7 @@
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Utilizzo: <%=progressMezzo%> / <%=obb.getObiettivo()%></p>
+                                <p>Utilizzo: <%=obb.getProgresso()%> / <%=obb.getObiettivo()%></p>
                             </div>
                         </div>
                         <%
@@ -98,7 +98,7 @@
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obb.getObiettivo()%></p>
+                                <p>Euro spesi: <%=obb.getProgresso()%> &nbsp &nbsp &nbsp Spesa massima: <%=obb.getObiettivo()%></p>
                             </div>
                         </div>
                         <%
