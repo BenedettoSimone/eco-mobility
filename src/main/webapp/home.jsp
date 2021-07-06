@@ -2,6 +2,9 @@
 <%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+
+
+
     int[] km,carburante;
     km= (int[]) request.getAttribute("kmSettimanali");
     System.out.println("valori chilometri");

@@ -41,7 +41,7 @@
     </div>
     <ul class="nav_list">
         <li>
-            <a id="home" class="top" href="">
+            <a id="home" class="top" href="#">
                 <i class='bx bxs-home'></i>
                 <span class="links_name">Home</span>
             </a>
