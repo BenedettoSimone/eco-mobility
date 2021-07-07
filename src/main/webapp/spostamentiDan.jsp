@@ -138,7 +138,7 @@
         <br>
 
 
-        <form id="cercaData"  action="" method="post">
+        <form id="cercaData"  action="${pageContext.servletContext.contextPath}/SearchSpostamentiByDateControl" method="post">
             <%@include file="calendarProva1.jsp"%>
             <input class="buttonFilter" type="submit" value="Cerca">
         </form>

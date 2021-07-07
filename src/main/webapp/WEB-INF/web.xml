@@ -132,5 +132,14 @@
         <servlet-name>RetriveSpostamentiControl</servlet-name>
         <url-pattern>/RetriveSpostamentiControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchSpostamentiByDateControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.SearchSpostamentiByDateControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchSpostamentiByDateControl</servlet-name>
+        <url-pattern>/SearchSpostamentiByDateControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>
