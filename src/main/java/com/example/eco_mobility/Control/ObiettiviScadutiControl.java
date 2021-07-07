@@ -76,10 +76,10 @@ public class ObiettiviScadutiControl extends HttpServlet {
 
                     int mezzoProgress = spDao.UtilizzoEcoProgressData(ut.getIdUtenti(),data.toString(),dataS.toString());
 
-                    if(mezzoProgress<=ob.get(i).getObiettivo()){
-                        obDao.UpdateStatus("completato",ob.get(i).getIdObiettivi());
-                    }else{
+                    if(mezzoProgress<ob.get(i).getObiettivo()){
                         obDao.UpdateStatus("fallito",ob.get(i).getIdObiettivi());
+                    }else{
+                        obDao.UpdateStatus("completato",ob.get(i).getIdObiettivi());
                     }
                 }
             }
@@ -94,8 +94,8 @@ public class ObiettiviScadutiControl extends HttpServlet {
                 obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
             }
             obInCorso=obDao.obiettiviPerFiltroInCorso("Utilizzo mezzo eco",ut.getIdUtenti());
-            if(obInCorso.getProgresso()>obInCorso.getObiettivo()){
-                obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
+            if(obInCorso.getProgresso()>=obInCorso.getObiettivo()){
+                obDao.UpdateStatus("completato", obInCorso.getIdObiettivi());
             }
 
             RequestDispatcher dispatcher;
