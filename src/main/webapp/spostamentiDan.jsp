@@ -1,5 +1,6 @@
 <%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.example.eco_mobility.DTO.SpostamentiDTO" %><%--
   Created by IntelliJ IDEA.
   User: SalernoDaniele
   Date: 14/06/21
@@ -9,7 +10,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
 
-
+    List<SpostamentiDTO> spostamenti = (List<SpostamentiDTO>) request.getSession().getAttribute("retriveSpost");
+    if(spostamenti==null){
+        response.sendRedirect("./RetriveSpostamentiControl");
+        return;
+    }
 
 %>
 <html>
@@ -139,19 +144,36 @@
         </form>
 
         <div class="listaSpese">
+            <%
+                if(!spostamenti.isEmpty()){
+                    for(SpostamentiDTO sp : spostamenti){
+                        String tipo=null;
+                        if(sp.isTipoMezzo()){
+                            tipo="ecosostenibile";
+                        }else{
+                            tipo="non ecosostenibile";
+                        }
+            %>
+                        <div class="eco">
+                            <h3><%=sp.getData()%></h3>
+                            <p>Mezzo utilizzato: <%=tipo%></p>
+                            <p>Km percorsi: <%=sp.getKmPercorsi()%></p>
+                        </div>
+
+            <%
+
+                    }
+                }else{
+            %>
+            No Spese
+            <%
+
+                }
+            %>
 
 
-                <div class="not-eco ">
-                    <h3>19/04/2021</h3>
-                    <p>Mezzo utilizzato: non-ecosostenibile</p>
-                    <p>Km percorsi: null </p>
-                </div>
 
-            <div class="eco">
-                <h3>19/04/2021</h3>
-                <p>Mezzo utilizzato: ecosostenibile</p>
-                <p>Km percorsi: null </p>
-            </div>
+
 
         </div>
 

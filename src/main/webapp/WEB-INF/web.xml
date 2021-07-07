@@ -123,5 +123,14 @@
         <servlet-name>AddSpostamentiControl</servlet-name>
         <url-pattern>/AddSpostamentiControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RetriveSpostamentiControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.RetriveSpostamentiControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RetriveSpostamentiControl</servlet-name>
+        <url-pattern>/RetriveSpostamentiControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>

@@ -123,6 +123,31 @@ public class SpostamentiDAO {
         return mezzo;
     }
 
+    public synchronized ArrayList<SpostamentiDTO> doRetriveSpostamenti(int idUtente) throws SQLException {
+        PreparedStatement ps=null;
+
+        String query="SELECT * FROM ecomobility.Spostamenti WHERE idUtente=?";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,idUtente);
+
+        ResultSet rs = ps.executeQuery();
+
+        ArrayList<SpostamentiDTO> spostamenti = new ArrayList<>();
+
+        while(rs.next()){
+            SpostamentiDTO spostamento = new SpostamentiDTO();
+
+            spostamento.setTipoMezzo(rs.getBoolean("tipoMezzo"));
+            spostamento.setData(rs.getDate("data"));
+            spostamento.setKmPercorsi(rs.getInt("kmPercorsi"));
+
+            spostamenti.add(spostamento);
+        }
+
+        return spostamenti;
+    }
 
 
 }
