@@ -126,7 +126,7 @@ public class SpostamentiDAO {
     public synchronized ArrayList<SpostamentiDTO> doRetriveSpostamenti(int idUtente) throws SQLException {
         PreparedStatement ps=null;
 
-        String query="SELECT * FROM ecomobility.Spostamenti WHERE idUtente=?";
+        String query="SELECT * FROM ecomobility.Spostamenti WHERE idUtente=? order by data desc";
 
         ps=con.prepareStatement(query);
 
