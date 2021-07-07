@@ -111,6 +111,7 @@ public class SpeseCarburanteDAO {
         ps.setString(1,data);
         ps.setInt(2,idUtente);
 
+        System.out.println(ps);
         ResultSet rs = ps.executeQuery();
 
         ArrayList<SpeseCarburanteDTO> spese = new ArrayList<>();

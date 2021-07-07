@@ -153,12 +153,14 @@ public class SpostamentiDAO {
         PreparedStatement ps=null;
 
 
-        String query="SELECT * FROM ecomobility.Spostamenti WHERE data= ? and idUtente=?";
+        String query="SELECT * FROM ecomobility.Spostamenti where idUtente="+idUtente+" AND data=\'"+data+"\'";
 
         ps=con.prepareStatement(query);
 
-        ps.setString(1,data);
-        ps.setInt(2,idUtente);
+        //ps.setString(1,data);
+        //ps.setInt(2,idUtente);
+
+        System.out.println(ps);
 
         ResultSet rs= ps.executeQuery(query);
 
