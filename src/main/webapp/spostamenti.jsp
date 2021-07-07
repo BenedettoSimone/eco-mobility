@@ -15,6 +15,7 @@
         response.sendRedirect("./RetriveSpostamentiControl");
         return;
     }
+    String message= (String) request.getAttribute("addSpost");
 
 %>
 <html>
@@ -47,22 +48,31 @@
         <div class="background-content">
             <span id="obiettIcon" style="font-size:35px;cursor:pointer" onclick="openBar()"><i class='bx bx-list-ol'></i></span>
 
-
+            <%
+                if(message!=null && message.equalsIgnoreCase("fallito")){
+            %>
 
             <div id="alert">
                 <span class="closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
-                <strong>Errore! </strong> Impossibile aggiungere due obiettivi dello stesso tipo in una settimana.
+                <strong>Errore! </strong> Lo spostamento non è stato aggiunto correttamente. Riprova!
             </div>
 
+            <%
+                }
+            %>
 
+            <%
+                if(message!=null && message.equalsIgnoreCase("successo")){
+            %>
 
+            <div id="success">
+                <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
+                <strong></strong>Nuovo spostamento aggiunto con <strong>successo.</strong>
+            </div>
+            <%
 
-
-              <div id="success">
-                   <span class="closebtn-success" onclick="this.parentElement.style.display='none'; onDeleteMessage()">&times;</span>
-                   <strong></strong>Obiettivo aggiunto con <strong>successo.</strong>
-               </div>
-
+                }
+            %>
 
             <div id="titleContent">
                 SPOSTAMENTI

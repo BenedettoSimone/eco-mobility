@@ -351,6 +351,7 @@ input#eco, input#Noteco {
     margin-top: 20px;
     padding: 13px;
     border: 0;
+    cursor:pointer;
 }
 
 
