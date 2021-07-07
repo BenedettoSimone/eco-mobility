@@ -1,23 +1,21 @@
 
 var url = window.location.href;
 
+var title=document.title;
 
-if (url.includes("home")) {
+if (title=="Home") {
     document.getElementById("home").setAttribute('id', 'clicked');
 
-} else if (url.includes("index")) {
+} else if (title=="Spostamenti") {
     document.getElementById("spostamenti").setAttribute('id', 'clicked');
 
-} else if (url.includes("spesa")) {
-
+} else if (title=="Spese carburante") {
     document.getElementById("spesa").setAttribute('id', 'clicked');
 }
-else if (url.includes("obiettivi")) {
-
+else if (title=="Obiettivi") {
     document.getElementById("obiettivi").setAttribute('id', 'clicked');
 }
-else if (url.includes("premi")) {
-
+else if (title=="Premi") {
     document.getElementById("premi").setAttribute('id', 'clicked');
 }
 
