@@ -114,5 +114,14 @@
         <servlet-name>SearchSpeseByDateControl</servlet-name>
         <url-pattern>/SearchSpeseByDateControl</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddSpostamentiControl</servlet-name>
+        <servlet-class>com.example.eco_mobility.Control.AddSpostamentiControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddSpostamentiControl</servlet-name>
+        <url-pattern>/AddSpostamentiControl</url-pattern>
+    </servlet-mapping>
     
 </web-app>

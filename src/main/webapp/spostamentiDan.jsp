@@ -66,7 +66,7 @@
                 <!-- card UTILIZZO MEZZO ECO -->
                 <div id="cardECO" class="card">
                     <div class="cardSX">
-                        <form id="fMezzo" action="" method="post">
+                        <form id="fMezzo" action="${pageContext.servletContext.contextPath}/AddSpostamentiControl" method="post">
                             <h4>NUOVO SPOSTAMENTO</h4>
 
                             <div class="textCard">
@@ -81,7 +81,7 @@
                             <div class="textCard">
                                 <p id="bottom_p">Chilometri Percorsi</p>
 
-                                <input id="chilometri_input" type="text" name="spostamento" class="formCard" required onchange="chilometriObserver()">
+                                <input id="chilometri_input" type="text" name="km" class="formCard" required>
                                 <label id="chilometri_label"></label>
                                 <input type="hidden" name="action" value="3">
 
@@ -91,11 +91,11 @@
                                 Tipologia mezzo utilizzato<br>
                                 <div id="content-radio">
                                 <div id="ecodiv">
-                                <input id="eco" type="radio" name="spostamento" required checked>
+                                <input id="eco" type="radio" name="mezzo" required checked value="eco">
                                 <p>eco-sostenibile</p>
                                 </div>
                                 <div id="Notecodiv">
-                                <input id="Noteco" type="radio" name="spostamento" required>
+                                <input id="Noteco" type="radio" name="mezzo" value="Noteco" required>
                                     <p>non eco-sostenibile</p>
                                 </div>
                                 </div>
@@ -160,6 +160,6 @@
 
 </div>
 
-<script src="js/spostamenti.js"></script>
+
 </body>
 </html>
