@@ -6,6 +6,9 @@ import com.example.eco_mobility.DTO.ObiettiviDTO;
 import com.example.eco_mobility.DTO.SpeseCarburanteDTO;
 import com.example.eco_mobility.DTO.UtentiDTO;
 
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,8 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class AddSpeseControl extends HttpServlet {
@@ -29,7 +30,9 @@ public class AddSpeseControl extends HttpServlet {
         String page=req.getParameter("spesa");
         req.getSession().setAttribute("page",page);
         String data = req.getParameter("data");
+
         int euro =Integer.parseInt(req.getParameter("euro"));
+
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
 
         UtentiDTO utente= (UtentiDTO) req.getSession().getAttribute("utente");
@@ -54,7 +57,25 @@ public class AddSpeseControl extends HttpServlet {
             dao.doSaveSpeseCarburante(spesa);
             req.setAttribute("addSpesa","successo");
 
-            ob.UpdateProgresso(obiettivo.getProgresso()+euro, obiettivo.getIdObiettivi());
+            //if((Date)data>obiettivo.getScadenza()-86400000*(7))
+
+            //scandeza obiettivo
+            Date scadenza= obiettivo.getScadenza();
+            long mill= scadenza.getTime();
+
+            //calcolo i 7 giorni pirma( inizio obiettivo)
+            Date inizio= new Date(mill -86400000*(8));
+
+            
+            String sDate1 = data;
+            java.sql.Date date1 =Date.valueOf(data);//converting string into sql date
+
+
+            if(date1.after(inizio)){
+                ob.UpdateProgresso(obiettivo.getProgresso()+euro, obiettivo.getIdObiettivi());
+            }
+
+
             if(page!=null && page.equalsIgnoreCase("spesa")) {
                 dispatcher = getServletContext().getRequestDispatcher("/ObiettiviScadutiControl");
             }

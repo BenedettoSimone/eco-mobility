@@ -17,6 +17,7 @@
 
     String error= (String) request.getAttribute("ErrObiettivo");
     String success= (String) request.getAttribute("SuccessObiettivo");
+    
 
 
 %>
@@ -125,7 +126,7 @@
                             <h4>RIDUZIONE SPESE CARBURANTE</h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai speso <%=mediaCarburante%> euro.</h6><br>
+                                <h6>Negli ultimi 7 giorni hai speso in media <%=mediaCarburante%> euro.</h6><br>
 
                             </div>
 
