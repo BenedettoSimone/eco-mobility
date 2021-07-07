@@ -14,6 +14,7 @@
         return;
     }
 
+    int count=(int) request.getSession().getAttribute("countMezzo");
 
     String error= (String) request.getAttribute("ErrObiettivo");
     String success= (String) request.getAttribute("SuccessObiettivo");

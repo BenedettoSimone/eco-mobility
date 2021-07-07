@@ -21,8 +21,6 @@
     //media spesa carburante settimana corrente
     int mediaCarburante=(int) request.getSession().getAttribute("mediaSpCarburante");
 
-    int count=(int) request.getSession().getAttribute("countMezzo");
-
 
 %>
 

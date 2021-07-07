@@ -69,7 +69,7 @@ public class SpostamentiControl extends HttpServlet {
             request.setAttribute("kmSettimanali", km);
             request.getSession().setAttribute("mediaSet", media);
 
-            request.getSession().setAttribute("countMezzo",spDAO.doRetriveNumEco(utente.getIdUtenti()));
+
 
             RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/SpeseCarburanteControl");
 

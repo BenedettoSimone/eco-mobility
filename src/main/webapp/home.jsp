@@ -17,6 +17,7 @@
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
 
+
 %>
 <!DOCTYPE html>
 <html lang="en" xmlns="">
