@@ -23,15 +23,15 @@
 </span>
 
     <div class="logo_resp_visible">
-        <a href=""><img id="logo-resp" src="img/logo.png"></a>
+        <a href="./SpostamentiControl"><img id="logo-resp" src="img/logo.png"></a>
     </div>
 
 
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div id="links_resp">
-        <a href="#">Home</a>
-        <a href="#">Spostamenti</a>
+        <a href="./SpostamentiControl">Home</a>
+        <a href="spostamentiDan.jsp">Spostamenti</a>
         <a href="obiettivi.jsp">Obiettivi</a>
         <a href="speseCarb.jsp">Spesa Carburante</a>
         <a href="premi.jsp">Premi</a>
