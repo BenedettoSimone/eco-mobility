@@ -65,7 +65,7 @@ public class ObiettivoDAO {
         List<ObiettiviDTO> obiettivi = new ArrayList<ObiettiviDTO>();
         PreparedStatement ps = null;
 
-        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? and current_date()<=scadenza ";
+        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? and status='in corso'";
 
         ps=con.prepareStatement(query);
 

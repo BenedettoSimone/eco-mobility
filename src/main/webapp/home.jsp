@@ -66,6 +66,7 @@
                     <div class="row-obiettivi">
                         <% if(obiettiviInCorso.isEmpty()==false){
 
+                            System.out.println(obiettiviInCorso.toString());
                           System.out.println("Empty"+obiettiviInCorso.isEmpty());
 
                             for(ObiettiviDTO obb : obiettiviInCorso){
