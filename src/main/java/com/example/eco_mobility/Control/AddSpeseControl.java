@@ -64,8 +64,7 @@ public class AddSpeseControl extends HttpServlet {
             //calcolo 8 giorni prima( inizio obiettivo -1)
             Date inizio= new Date(mill -86400000*(8));
 
-            
-            String sDate1 = data;
+
             java.sql.Date date1 =Date.valueOf(data);//converting string into sql date
 
 
