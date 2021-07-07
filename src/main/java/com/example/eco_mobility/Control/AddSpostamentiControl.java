@@ -40,6 +40,7 @@ public class AddSpostamentiControl extends HttpServlet {
         ObiettivoDAO ob = new ObiettivoDAO();
         ObiettiviDTO obiettivo = new ObiettiviDTO();
 
+
         //obiettivo mezzo
         ObiettivoDAO ob1 = new ObiettivoDAO();
         ObiettiviDTO obiettivo1 = new ObiettiviDTO();
@@ -49,23 +50,6 @@ public class AddSpostamentiControl extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
-        //scandenza obiettivo riduzione chilometri
-        Date scadenza= obiettivo.getScadenza();
-        long mill= scadenza.getTime();
-
-        //calcolo 8 giorni prima( inizio obiettivo -1)
-        Date inizio= new Date(mill -86400000*(8));
-        java.sql.Date date1 =Date.valueOf(data);//converting string into sql date
-
-        //scandenza obiettivo utilizzo eco
-        Date scadenza1= obiettivo1.getScadenza();
-        long mill1= scadenza1.getTime();
-
-        //calcolo 8 giorni prima( inizio obiettivo -1)
-        Date inizio1= new Date(mill1 -86400000*(8));
-        java.sql.Date date2 =Date.valueOf(data);//converting string into sql date
-
 
 
 
@@ -87,22 +71,47 @@ public class AddSpostamentiControl extends HttpServlet {
 
         try {
             spostDao.doSaveSpostamento(spostamento);
+            req.setAttribute("addSpost", "successo");
 
-            if(date1.after(inizio)){
-                ob.UpdateProgresso(obiettivo.getProgresso()+km, obiettivo.getIdObiettivi());
+            if(obiettivo.getScadenza()!=null){
+                //scandenza obiettivo riduzione chilometri
+                Date scadenza= obiettivo.getScadenza();
+                long mill= scadenza.getTime();
+
+                //calcolo 8 giorni prima( inizio obiettivo -1)
+                Date inizio= new Date(mill -86400000*(8));
+                java.sql.Date date1 =Date.valueOf(data);//converting string into sql date
+
+                if(date1.after(inizio)){
+                    ob.UpdateProgresso(obiettivo.getProgresso()+km, obiettivo.getIdObiettivi());
+                }
             }
 
-            if(spostamento.isTipoMezzo()==true){
+            if(obiettivo1.getScadenza()!=null){
+                //scandenza obiettivo utilizzo eco
+                Date scadenza1= obiettivo1.getScadenza();
+                long mill1= scadenza1.getTime();
 
-                if(date2.after(inizio1)){
+                //calcolo 8 giorni prima( inizio obiettivo -1)
+                Date inizio1= new Date(mill1 -86400000*(8));
+                java.sql.Date date2 =Date.valueOf(data);//converting string into sql date
 
-                    ob1.UpdateProgresso(obiettivo1.getProgresso()+1, obiettivo1.getIdObiettivi());
+                if(spostamento.isTipoMezzo()==true){
+
+                    if(date2.after(inizio1)){
+
+                        ob1.UpdateProgresso(obiettivo1.getProgresso()+1, obiettivo1.getIdObiettivi());
+                    }
+
                 }
 
             }
 
+
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+            req.setAttribute("addSpost", "fallito");
         }
 
         if(page!=null && page.equalsIgnoreCase("spostamenti")) {

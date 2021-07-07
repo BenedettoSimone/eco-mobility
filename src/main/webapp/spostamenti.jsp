@@ -47,6 +47,7 @@
             <span id="obiettIcon" style="font-size:35px;cursor:pointer" onclick="openBar()"><i class='bx bx-list-ol'></i></span>
 
 
+
             <div id="alert">
                 <span class="closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
                 <strong>Errore! </strong> Impossibile aggiungere due obiettivi dello stesso tipo in una settimana.
@@ -167,7 +168,7 @@
                     }
                 }else{
             %>
-            No Spese
+            No Spostamenti
             <%
 
                 }
