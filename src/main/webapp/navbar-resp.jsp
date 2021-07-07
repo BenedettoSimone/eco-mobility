@@ -34,7 +34,7 @@
         <a href="#">Spostamenti</a>
         <a href="obiettivi.jsp">Obiettivi</a>
         <a href="speseCarb.jsp">Spesa Carburante</a>
-        <a href="#">Premi</a>
+        <a href="premi.jsp">Premi</a>
     </div>
 
     <div id="user_resp">

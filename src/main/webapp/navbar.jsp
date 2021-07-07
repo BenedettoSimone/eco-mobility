@@ -65,7 +65,7 @@
             </a>
         </li>
         <li>
-            <a id="premi" class="top" href="#">
+            <a id="premi" class="top" href="premi.jsp">
                 <i class='bx bxs-medal'></i>
                 <span class="links_name">Premi</span>
             </a>
