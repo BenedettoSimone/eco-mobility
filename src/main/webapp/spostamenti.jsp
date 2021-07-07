@@ -147,13 +147,16 @@
                 if(!spostamenti.isEmpty()){
                     for(SpostamentiDTO sp : spostamenti){
                         String tipo=null;
+                        String classe=null;
                         if(sp.isTipoMezzo()){
                             tipo="ecosostenibile";
+                            classe="eco";
                         }else{
                             tipo="non ecosostenibile";
+                            classe="not-eco";
                         }
             %>
-                        <div class="eco">
+                        <div class="<%=classe%>">
                             <h3><%=sp.getData()%></h3>
                             <p>Mezzo utilizzato: <%=tipo%></p>
                             <p>Km percorsi: <%=sp.getKmPercorsi()%></p>

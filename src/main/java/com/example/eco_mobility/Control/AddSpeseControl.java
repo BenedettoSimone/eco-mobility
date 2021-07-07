@@ -40,6 +40,18 @@ public class AddSpeseControl extends HttpServlet {
 
         ObiettivoDAO ob = new ObiettivoDAO();
         ObiettiviDTO obiettivo = new ObiettiviDTO();
+
+
+        //scandenza obiettivo
+        Date scadenza= obiettivo.getScadenza();
+        long mill= scadenza.getTime();
+
+        //calcolo 8 giorni prima( inizio obiettivo -1)
+        Date inizio= new Date(mill -86400000*(8));
+
+
+        java.sql.Date date1 =Date.valueOf(data);//converting string into sql date
+
         try {
             obiettivo=ob.obiettiviPerFiltroInCorso("Riduzione Spesa",idUtente);
         } catch (SQLException throwables) {
@@ -56,17 +68,6 @@ public class AddSpeseControl extends HttpServlet {
         try {
             dao.doSaveSpeseCarburante(spesa);
             req.setAttribute("addSpesa","successo");
-
-            //scandenza obiettivo
-            Date scadenza= obiettivo.getScadenza();
-            long mill= scadenza.getTime();
-
-            //calcolo 8 giorni prima( inizio obiettivo -1)
-            Date inizio= new Date(mill -86400000*(8));
-
-
-            java.sql.Date date1 =Date.valueOf(data);//converting string into sql date
-
 
             if(date1.after(inizio)){
                 ob.UpdateProgresso(obiettivo.getProgresso()+euro, obiettivo.getIdObiettivi());

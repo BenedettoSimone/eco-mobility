@@ -123,7 +123,6 @@ html, body{
     text-align: left;
     margin-bottom:20px;
     position: relative;
-    cursor:pointer;
 }
 
 .not-eco p{
@@ -144,7 +143,7 @@ html, body{
 
 
 /*card completato*/
-.eco {
+.eco{
     background-color: #f0fcec;
     border:1px solid #57A758;
     border-radius:30px;
@@ -152,7 +151,6 @@ html, body{
     text-align: left;
     margin-bottom:20px;
     position: relative;
-    cursor:pointer;
 }
 
 .eco p{
@@ -190,7 +188,7 @@ html, body{
 #content{
     background-color: white;
     width: 60%;
-    padding:20px 20px 20px 0;
+    padding:20px 0 20px 0;
 }
 
 #content #titleContent{
