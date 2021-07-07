@@ -22,7 +22,7 @@ function chilometriObserver() {
 
 }
 
-$(document).on("submit", "#fMezzo", function (event) {
+$(document).on("submit", "#fSpostamenti", function (event) {
     let kmObs = chilometriObserver();
 
     if (kmObs){

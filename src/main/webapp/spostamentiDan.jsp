@@ -25,7 +25,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/ListaObiettiviResp.js"></script>
-    <script src="js/obiettivi.js"></script>
 <body>
 
 <%@ include file="ListaObResp.jsp" %>
@@ -71,7 +70,7 @@
                 <!-- card UTILIZZO MEZZO ECO -->
                 <div id="cardECO" class="card">
                     <div class="cardSX">
-                        <form id="fMezzo" action="${pageContext.servletContext.contextPath}/AddSpostamentiControl" method="post">
+                        <form id="fSpostamenti" action="${pageContext.servletContext.contextPath}/AddSpostamentiControl" method="post">
                             <h4>NUOVO SPOSTAMENTO</h4>
 
                             <div class="textCard">
@@ -86,7 +85,7 @@
                             <div class="textCard">
                                 <p id="bottom_p">Chilometri Percorsi</p>
 
-                                <input id="chilometri_input" type="text" name="km" class="formCard" required>
+                                <input id="chilometri_input" type="text" name="km" class="formCard" onchange="chilometriObserver()">
                                 <label id="chilometri_label"></label>
                                 <input type="hidden" name="action" value="3">
 
@@ -182,6 +181,6 @@
 
 </div>
 
-
+<script src="js/spostamenti.js"></script>
 </body>
 </html>

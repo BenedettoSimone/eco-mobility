@@ -20,7 +20,7 @@ public class SpostamentiDAO {
     public synchronized void doSaveSpostamento(SpostamentiDTO spostamento) throws SQLException{
         PreparedStatement ps = null;
 
-        String query="INSERT INTO "+ SpostamentiDAO.TABLE_NAME+" ( dat, kmPercorsi, tipoMezzo, idUtenti) VALUES (?,?,?,?);";
+        String query="INSERT INTO "+ SpostamentiDAO.TABLE_NAME+" (data, kmPercorsi, tipoMezzo, idUtente) VALUES (?,?,?,?);";
         ps=con.prepareStatement(query);
 
         ps.setDate(1,spostamento.getData());
