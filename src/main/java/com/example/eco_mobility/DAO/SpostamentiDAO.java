@@ -152,7 +152,8 @@ public class SpostamentiDAO {
     public synchronized ArrayList<SpostamentiDTO> spostamentiByData (String data, int idUtente) throws SQLException {
         PreparedStatement ps=null;
 
-        String query="SELECT * FROM ecomobility.Spostamenti WHERE data=? and idUtenti=?";
+
+        String query="SELECT * FROM ecomobility.Spostamenti WHERE data= ? and idUtente=?";
 
         ps=con.prepareStatement(query);
 

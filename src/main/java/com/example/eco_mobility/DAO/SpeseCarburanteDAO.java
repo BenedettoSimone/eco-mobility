@@ -103,6 +103,7 @@ public class SpeseCarburanteDAO {
     public synchronized ArrayList<SpeseCarburanteDTO> speseByData(String data, int idUtente) throws SQLException {
         PreparedStatement ps = null;
 
+
         String query="SELECT * FROM ecomobility.SpeseCarburante WHERE data = ? AND idUtenti = ?";
 
         ps=con.prepareStatement(query);
