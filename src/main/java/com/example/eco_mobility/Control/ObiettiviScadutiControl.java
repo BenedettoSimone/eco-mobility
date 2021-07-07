@@ -116,6 +116,7 @@ public class ObiettiviScadutiControl extends HttpServlet {
                 dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
             }
 
+            request.getSession().setAttribute("obiettiviInCorso",obDao.doRetriveObiettiviInCorso(ut.getIdUtenti()));
 
             dispatcher.forward(request,response);
 

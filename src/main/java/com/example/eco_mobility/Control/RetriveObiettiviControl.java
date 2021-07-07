@@ -28,8 +28,6 @@ public class RetriveObiettiviControl extends HttpServlet {
 
             request.getSession().setAttribute("countMezzo",spDAO.doRetriveNumEco(ut.getIdUtenti()));
 
-            request.getSession().setAttribute("obiettiviInCorso",obDAO.doRetriveObiettiviInCorso(ut.getIdUtenti()));
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
