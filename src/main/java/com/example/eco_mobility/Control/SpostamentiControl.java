@@ -19,6 +19,8 @@ public class SpostamentiControl extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         UtentiDTO utente = (UtentiDTO) request.getSession().getAttribute("utente");
 
+        request.getSession().setAttribute("page","home");
+
         List<SpostamentiDTO> sp = new ArrayList<SpostamentiDTO>();
 
         SpostamentiDAO spDAO = new SpostamentiDAO();
