@@ -103,11 +103,20 @@ public class ObiettiviScadutiControl extends HttpServlet {
             if(request.getSession().getAttribute("page").equals("spesa") && request.getSession().getAttribute("page")!=null ) {
                 dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
             }
+
             else if(request.getSession().getAttribute("page").equals("ob") && request.getSession().getAttribute("page")!=null){
                  dispatcher = getServletContext().getRequestDispatcher("/obiettivi.jsp");
-            }else{
+            }
+
+            else if(request.getSession().getAttribute("page").equals("spostamenti") && request.getSession().getAttribute("page")!=null) {
+                dispatcher = getServletContext().getRequestDispatcher("/RetriveSpostamentiControl");
+            }
+
+            else{
                 dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
             }
+
+
             dispatcher.forward(request,response);
 
         } catch (SQLException throwables) {

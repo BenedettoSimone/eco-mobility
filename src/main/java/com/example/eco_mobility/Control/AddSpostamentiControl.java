@@ -27,7 +27,12 @@ public class AddSpostamentiControl extends HttpServlet {
         String data=req.getParameter("data");
         int km= Integer.parseInt(req.getParameter("km"));
         String mezzo=req.getParameter("mezzo");
+        String page="spostamenti";
+        req.getSession().setAttribute("page","spostamenti");
 
+
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/RetriveSpostamentiControl");
 
         int idUtente=utente.getIdUtenti();
 
@@ -79,7 +84,12 @@ public class AddSpostamentiControl extends HttpServlet {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/spostamentiDan.jsp");
+        if(page!=null && page.equalsIgnoreCase("spostamenti")) {
+            dispatcher = getServletContext().getRequestDispatcher("/ObiettiviScadutiControl");
+        }
+
+
+
 
         dispatcher.forward(req,resp);
     }

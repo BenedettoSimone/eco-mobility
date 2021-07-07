@@ -32,7 +32,7 @@ public class SearchSpostamentiByDateControl extends HttpServlet {
                 throwables.printStackTrace();
             }
 
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/spostamentiDan.jsp");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/spostamenti.jsp");
             dispatcher.forward(req, resp);
             return;
         }
@@ -43,7 +43,7 @@ public class SearchSpostamentiByDateControl extends HttpServlet {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/spostamentiDan.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/spostamenti.jsp");
         dispatcher.forward(req, resp);
     }
 

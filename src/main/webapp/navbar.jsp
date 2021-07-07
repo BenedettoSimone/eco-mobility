@@ -47,7 +47,7 @@
             </a>
         </li>
         <li>
-            <a id="spostamenti" class="top" href="spostamentiDan.jsp">
+            <a id="spostamenti" class="top" href="spostamenti.jsp">
                 <i class='bx bxs-car'></i>
                 <span class="links_name">Spostamenti</span>
             </a>

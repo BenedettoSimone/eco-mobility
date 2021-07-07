@@ -31,7 +31,7 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div id="links_resp">
         <a href="./SpostamentiControl">Home</a>
-        <a href="spostamentiDan.jsp">Spostamenti</a>
+        <a href="spostamenti.jsp">Spostamenti</a>
         <a href="obiettivi.jsp">Obiettivi</a>
         <a href="speseCarb.jsp">Spesa Carburante</a>
         <a href="premi.jsp">Premi</a>
