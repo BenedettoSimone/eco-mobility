@@ -87,6 +87,10 @@
   color: #494848;
 }
 
+.tooltipDivUser, .tooltipUser{
+  display: none;
+}
+
 .sidebar ul li .logout-bottom{
   background-color: #5a87e8;
   color: #fff;
@@ -165,8 +169,21 @@
     height: 68px;
   }
 
-  .sidebar.active .links_name {
-    opacity: 0;
+  .sidebar.active .links_name{
+   visibility: hidden;
+  }
+
+  .user-name:hover .links_name{
+    visibility: visible;
+    background-color: #F8F7FA;
+    color: #494848;
+    text-align: center;
+    padding: 0px 14px;
+    border-radius: 6px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
   }
 
   .sidebar.active {
