@@ -179,4 +179,26 @@ public class SpostamentiDAO {
         return spostamenti;
     }
 
+    public synchronized int doRetriveNumEco(int utente) throws SQLException {
+        PreparedStatement ps= null;
+
+        String query="SELECT DISTINCT count(tipoMezzo) " +
+                "FROM ecomobility.Spostamenti " +
+                "WHERE data between (curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY) AND (curdate()) AND idUtente= ? and tipoMezzo=1 ;";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs=ps.executeQuery();
+
+        int count=0;
+        while(rs.next()){
+            count=rs.getInt("count(tipoMezzo)");
+        }
+
+        return count;
+
+    }
+
 }

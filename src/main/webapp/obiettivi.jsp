@@ -172,7 +172,7 @@
                             </h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai utilizzato NULL volte un mezzo eco-sostenibile</h6><br>
+                                <h6>Negli ultimi 7 giorni hai utilizzato <%=count%> volte un mezzo eco-sostenibile</h6><br>
                             </div>
 
                             <div class="textCard">
