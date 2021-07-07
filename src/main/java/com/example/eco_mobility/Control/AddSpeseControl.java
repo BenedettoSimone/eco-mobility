@@ -57,13 +57,11 @@ public class AddSpeseControl extends HttpServlet {
             dao.doSaveSpeseCarburante(spesa);
             req.setAttribute("addSpesa","successo");
 
-            //if((Date)data>obiettivo.getScadenza()-86400000*(7))
-
-            //scandeza obiettivo
+            //scandenza obiettivo
             Date scadenza= obiettivo.getScadenza();
             long mill= scadenza.getTime();
 
-            //calcolo i 7 giorni pirma( inizio obiettivo)
+            //calcolo 8 giorni prima( inizio obiettivo -1)
             Date inizio= new Date(mill -86400000*(8));
 
             
