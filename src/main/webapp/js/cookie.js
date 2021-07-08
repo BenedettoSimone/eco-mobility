@@ -15,6 +15,7 @@ window.onload = function provaDark(){
             //alert(c.substring(name.length, c.length)+" cookie recuperato");
 
             body.className="dark-mode";
+            document.getElementById('darkswitch').setAttribute("checked",true);
 
 
             return;
