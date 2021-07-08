@@ -97,12 +97,13 @@ html, body{
 /* Style the counter cards */
 .card-premi {
     background-color: #fff;
-    border:1px solid #000;
+    border:1px solid #494848;
     border-radius:30px;
     padding: 16px;
     text-align: left;
     display: flex;
     align-items: center;
+    height: 190px;
 }
 
 #premi-content h5{
@@ -403,6 +404,10 @@ html, body{
 
     .center{
         margin: 0 auto;
+    }
+
+    .resume-left{
+        float: none;
     }
 }
 
