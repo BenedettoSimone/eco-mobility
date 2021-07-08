@@ -291,14 +291,28 @@ html, body{
 }
 
 
-@media screen and (max-width: 1158px){
+@media screen and (max-width: 1244px){
+
+
+    .scroll-bar{
+        overflow-x:hidden;
+        margin-bottom: -162px;
+        height: auto;
+    }
+
     .column-medal{
         width: 100%;
         padding: 0 27px;
         margin-bottom: 23px;
     }
 
-    .row-medal{
+    .column-premi{
+        width: 100%;
+        padding: 0 27px;
+        margin-bottom: 23px;
+    }
+
+    .row-medal, .row-premi{
         width: auto;
         overflow-x: hidden;
     }
