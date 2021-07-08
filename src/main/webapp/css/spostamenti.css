@@ -429,7 +429,6 @@ input#eco, input#Noteco {
 
     #list{
         width:100%;
-        height: 300px;
         float:left;
     }
 
@@ -445,7 +444,6 @@ input#eco, input#Noteco {
     .listaSpese{
         background-color: #fff;
         overflow-x:scroll;
-        height: 223.9%;
     }
 
     .cardList{
