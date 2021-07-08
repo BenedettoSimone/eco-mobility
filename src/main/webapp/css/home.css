@@ -148,7 +148,23 @@ body::-webkit-scrollbar{
     border-radius:30px;
     padding: 16px;
     text-align: left;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
 }
+
+.card-obiettivi:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+
+
+
 #obiettivi-content h5{
     font-size:19px;
     font-family: HelveticaNeueBold;
@@ -180,7 +196,7 @@ body::-webkit-scrollbar{
     text-transform: uppercase;
     color: #707070;
     margin-bottom: -154px;
-    font-family: 'CoolveticaCustom';
+    font-family: CoolveticaCustom;
 
 }
 #nob{
