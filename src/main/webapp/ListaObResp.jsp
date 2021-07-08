@@ -12,7 +12,7 @@
     <link href="css/obiettResp.css" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
+<body id="body" class="light-mode">
 
 <div id="myOb-bar" class="ob-bar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeBar()">&times;</a>
