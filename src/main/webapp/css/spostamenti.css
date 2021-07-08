@@ -111,7 +111,7 @@ body::-webkit-scrollbar{
     box-sizing: border-box;
     margin: 73px 0px 0px 0px;
     overflow: scroll;
-    padding: 2px;
+    padding: 5px;
 }
 
 .listaSpese::-webkit-scrollbar{
@@ -129,6 +129,18 @@ body::-webkit-scrollbar{
     text-align: left;
     margin-bottom:20px;
     position: relative;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+.not-eco:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 .not-eco p{
@@ -157,6 +169,18 @@ body::-webkit-scrollbar{
     text-align: left;
     margin-bottom:20px;
     position: relative;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+.eco:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 .eco p{

@@ -40,7 +40,7 @@ function openBar() {
     document.getElementById("myOb-bar").style.width = "400px";
     list.style.width="100%";
     list.style.backgroundColor="#fff";
-    list.style.padding="25px 30px 0 30px"
+    list.style.padding="25px 25px 0 30px"
 
 
 }
