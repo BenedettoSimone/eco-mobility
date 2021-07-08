@@ -91,7 +91,8 @@ body::-webkit-scrollbar{
 .column-premi {
     float: left;
     width: 33.3%;
-    padding: 0 28px;
+    padding: 0 31px;
+    height: 183px;
 }
 
 /* Remove extra left and right margins, due to padding */
@@ -107,7 +108,26 @@ body::-webkit-scrollbar{
     text-align: left;
     display: flex;
     align-items: center;
+margin-top:2px;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
 }
+
+.card-premi:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+
+
+
+
+
 
 #premi-content h5{
     font-size:19px;
@@ -349,7 +369,7 @@ body::-webkit-scrollbar{
 
     .column-medal{
         width: 100%;
-        padding: 0 27px;
+        padding: 0 31px;
         margin-bottom: 23px;
     }
 
