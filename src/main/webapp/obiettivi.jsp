@@ -306,5 +306,7 @@
 
     };
 </script>
+<script type="text/javascript" src="js/dark.js"></script>
+<script src="js/cookie.js"></script>
 </body>
 </html>
