@@ -7,30 +7,6 @@
     src: url("../font/HelveticaNeue-Bold.ttf");
 }
 
-:root{
-    --primary-color: #5a87e8;
-    --theme-bg-color: #fff;
-    --secondary-bg-color:#fff;
-    --primary-text: #494848;
-    --secondary-text: #707070;
-    --background-content: #eeecf2;
-    --background-chart: #EEECF2;
-    --hover-obiettivi:0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-
-.dark-mode{
-    --primary-color: #5a87e8;
-    --theme-bg-color: #1d1d1d;
-    --secondary-bg-color:#272829;
-    --primary-text: #fff;
-    --secondary-text: #fff;
-    --background-content: #1d1d1d;
-    --background-chart: #1d1d1d;
-    --hover-obiettivi:0 4px 8px 0 rgba(255,255,255,0.2);
-}
-
-
 *{
     box-sizing: border-box;
 }

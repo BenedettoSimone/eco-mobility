@@ -35,7 +35,7 @@ body::-webkit-scrollbar{
 }
 
 #navbar{
-    background-color: white;
+    background-color:var(--secondary-bg-color);
     width: 20%;
     padding:30px 0 0 40px;
 }
@@ -91,7 +91,7 @@ body::-webkit-scrollbar{
 /* Lista destra*/
 
 #list{
-    background-color: white;
+    background-color: var(--secondary-bg-color);
     width: 20%;
     padding: 130px 25px 0 25px;
     height: 98%;
@@ -99,7 +99,7 @@ body::-webkit-scrollbar{
 
 #list #titleList{
     font-size: 26px;
-    color:#494848;
+    color:var(--primary-text);
     font-weight: 100;
     font-family: HelveticaNeueBold;
     padding-left: 6px;
@@ -176,7 +176,7 @@ body::-webkit-scrollbar{
 .eco:hover{
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0.01px);
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--hover-obiettivi);
     -webkit-transition-duration: 0.4s;
 
     -webkit-transition-property: box-shadow, transform;
@@ -192,7 +192,7 @@ body::-webkit-scrollbar{
 
 .eco h3{
     font-size: 18px;
-    font-family: 'HelveticaNeueBold';
+    font-family: HelveticaNeueBold;
     margin-bottom: 16px;
     margin-top: 10px;
     color: #57A758;
@@ -217,7 +217,7 @@ body::-webkit-scrollbar{
 
 
 #content{
-    background-color: white;
+    background-color: var(--secondary-bg-color) ;
     width: 60%;
     padding:20px 0 20px 0;
 }
@@ -226,7 +226,7 @@ body::-webkit-scrollbar{
     padding-top: 80px;
     padding-bottom: 30px;
     font-size: 51px;
-    color: #494848;
+    color: var(--primary-text);
     font-family: CoolveticaCustom;
     letter-spacing: 1px;
     font-weight: 100;
@@ -236,7 +236,7 @@ body::-webkit-scrollbar{
 .background-content{
     width: 100%;
     height: 100%;
-    background-color: #EEECF2;
+    background-color: var(--background-content);
     border-radius:30px;
     padding:35px 35px 0 35px;
     overflow-y: scroll;
@@ -261,14 +261,14 @@ body::-webkit-scrollbar{
 
 .card{
     display: flex;
-    font-family: Helvetica Neue;
+    font-family: HelveticaNeueCustom;
     float: left;
     width: 100%;
     height: fit-content;
-    background: white;
+    background: var(--secondary-bg-color);
     border-radius: 20px;
     padding:20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--hover-obiettivi);
     position: relative;
 }
 
@@ -294,7 +294,7 @@ body::-webkit-scrollbar{
     margin-top: 0px;
     font-size: 20px;
     margin-bottom: 0px;
-    color: #494848;
+    color: var(--primary-text);
     font-family: HelveticaNeueBold;
     font-weight: 100;
 }
@@ -307,7 +307,7 @@ body::-webkit-scrollbar{
 .textCard{
     margin-top: 40px;
     font-family: HelveticaNeueCustom;
-    color: 	#858585;
+    color: 	var(--secondary-text);
 
 }
 
@@ -319,7 +319,7 @@ body::-webkit-scrollbar{
 .radioCard{
     margin-top: 40px;
     font-family: HelveticaNeueCustom;
-    color: 	#858585;
+    color: 	var(--secondary-text);
 }
 
 #content-radio{
@@ -354,13 +354,14 @@ input#eco, input#Noteco {
 
 #mezzo_input, #chilometri_input, #spese_input{
     margin-bottom: 7px;
+    background-color: var(--theme-bg-color);
 }
 
 .textCardUp{
     margin-top: 12px;
     font-family: Helvetica Neue;
     font-size: 24px;
-    color: 	#858585;
+    color: 	var(--secondary-text);
 }
 
 
@@ -378,7 +379,7 @@ input#eco, input#Noteco {
 }
 
 .buttonCard{
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueCustom;
     float: right;
     text-align: center;
     color: white;
@@ -394,7 +395,7 @@ input#eco, input#Noteco {
 
 
 .buttonFilter{
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueCustom;
     float: right;
     height: 50px;
     text-align: center;

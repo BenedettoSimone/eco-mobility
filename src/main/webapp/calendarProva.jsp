@@ -33,7 +33,7 @@
             width: 260px;
             height: auto;
             max-height: 50px;
-            background: white;
+            background: var(--theme-bg-color);
             position: absolute;
             overflow: hidden;
             transition: all 0.3s 0s ease-in-out;
@@ -56,7 +56,7 @@
             line-height: 50px;
             font-size: 16px;
             padding: 0 10px;
-            color: #000;
+            color: var(--primary-text);
             box-sizing: border-box;
         }
         .date-picker .input a {
@@ -81,7 +81,7 @@
         .date-picker .calendar {
             position: relative;
             width: 100%;
-            background: #fff;
+            background: var(--theme-bg-color);
             border-radius: 0px;
             overflow: hidden;
         }
