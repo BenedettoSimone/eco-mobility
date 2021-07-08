@@ -1,5 +1,27 @@
 /*vedo se ci vuole la dark mode*/
 window.onload = function provaDark(){
+
+    div = document.getElementById("myOb-bar");
+    list = document.getElementById("list");
+    divrow=document.getElementById("myrow");
+    if (window.innerWidth <= 1790) {
+
+        div.appendChild(list);
+
+
+    }
+
+
+    if(window.innerWidth>1790){
+        divrow.appendChild(list);
+        closeBar();
+
+    }
+
+
+
+
+
     var body = document.getElementById("body");
     let name = "darkmode=";
     let decodedCookie = decodeURIComponent(document.cookie);
