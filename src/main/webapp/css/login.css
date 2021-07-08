@@ -13,6 +13,17 @@
     src: url("../font/HelveticaNeue-Bold.ttf");
 }
 
+:root{
+
+    --secondary:#fff;
+    --text_primary:#494848;
+}
+
+.dark-mode{
+    --secondary:#272829;
+    --text_primary:#fff;
+}
+
 html{
     width: 100%;
     min-height: 100%;
@@ -108,7 +119,7 @@ h1{
 
 #formContent{
     position: relative;
-    background: #ffffff;
+    background: var(--secondary);
     border-radius: 26px;
     height: 650px;
     width: 550px;
