@@ -71,7 +71,7 @@ html, body{
     padding-top: 28px;
     padding-bottom: 15px;
     font-size: 59px;
-    color: #393838;
+    color: #494848;
     font-weight: bolder;
     font-family: CoolveticaCustom;
     text-transform: uppercase;
@@ -114,7 +114,8 @@ html, body{
 
 #premi-content h3{
     font-size:18px;
-    font-family:HelveticaNeueCustom;
+    font-family:HelveticaNeueBold;
+    font-weight: 100;
     margin-bottom:16px;
     margin-top:10px;
     color:#494848;
@@ -127,9 +128,11 @@ html, body{
     color: #707070;
 }
 
+
 .resume-left{
     width: 257px;
     text-align: center;
+    float: left;
 }
 
 .resume-icon{
@@ -154,6 +157,10 @@ html, body{
     z-index: 6;
 }
 
+.center{
+    margin:0 auto;
+    align-items: center;
+}
 .resume-icon span{
     z-index: 7;
     font-family: HelveticaNeueCustom;
@@ -165,13 +172,15 @@ html, body{
 .category-resume0, .category-resume2{
     position: relative;
     width: 100px;
-    left: 33px;
+    float:left;
+    margin-top:10px;
 }
 
 .category-resume1{
     position: relative;
     width: 103px;
-    left:27px;
+    float:left;
+    margin-top: 10px;
 }
 
 
@@ -214,14 +223,16 @@ html, body{
 }
 #medal-content h5{
     font-size:19px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
     margin-bottom:16px;
-    color: var(--primary-text);
+    color: #494848;
 }
 
 #medal-content h3{
     font-size:19px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
     margin-bottom:16px;
     margin-top:10px;
     color:var(--primary-color);
@@ -364,23 +375,6 @@ html, body{
 }
 
 
-@media screen and (max-width: 938px){
-    .row-premi{
-        margin:0 -10px;
-        width: 933px;
-    }
-
-    .column-premi{
-        width: 311px;
-        padding:0 10px;
-    }
-
-    .category-resume0, .category-resume2, .category-resume1{
-        display: none;
-    }
-
-}
-
 @media screen and (max-width: 614px){
     .background-content{
         padding: 20px;
@@ -399,11 +393,17 @@ html, body{
     .info-medal{
         margin-left:15px;
     }
+}
 
 
+@media screen  and (max-width: 480px){
+    .category-resume0, .category-resume2, .category-resume1{
+       display:none;
+    }
 
-
-
+    .center{
+        margin: 0 auto;
+    }
 }
 
 

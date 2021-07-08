@@ -34,6 +34,7 @@
                     <div class="row-premi">
                         <div class="column-premi">
                             <div class="card-premi">
+                                <div class="center">
                                 <div class="resume-left">
                                     <h3>chilometri ridotti</h3>
                                     <p>Medaglie ottenute</p>
@@ -55,13 +56,14 @@
                                     </div>
                                 </div>
                                 <img class="category-resume0" src="img/sprout.svg">
-
+                                </div>
                             </div>
                         </div>
 
                         <div class="column-premi">
                             <div class="card-premi">
-                                <div class="resume-left">
+                                <div class="center">
+                                    <div class="resume-left">
                                     <h3>Dispendio carburante</h3>
                                     <p>Medaglie ottenute</p>
                                     <div class="resume-icon">
@@ -83,10 +85,13 @@
                                 </div>
                                     <img class="category-resume1" src="img/money-bag.svg">
                             </div>
+                            </div>
+
                         </div>
 
                         <div class="column-premi">
                             <div class="card-premi">
+                                <div class="center">
                                 <div class="resume-left">
                                     <h3>Utilizzo mezzi eco</h3>
                                     <p>Medaglie ottenute</p>
@@ -108,6 +113,7 @@
                                     </div>
                                 </div>
                                 <img class="category-resume2" src="img/eco-fuel.svg">
+                            </div>
                             </div>
                         </div>
                     </div>
