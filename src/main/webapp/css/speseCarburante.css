@@ -169,8 +169,12 @@ html, body{
     background-color: #EEECF2;
     border-radius:30px;
     padding:35px 35px 0 35px;
-    overflow-x: scroll;
+    overflow-x: hidden;
 
+}
+
+.background-content::-webkit-scrollbar, body::-webkit-scrollbar{
+    display: none;
 }
 
 
