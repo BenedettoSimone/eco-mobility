@@ -173,7 +173,7 @@
    visibility: hidden;
   }
 
-  .user-name:hover .links_name{
+  #user .user-name:hover .links_name{
     visibility: visible;
     background-color: #F8F7FA;
     color: #494848;
