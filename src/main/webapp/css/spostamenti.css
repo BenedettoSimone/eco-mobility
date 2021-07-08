@@ -55,6 +55,7 @@ html, body{
     background-color:#C34D4C;
     color:white ;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 #success{
@@ -63,6 +64,7 @@ html, body{
     background-color:#57A758;
     color: white;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 .closebtn-success, .closebtn-error{
