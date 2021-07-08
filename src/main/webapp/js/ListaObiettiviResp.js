@@ -45,6 +45,7 @@ function openBar() {
 
 }
 
+
 function closeBar() {
     document.getElementById("myOb-bar").style.width = "0px";
 
