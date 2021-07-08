@@ -4,8 +4,13 @@
 }
 
 @font-face {
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeueCustom";
     src: url("../font/HelveticaNeue.ttf");
+}
+
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../font/HelveticaNeue-Bold.ttf");
 }
 
 html{
@@ -31,6 +36,7 @@ html{
     background-color:#C34D4C;
     color:white ;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 #success{
@@ -39,6 +45,7 @@ html{
     background-color:#57A758;
     color: white;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 .closebtn-success, .closebtn-error{
@@ -73,10 +80,11 @@ html{
 }
 
 h1{
-    font-family: Helvetica Neue;
+    font-family: HelveticaNeueBold;
     display: inline;
     color:#494848;
     font-size:50px;
+    font-weight: 100;
 }
 #particolareH1{
     color: #5a87e8;
@@ -141,7 +149,7 @@ h1{
 #fLogin p{
     text-align: left;
     font-size:19px;
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueCustom;
     color: #707070;
     margin-bottom:5px;
 }
@@ -179,7 +187,7 @@ h1{
 #fRegi p{
     text-align: left;
     font-size:19px;
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueCustom;
     color: #707070;
     margin-bottom:5px;
 }
