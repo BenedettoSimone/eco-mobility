@@ -252,9 +252,44 @@ body::-webkit-scrollbar{
 
 @media screen and (max-width: 1818px){
 
+    ::-webkit-scrollbar{
+        width:0.6em;
+        height:0.6em;
+        background: #eeecf2;
+        margin-right: 10px;
+    }
+    ::-webkit-scrollbar:hover{
+        background-color:#eeecf2 ;
+        border: none;
+        height:0.6em;
+    }
+    ::-webkit-resizer{
+        -webkit-border-radius:4px;
+        background-color:#eeecf2;
+        border: none;
+    }
+    ::-webkit-scrollbar-thumb{
+        min-height:0.8em;
+        min-width:0.8em;
+        -webkit-border-radius:4px;
+        background-color: #80a1e9;
+        border: none;
+
+    }
+    ::-webkit-scrollbar-thumb:hover{
+        background-color: #5a87e8;
+        border: none;
+        height:0.8em;
+    }
+    ::-webkit-scrollbar-thumb:active{
+        background-color:#5a87e8;
+        border: none;
+        height:0.8em;
+    }
+
     .scroll-bar{
         overflow-x:scroll ;
-        height: 154px;
+        height: 183px;
         overflow-y: hidden;
         margin-bottom: -162px;
     }
@@ -265,9 +300,6 @@ body::-webkit-scrollbar{
         overflow-y: hidden;
     }
 
-
-
-
     .row-premi, .row-medal{
         width: 1420px;
         overflow-x: scroll;
@@ -276,7 +308,6 @@ body::-webkit-scrollbar{
     .column-premi{
         width: 472px;
     }
-
 }
 
 
