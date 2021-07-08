@@ -19,6 +19,12 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
 
     <style>
+
+        @font-face {
+            font-family: "HelveticaNeueCustom";
+            src: url("../font/HelveticaNeue.ttf");
+        }
+
         .date-picker {
             margin: 0 auto;
         }
@@ -143,6 +149,7 @@
             color: #8392A7;
             margin-bottom: 5px;
             font-size: 13px;
+            font-family: HelveticaNeueCustom;
         }
         .date-picker .ui-state-default {
             display: block;

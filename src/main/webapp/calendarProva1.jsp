@@ -53,6 +53,7 @@
             padding: 0 10px;
             color: #000;
             box-sizing: border-box;
+            font-family: HelveticaNeueCustom;
         }
         .date-picker1 .input a {
             width: 50px;
