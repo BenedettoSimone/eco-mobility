@@ -13,6 +13,8 @@
     <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
 
 
+    <script type="text/javascript" src="js/dark.js"></script>
+    <script src="js/cookie.js"></script>
 
 
 
@@ -248,6 +250,23 @@
 
 
         });
+
+        div = document.getElementById("myOb-bar");
+        list = document.getElementById("list");
+        divrow=document.getElementById("myrow");
+        if (window.innerWidth <= 1790) {
+
+            div.appendChild(list);
+
+
+        }
+
+
+        if(window.innerWidth>1790){
+            divrow.appendChild(list);
+            closeBar();
+
+        }
     });
     //# sourceURL=pen.js
 </script>

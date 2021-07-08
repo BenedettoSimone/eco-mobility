@@ -623,7 +623,7 @@ html, body{
 @media screen and (max-width:1520px){
 
     #navbar{
-        background-color: white;
+        background-color: var(--secondary-bg-color);
         width: 10%;
         padding:0px 0 0 40px;
     }
@@ -648,7 +648,7 @@ html, body{
 
     }
     .listaSpese{
-        background-color: #fff;
+        background-color: var(--secondary-bg-color);
         overflow-x:scroll;
     }
 
@@ -692,7 +692,7 @@ html, body{
     }
 
     #content {
-        background-color: white;
+        background-color: var(--secondary-bg-color);
         width: 100%;
         padding: 20px 20px 20px 20px;
         margin-top: 45px;

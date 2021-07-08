@@ -261,7 +261,7 @@ body::-webkit-scrollbar{
 @media screen and (max-width:1520px){
 
 #navbar{
-    background-color: #fff;
+    background-color: var(--secondary-bg-color);
     width: 10%;
     padding:0 0 0 40px;
 }
@@ -346,7 +346,7 @@ body::-webkit-scrollbar{
     }
 
     #content{
-        background-color: #fff;
+        background-color: var(--secondary-bg-color);
         width: 100%;
         padding:20px 20px 20px 20px;
         margin-top: 45px;

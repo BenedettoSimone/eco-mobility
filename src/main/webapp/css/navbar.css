@@ -259,7 +259,7 @@
   }
 
   .background_white {
-    background-color: #ffffff;
+    background-color: var(--secondary-bg-color);
     height: 63px;
     width: 100%;
     position: fixed;
@@ -381,7 +381,7 @@
   #menu {
     font-size: 24px;
     font-family: CoolveticaCustom;
-    color: #494848;
+    color: var(--primary-text);
   }
 
 }
