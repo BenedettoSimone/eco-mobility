@@ -240,7 +240,10 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Km percorsi: <%=obiettivi.get(i).getProgresso()%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <div class="progress">
+                    <p class="first">Km percorsi: <%=obiettivi.get(i).getProgresso()%></p>
+                    <p>Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
+                    </div>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
@@ -267,7 +270,7 @@
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
                     <div class="progress">
-                        <p>Euro spesi: <%=obiettivi.get(i).getProgresso()%></p>
+                        <p class="first">Euro spesi: <%=obiettivi.get(i).getProgresso()%></p>
                         <p>Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
 
                     </div>

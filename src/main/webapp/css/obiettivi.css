@@ -321,6 +321,13 @@ html, body{
 }
 
 
+.progress{
+    margin-top: 22px;
+}
+
+.progress .first{
+    margin-bottom: -11px;
+}
 
 
 
