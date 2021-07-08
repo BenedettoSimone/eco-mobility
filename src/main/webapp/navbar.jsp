@@ -32,6 +32,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+<script src="js/cookie.js"></script>
 
 
 
@@ -74,7 +75,7 @@
 
     <div id="user">
         <label class="switch">
-            <input type="checkbox" name="switch" id="checkbox" onclick="darkMode()">
+            <input type="checkbox" name="switch" id="darkswitch" onclick="darkMode()">
             <span class="switch-svg"></span>
         </label>
         <ul>
@@ -129,7 +130,7 @@
 
 
 </script>
-<script src="js/cookie.js"></script>
+
 <script type="text/javascript" src="js/dark.js"></script>
 </body>
 </html>

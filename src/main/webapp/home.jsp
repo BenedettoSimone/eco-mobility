@@ -245,16 +245,19 @@
                     c = c.substring(1);
                 }
                 if (c.indexOf(name) == 0) {
-                    alert(c.substring(name.length, c.length)+" cookie recuperato");
+                   // alert(c.substring(name.length, c.length)+" cookie recuperato");
 
                     body.className="dark-mode";
+                    document.getElementById('darkswitch').setAttribute("checked",true);
 
                     return;
                 }
             }
 
-            alert("cookie non recuperato");
+           // alert("cookie non recuperato");
             body.className="light-mode";
+
+
 
 
     }

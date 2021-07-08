@@ -24,4 +24,6 @@ function darkMode(){
         document.cookie = "darkmode" + "=" + "true" + ";" + expires;
     }
 
+
+
 }
