@@ -114,8 +114,29 @@
         </div>
 
     </div>
+<script>
+    /*vedo se ci vuole la dark mode*/
+    window.onload = function provaDark(){
+        let name = "darkmode=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                alert(c.substring(name.length, c.length)+" cookie recuperato");
+                return;
+            }
+        }
 
+        alert("cookie non recuperato");
+
+    }
+</script>
 <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/dark.js"></script>
 
 
 </body>
