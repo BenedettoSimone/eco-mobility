@@ -256,7 +256,7 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Utilizzo: <%=obiettivi.get(i).getProgresso()%> / <%=obiettivi.get(i).getObiettivo()%></p>
+                    <p class="progress">Utilizzo: <%=obiettivi.get(i).getProgresso()%> / <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
