@@ -2,6 +2,10 @@
     font-family: "CoolveticaCustom";
     src: url("../font/coolvetica rg.ttf");
 }
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../font/HelveticaNeue-Bold.ttf");
+}
 
 :root{
     --primary-color: #5a87e8;
@@ -146,11 +150,12 @@ html, body{
 
 #obiettivi-content h3{
     font-size:18px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
     margin-bottom:16px;
     margin-top:10px;
     color:var(--primary-color);
     text-transform: uppercase;
+    font-weight: 100;
 }
 
 #obiettivi-content p:not(.no_obiettivo){

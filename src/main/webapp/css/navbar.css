@@ -1,6 +1,11 @@
 @font-face {
-  font-family: "HelveticaNeue";
+  font-family: "HelveticaNeueCustom";
   src: url("../font/HelveticaNeue.ttf");
+}
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("../font/HelveticaNeue-Bold.ttf");
 }
 
 /*hamburger icon*/
@@ -118,7 +123,7 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  font-family: HelveticaNeue;
+  font-family: HelveticaNeueCustom;
 }
 
 .sidebar.active .links_name{
