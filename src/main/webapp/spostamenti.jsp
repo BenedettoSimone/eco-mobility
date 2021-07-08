@@ -144,7 +144,7 @@
 
 
         <div id="titleList">
-            Lista Spostamenti
+            Lista spostamenti
         </div>
         <br>
 
@@ -179,7 +179,7 @@
                     }
                 }else{
             %>
-            No Spostamenti
+            No spostamenti
             <%
 
                 }

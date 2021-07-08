@@ -8,6 +8,12 @@
   src: url("../font/HelveticaNeue-Bold.ttf");
 }
 
+@font-face {
+  font-family: "CoolveticaCustom";
+  src: url("../font/coolvetica rg.ttf");
+}
+
+
 /*hamburger icon*/
 .hamburger {
   font-size: 30px;
