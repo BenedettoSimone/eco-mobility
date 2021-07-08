@@ -13,7 +13,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body>
+<script type="text/javascript" src="js/dark.js"></script>
+<script src="js/cookie.js"></script>
+<body id="body" class="light-mode">
 
 <div class="row">
 
