@@ -210,7 +210,7 @@
 
 
         <div id="titleList">
-            Lista Obiettivi
+            Lista obiettivi
         </div>
         <br>
 
