@@ -110,7 +110,7 @@
                         }
                             }else{
                         %>
-                        <p class="no_obiettivo">Nessun obiettivo in corso. <a href="obiettivi.jsp">Imposta un nuovo obiettivo</a></p>
+                        <p class="no_obiettivo"><span id="nob">Nessun obiettivo in corso.</span> <a href="obiettivi.jsp">Imposta un nuovo obiettivo</a>
                         <%
                                 }
                         %>

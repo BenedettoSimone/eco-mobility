@@ -2,6 +2,10 @@
     font-family: "CoolveticaCustom";
     src: url("../font/coolvetica rg.ttf");
 }
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../font/HelveticaNeue-Bold.ttf");
+}
 
 :root{
     --primary-color: #5a87e8;
@@ -94,6 +98,7 @@ html, body{
     letter-spacing: 2px;
     margin-top: 6px;
     margin-bottom: 11px;
+    font-weight: 100;
 }
 
 #home-card h3{
@@ -101,7 +106,7 @@ html, body{
     font-family: HelveticaNeueCustom;
     font-size:27px;
     margin-top:10px;
-
+    font-weight: 100;
 }
 
 #home-card img{
@@ -139,24 +144,27 @@ html, body{
 }
 #obiettivi-content h5{
     font-size:19px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
     margin-bottom:16px;
     color: var(--primary-text);
+    font-weight: 100;
 }
 
 #obiettivi-content h3{
     font-size:18px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
     margin-bottom:16px;
     margin-top:10px;
     color:var(--primary-color);
     text-transform: uppercase;
+    font-weight: 100;
 }
 
 #obiettivi-content p:not(.no_obiettivo){
     font-size: 15px;
     font-family: HelveticaNeueCustom;
     color:var(--primary-color);
+
 }
 
 .row-obiettivi .no_obiettivo{
@@ -165,10 +173,22 @@ html, body{
     text-transform: uppercase;
     color: #707070;
     margin-bottom: -154px;
+    font-family: 'CoolveticaCustom';
+
 }
+#nob{
+    opacity: 0.5;
+}
+
+
 
 .no_obiettivo a{
     color:#5a87e8;
+    opacity: 0.5;
+}
+.no_obiettivo a:hover{
+    opacity:1;
+
 }
 
 /*---Chart Section--*/
@@ -207,7 +227,11 @@ html, body{
     margin-top:6px;
 }
 
-.chart-card h1, .chart-card h5{
+.chart-card h1{
+    font-family: HelveticaNeueBold;
+}
+
+.chart-card h5 {
     font-family: HelveticaNeueCustom;
 }
 
@@ -217,6 +241,7 @@ html, body{
     font-size: 18px;
     margin-top: 18px;
     color:var(--primary-text);
+    font-weight: 100;
 }
 
 .chart-card h5{

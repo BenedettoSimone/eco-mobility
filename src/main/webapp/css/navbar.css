@@ -1,7 +1,18 @@
 @font-face {
-  font-family: "HelveticaNeue";
+  font-family: "HelveticaNeueCustom";
   src: url("../font/HelveticaNeue.ttf");
 }
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("../font/HelveticaNeue-Bold.ttf");
+}
+
+@font-face {
+  font-family: "CoolveticaCustom";
+  src: url("../font/coolvetica rg.ttf");
+}
+
 
 /*hamburger icon*/
 .hamburger {
@@ -118,7 +129,7 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-  font-family: HelveticaNeue;
+  font-family: HelveticaNeueCustom;
 }
 
 .sidebar.active .links_name{
@@ -273,7 +284,7 @@
     color: #f1f1f1;
     display: block;
     transition: 0.3s;
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueCustom;
     margin-bottom: 30px;
 
   }

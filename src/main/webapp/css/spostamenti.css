@@ -55,6 +55,7 @@ html, body{
     background-color:#C34D4C;
     color:white ;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 #success{
@@ -63,6 +64,7 @@ html, body{
     background-color:#57A758;
     color: white;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 .closebtn-success, .closebtn-error{
@@ -94,8 +96,8 @@ html, body{
 #list #titleList{
     font-size: 26px;
     color:#494848;
-    font-weight: bold;
-    font-family: HelveticaNeue;
+    font-weight: 100;
+    font-family: HelveticaNeueBold;
     padding-left: 6px;
 
 }
@@ -161,12 +163,13 @@ html, body{
 }
 
 .eco h3{
-    font-size:18px;
-    font-family: HelveticaNeueCustom;
-    margin-bottom:16px;
-    margin-top:10px;
-    color:#57A758;
+    font-size: 18px;
+    font-family: 'HelveticaNeueBold';
+    margin-bottom: 16px;
+    margin-top: 10px;
+    color: #57A758;
     text-transform: uppercase;
+    font-weight: 100;
 }
 
 #ContainerObiettivi{
@@ -194,12 +197,11 @@ html, body{
 #content #titleContent{
     padding-top: 80px;
     padding-bottom: 30px;
-
-
-    font-size: 45px;
-    color:#494848;
-    font-weight: bolder;
-    font-family: Helvetica Neue;
+    font-size: 51px;
+    color: #494848;
+    font-family: CoolveticaCustom;
+    letter-spacing: 1px;
+    font-weight: 100;
 
 }
 
@@ -260,7 +262,9 @@ html, body{
     margin-top: 0px;
     font-size: 20px;
     margin-bottom: 0px;
-    color:#494848;
+    color: #494848;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
 }
 
 .textCardUp h6{
@@ -270,8 +274,9 @@ html, body{
 
 .textCard{
     margin-top: 40px;
-    font-family: Helvetica Neue;
+    font-family: HelveticaNeueCustom;
     color: 	#858585;
+
 }
 
 .textCard #bottom_p{
@@ -281,7 +286,7 @@ html, body{
 /*radio Button*/
 .radioCard{
     margin-top: 40px;
-    font-family: Helvetica Neue;
+    font-family: HelveticaNeueCustom;
     color: 	#858585;
 }
 
@@ -368,11 +373,13 @@ input#eco, input#Noteco {
     padding: 13px;
     border: 0;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .imgCard{
     width: 80%;
     box-sizing: border-box;
+    height: 451px;
     position: absolute;
     right: 0;
 }

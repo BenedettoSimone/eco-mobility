@@ -137,7 +137,7 @@
 
 
         <div id="titleList">
-            Lista Spese
+            Lista spese
         </div>
         <br>
 
@@ -163,7 +163,7 @@
                 }
             }else {
             %>
-            No Spese
+            No spese
             <%
                 }
             %>
