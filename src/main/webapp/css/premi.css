@@ -23,6 +23,10 @@ html, body{
 }
 
 
+
+body::-webkit-scrollbar{
+    display: none;
+}
 /* Create two equal columns that floats next to each other */
 #content, #navbar {
     float: left;
