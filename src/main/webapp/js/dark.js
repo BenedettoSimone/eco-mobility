@@ -13,27 +13,21 @@ function darkMode(){
     var body = document.getElementById("body");
     var currentClass = body.className;
 
+    /*se è impostata la dark mode allora già c'è il cookie quindi lo distruggo*/
     if(currentClass== "dark-mode"){
         body.className="light-mode";
 
-        /*cerco il cookie*/
-        let name = "darkmode=";
-        let decodedCookie = decodeURIComponent(document.cookie);
-        let ca = decodedCookie.split(';');
-        for(let i = 0; i <ca.length; i++) {
-            let c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                /*se non voglio la dark mode distruggo il cookie*/
-                document.cookie = "darkmode= ; expires = Thu, 01 Jan 1970 00:00:00 GMT"
-            }
-        }
+        document.cookie = "darkmode= ; expires = Thu, 01 Jan 1970 00:00:00 GMT";
 
-    }
-    else {
+    }else {
+        /*se la dark mode non è impostata allora creo il cookie*/
         body.className="dark-mode";
+
+        /*creo il cookie della durata di un giorno*/
+        const d = new Date();
+        d.setTime(d.getTime() + (1*24*60*60));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = "darkmode" + "=" + "true" + ";" + expires;
     }
 
 }
