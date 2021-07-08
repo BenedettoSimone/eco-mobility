@@ -20,7 +20,7 @@
 
 %>
 <!DOCTYPE html>
-<html lang="en" xmlns="">
+<html lang="en" xmlns="" id="body" class="light-mode">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -33,7 +33,7 @@
     <script src="../contrast-bootstrap-pro/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/9d1d9a82d2.js" crossorigin="anonymous"></script>
 </head>
-<body id="body" class="light-mode">
+<body>
 
 
 

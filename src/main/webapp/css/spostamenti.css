@@ -356,6 +356,7 @@ input#eco, input#Noteco {
 #mezzo_input, #chilometri_input, #spese_input{
     margin-bottom: 7px;
     background-color: var(--theme-bg-color);
+    color: var(--secondary-text)
 }
 
 .textCardUp{
@@ -426,6 +427,7 @@ input#eco, input#Noteco {
 @media screen and (max-width:1790px) {
     #content{
         width:80%;
+        padding: 20px 20px 20px 0;
     }
 
     #obiettIcon{

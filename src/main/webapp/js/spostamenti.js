@@ -7,9 +7,9 @@ function chilometriObserver() {
     var reg = new RegExp(/^[0-9]*$/);
 
     if (!reg.test(chilometri_text)) {
-        chilometri.css('border-color', 'red');
+        chilometri.css('border-color', 'rgb(255, 119, 119)');
         chilometri_l.text("Inserisci un valore numerico!");
-        chilometri_l.css('color', 'red');
+        chilometri_l.css('color', 'rgb(255, 119, 119)');
 
         return false;
     } else {

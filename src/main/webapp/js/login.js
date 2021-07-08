@@ -46,7 +46,7 @@ function selectRegi(){
 
     /*cambio i colori al bottone non cliccato*/
     document.getElementById("selectLogin").style.color="#494848"
-    document.getElementById("selectLogin").style.backgroundColor="#fff"
+    document.getElementById("selectLogin").style.backgroundColor="transparent"
     document.getElementById("selectLogin").style.borderRadius="0px";
 
 
@@ -71,7 +71,7 @@ function selectLogin(){
 
     /*cambio i colori al bottone non cliccato*/
     document.getElementById("selectRegi").style.color="#494848"
-    document.getElementById("selectRegi").style.backgroundColor="#fff"
+    document.getElementById("selectRegi").style.backgroundColor="transparent"
     document.getElementById("selectRegi").style.borderRadius="0px";
 
     document.getElementById("message").style.visibility="hidden";
@@ -92,8 +92,8 @@ function emailObserver() {
     var reg = new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
 
     if (!reg.test(email_text) || email_text.length < 10 || email_text.length > 40) {
-        email.css('border-color', 'red');
-        label.css('color', 'red');
+        email.css('border-color', 'rgb(255, 119, 119)');
+        label.css('color', 'rgb(255, 119, 119)');
         label.text("Inserire email corretta!");
 
         emailGlobal = false;
@@ -119,8 +119,8 @@ function nomeObserver() {
     var reg = new RegExp(/^[a-zA-Z ]{1,20}$/);
 
     if (!reg.test(nome_text)) {
-        nome.css('border-color', 'red');
-        label.css('color', 'red');
+        nome.css('border-color', 'rgb(255, 119, 119)');
+        label.css('color', 'rgb(255, 119, 119)');
         label.text("Nome non valido!");
 
         return false;
@@ -145,8 +145,8 @@ function cognomeObserver() {
     var reg = new RegExp(/^[a-zA-Z ]{1,20}$/);
 
     if (!reg.test(cognome_text)) {
-        cognome.css('border-color', 'red');
-        label.css('color', 'red');
+        cognome.css('border-color', 'rgb(255, 119, 119)');
+        label.css('color', 'rgb(255, 119, 119)');
         label.text("Cognome non valido!");
 
         return false;
@@ -170,8 +170,8 @@ function passwordObserver() {
     var reg = new RegExp(/^[a-zA-Z0-9!@#%*)(+=._-]{8,20}$/g);
 
     if (!reg.test(password_text)) {
-        password.css('border-color', 'red');
-        label.css('color', 'red');
+        password.css('border-color', 'rgb(255, 119, 119)');
+        label.css('color', 'rgb(255, 119, 119)');
         label.text("Password non valida, mimino 8 caratteri!");
 
 

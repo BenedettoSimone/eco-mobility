@@ -17,11 +17,13 @@
 
     --secondary:#fff;
     --text_primary:#494848;
+    --text-secondary:#707070;
 }
 
 .dark-mode{
     --secondary:#272829;
     --text_primary:#fff;
+    --text-secondary:#fff;
 }
 
 html{
@@ -161,7 +163,7 @@ h1{
     text-align: left;
     font-size:19px;
     font-family: HelveticaNeueCustom;
-    color: #707070;
+    color: var(--text-secondary);
     margin-bottom:5px;
 }
 
@@ -199,7 +201,7 @@ h1{
     text-align: left;
     font-size:19px;
     font-family: HelveticaNeueCustom;
-    color: #707070;
+    color: var(--text-secondary);
     margin-bottom:5px;
 }
 

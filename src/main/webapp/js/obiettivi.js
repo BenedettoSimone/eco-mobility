@@ -12,9 +12,9 @@ function mezzoObserver() {
     var reg = new RegExp(/^[0-9]*$/);
 
     if (!reg.test(mezzo_text)) {
-        mezzo.css('border-color', 'red');
+        mezzo.css('border-color', 'rgb(255, 119, 119)');
         mezzo_l.text("Inserisci un valore numerico!");
-        mezzo_l.css('color', 'red');
+        mezzo_l.css('color', 'rgb(255, 119, 119)');
 
         return false;
     } else {
@@ -36,9 +36,9 @@ function spesaObserver() {
     var reg = new RegExp(/^[0-9]*$/);
 
     if (!reg.test(spesa_text)) {
-        spesa.css('border-color', 'red');
+        spesa.css('border-color', 'rgb(255, 119, 119)');
         spesa_l.text("Inserisci un valore numerico!");
-        spesa_l.css('color', 'red');
+        spesa_l.css('color', 'rgb(255, 119, 119)');
 
         return false;
     } else {
@@ -60,9 +60,9 @@ function kmObserver() {
     var reg = new RegExp(/^[0-9]*$/);
 
     if (!reg.test(km_text)) {
-        km.css('border-color', 'red');
+        km.css('border-color', 'rgb(255, 119, 119)');
         km_l.text("Inserisci un valore numerico!");
-        km_l.css('color', 'red');
+        km_l.css('color', 'rgb(255, 119, 119)');
 
         return false;
     } else {
