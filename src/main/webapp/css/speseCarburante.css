@@ -212,12 +212,12 @@ html, body{
     font-family: Helvetica Neue;
     float: left;
     width: 100%;
-    height: fit-content;
     background: white;
     border-radius: 20px;
     padding:20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     position: relative;
+    height: 413px;
 }
 
 .cardDX{
@@ -227,7 +227,7 @@ html, body{
     position: relative;
 }
 .cardSX{
-    width: 71%;
+    width: 64%;
     height: 100%;
     box-sizing: border-box;
 }
@@ -302,10 +302,11 @@ html, body{
 }
 
 .imgCard{
-    width: 94%;
+    width: 89%;
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    height: 378px;
 }
 
 @media screen and (max-width:1790px) {
