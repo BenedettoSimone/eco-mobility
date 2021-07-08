@@ -1,12 +1,6 @@
 /*funzione associata al button*/
 function darkMode(){
 
-    /*creo il cookie della durata di un giorno*/
-    const d = new Date();
-    d.setTime(d.getTime() + (1*24*60*60));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = "darkmode" + "=" + "true" + ";" + expires;
-
     /*
     document.querySelector('.wave').classList.toggle('active');
     */
