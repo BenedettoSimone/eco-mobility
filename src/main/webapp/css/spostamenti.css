@@ -95,7 +95,7 @@ body::-webkit-scrollbar{
     background-color: var(--secondary-bg-color);
     width: 20%;
     padding: 130px 25px 0 25px;
-    height: 98%;
+    height: 100%;
 }
 
 #list #titleList{
