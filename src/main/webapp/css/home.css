@@ -106,8 +106,6 @@ html, body{
     font-family: HelveticaNeueCustom;
     font-size:27px;
     margin-top:10px;
-    letter-spacing:1px;
-
 }
 
 #home-card img{
@@ -148,6 +146,7 @@ html, body{
     font-family: HelveticaNeueBold;
     margin-bottom:16px;
     color: var(--primary-text);
+    font-weight: 100;
 }
 
 #obiettivi-content h3{
@@ -241,6 +240,7 @@ html, body{
     font-size: 18px;
     margin-top: 18px;
     color:var(--primary-text);
+    font-weight: 100;
 }
 
 .chart-card h5{
