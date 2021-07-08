@@ -94,8 +94,8 @@ html, body{
 #list #titleList{
     font-size: 26px;
     color:#494848;
-    font-weight: bold;
-    font-family: HelveticaNeue;
+    font-weight: 100;
+    font-family: HelveticaNeueBold;
     padding-left: 6px;
 
 }
@@ -195,7 +195,7 @@ html, body{
 #content #titleContent{
     padding-top: 80px;
     padding-bottom: 30px;
-    font-size: 45px;
+    font-size: 51px;
     color: #494848;
     font-family: CoolveticaCustom;
     letter-spacing: 1px;
@@ -262,6 +262,7 @@ html, body{
     margin-bottom: 0px;
     color: #494848;
     font-family: HelveticaNeueBold;
+    font-weight: 100;
 }
 
 .textCardUp h6{
