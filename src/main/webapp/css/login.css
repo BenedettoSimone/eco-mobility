@@ -18,12 +18,15 @@
     --secondary:#fff;
     --text_primary:#494848;
     --text-secondary:#707070;
+    --hover-obiettivi:0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .dark-mode{
     --secondary:#272829;
     --text_primary:#fff;
     --text-secondary:#fff;
+    --hover-obiettivi:0 4px 8px 0 rgba(255,255,255,0.2);
+
 }
 
 html{
@@ -142,7 +145,7 @@ h1{
     color: #494848;
 }
 
-#selectLogin{
+#selectLogin {
     font-family: CoolveticaCustom;
     font-size: 30px;
     padding: 5px 20px 5px 20px;
@@ -189,6 +192,18 @@ h1{
     margin-top: 50px;
     font-size: 25px;
     cursor:pointer;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.05px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 #fRegi {
