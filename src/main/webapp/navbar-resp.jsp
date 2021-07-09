@@ -37,7 +37,7 @@
         <a href="speseCarb.jsp">Spesa Carburante</a>
         <a href="premi.jsp">Premi</a>
         <label class="switch">
-            <input type="checkbox" name="switch" id="darkswitch" onclick="darkMode()">
+            <input type="checkbox" name="switch" id="darkswitchD" onclick="darkMode()">
             <span class="switch-svg"></span>
         </label>
 
@@ -54,5 +54,6 @@
     </div>
 </div>
 
+<script src="js/cookie.js"></script>
 </body>
 </html>

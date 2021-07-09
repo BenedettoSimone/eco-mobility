@@ -276,6 +276,7 @@ window.onload=function darkuno(){
 
             body.className="dark-mode";
             document.getElementById('darkswitch').setAttribute("checked",true);
+            document.getElementById('darkswitchD').setAttribute("checked",true);
 
             return;
         }
