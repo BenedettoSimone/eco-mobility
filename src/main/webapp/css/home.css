@@ -93,6 +93,7 @@ body::-webkit-scrollbar{
     font-size:27px;
     margin-top:10px;
     font-weight: 100;
+    text-transform: capitalize;
 }
 
 #home-card img{

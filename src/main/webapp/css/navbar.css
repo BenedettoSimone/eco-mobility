@@ -178,7 +178,8 @@
 .sidebar.active .links_name{
   transition: 0s;
   opacity: 1;
-  pointer-events: auto
+  pointer-events: auto;
+  text-transform: capitalize;
 }
 
 #user{
@@ -467,6 +468,7 @@
   #user_resp span {
     margin-right: 18px;
     font-size: 20px;
+    text-transform: capitalize;
   }
 
   #user_resp .user-name, #user_resp .logout-bottom {

@@ -98,7 +98,7 @@
                             <div class="textCard">
                                 <p id="bottom_p">Chilometri Percorsi</p>
 
-                                <input id="chilometri_input" type="text" name="km" class="formCard" onchange="chilometriObserver()">
+                                <input id="chilometri_input" type="text" name="km" class="formCard" onchange="chilometriObserver()" required>
                                 <label id="chilometri_label"></label>
                                 <input type="hidden" name="action" value="3">
 

@@ -1,3 +1,4 @@
+<%@ page import="com.example.eco_mobility.DTO.UtentiDTO" %>
 <%--
   Created by IntelliJ IDEA.
   User: benedettosimone
@@ -6,7 +7,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    UtentiDTO utente = (UtentiDTO) request.getSession().getAttribute("utente");
 
+
+%>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +50,7 @@
 
     <div id="user_resp">
         <a class="user-name"> <i class='bx bxs-user'></i>
-            <span class="links_name">Benedetto Simone</span>
+            <span class="links_name"><%=utente.getNome()%> <%=utente.getCognome()%></span>
         </a>
 
         <a class="logout-bottom" href="${pageContext.servletContext.contextPath}/LogoutControl"> <i class='bx bx-log-out'></i>

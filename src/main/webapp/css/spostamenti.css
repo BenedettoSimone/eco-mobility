@@ -256,6 +256,18 @@ body::-webkit-scrollbar{
     padding:2px;
     display: none;
     color:#fff;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+#obiettIcon:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.05px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 /*Card centrale*/
