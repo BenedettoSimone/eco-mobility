@@ -355,6 +355,10 @@
   /*--change type navbar--*/
 @media screen and (max-width:1080px) {
 
+  .switch{
+    margin-top: 41px;
+  }
+
   .sidebar.active {
     display: none;
   }
