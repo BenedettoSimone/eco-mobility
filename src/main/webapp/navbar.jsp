@@ -74,7 +74,7 @@
     </ul>
 
     <div id="user">
-        <label class="switch">
+        <label class="switch" id="switchD">
             <input type="checkbox" name="switch" id="darkswitch" onclick="darkMode()">
             <span class="switch-svg"></span>
         </label>

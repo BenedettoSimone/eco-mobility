@@ -18,10 +18,6 @@ window.onload = function provaDark(){
 
     }
 
-
-
-
-
     var body = document.getElementById("body");
     let name = "darkmode=";
     let decodedCookie = decodeURIComponent(document.cookie);
@@ -46,6 +42,49 @@ window.onload = function provaDark(){
 
     //alert("cookie non recuperato");
     body.className="light-mode";
+
+
+
+    div1 = document.getElementById("links_resp");
+    list1 = document.getElementById("switchD");
+    divrow1=document.getElementById("user");
+    if (window.innerWidth <= 1080) {
+
+        div1.appendChild(list1);
+
+
+    }
+
+
+    if(window.innerWidth>1080) {
+        divrow1.appendChild(list1);
+
+
+    }
+
+
+
+
+}
+
+window.onresize = function myFunction() {
+
+    div2 = document.getElementById("links_resp");
+    list2 = document.getElementById("switchD");
+    divrow2=document.getElementById("user");
+    if (window.innerWidth <= 1080) {
+
+        div2.appendChild(list2);
+
+
+    }
+
+    if(window.innerWidth > 1080){
+
+
+        divrow2.appendChild(list2);
+        closeBar();
+    }
 
 
 

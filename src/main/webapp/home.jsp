@@ -259,8 +259,43 @@
 
 
 
+            div1 = document.getElementById("links_resp");
+            list1= document.getElementById("switchD");
+            divrow1=document.getElementById("user");
+            if (window.innerWidth <= 1080) {
 
+                div1.appendChild(list);
+
+
+            }
+
+
+            if(window.innerWidth>1080) {
+                divrow1.appendChild(list);
+
+            }
     }
+
+    window.onresize = function myFunction() {
+
+        div = document.getElementById("links_resp");
+        list = document.getElementById("switchD");
+        divrow=document.getElementById("user");
+        if (window.innerWidth <= 1080) {
+
+            div.appendChild(list);
+
+
+        }
+
+        if(window.innerWidth > 1080){
+
+
+            divrow.appendChild(list);
+            closeBar();
+        }
+    }
+
 </script>
 
 </body>
