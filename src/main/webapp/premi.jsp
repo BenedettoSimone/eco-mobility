@@ -43,17 +43,17 @@
                                     <div class="resume-icon">
                                         <div class="bronzo">
                                             <img src="img/resumeBronzo.png">
-                                            <span>3</span>
+                                            <span>0</span>
                                         </div>
 
                                         <div class="argento">
                                             <img src="img/resumeSilver.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
 
                                         <div class="oro">
                                             <img src="img/resumeGold.png">
-                                            <span>3</span>
+                                            <span>2</span>
                                         </div>
                                     </div>
                                 </div>
@@ -71,17 +71,17 @@
                                     <div class="resume-icon">
                                         <div class="bronzo">
                                             <img src="img/resumeBronzo.png">
-                                            <span>3</span>
+                                            <span>2</span>
                                         </div>
 
                                         <div class="argento">
                                             <img src="img/resumeSilver.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
 
                                         <div class="oro">
                                             <img src="img/resumeGold.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
                                     </div>
                                 </div>
@@ -100,17 +100,17 @@
                                     <div class="resume-icon">
                                         <div class="bronzo">
                                             <img src="img/resumeBronzo.png">
-                                            <span>3</span>
+                                            <span>0</span>
                                         </div>
 
                                         <div class="argento">
                                             <img src="img/resumeSilver.png">
-                                            <span>3</span>
+                                            <span>0</span>
                                         </div>
 
                                         <div class="oro">
                                             <img src="img/resumeGold.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/no-carbMedal.png">
+                                    <img src="img/no-ecoMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Argento</h3>
@@ -155,7 +155,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmOro.png">
+                                    <img src="img/no-ecoMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Oro</h3>
@@ -175,7 +175,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/speseBronzo.png">
+                                    <img src="img/no-speseMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Bronzo</h3>
@@ -187,7 +187,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/speseArgento.png">
+                                    <img src="img/no-speseMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Argento</h3>
@@ -218,7 +218,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/carbBronzo.png">
+                                    <img src="img/no-carbMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Bronzo</h3>
@@ -242,7 +242,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/carbOro.png">
+                                    <img src="img/no-carbMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Oro</h3>
