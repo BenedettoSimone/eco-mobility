@@ -36,6 +36,10 @@
         <a href="obiettivi.jsp">Obiettivi</a>
         <a href="speseCarb.jsp">Spesa Carburante</a>
         <a href="premi.jsp">Premi</a>
+        <label class="switch">
+            <input type="checkbox" name="switch" id="darkswitch" onclick="darkMode()">
+            <span class="switch-svg"></span>
+        </label>
 
     </div>
 
