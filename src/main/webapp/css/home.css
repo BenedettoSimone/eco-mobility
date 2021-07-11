@@ -2,28 +2,10 @@
     font-family: "CoolveticaCustom";
     src: url("../font/coolvetica rg.ttf");
 }
-
-:root{
-    --primary-color: #5a87e8;
-    --theme-bg-color: #fff;
-    --secondary-bg-color:#fff;
-    --primary-text: #494848;
-    --secondary-text: #707070;
-    --background-content: #eeecf2;
-    --background-chart: #EEECF2;
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../font/HelveticaNeue-Bold.ttf");
 }
-
-
-.dark-mode{
-    --primary-color: #5a87e8;
-    --theme-bg-color: #121212;
-    --secondary-bg-color:#292929;
-    --primary-text: #fff;
-    --secondary-text: #fff;
-    --background-content: #121212;
-    --background-chart: #121212;
-}
-
 
 *{
     box-sizing: border-box;
@@ -32,7 +14,11 @@
 html, body{
     width: 100%;
     height: 100%;
-    margin:0;
+    margin: 0;
+    background-color: var(--secondary-bg-color);
+}
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .row {
@@ -68,6 +54,11 @@ html, body{
     padding:35px;
     overflow-x: scroll;
 
+
+}
+
+.background-content::-webkit-scrollbar{
+    display:none;
 }
 
 /*----Content Section--*/
@@ -93,14 +84,16 @@ html, body{
     letter-spacing: 2px;
     margin-top: 6px;
     margin-bottom: 11px;
+    font-weight: 100;
 }
 
 #home-card h3{
     color:#fff;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
     font-size:27px;
     margin-top:10px;
-
+    font-weight: 100;
+    text-transform: capitalize;
 }
 
 #home-card img{
@@ -135,27 +128,46 @@ html, body{
     border-radius:30px;
     padding: 16px;
     text-align: left;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
 }
+
+.card-obiettivi:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+
+
+
 #obiettivi-content h5{
     font-size:19px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
     margin-bottom:16px;
     color: var(--primary-text);
+    font-weight: 100;
 }
 
 #obiettivi-content h3{
     font-size:18px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
     margin-bottom:16px;
     margin-top:10px;
     color:var(--primary-color);
     text-transform: uppercase;
+    font-weight: 100;
 }
 
 #obiettivi-content p:not(.no_obiettivo){
     font-size: 15px;
     font-family: HelveticaNeueCustom;
     color:var(--primary-color);
+
 }
 
 .row-obiettivi .no_obiettivo{
@@ -164,10 +176,22 @@ html, body{
     text-transform: uppercase;
     color: #707070;
     margin-bottom: -154px;
+    font-family: CoolveticaCustom;
+
 }
+#nob{
+    opacity: 0.5;
+}
+
+
 
 .no_obiettivo a{
     color:#5a87e8;
+    opacity: 0.5;
+}
+.no_obiettivo a:hover{
+    opacity:1;
+
 }
 
 /*---Chart Section--*/
@@ -201,12 +225,16 @@ html, body{
     width: 100%;
     background-color: var(--secondary-bg-color);
     border-radius:20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--hover-obiettivi);
     padding:2px 19px 19px 19px;
     margin-top:6px;
 }
 
-.chart-card h1, .chart-card h5{
+.chart-card h1{
+    font-family: HelveticaNeueBold;
+}
+
+.chart-card h5 {
     font-family: HelveticaNeueCustom;
 }
 
@@ -216,6 +244,7 @@ html, body{
     font-size: 18px;
     margin-top: 18px;
     color:var(--primary-text);
+    font-weight: 100;
 }
 
 .chart-card h5{
@@ -234,7 +263,7 @@ html, body{
 @media screen and (max-width:1520px){
 
 #navbar{
-    background-color: #fff;
+    background-color: var(--secondary-bg-color);
     width: 10%;
     padding:0 0 0 40px;
 }
@@ -319,7 +348,7 @@ html, body{
     }
 
     #content{
-        background-color: #fff;
+        background-color: var(--secondary-bg-color);
         width: 100%;
         padding:20px 20px 20px 20px;
         margin-top: 45px;
@@ -346,6 +375,8 @@ html, body{
 
 
 }
+
+
 
 
 

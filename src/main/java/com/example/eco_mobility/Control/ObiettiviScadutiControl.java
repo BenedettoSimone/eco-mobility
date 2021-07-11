@@ -23,6 +23,7 @@ public class ObiettiviScadutiControl extends HttpServlet {
         List<ObiettiviDTO> ob = new ArrayList<ObiettiviDTO>();
         UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
 
+
         try {
             //ob è la lista degli obiettivi scaduti
             ob=obDao.RetriveObiettiviScaduti(ut.getIdUtenti());
@@ -75,14 +76,48 @@ public class ObiettiviScadutiControl extends HttpServlet {
 
                     int mezzoProgress = spDao.UtilizzoEcoProgressData(ut.getIdUtenti(),data.toString(),dataS.toString());
 
-                    if(mezzoProgress<=ob.get(i).getObiettivo()){
-                        obDao.UpdateStatus("completato",ob.get(i).getIdObiettivi());
-                    }else{
+                    if(mezzoProgress<ob.get(i).getObiettivo()){
                         obDao.UpdateStatus("fallito",ob.get(i).getIdObiettivi());
+                    }else{
+                        obDao.UpdateStatus("completato",ob.get(i).getIdObiettivi());
                     }
                 }
             }
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+
+            ObiettiviDTO obInCorso = new ObiettiviDTO();
+            obInCorso=obDao.obiettiviPerFiltroInCorso("Riduzione spesa",ut.getIdUtenti());
+            if(obInCorso.getProgresso()>obInCorso.getObiettivo()){
+                obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
+            }
+            obInCorso=obDao.obiettiviPerFiltroInCorso("Riduzione chilometri",ut.getIdUtenti());
+            if(obInCorso.getProgresso()>obInCorso.getObiettivo()){
+                obDao.UpdateStatus("fallito", obInCorso.getIdObiettivi());
+            }
+            obInCorso=obDao.obiettiviPerFiltroInCorso("Utilizzo mezzo eco",ut.getIdUtenti());
+            if(obInCorso.getProgresso()>=obInCorso.getObiettivo()){
+                obDao.UpdateStatus("completato", obInCorso.getIdObiettivi());
+            }
+
+            RequestDispatcher dispatcher;
+
+            if(request.getSession().getAttribute("page").equals("spesa") && request.getSession().getAttribute("page")!=null ) {
+                dispatcher = getServletContext().getRequestDispatcher("/RetriveSpeseControl");
+            }
+
+            else if(request.getSession().getAttribute("page").equals("ob") && request.getSession().getAttribute("page")!=null){
+                 dispatcher = getServletContext().getRequestDispatcher("/obiettivi.jsp");
+            }
+
+            else if(request.getSession().getAttribute("page").equals("spostamenti") && request.getSession().getAttribute("page")!=null) {
+                dispatcher = getServletContext().getRequestDispatcher("/RetriveSpostamentiControl");
+            }
+
+            else{
+                dispatcher = getServletContext().getRequestDispatcher("/home.jsp");
+            }
+
+            request.getSession().setAttribute("obiettiviInCorso",obDao.doRetriveObiettiviInCorso(ut.getIdUtenti()));
+
             dispatcher.forward(request,response);
 
         } catch (SQLException throwables) {

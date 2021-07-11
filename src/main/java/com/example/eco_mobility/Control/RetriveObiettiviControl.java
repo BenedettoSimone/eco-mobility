@@ -1,6 +1,7 @@
 package com.example.eco_mobility.Control;
 
 import com.example.eco_mobility.DAO.ObiettivoDAO;
+import com.example.eco_mobility.DAO.SpostamentiDAO;
 import com.example.eco_mobility.DTO.ObiettiviDTO;
 import com.example.eco_mobility.DTO.UtentiDTO;
 
@@ -18,15 +19,23 @@ public class RetriveObiettiviControl extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ObiettivoDAO obDAO = new ObiettivoDAO();
         UtentiDTO ut = (UtentiDTO) request.getSession().getAttribute("utente");
+        SpostamentiDAO spDAO = new SpostamentiDAO();
+
+        request.getSession().setAttribute("page","ob");
 
         try {
-            request.getSession().setAttribute("obiettivi",obDAO.doRetriveObiettivi(ut.getIdUtenti()));
+            request.setAttribute("obiettivi",obDAO.doRetriveObiettivi(ut.getIdUtenti()));
+
+            request.getSession().setAttribute("countMezzo",spDAO.doRetriveNumEco(ut.getIdUtenti()));
 
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/obiettivi.jsp");
+
+
+
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ObiettiviScadutiControl");
 
         dispatcher.forward(request,response);
 

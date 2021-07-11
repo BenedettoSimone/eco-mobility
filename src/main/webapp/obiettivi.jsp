@@ -8,19 +8,23 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    List <ObiettiviDTO> obiettivi= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettivi");
+    List <ObiettiviDTO> obiettivi= (List<ObiettiviDTO>) request.getAttribute("obiettivi");
     if(obiettivi==null){
         response.sendRedirect("./RetriveObiettiviControl");
         return;
     }
 
+    int count=(int) request.getSession().getAttribute("countMezzo");
+
     String error= (String) request.getAttribute("ErrObiettivo");
     String success= (String) request.getAttribute("SuccessObiettivo");
+    
 
 
 %>
 <html>
 <head>
+    <title>Obiettivi</title>
     <link rel="stylesheet" href="css/obiettivi.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -124,7 +128,7 @@
                             <h4>RIDUZIONE SPESE CARBURANTE</h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai speso <%=mediaCarburante%> euro.</h6><br>
+                                <h6>Negli ultimi 7 giorni hai speso in media <%=mediaCarburante%> euro.</h6><br>
 
                             </div>
 
@@ -170,7 +174,7 @@
                             </h4>
 
                             <div class="textCardUp">
-                                <h6>Negli ultimi 7 giorni hai utilizzato <%=progressMezzo%> volte un mezzo eco-sostenibile</h6><br>
+                                <h6>Negli ultimi 7 giorni hai utilizzato <%=count%> volte un mezzo eco-sostenibile</h6><br>
                             </div>
 
                             <div class="textCard">
@@ -206,7 +210,7 @@
 
 
         <div id="titleList">
-            Lista Obiettivi
+            Lista obiettivi
         </div>
         <br>
 
@@ -236,7 +240,10 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status: <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <div class="progress">
+                    <p class="first">Km percorsi: <%=obiettivi.get(i).getProgresso()%></p>
+                    <p>Km massimi: <%=obiettivi.get(i).getObiettivo()%></p>
+                    </div>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
@@ -249,7 +256,7 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Utilizzo: <%=progressMezzo%> / <%=obiettivi.get(i).getObiettivo()%></p>
+                    <p class="progress">Utilizzo: <%=obiettivi.get(i).getProgresso()%> / <%=obiettivi.get(i).getObiettivo()%></p>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
@@ -262,7 +269,11 @@
                 <div class="card-obiettivi <%=obiettivi.get(i).getStatus()%>">
                     <h3><%=obiettivi.get(i).getTipoObiettivo()%></h3><i class='bx bxs-down-arrow'></i>
                     <p>Status:  <%=obiettivi.get(i).getStatus()%></p>
-                    <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
+                    <div class="progress">
+                        <p class="first">Euro spesi: <%=obiettivi.get(i).getProgresso()%></p>
+                        <p>Spesa massima: <%=obiettivi.get(i).getObiettivo()%></p>
+
+                    </div>
                     <hr>
                     <p class="scadenza">Scadenza obiettivo: <%=obiettivi.get(i).getScadenza()%></p>
                 </div>
@@ -295,5 +306,7 @@
 
     };
 </script>
+<script type="text/javascript" src="js/dark.js"></script>
+<script src="js/cookie.js"></script>
 </body>
 </html>

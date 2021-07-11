@@ -59,4 +59,6 @@ public class SpostamentiDTO {
     public void setIdUtenti(int idUtenti) {
         this.idUtenti = idUtenti;
     }
+
+
 }

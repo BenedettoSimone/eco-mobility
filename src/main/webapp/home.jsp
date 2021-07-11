@@ -2,14 +2,13 @@
 <%@ page import="com.example.eco_mobility.DTO.ObiettiviDTO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
+
+
+
     int[] km,carburante;
     km= (int[]) request.getAttribute("kmSettimanali");
-    System.out.println("valori chilometri");
-    for(int i=0;i<7;i++){
-        System.out.println("km "+ km[i]);
-    }
 
-
+    request.getSession().setAttribute("flag",0);
     carburante= (int[]) request.getAttribute("speseSettimanali");
 
     if(km==null || carburante==null){
@@ -18,9 +17,10 @@
 
     List<ObiettiviDTO> obiettiviInCorso= (List<ObiettiviDTO>) request.getSession().getAttribute("obiettiviInCorso");
 
+
 %>
 <!DOCTYPE html>
-<html lang="en" xmlns="">
+<html lang="en" xmlns="" id="body" class="light-mode">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
@@ -66,6 +66,9 @@
                     <div class="row-obiettivi">
                         <% if(obiettiviInCorso.isEmpty()==false){
 
+                            System.out.println(obiettiviInCorso.toString());
+                          System.out.println("Empty"+obiettiviInCorso.isEmpty());
+
                             for(ObiettiviDTO obb : obiettiviInCorso){
 
                               if(obb.getStatus().equals("in corso")){
@@ -76,7 +79,7 @@
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Km percorsi: <%=progressKm%> &nbsp &nbsp &nbsp Km massimi: <%=obb.getObiettivo()%></p>
+                                <p>Km percorsi: <%=obb.getProgresso()%> &nbsp &nbsp &nbsp Km massimi: <%=obb.getObiettivo()%></p>
                             </div>
                         </div>
                         <%
@@ -87,7 +90,7 @@
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Utilizzo: <%=progressMezzo%> / <%=obb.getObiettivo()%></p>
+                                <p>Utilizzo: <%=obb.getProgresso()%> / <%=obb.getObiettivo()%></p>
                             </div>
                         </div>
                         <%
@@ -98,7 +101,7 @@
                             <div class="card-obiettivi">
                                 <h3><%=obb.getTipoObiettivo()%></h3>
                                 <p>Status: in corso</p>
-                                <p>Euro spesi: <%=progressEuro%> &nbsp &nbsp &nbsp Spesa massima: <%=obb.getObiettivo()%></p>
+                                <p>Euro spesi: <%=obb.getProgresso()%> &nbsp &nbsp &nbsp Spesa massima: <%=obb.getObiettivo()%></p>
                             </div>
                         </div>
                         <%
@@ -107,7 +110,7 @@
                         }
                             }else{
                         %>
-                        <p class="no_obiettivo">Nessun obiettivo in corso. <a href="obiettivi.jsp">Imposta un nuovo obiettivo</a></p>
+                        <p class="no_obiettivo"><span id="nob">Nessun obiettivo in corso.</span> <a href="obiettivi.jsp">Imposta un nuovo obiettivo</a>
                         <%
                                 }
                         %>
@@ -231,7 +234,31 @@
             }
         });
 
+
+            var body = document.getElementById("body");
+            let name = "darkmode=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for(let i = 0; i <ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                   // alert(c.substring(name.length, c.length)+" cookie recuperato");
+
+                    body.className="dark-mode";
+                    document.getElementById('darkswitch').setAttribute("checked",true);
+                    document.getElementById('darkswitchD').setAttribute("checked",true);
+
+                    return;
+                }
+            }
+
+           // alert("cookie non recuperato");
+            body.className="light-mode";
     }
+
 </script>
 
 </body>

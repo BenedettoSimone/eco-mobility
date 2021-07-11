@@ -20,7 +20,7 @@ public class SpostamentiDAO {
     public synchronized void doSaveSpostamento(SpostamentiDTO spostamento) throws SQLException{
         PreparedStatement ps = null;
 
-        String query="INSERT INTO "+ SpostamentiDAO.TABLE_NAME+" ( dat, kmPercorsi, tipoMezzo, idUtenti) VALUES (?,?,?,?);";
+        String query="INSERT INTO "+ SpostamentiDAO.TABLE_NAME+" (data, kmPercorsi, tipoMezzo, idUtente) VALUES (?,?,?,?);";
         ps=con.prepareStatement(query);
 
         ps.setDate(1,spostamento.getData());
@@ -123,6 +123,82 @@ public class SpostamentiDAO {
         return mezzo;
     }
 
+    public synchronized ArrayList<SpostamentiDTO> doRetriveSpostamenti(int idUtente) throws SQLException {
+        PreparedStatement ps=null;
 
+        String query="SELECT * FROM ecomobility.Spostamenti WHERE idUtente=? order by data desc";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,idUtente);
+
+        ResultSet rs = ps.executeQuery();
+
+        ArrayList<SpostamentiDTO> spostamenti = new ArrayList<>();
+
+        while(rs.next()){
+            SpostamentiDTO spostamento = new SpostamentiDTO();
+
+            spostamento.setTipoMezzo(rs.getBoolean("tipoMezzo"));
+            spostamento.setData(rs.getDate("data"));
+            spostamento.setKmPercorsi(rs.getInt("kmPercorsi"));
+
+            spostamenti.add(spostamento);
+        }
+
+        return spostamenti;
+    }
+
+    public synchronized ArrayList<SpostamentiDTO> spostamentiByData (String data, int idUtente) throws SQLException {
+        PreparedStatement ps=null;
+
+
+        String query="SELECT * FROM ecomobility.Spostamenti where idUtente="+idUtente+" AND data=\'"+data+"\'";
+
+        ps=con.prepareStatement(query);
+
+        //ps.setString(1,data);
+        //ps.setInt(2,idUtente);
+
+        System.out.println(ps);
+
+        ResultSet rs= ps.executeQuery(query);
+
+        ArrayList<SpostamentiDTO> spostamenti = new ArrayList<>();
+
+        while(rs.next()){
+            SpostamentiDTO spostamento = new SpostamentiDTO();
+
+            spostamento.setTipoMezzo(rs.getBoolean("tipoMezzo"));
+            spostamento.setData(rs.getDate("data"));
+            spostamento.setKmPercorsi(rs.getInt("kmPercorsi"));
+
+            spostamenti.add(spostamento);
+        }
+
+        return spostamenti;
+    }
+
+    public synchronized int doRetriveNumEco(int utente) throws SQLException {
+        PreparedStatement ps= null;
+
+        String query="SELECT DISTINCT count(tipoMezzo) " +
+                "FROM ecomobility.Spostamenti " +
+                "WHERE data between (curdate() - INTERVAL DAYOFWEEK(curdate())+6 DAY) AND (curdate()) AND idUtente= ? and tipoMezzo=1 ;";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,utente);
+
+        ResultSet rs=ps.executeQuery();
+
+        int count=0;
+        while(rs.next()){
+            count=rs.getInt("count(tipoMezzo)");
+        }
+
+        return count;
+
+    }
 
 }

@@ -24,13 +24,13 @@ public class LoginControl extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        request.getSession().setAttribute("page","home");
 
-        String redirectedPage;
 
         try {
             if(checkLogin(email,password,request).equals("registrato")){
 
-                redirectedPage="/home.jsp";
+
 
                 RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/SpostamentiControl");
 
@@ -57,7 +57,9 @@ public class LoginControl extends HttpServlet {
         if (ut.getEmail().equals(email) && ut.getPassword().equals(password)) {
 
             request.getSession().setAttribute("utente",ut);
+
             request.getSession().setAttribute("obiettiviInCorso",obbDao.doRetriveObiettiviInCorso(ut.getIdUtenti()));
+
             //avanzamento km per obiettivi in corso
             request.getSession().setAttribute("progressKm",obbDao.doRetriveProgressKm(ut.getIdUtenti()));
 
@@ -66,6 +68,7 @@ public class LoginControl extends HttpServlet {
 
             //avanzamento spese carburante
             request.getSession().setAttribute("progressEuro",obbDao.doRetriveProgressCarburante(ut.getIdUtenti()));
+
             return "registrato";
         } else
             throw new Exception("Invalid login and password");

@@ -22,40 +22,33 @@
     int mediaCarburante=(int) request.getSession().getAttribute("mediaSpCarburante");
 
 
-    int progressKm= (int) request.getSession().getAttribute("progressKm");
-
-    //avanzamento utilizzo mezzo eco
-    int progressMezzo= (int) request.getSession().getAttribute("progressMezzo");
-
-    //avanzamento spese carburante
-    int progressEuro= (int) request.getSession().getAttribute("progressEuro");
 %>
 
 <html>
 <head>
-    <title>Title</title>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/navbar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+<script src="js/cookie.js"></script>
 
 
 
 <div class="sidebar active">
     <div class="logo_content">
-        <a href=""><img id="logo" src="img/logo.png"></a>
+        <a href="./SpostamentiControl"><img id="logo" src="img/logo.png"></a>
     </div>
     <ul class="nav_list">
         <li>
-            <a id="home" class="top" href="#">
+            <a id="home" class="top" href="./SpostamentiControl">
                 <i class='bx bxs-home'></i>
                 <span class="links_name">Home</span>
             </a>
         </li>
         <li>
-            <a id="spostamenti" class="top" href="#">
+            <a id="spostamenti" class="top" href="spostamenti.jsp">
                 <i class='bx bxs-car'></i>
                 <span class="links_name">Spostamenti</span>
             </a>
@@ -73,7 +66,7 @@
             </a>
         </li>
         <li>
-            <a id="premi" class="top" href="#">
+            <a id="premi" class="top" href="premi.jsp">
                 <i class='bx bxs-medal'></i>
                 <span class="links_name">Premi</span>
             </a>
@@ -81,6 +74,10 @@
     </ul>
 
     <div id="user">
+        <label class="switch" id="switchD">
+            <input type="checkbox" name="switch" id="darkswitch" onclick="darkMode()">
+            <span class="switch-svg"></span>
+        </label>
         <ul>
             <li>
                 <a class="user-name"> <i class='bx bxs-user'></i>
@@ -134,6 +131,7 @@
 
 </script>
 
+<script type="text/javascript" src="js/dark.js"></script>
 </body>
 </html>
 

@@ -14,16 +14,22 @@
 
     String message= (String) request.getAttribute("addSpesa");
 
-    List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getSession().getAttribute("spese");
+    List <SpeseCarburanteDTO> spese= (List<SpeseCarburanteDTO>) request.getAttribute("spese");
     if(spese==null){
         response.sendRedirect("./RetriveSpeseControl");
         return;
     }
 
+
+
+
+
+
 %>
 
 <html>
 
+<title>Spese carburante</title>
     <link rel="stylesheet" href="css/speseCarburante.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -36,7 +42,7 @@
     <script src="js/obiettivi.js"></script>
 
 
-<body>
+<body id="body" class="light-mode">
 
 
 <%@ include file="ListaObResp.jsp" %>
@@ -101,8 +107,9 @@
                             <%@include file="calendarProva.jsp"%>
 
                             <p id="bottom_p">Euro spesi</p>
-                                <input id="euro_input" type="text" name="euro" class="formCard" onchange="euroObserver()">
+                                <input id="euro_input" type="text" name="euro" class="formCard" onchange="euroObserver()" required>
                                 <label id="euro_label"></label>
+                            <input type="hidden" name="spesa" value="spesa">
 
 
 
@@ -115,7 +122,7 @@
 
 
                     <div class="cardDX">
-                        <img src="img/speseForm.png"
+                        <img src="img/speseForm.jpg"
                              class="imgCard"/></div>
                 </div>
             </div>
@@ -130,11 +137,11 @@
 
 
         <div id="titleList">
-            Lista Spese
+            Lista spese
         </div>
         <br>
 
-        <form id="cercaData"  action="" method="post">
+        <form id="cercaData"  action="${pageContext.servletContext.contextPath}/SearchSpeseByDateControl" method="post">
         <%@include file="calendarProva1.jsp"%>
             <input class="buttonFilter" type="submit" value="Cerca">
         </form>
@@ -154,9 +161,9 @@
 
             <%
                 }
-            }else{
+            }else {
             %>
-            No Spese
+            No spese
             <%
                 }
             %>
@@ -164,7 +171,6 @@
 
     </div>
 </div>
-
 <script src="js/speseCarb.js"></script>
 </body>
 </html>

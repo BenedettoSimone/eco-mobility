@@ -12,6 +12,8 @@
 
     <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
 
+    <script type="text/javascript" src="js/dark.js"></script>
+    <script src="js/cookie.js"></script>
 
 
 
@@ -19,6 +21,12 @@
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
 
     <style>
+
+        @font-face {
+            font-family: "HelveticaNeueCustom";
+            src: url("../font/HelveticaNeue.ttf");
+        }
+
         .date-picker {
             margin: 0 auto;
         }
@@ -27,7 +35,7 @@
             width: 260px;
             height: auto;
             max-height: 50px;
-            background: white;
+            background: var(--theme-bg-color);
             position: absolute;
             overflow: hidden;
             transition: all 0.3s 0s ease-in-out;
@@ -50,7 +58,7 @@
             line-height: 50px;
             font-size: 16px;
             padding: 0 10px;
-            color: #000;
+            color: var(--primary-text);
             box-sizing: border-box;
         }
         .date-picker .input a {
@@ -75,7 +83,7 @@
         .date-picker .calendar {
             position: relative;
             width: 100%;
-            background: #fff;
+            background: var(--theme-bg-color);
             border-radius: 0px;
             overflow: hidden;
         }
@@ -143,6 +151,7 @@
             color: #8392A7;
             margin-bottom: 5px;
             font-size: 13px;
+            font-family: HelveticaNeueCustom;
         }
         .date-picker .ui-state-default {
             display: block;
@@ -245,6 +254,28 @@
 
 
         });
+
+        var body = document.getElementById("body");
+        let name = "darkmode=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                // alert(c.substring(name.length, c.length)+" cookie recuperato");
+
+                body.className="dark-mode";
+                document.getElementById('darkswitch').setAttribute("checked",true);
+
+                return;
+            }
+        }
+
+        // alert("cookie non recuperato");
+        body.className="light-mode";
     });
     //# sourceURL=pen.js
 </script>

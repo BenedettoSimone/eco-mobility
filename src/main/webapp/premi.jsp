@@ -8,12 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <meta charset="UTF-8">
-<title>Title</title>
+<title>Premi</title>
 <link rel="stylesheet" href="css/premi.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
-<body>
+<script type="text/javascript" src="js/dark.js"></script>
+<script src="js/cookie.js"></script>
+<body id="body" class="light-mode">
 
 <div class="row">
 
@@ -34,80 +36,86 @@
                     <div class="row-premi">
                         <div class="column-premi">
                             <div class="card-premi">
+                                <div class="center">
                                 <div class="resume-left">
                                     <h3>chilometri ridotti</h3>
                                     <p>Medaglie ottenute</p>
                                     <div class="resume-icon">
                                         <div class="bronzo">
                                             <img src="img/resumeBronzo.png">
-                                            <span>3</span>
+                                            <span>0</span>
                                         </div>
 
                                         <div class="argento">
                                             <img src="img/resumeSilver.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
 
                                         <div class="oro">
                                             <img src="img/resumeGold.png">
-                                            <span>3</span>
+                                            <span>2</span>
                                         </div>
                                     </div>
                                 </div>
                                 <img class="category-resume0" src="img/sprout.svg">
-
+                                </div>
                             </div>
                         </div>
 
                         <div class="column-premi">
                             <div class="card-premi">
-                                <div class="resume-left">
+                                <div class="center">
+                                    <div class="resume-left">
                                     <h3>Dispendio carburante</h3>
                                     <p>Medaglie ottenute</p>
                                     <div class="resume-icon">
                                         <div class="bronzo">
                                             <img src="img/resumeBronzo.png">
-                                            <span>3</span>
+                                            <span>2</span>
                                         </div>
 
                                         <div class="argento">
                                             <img src="img/resumeSilver.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
 
                                         <div class="oro">
                                             <img src="img/resumeGold.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
                                     </div>
                                 </div>
                                     <img class="category-resume1" src="img/money-bag.svg">
                             </div>
+                            </div>
+
                         </div>
 
                         <div class="column-premi">
                             <div class="card-premi">
+                                <div class="center">
                                 <div class="resume-left">
                                     <h3>Utilizzo mezzi eco</h3>
                                     <p>Medaglie ottenute</p>
                                     <div class="resume-icon">
                                         <div class="bronzo">
                                             <img src="img/resumeBronzo.png">
-                                            <span>3</span>
+                                            <span>0</span>
                                         </div>
 
                                         <div class="argento">
                                             <img src="img/resumeSilver.png">
-                                            <span>3</span>
+                                            <span>0</span>
                                         </div>
 
                                         <div class="oro">
                                             <img src="img/resumeGold.png">
-                                            <span>3</span>
+                                            <span>1</span>
                                         </div>
                                     </div>
                                 </div>
                                 <img class="category-resume2" src="img/eco-fuel.svg">
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -135,7 +143,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/no-carbMedal.png">
+                                    <img src="img/no-ecoMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Argento</h3>
@@ -147,7 +155,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/kmOro.png">
+                                    <img src="img/no-ecoMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Oro</h3>
@@ -167,7 +175,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/speseBronzo.png">
+                                    <img src="img/no-speseMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Bronzo</h3>
@@ -179,7 +187,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/speseArgento.png">
+                                    <img src="img/no-speseMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Argento</h3>
@@ -210,7 +218,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/carbBronzo.png">
+                                    <img src="img/no-carbMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Bronzo</h3>
@@ -234,7 +242,7 @@
                         <div class="column-medal">
                             <div class="card-medal">
                                 <div class="medal">
-                                    <img src="img/carbOro.png">
+                                    <img src="img/no-carbMedal.png">
                                 </div>
                                 <div class="info-medal">
                                 <h3>Oro</h3>
@@ -251,6 +259,37 @@
         </div>
     </div>
 </div>
+
+<script>
+window.onload=function darkuno(){
+    var body = document.getElementById("body");
+    let name = "darkmode=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            // alert(c.substring(name.length, c.length)+" cookie recuperato");
+
+            body.className="dark-mode";
+            document.getElementById('darkswitch').setAttribute("checked",true);
+            document.getElementById('darkswitchD').setAttribute("checked",true);
+
+            return;
+        }
+    }
+
+    // alert("cookie non recuperato");
+    body.className="light-mode";
+
+
+
+
+    }
+</script>
 
 
 </body>

@@ -19,7 +19,7 @@ public class ObiettivoDAO {
     public synchronized void doSaveObiettivi(ObiettiviDTO obiettivo) throws SQLException{
         PreparedStatement ps = null;
 
-        String query="INSERT INTO "+ ObiettivoDAO.TABLE_NAME+" (tipoObiettivi, obiettivo, status, scadenza, idUtenti) VALUES (?,?,?,?,?);";
+        String query="INSERT INTO "+ ObiettivoDAO.TABLE_NAME+" (tipoObiettivi, obiettivo, status, scadenza, idUtenti, progresso) VALUES (?,?,?,?,?,?);";
         ps=con.prepareStatement(query);
 
         ps.setString(1,obiettivo.getTipoObiettivo());
@@ -27,6 +27,7 @@ public class ObiettivoDAO {
         ps.setString(3,obiettivo.getStatus());
         ps.setDate(4,obiettivo.getScadenza());
         ps.setInt(5,obiettivo.getIdUtenti());
+        ps.setInt(6,obiettivo.getProgresso());
 
 
         ps.executeUpdate();
@@ -37,7 +38,7 @@ public class ObiettivoDAO {
         List<ObiettiviDTO> obiettivi = new ArrayList<ObiettiviDTO>();
         PreparedStatement ps = null;
 
-        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? ";
+        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? order by status='in corso' desc,  idObiettivi desc";
 
         ps=con.prepareStatement(query);
 
@@ -47,11 +48,13 @@ public class ObiettivoDAO {
 
         while(rs.next()){
             ObiettiviDTO ob = new ObiettiviDTO();
+            ob.setIdObiettivi((rs.getInt("idObiettivi")));
             ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
             ob.setObiettivo(rs.getInt("obiettivo"));
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
             ob.setStatus(rs.getString("status"));
+            ob.setProgresso(rs.getInt("progresso"));
 
             obiettivi.add(ob);
         }
@@ -62,7 +65,7 @@ public class ObiettivoDAO {
         List<ObiettiviDTO> obiettivi = new ArrayList<ObiettiviDTO>();
         PreparedStatement ps = null;
 
-        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? and current_date()<=scadenza ";
+        String query="SELECT * FROM "+ ObiettivoDAO.TABLE_NAME+" WHERE idUtenti= ? and status='in corso'";
 
         ps=con.prepareStatement(query);
 
@@ -72,11 +75,13 @@ public class ObiettivoDAO {
 
         while(rs.next()){
             ObiettiviDTO ob = new ObiettiviDTO();
+            ob.setIdObiettivi((rs.getInt("idObiettivi")));
             ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
             ob.setObiettivo(rs.getInt("obiettivo"));
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
             ob.setStatus(rs.getString("status"));
+            ob.setProgresso(rs.getInt("progresso"));
 
             obiettivi.add(ob);
         }
@@ -157,16 +162,45 @@ public class ObiettivoDAO {
 
         while(rs.next()){
             ObiettiviDTO ob = new ObiettiviDTO();
+            ob.setIdObiettivi((rs.getInt("idObiettivi")));
             ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
             ob.setObiettivo(rs.getInt("obiettivo"));
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
             ob.setStatus(rs.getString("status"));
+            ob.setProgresso(rs.getInt("progresso"));
 
             obiettivi.add(ob);
         }
 
         return obiettivi;
+    }
+
+    public synchronized ObiettiviDTO obiettiviPerFiltroInCorso(String fil, int ut) throws SQLException {
+        PreparedStatement ps=null;
+
+        String query="SELECT * FROM ecomobility.Obiettivi where tipoObiettivi like \"%"+fil+"%\" and idUtenti=? and status='in corso';";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,ut);
+
+        ResultSet rs = ps.executeQuery();
+
+        ObiettiviDTO ob = new ObiettiviDTO();
+
+        while(rs.next()){
+
+            ob.setIdObiettivi((rs.getInt("idObiettivi")));
+            ob.setTipoObiettivo(rs.getString("tipoObiettivi"));
+            ob.setObiettivo(rs.getInt("obiettivo"));
+            ob.setScadenza(rs.getDate("scadenza"));
+            ob.setIdUtenti(rs.getInt("idUtenti"));
+            ob.setStatus(rs.getString("status"));
+            ob.setProgresso(rs.getInt("progresso"));
+        }
+
+        return ob;
     }
 
     public synchronized List<ObiettiviDTO> RetriveObiettiviScaduti(int utente) throws SQLException {
@@ -189,6 +223,7 @@ public class ObiettivoDAO {
             ob.setScadenza(rs.getDate("scadenza"));
             ob.setIdUtenti(rs.getInt("idUtenti"));
             ob.setStatus(rs.getString("status"));
+            ob.setProgresso(rs.getInt("progresso"));
 
             obiettivi.add(ob);
         }
@@ -207,6 +242,20 @@ public class ObiettivoDAO {
         ps.setInt(2,obiettivo);
 
         ps.executeUpdate();
+    }
+
+    public synchronized  void UpdateProgresso(int tot, int obieettivo) throws SQLException {
+        PreparedStatement ps=null;
+
+        String query="UPDATE `ecomobility`.`Obiettivi` SET `progresso` = ? WHERE (`idObiettivi` = ?)";
+
+        ps=con.prepareStatement(query);
+
+        ps.setInt(1,tot);
+        ps.setInt(2,obieettivo);
+
+        ps.executeUpdate();
+
     }
 
 }

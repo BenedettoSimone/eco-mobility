@@ -50,6 +50,7 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setIdUtenti(ut.getIdUtenti());
                 ob.setScadenza(data);
                 ob.setStatus("in corso");
+                ob.setProgresso(0);
 
                 obDAO.doSaveObiettivi(ob);
                 request.setAttribute("SuccessObiettivo", "true");
@@ -60,6 +61,8 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setIdUtenti(ut.getIdUtenti());
                 ob.setScadenza(data);
                 ob.setStatus("in corso");
+                ob.setProgresso(0);
+
 
                 obDAO.doSaveObiettivi(ob);
                 request.setAttribute("SuccessObiettivo", "true");
@@ -69,6 +72,8 @@ public class ObiettivoControl extends HttpServlet {
                 ob.setIdUtenti(ut.getIdUtenti());
                 ob.setScadenza(data);
                 ob.setStatus("in corso");
+                ob.setProgresso(0);
+
 
                 obDAO.doSaveObiettivi(ob);
                 request.setAttribute("SuccessObiettivo", "true");

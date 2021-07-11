@@ -24,7 +24,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
+<script type="text/javascript" src="js/dark.js"></script><script type="text/javascript" src="js/cookie.js"></script>
+<body id="body" class="light-mode">
     <div id="content">
 
             <div class="logo_content">
@@ -32,7 +33,7 @@
             </div>
 
             <label class="switch">
-                <input type="checkbox" name="switch" id="checkbox" onclick="darkMode()">
+                <input type="checkbox" name="switch" id="darkswitch" onclick="darkMode()">
                 <span class="switch-svg"></span>
             </label>
 
@@ -114,8 +115,8 @@
         </div>
 
     </div>
-
 <script type="text/javascript" src="js/login.js"></script>
+
 
 
 </body>

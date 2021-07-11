@@ -13,6 +13,8 @@
     <link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
 
 
+    <script type="text/javascript" src="js/dark.js"></script>
+    <script src="js/cookie.js"></script>
 
 
 
@@ -28,7 +30,7 @@
             width: 212px;
             height: auto;
             max-height: 50px;
-            background: white;
+            background: var(--theme-bg-color);;
             position: absolute;
             overflow: hidden;
             transition: all 0.3s 0s ease-in-out;
@@ -51,8 +53,9 @@
             line-height: 50px;
             font-size: 16px;
             padding: 0 10px;
-            color: #000;
+            color: var(--primary-text);
             box-sizing: border-box;
+            font-family: HelveticaNeueCustom;
         }
         .date-picker1 .input a {
             width: 50px;
@@ -76,7 +79,7 @@
         .date-picker1 .calendar {
             position: relative;
             width: 100%;
-            background: #fff;
+            background: var(--theme-bg-color);
             border-radius: 0px;
             overflow: hidden;
         }
@@ -221,12 +224,16 @@
         $(".calendar").datepicker({
             dateFormat: 'yy-mm-dd',
             firstDay: 1,
-            maxDate: today });
+            maxDate: today,
+        });
 
 
         $(document).on('click', '.date-picker1 .input', function (e) {
             var $me = $(this),
                 $parent = $me.parents('.date-picker1');
+
+            var $tutti= 'Cerca tutti';
+            $parent.find('.result').children('span').html($tutti);
             $parent.toggleClass('open');
         });
 
@@ -242,9 +249,24 @@
 
 
 
-
-
         });
+
+        div = document.getElementById("myOb-bar");
+        list = document.getElementById("list");
+        divrow=document.getElementById("myrow");
+        if (window.innerWidth <= 1790) {
+
+            div.appendChild(list);
+
+
+        }
+
+
+        if(window.innerWidth>1790){
+            divrow.appendChild(list);
+            closeBar();
+
+        }
     });
     //# sourceURL=pen.js
 </script>

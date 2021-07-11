@@ -19,9 +19,9 @@ public class FiltroControl extends HttpServlet {
         String filter = request.getParameter("filter");
 
         if(filter!=null && filter.equals("chilometri") || filter.equals("spesa") || filter.equals("mezzo")){
-            request.getSession().removeAttribute("obiettivi");
+            request.removeAttribute("obiettivi");
             try {
-                request.getSession().setAttribute("obiettivi",obDao.obiettiviPerFiltro(filter,ut.getIdUtenti()));
+                request.setAttribute("obiettivi",obDao.obiettiviPerFiltro(filter,ut.getIdUtenti()));
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }

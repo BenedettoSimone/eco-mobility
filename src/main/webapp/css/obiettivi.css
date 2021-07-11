@@ -31,7 +31,7 @@ html, body{
 }
 
 #navbar{
-    background-color: white;
+    background-color: var(--secondary-bg-color);
     width: 20%;
     padding:30px 0 0 40px;
 }
@@ -55,6 +55,7 @@ html, body{
     background-color:#C34D4C;
     color:white ;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 #success{
@@ -63,6 +64,7 @@ html, body{
     background-color:#57A758;
     color: white;
     border-radius:14px;
+    font-family: HelveticaNeueCustom;
 }
 
 .closebtn-success, .closebtn-error{
@@ -85,17 +87,17 @@ html, body{
 /* Lista destra*/
 
 #list{
-    background-color: white;
+    background-color: var(--secondary-bg-color);
     width: 20%;
-    padding: 130px 30px 0 30px;
-    height: 98%;
+    padding: 130px 25px 0 25px;
+    height: 100%;
 }
 
 #list #titleList{
     font-size: 26px;
-    color:#494848;
-    font-weight: bold;
-    font-family: HelveticaNeue;
+    color: var(--primary-text);
+    font-weight: 100;
+    font-family: HelveticaNeueBold;
     padding-left: 6px;
 
 }
@@ -105,7 +107,7 @@ html, body{
     box-sizing: border-box;
     margin: 30px 0px 0px 0px;
     overflow: scroll;
-    padding: 2px;
+    padding: 9px;
 }
 
 .listaSpese::-webkit-scrollbar{
@@ -137,9 +139,10 @@ html, body{
     position: absolute;
     background-color: #f9f9f9;
     min-width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: var(--hover-obiettivi);
     z-index: 1;
     border-radius: 20px;
+    font-family: HelveticaNeueCustom;
 }
 
 .dropdown-content a {
@@ -171,6 +174,18 @@ html, body{
     margin-bottom:20px;
     position: relative;
     cursor:pointer;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+.corso:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow:var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 .corso p{
@@ -181,12 +196,14 @@ html, body{
 }
 
 .corso h3{
-    font-size:18px;
-    font-family: HelveticaNeueCustom;
-    margin-bottom:16px;
-    margin-top:10px;
-    color:#5a87e8;
+    font-size: 18px;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
+    margin-bottom: 16px;
+    margin-top: 10px;
+    color: #5a87e8;
     text-transform: uppercase;
+
 }
 
 .corso hr{
@@ -210,6 +227,18 @@ html, body{
     margin-bottom:20px;
     position: relative;
     cursor:pointer;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+.fallito:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 .fallito p{
@@ -221,7 +250,8 @@ html, body{
 
 .fallito h3{
     font-size:18px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
     margin-bottom:16px;
     margin-top:10px;
     color:#C34D4C;
@@ -249,8 +279,19 @@ html, body{
     margin-bottom:20px;
     position: relative;
     cursor:pointer;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
 }
 
+.completato:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.01px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
 .completato p{
     font-size: 16px;
     font-family: HelveticaNeueCustom;
@@ -260,7 +301,8 @@ html, body{
 
 .completato h3{
     font-size:18px;
-    font-family: HelveticaNeueCustom;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
     margin-bottom:16px;
     margin-top:10px;
     color:#57A758;
@@ -275,9 +317,17 @@ html, body{
 .completato.expanded hr{
     display: block;
     border: 0.8px solid #57A758;
+
 }
 
 
+.progress{
+    margin-top: 22px;
+}
+
+.progress .first{
+    margin-bottom: -11px;
+}
 
 
 
@@ -335,7 +385,7 @@ html, body{
 
 
 #content{
-    background-color: white;
+    background-color: var(--secondary-bg-color);
     width: 60%;
     padding:20px 0px 20px 0;
 }
@@ -343,23 +393,25 @@ html, body{
 #content #titleContent{
     padding-top: 80px;
     padding-bottom: 30px;
-
-
-    font-size: 45px;
-    color:#494848;
-    font-weight: bolder;
-    font-family: Helvetica Neue;
+    font-size: 51px;
+    color: var(--primary-text);
+    font-weight: 100;
+    font-family: HelveticaNeueBold;
 
 }
 
 .background-content{
     width: 100%;
     height: 100%;
-    background-color: #EEECF2;
-    border-radius:30px;
-    padding:35px 35px 0 35px;
-    overflow-x: scroll;
+    background-color: var(--background-content);
+    border-radius: 30px;
+    padding: 35px 35px 0 35px;
+    overflow-x: hidden;
 
+}
+
+.background-content::-webkit-scrollbar, body::-webkit-scrollbar{
+    display: none;
 }
 
 /*icona obiettivi*/
@@ -370,6 +422,18 @@ html, body{
     padding:2px;
     display: none;
     color:#fff;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+#obiettIcon:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.05px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 /*Card centrale*/
@@ -380,10 +444,10 @@ html, body{
     float: left;
     width: 100%;
     height: fit-content;
-    background: white;
+    background: var(--secondary-bg-color);
     border-radius: 20px;
     padding:20px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--hover-obiettivi);
     position: relative;
 }
 
@@ -409,29 +473,35 @@ html, body{
     margin-top: 0px;
     font-size: 20px;
     margin-bottom: 0px;
-    color:#494848;
+    color: var(--primary-text);
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
 }
 
 .textCardUp h6{
     margin-top: 0px;
     font-size: 17px;
+    font-family: HelveticaNeueBold;
+    font-weight: 100;
 }
 
 .textCard{
     margin-top: -23px;
-    font-family: Helvetica Neue;
-    color: 	#858585;
+    font-family: HelveticaNeueCustom;
+    color: 	var(--secondary-text);
 }
 
 #mezzo_input, #chilometri_input, #spese_input{
     margin-bottom: 7px;
+    color: var(--secondary-text);
+    background-color: var(--theme-bg-color);
 }
 
 .textCardUp{
     margin-top: 12px;
-    font-family: Helvetica Neue;
+    font-family: HelveticaNeueCustom;
     font-size: 24px;
-    color: 	#858585;
+    color: 		var(--secondary-text);;
 }
 
 
@@ -449,7 +519,7 @@ html, body{
 }
 
 .buttonCard{
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueCustom;
     float: right;
     text-align: center;
     color: white;
@@ -459,6 +529,20 @@ html, body{
     margin-top: 20px;
     padding: 13px;
     border: 0;
+    cursor:pointer;
+    text-transform: uppercase;
+    transition-timing-function: ease-out;
+    transition: 0.4s;
+}
+
+.buttonCard:hover{
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0.05px);
+    box-shadow: var(--hover-obiettivi);
+    -webkit-transition-duration: 0.4s;
+
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 
 .imgCard{
@@ -482,12 +566,13 @@ html, body{
     text-align: left;
     border-radius: 6px;
     padding: 13px;
+    font-family: HelveticaNeueCustom;
 
     /* Position the tooltip */
     position: absolute;
     margin-top:-13px;
     margin-left:11px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: var(--hover-obiettivi);
     z-index: 1;
     font-size: 14px;
 }
@@ -545,6 +630,7 @@ html, body{
 @media screen and (max-width:1790px) {
     #content{
         width:80%;
+        padding: 20px 20px 20px 0;
     }
 
     #obiettIcon{
@@ -562,7 +648,7 @@ html, body{
 @media screen and (max-width:1520px){
 
     #navbar{
-        background-color: white;
+        background-color: var(--secondary-bg-color);
         width: 10%;
         padding:0px 0 0 40px;
     }
@@ -574,7 +660,6 @@ html, body{
 
     #list{
         width:100%;
-        height: 300px;
         float:left;
     }
 
@@ -588,9 +673,8 @@ html, body{
 
     }
     .listaSpese{
-        background-color: #fff;
+        background-color: var(--secondary-bg-color);
         overflow-x:scroll;
-        height: 223.9%;
     }
 
     .cardList{
@@ -633,7 +717,7 @@ html, body{
     }
 
     #content {
-        background-color: white;
+        background-color: var(--secondary-bg-color);
         width: 100%;
         padding: 20px 20px 20px 20px;
         margin-top: 45px;

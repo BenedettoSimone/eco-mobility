@@ -7,9 +7,9 @@ function euroObserver() {
     var reg = new RegExp(/^[0-9]*$/);
 
     if (!reg.test(euro_text)) {
-        euro.css('border-color', 'red');
+        euro.css('border-color', 'rgb(255, 119, 119)');
         euro_l.text("Inserisci un valore numerico!");
-        euro_l.css('color', 'red');
+        euro_l.css('color', 'rgb(255, 119, 119)');
 
         return false;
     } else {
